@@ -145,6 +145,7 @@ country_event = {
 				NOT = { tag = JAN }
 				NOT = { tag = USS }
 				NOT = { tag = BGR }
+				NOT = { tag = UBD }
 				NOT = { has_country_flag = AlreadyPingedGWRTEST }
 				NOT = { has_country_flag = VanquishedStateMajorGWRTEST }
 			}
