@@ -36,7 +36,10 @@ country_event = {
             is_ideology_enabled = socialist
             vote_franschise = universal_weighted_voting
             vote_franschise = universal_voting
-            government = democracy
+			OR = {
+				government = democracy						
+				has_country_flag = Government_Democracy
+			}
         }
         NOT = {
             OR = {

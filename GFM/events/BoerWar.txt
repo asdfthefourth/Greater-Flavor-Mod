@@ -165,7 +165,9 @@ country_event = {
         NAL = {
             prestige = -30
             add_country_modifier = { name = unrecognized_country duration = 1825 }
-            government = democracy
+            OR = {
+				government = democracy
+			}
         }
         any_pop = {
             limit = {
@@ -195,7 +197,7 @@ country_event = {
         NAL = {
             prestige = -30
             add_country_modifier = { name = unrecognized_country duration = 1825 }
-            government = democracy
+			government = democracy
         }
         any_pop = {
             limit = {

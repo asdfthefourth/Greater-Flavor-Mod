@@ -1811,7 +1811,12 @@ country_event = {
         has_country_flag = NW_hegemony
         tag = USA
         OR = {
-            NOT = { government = democracy }
+            NOT = { 
+				OR = {
+					government = democracy
+					has_country_flag = Government_Democracy
+				}
+			}
             is_greater_power = no
             is_disarmed = yes
         }

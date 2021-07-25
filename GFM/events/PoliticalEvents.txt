@@ -1104,7 +1104,10 @@ country_event = {
         civilized = yes
         public_meetings = yes_meeting
         NOT = {
-            government = democracy
+			OR = {
+				government = democracy
+				has_country_flag = Government_Democracy
+			}
         }
         NOT = {
             is_ideology_enabled = socialist

@@ -136,6 +136,7 @@ country_event = {
             government = democracy
             government = hms_government
             government = constitutional_empire
+			has_country_flag = Government_Democracy
         }
         ARC = {
             government = presidential_dictatorship
@@ -875,6 +876,7 @@ country_event = {
                 OR = {
                 government = democracy
                 government = presidential_dictatorship
+				has_country_flag = Government_Democracy
                 }
             }
              casus_belli = {
@@ -946,6 +948,7 @@ country_event = {
                 OR = {
                 government = democracy
                 government = presidential_dictatorship
+				has_country_flag = Government_Democracy
                 }
             }
              casus_belli = {
@@ -959,7 +962,10 @@ country_event = {
         any_country = {
             limit = {
                 is_greater_power = yes
-                government = democracy
+                OR = {
+					government = democracy
+					has_country_flag = Government_Democracy
+				}
                 OR = {
                     capital_scope = { continent = north_america }
                     capital_scope = { continent = south_america    }
@@ -1024,6 +1030,7 @@ country_event = {
                 OR = {
                 government = democracy
                 government = presidential_dictatorship
+				has_country_flag = Government_Democracy
                 }
             }
              casus_belli = {
@@ -1037,7 +1044,10 @@ country_event = {
         any_country = {
             limit = {
                 is_greater_power = yes
-                government = democracy
+                OR = {
+					government = democracy
+					has_country_flag = Government_Democracy
+				}
                 OR = {
                     capital_scope = { continent = north_america }
                     capital_scope = { continent = south_america    }

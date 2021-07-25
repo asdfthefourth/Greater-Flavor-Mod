@@ -937,7 +937,8 @@ country_event = {
             government = prussian_constitutionalism
             government = semi_constitutional_empire
             government = hms_government
-            government = constitutional_empire
+            government = constitutional_empire						
+			has_country_flag = Government_Democracy
         }
         NOT = {
             tag = IRE
@@ -1182,7 +1183,8 @@ country_event = {
         OR = {
             government = democracy
             government = hms_government
-            government = constitutional_empire
+            government = constitutional_empire					
+			has_country_flag = Government_Democracy
         }
         NOT = {
             has_country_flag = parnell_discouraged
@@ -1306,7 +1308,8 @@ country_event = {
             government = prussian_constitutionalism
             government = semi_constitutional_empire
             government = hms_government
-            government = constitutional_empire
+            government = constitutional_empire					
+			has_country_flag = Government_Democracy
         }
         NOT = { exists = IRE }
     }
@@ -1405,7 +1408,10 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                government = democracy
+                OR = {
+					government = democracy						
+					has_country_flag = Government_Democracy
+				}
             }
             modifier = {
                 factor = 0.5
@@ -1468,7 +1474,10 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                government = democracy
+                OR = {
+					government = democracy						
+					has_country_flag = Government_Democracy
+				}
             }
             modifier = {
                 factor = 1.5

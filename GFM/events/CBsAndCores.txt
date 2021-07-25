@@ -270,6 +270,7 @@ country_event = {
                     government = dominion
                     government = democracy
                     government = constitutional_empire
+					has_country_flag = Government_Democracy
                 }
             }
             modifier = {
@@ -322,6 +323,7 @@ country_event = {
                     government = dominion
                     government = democracy
                     government = constitutional_empire
+					has_country_flag = Government_Democracy
                 }
             }
             modifier = {
@@ -549,14 +551,13 @@ country_event = {
     }
     mean_time_to_happen = {
         months = 800
-        modifier =
-        {
+        modifier = {
             factor = 0.5
-            OR =
-            {
+            OR = {
                 government = democracy
                 government = proletarian_dictatorship
                 government = fascist_dictatorship
+				has_country_flag = Government_Democracy
             }
         }
         modifier = {

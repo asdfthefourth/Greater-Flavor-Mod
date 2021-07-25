@@ -199,7 +199,10 @@ country_event = {
         NOT = {
             month = 11
         }
-        government = democracy
+        OR = {
+			government = democracy
+			has_country_flag = Government_Democracy
+		}
         average_militancy = 3
     }
 

@@ -308,6 +308,7 @@ country_event = {
                     government = hms_government
                     government = constitutional_empire
                     government = proletarian_dictatorship
+					has_country_flag = Government_Democracy
                 }
                 NOT = {
                     has_country_flag = former_sphere_leader
@@ -334,6 +335,7 @@ country_event = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
+						has_country_flag = Government_Democracy
                     }
                     has_country_flag = former_sphere_leader
                     has_country_flag = former_overlord
@@ -365,6 +367,7 @@ country_event = {
                     government = hms_government
                     government = constitutional_empire
                     government = proletarian_dictatorship
+					has_country_flag = Government_Democracy
                 }
                 is_greater_power = no
                 NOT = {
@@ -387,6 +390,7 @@ country_event = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
+						has_country_flag = Government_Democracy
                     }
                 }
                 NOT = {
@@ -746,6 +750,7 @@ country_event = {
                     OR = {
                         ruling_party_ideology = radical
                         government = democracy
+						has_country_flag = Government_Democracy
                     }
                 }
             }
@@ -1004,6 +1009,7 @@ country_event = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
+					has_country_flag = Government_Democracy
                 }
                 NOT = {
                     has_country_flag = former_sphere_leader
@@ -1029,6 +1035,7 @@ country_event = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
+						has_country_flag = Government_Democracy
                     }
                 }
             }
@@ -1065,6 +1072,7 @@ country_event = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
+						has_country_flag = Government_Democracy
                     }
                     has_country_flag = former_sphere_leader
                     has_country_flag = former_overlord
@@ -1100,6 +1108,7 @@ country_event = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
+					has_country_flag = Government_Democracy
                 }
                 NOT = { has_country_flag = former_overlord }
             }
@@ -1117,6 +1126,7 @@ country_event = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
+						has_country_flag = Government_Democracy
                     }
                     has_country_flag = former_overlord
                 }
@@ -1320,6 +1330,7 @@ country_event = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
+					has_country_flag = Government_Democracy
                 }
                 NOT = {
                     has_country_flag = former_sphere_leader
@@ -1347,6 +1358,7 @@ country_event = {
                         government = constitutional_empire
                         government = proletarian_dictatorship
                         ruling_party_ideology = socialist
+						has_country_flag = Government_Democracy
                     }
                 }
             }
@@ -1379,6 +1391,7 @@ country_event = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
+						has_country_flag = Government_Democracy
                     }
                     has_country_flag = former_sphere_leader
                     has_country_flag = former_overlord
@@ -1411,6 +1424,7 @@ country_event = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
+					has_country_flag = Government_Democracy
                 }
                 NOT = { has_country_flag = former_overlord }
                 ruling_party_ideology = socialist
@@ -1428,6 +1442,7 @@ country_event = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
+						has_country_flag = Government_Democracy
                     }
                     has_country_flag = former_overlord
                 }
@@ -2358,7 +2373,10 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                government = democracy
+                OR = {
+					government = democracy
+					has_country_flag = Government_Democracy
+				}
             }
             modifier = {
                 factor = 0.25
@@ -2435,7 +2453,10 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                government = democracy
+                OR = {
+					government = democracy
+					has_country_flag = Government_Democracy
+				}
             }
             modifier = {
                 factor = 0.25
@@ -2516,7 +2537,10 @@ country_event = {
             factor = 50
             modifier = {
                 factor = 0.5
-                government = democracy
+                OR = {
+					government = democracy
+					has_country_flag = Government_Democracy
+				}
             }
             modifier = {
                 factor = 1.75
@@ -2633,7 +2657,10 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                government = democracy
+                OR = {
+					government = democracy
+					has_country_flag = Government_Democracy
+				}
             }
             modifier = {
                 factor = 0.25
@@ -2736,7 +2763,10 @@ country_event = {
             factor = 50
             modifier = {
                 factor = 0.5
-                government = democracy
+                OR = {
+					government = democracy
+					has_country_flag = Government_Democracy
+				}
             }
             modifier = {
                 factor = 1.75

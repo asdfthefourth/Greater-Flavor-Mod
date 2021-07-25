@@ -2166,12 +2166,14 @@ country_event = {
                             government = democracy
                             government = hms_government
                             government = constitutional_empire
+							has_country_flag = Government_Democracy
                         }
                         THIS = {
                             OR = {
                                 government = democracy
                                 government = hms_government
                                 government = constitutional_empire
+								has_country_flag = Government_Democracy
                             }
                         }
                         FROM = {
@@ -2346,12 +2348,14 @@ country_event = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
+					has_country_flag = Government_Democracy
                 }
                 FROM = {
                     OR = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
+						has_country_flag = Government_Democracy
                     }
                 }
                 any_greater_power = {
@@ -2451,6 +2455,7 @@ country_event = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
+					has_country_flag = Government_Democracy
                 }
                 NOT = { ruling_party_ideology = communist }
                 FROM = { government = proletarian_dictatorship }
@@ -2473,6 +2478,7 @@ country_event = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
+						has_country_flag = Government_Democracy
                     }
                 }
             }
@@ -2494,6 +2500,7 @@ country_event = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
+						has_country_flag = Government_Democracy
                     }
                 }
             }
@@ -10162,6 +10169,7 @@ country_event = {
             OR = {
                 government = democracy
                 government = hms_government
+				has_country_flag = Government_Democracy
             }
         }
         modifier = {
@@ -10293,6 +10301,7 @@ country_event = {
             OR = {
                 government = democracy
                 government = hms_government
+				has_country_flag = Government_Democracy
             }
         }
         modifier = {

@@ -18,7 +18,10 @@ country_event = {
         war = no
         NOT = {
             year = 1913
-            government = democracy
+			OR = {
+				government = democracy						
+				has_country_flag = Government_Democracy
+			}
             government = hms_government
             government = constitutional_empire
             poor_strata_everyday_needs = 0.75 #will not fire if poor are getting 75%+ everyday needs
@@ -104,7 +107,10 @@ country_event = {
         has_country_flag = Madero
         NOT = {
             year = 1914
-            government = democracy
+			OR = {
+				government = democracy						
+				has_country_flag = Government_Democracy
+			}
             government = hms_government
             government = constitutional_empire
             poor_strata_everyday_needs = 0.95 #will not fire if poor are getting 95%+ everyday needs
@@ -163,7 +169,10 @@ country_event = {
         has_country_flag = MaderoRevolt
         NOT = {
             year = 1915
-            government = democracy
+			OR = {
+				government = democracy						
+				has_country_flag = Government_Democracy
+			}
             government = hms_government
             government = constitutional_empire
         }
@@ -210,7 +219,10 @@ country_event = {
         has_country_flag = MaderoRevolt
         year = 1911
         NOT = {
-            government = democracy
+			OR = {
+				government = democracy						
+				has_country_flag = Government_Democracy
+			}
             government = hms_government
             government = constitutional_empire
             year = 1915
@@ -591,7 +603,10 @@ country_event = {
         is_vassal = no
         NOT = {
             exists = YUC
-            government = democracy
+			OR = {
+				government = democracy						
+				has_country_flag = Government_Democracy
+			}
             government = hms_government
             government = constitutional_empire
         }
@@ -666,7 +681,10 @@ country_event = {
 
     trigger = {
         tag = YUC
-        government = democracy
+		OR = {
+			government = democracy						
+			has_country_flag = Government_Democracy
+		}
         is_vassal = no
         war = no
         UCA = {
@@ -1004,7 +1022,10 @@ country_event = {
         tag = MEX
         war = no
         ai = yes
-        government = democracy
+		OR = {
+			government = democracy						
+			has_country_flag = Government_Democracy
+		}
         year = 1876
         NOT = { year = 1900 }
     }

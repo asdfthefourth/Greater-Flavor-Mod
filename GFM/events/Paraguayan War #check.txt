@@ -30,6 +30,7 @@ country_event = {
         OR = {
             government = democracy
             government = hms_government
+			has_country_flag = Government_Democracy
         }
         PRG = { government = presidential_dictatorship }
     }
@@ -116,6 +117,7 @@ country_event = {
             in_sphere = URU
             government = democracy
             government = hms_government
+			has_country_flag = Government_Democracy
             ruling_party_ideology = liberal
             badboy = 0.64
             has_global_flag = paraguayan_war

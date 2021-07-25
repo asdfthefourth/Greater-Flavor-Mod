@@ -20,7 +20,12 @@ country_event = {
             war_policy = pro_military
         }
         NOT = { government = proletarian_dictatorship }
-        NOT = { government = democracy }
+        NOT = { 
+			OR = {
+				government = democracy						
+				has_country_flag = Government_Democracy
+			}
+		}
         OR = {
             AND = {
                 is_greater_power = yes

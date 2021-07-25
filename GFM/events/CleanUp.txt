@@ -82,7 +82,10 @@ country_event = {
     trigger = {
         is_vassal = no
         civilized = yes
-        government = democracy
+        OR = {
+			government = democracy
+			has_country_flag = Government_Democracy
+		}
         ruling_party_ideology = reactionary
         average_militancy = 3
         OR = {
@@ -480,7 +483,10 @@ country_event = {
     picture = "communist_crowd"
 
     trigger = {
-        government = democracy
+        OR = {
+			government = democracy
+			has_country_flag = Government_Democracy
+		}
         vote_franschise = none_voting
         OR = {
             ruling_party_ideology = conservative
@@ -526,7 +532,10 @@ country_event = {
     picture = "communist_crowd"
 
     trigger = {
-        government = democracy
+        OR = {
+			government = democracy
+			has_country_flag = Government_Democracy
+		}
         vote_franschise = none_voting
         ruling_party_ideology = radical
         civilized = yes
@@ -567,7 +576,10 @@ country_event = {
     picture = "communist_crowd"
 
     trigger = {
-        government = democracy
+        OR = {
+			government = democracy
+			has_country_flag = Government_Democracy
+		}
         vote_franschise = none_voting
         ruling_party_ideology = communist
         civilized = yes
@@ -608,7 +620,10 @@ country_event = {
     picture = "communist_crowd"
 
     trigger = {
-        government = democracy
+        OR = {
+			government = democracy
+			has_country_flag = Government_Democracy
+		}
         vote_franschise = none_voting
         ruling_party_ideology = fascist
         civilized = yes

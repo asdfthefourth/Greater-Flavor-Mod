@@ -318,6 +318,7 @@ country_event = {
                             government = semi_constitutional_empire
                             government = democracy
                             NOT = { invention = mass_advertising }
+							has_country_flag = Government_Democracy
                         }
                     }
                 }
@@ -372,6 +373,7 @@ country_event = {
                             government = prussian_constitutionalism
                             government = hms_government
                             government = democracy
+							has_country_flag = Government_Democracy
                         }
                     }
                 }

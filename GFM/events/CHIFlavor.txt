@@ -585,7 +585,14 @@ province_event = {
         is_core = CHI
         NOT = { has_province_modifier = peasant_revolt }
         NOT = { owner = { government = hms_government } }
-        NOT = { owner = { government = democracy } }
+        NOT = { 
+			owner = { 
+				OR = {
+					government = democracy 
+					has_country_flag = Government_Democracy
+				} 
+			}
+		}
         NOT = { owner = { government = constitutional_empire } }
         OR = {
             liberal = 10
@@ -3116,6 +3123,7 @@ country_event = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
+					has_country_flag = Government_Democracy
                 }
             }
             NOT = { prestige = 200 }
@@ -3210,6 +3218,7 @@ country_event = {
                 government = democracy
                 government = hms_government
                 government = constitutional_empire
+				has_country_flag = Government_Democracy
             }
         }
         modifier = {
@@ -5254,8 +5263,18 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                government = democracy
-                FROM = { NOT = { government = democracy }  }
+                OR = {
+					government = democracy
+					has_country_flag = Government_Democracy
+				}
+                FROM = { 
+					NOT = { 
+						OR = {
+							government = democracy
+							has_country_flag = Government_Democracy
+						}
+					}  
+				}
             }
         }
     }
@@ -5318,8 +5337,18 @@ country_event = {
             }
             modifier = {
                 factor = 2
-                government = democracy
-                FROM = { NOT = { government = democracy }  }
+                OR = {
+					government = democracy
+					has_country_flag = Government_Democracy
+				}
+                FROM = { 
+					NOT = { 
+						OR = {
+							government = democracy
+							has_country_flag = Government_Democracy
+						}
+					}  
+				}
             }
         }
     }
