@@ -1,5 +1,8 @@
+NOTE: 
+some flag numbers that are derived from communnist flags are broken. To fix this contact Bob Bobington from the Victoria 2 Modding server.
+
 USA 5 13 Stars
-USA 6 15 Stars
+USA 6 BROKEN-COMMUNIST 15 Stars
 USA 7 20 Stars
 USA 8 21 Stars
 USA 9 23 Stars
@@ -13,3 +16,18 @@ USA 16 30 Stars
 USA 17 31 Stars
 USA 18 32 Stars
 USA 19 33 Stars
+USA 20 34 Stars
+USA 21 35 Stars
+USA 22 36 Stars
+USA 23 37 Stars
+USA 24 38 Stars
+USA 25 43 Stars
+USA 26 44 Stars
+USA 27 45 Stars
+USA 28 46 Stars
+USA 29 48 Stars
+USA 30 49 Stars
+USA 31 50 Stars
+USA 32 60 Stars
+USA 33 70 Stars
+USA 34 100 Stars
