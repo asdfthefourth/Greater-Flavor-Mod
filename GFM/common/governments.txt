@@ -131,6 +131,54 @@ democracy = {
     flagType = republic
 }
 
+democracy_5th = {
+    liberal = yes
+    socialist = yes
+    conservative = yes
+    reactionary = yes
+    communist = yes
+    radical = yes
+    fascist = yes
+
+
+    election = yes
+    duration = 48
+    appoint_ruling_party = no
+    flagType = 5th
+}
+
+democracy_6th = {
+    liberal = yes
+    socialist = yes
+    conservative = yes
+    reactionary = yes
+    communist = yes
+    radical = yes
+    fascist = yes
+
+
+    election = yes
+    duration = 48
+    appoint_ruling_party = no
+    flagType = 6th
+}
+
+democracy_7th = {
+    liberal = yes
+    socialist = yes
+    conservative = yes
+    reactionary = yes
+    communist = yes
+    radical = yes
+    fascist = yes
+
+
+    election = yes
+    duration = 48
+    appoint_ruling_party = no
+    flagType = 7th
+}
+
 federal_democracy = {
     liberal = yes
     socialist = yes

@@ -1,0 +1,113 @@
+country_event = {
+    id = 777770599
+    title = "Self Government_Democracy"
+    desc = "This nation will be considered a Government_Democracy with stars."
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "Huzzah!"
+        set_country_flag = Government_Democracy
+    }
+}
+
+country_event = {
+
+    id = 777770600
+
+    title = "The 13 State Republic" # New State
+    desc = "The states of the replublic now number 13, Our flag must represent this accordingly."
+    picture = "ottoman"
+
+    trigger = {
+		tag = USA
+		has_country_flag = Government_Democracy
+		NOT = { check_variable = { which = USA_Stars_Count value = 13 }  }
+		number_of_states = 1
+		NOT = { number_of_states = 15 }
+    }
+
+    mean_time_to_happen = {
+        days = 1
+        modifier = {
+            factor = 1
+            USA = { exists = yes }
+        }
+    }
+
+    option = {
+        name = "*Stary Eyed*"
+		set_variable = { which = USA_Stars_Count value = 13 }
+		government = democracy_5th
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+country_event = {
+
+    id = 777770601
+
+    title = "The 15 State Republic" # New State
+    desc = "The states of the replublic now number 15, Our flag must represent this accordingly."
+    picture = "ottoman"
+
+    trigger = {
+		tag = USA
+		has_country_flag = Government_Democracy
+		NOT = { check_variable = { which = USA_Stars_Count value = 15 } }
+		number_of_states = 15
+		NOT = { number_of_states = 20 }
+    }
+
+    mean_time_to_happen = {
+        days = 1
+        modifier = {
+            factor = 1
+            USA = { exists = yes }
+        }
+    }
+
+    option = {
+        name = "*Stary Eyed*"
+        set_variable = { which = USA_Stars_Count value = 15 }
+		government = democracy_6th
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+country_event = {
+
+    id = 777770602
+
+    title = "The 20 State Republic" # New State
+    desc = "The states of the replublic now number 20, Our flag must represent this accordingly."
+    picture = "ottoman"
+
+    trigger = {
+		tag = USA
+		has_country_flag = Government_Democracy
+		NOT = { check_variable = { which = USA_Stars_Count value = 20 } }
+		number_of_states = 20
+		NOT = { number_of_states = 21 }
+    }
+
+    mean_time_to_happen = {
+        days = 1
+        modifier = {
+            factor = 1
+            USA = { exists = yes }
+        }
+    }
+
+    option = {
+        name = "*Stary Eyed*"
+        set_variable = { which = USA_Stars_Count value = 20 }
+		government = democracy_7th
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
