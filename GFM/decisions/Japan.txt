@@ -1482,12 +1482,14 @@ political_decisions = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
+					has_country_flag = Government_Democracy
                 }
                 JAP = {
                     NOT = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
+						has_country_flag = Government_Democracy
                     }
                 }
             }
@@ -1498,12 +1500,14 @@ political_decisions = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
+						has_country_flag = Government_Democracy
                     }
                 }
                 NOT = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
+					has_country_flag = Government_Democracy
                 }
             }
             modifier = {

@@ -542,7 +542,12 @@ political_decisions = {
 					ai = yes
 					war = no
 					citizens_rights = primary_culture_only
-					NOT = { government = democracy }
+					NOT = { 
+						OR = {
+							government = democracy
+							has_country_flag = Government_Democracy
+						}
+					}
 					NOT = { government = hms_government }
 					NOT = { government = constitutional_empire }
 					war_policy = jingoism
@@ -659,7 +664,12 @@ political_decisions = {
         allow = {
             war = no
             citizens_rights = primary_culture_only
-            NOT = { government = democracy }
+            NOT = { 
+				OR = {
+					government = democracy
+					has_country_flag = Government_Democracy
+				}
+			}
             NOT = { government = hms_government }
             NOT = { government = constitutional_empire }
             war_policy = jingoism

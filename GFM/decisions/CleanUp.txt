@@ -266,6 +266,7 @@ political_decisions = {
                 AND = { government = prussian_constitutionalism NOT = { has_country_flag = semi_constitutional_monarchy_gov } }
                 AND = { government = hms_government NOT = { has_country_flag = constitutional_monarchy_gov } }
                 AND = { government = democracy NOT = { has_country_flag = democracy_gov } }
+                AND = { has_country_flag = Government_Democracy NOT = { has_country_flag = democracy_gov } }
                 AND = { government = presidential_dictatorship NOT = { has_country_flag = presidential_dictatorship_gov } }
                 AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
                 AND = { government = colonial_company NOT = { has_country_flag = clean_up_colonial_government } }
@@ -280,6 +281,7 @@ political_decisions = {
                         AND = { government = prussian_constitutionalism NOT = { has_country_flag = semi_constitutional_monarchy_gov } }
                         AND = { government = hms_government NOT = { has_country_flag = constitutional_monarchy_gov } }
                         AND = { government = democracy NOT = { has_country_flag = democracy_gov } }
+                        AND = { has_country_flag = Government_Democracy NOT = { has_country_flag = democracy_gov } }
                         AND = { government = presidential_dictatorship NOT = { has_country_flag = presidential_dictatorship_gov } }
                         AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
                         AND = { government = colonial_company NOT = { has_country_flag = clean_up_colonial_government } }
