@@ -1,14 +1,17 @@
 political_decisions = {
 	USAFlagOverride = {
 		potential = {
-		ai = no
-		NOT = {
-			has_global_flag = USAOverride
+			ai = no
+			tag = USA
+			NOT = {
+				has_global_flag = USAOverride
+			}
 		}
-		tag = USA
+		allow = {
 		}
 		effect = {
 			set_global_flag = USAOverride
+			government = democracy
 		}
 		ai_will_do = {
 			factor = 0
@@ -19,6 +22,8 @@ political_decisions = {
 			ai = no
 			has_global_flag = USAOverride
 			tag = USA
+		}
+		allow = {
 		}
 		effect = {
 			clr_global_flag = USAOverride
