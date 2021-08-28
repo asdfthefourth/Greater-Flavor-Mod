@@ -56,6 +56,7 @@ country_event = {
 		clr_global_flag = Total_Six_Victor
 		clr_global_flag = Total_Seven_Victor
 		clr_global_flag = Total_Eight_Victor
+		set_country_flag = Second_Victor
     }
     option = {
         name = "Three"
@@ -67,6 +68,7 @@ country_event = {
 		clr_global_flag = Total_Six_Victor
 		clr_global_flag = Total_Seven_Victor
 		clr_global_flag = Total_Eight_Victor
+		set_country_flag = Third_Victor
     }
     option = {
         name = "Four"
@@ -78,6 +80,7 @@ country_event = {
 		clr_global_flag = Total_Six_Victor
 		clr_global_flag = Total_Seven_Victor
 		clr_global_flag = Total_Eight_Victor
+		set_country_flag = Fourth_Victor
     }
     option = {
         name = "Five"
@@ -89,6 +92,7 @@ country_event = {
 		clr_global_flag = Total_Six_Victor
 		clr_global_flag = Total_Seven_Victor
 		clr_global_flag = Total_Eight_Victor
+		set_country_flag = Fifth_Victor
     }
     option = {
         name = "Six"
@@ -100,6 +104,7 @@ country_event = {
 		set_global_flag = Total_Six_Victor
 		clr_global_flag = Total_Seven_Victor
 		clr_global_flag = Total_Eight_Victor
+		set_country_flag = Sixth_Victor
     }
     option = {
         name = "Seven"
@@ -111,6 +116,7 @@ country_event = {
 		clr_global_flag = Total_Six_Victor
 		set_global_flag = Total_Seven_Victor
 		clr_global_flag = Total_Eight_Victor
+		set_country_flag = Seventh_Victor
     }
     option = {
         name = "Three"
@@ -122,6 +128,7 @@ country_event = {
 		clr_global_flag = Total_Six_Victor
 		clr_global_flag = Total_Seven_Victor
 		set_global_flag = Total_Eight_Victor
+		set_country_flag = Eighth_Victor
     }
 }
 
