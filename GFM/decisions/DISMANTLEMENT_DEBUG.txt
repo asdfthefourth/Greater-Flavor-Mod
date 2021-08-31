@@ -1,4 +1,14 @@
 political_decisions = {
+	Set_Many_Victors = {
+		potential = {
+		}
+		effect = {
+			country_event = 777770400
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	Set_Victor_Second = {
 		potential = {
 		}
@@ -33,7 +43,7 @@ political_decisions = {
 		potential = {
 		}
 		effect = {
-			set_country_flag = Major_Defeated
+			country_event = 777770401
 		}
 		ai_will_do = {
 			factor = 0

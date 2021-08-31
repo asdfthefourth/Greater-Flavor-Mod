@@ -1,7 +1,7 @@
 country_event = {
     id = 777770400
     title = "Self Tag Alternate Victor"
-    desc = "This nation will be considered a secondary victor."
+    desc = "This nation will be considered any victor."
     fire_only_once = yes
     is_triggered_only = yes
     option = {
