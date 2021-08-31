@@ -1,0 +1,55 @@
+political_decisions = {
+	Set_Victor_Second = {
+		potential = {
+		}
+		effect = {
+			set_country_flag = Second_Victor
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Set_Victor_Third = {
+		potential = {
+		}
+		effect = {
+			set_country_flag = Third_Victor
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Set_Victor_Total = {
+		potential = {
+		}
+		effect = {
+			country_event = 777770402
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Select_as_Target = {
+		potential = {
+		}
+		effect = {
+			set_country_flag = Major_Defeated
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Fire_Conference = {
+		potential = {
+		ai = false
+		}
+		allow = {
+		}
+		effect = {
+			country_event = 777770403
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
