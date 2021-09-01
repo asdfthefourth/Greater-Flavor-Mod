@@ -5,7 +5,46 @@ country_event = {
     fire_only_once = yes
     is_triggered_only = yes
     option = {
-        name = "Huzzah!"
+        name = "Only One Victor!"
+		set_global_flag = Total_One_Victor
+    }
+    option = {
+        name = "Set Country Flag Second Victor!"
+		set_global_flag = Total_One_Victor
+        set_country_flag = Second_Victor
+    }
+    option = {
+        name = "Set Country Flag Third Victor!"
+		set_global_flag = Total_One_Victor
+		set_country_flag = Third_Victor
+    }
+    option = {
+        name = "Set Country Flag Fourth Victor!"
+		set_global_flag = Total_One_Victor
+		set_country_flag = Fourth_Victor
+    }
+    option = {
+        name = "Set Country Flag Fifth Victor!"
+		set_global_flag = Total_One_Victor
+		set_country_flag = Fifth_Victor
+    }
+    option = {
+        name = "Set Country Flag Sixth Victor!"
+		set_global_flag = Total_One_Victor
+		set_country_flag = Sixth_Victor
+    }
+    option = {
+        name = "Set Country Flag Seventh Victor!"
+		set_global_flag = Total_One_Victor
+		set_country_flag = Seventh_Victor
+    }
+    option = {
+        name = "Set Country Flag Eighth Victor!"
+		set_global_flag = Total_One_Victor
+		set_country_flag = Eighth_Victor
+    }
+    option = {
+        name = "Set Country Flag All Victors!"
 		set_global_flag = Total_One_Victor
         set_country_flag = Second_Victor
 		set_country_flag = Third_Victor
