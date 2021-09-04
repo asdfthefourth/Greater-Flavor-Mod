@@ -133,8 +133,34 @@ political_decisions = {
         }
         effect = {
             social_reform = low_schools
-			years_of_research = 0.1
+			years_of_research = 0.3
             set_country_flag = 1420_passed
+        }
+    }
+
+    law_8871 = {
+		picture = law_8871
+        potential = {
+            OR = {
+                tag = ARG
+                tag = ARC
+				tag = LPL
+            }
+            NOT = { has_country_flag = 8871_passed }
+			NOT = { vote_franschise = universal_voting }
+        }
+        allow = {
+            OR = {
+			    year = 1912
+				social_alienation = 1
+			}
+            ruling_party_ideology = conservative
+        }
+        effect = {
+            prestige = 2
+			years_of_research = 0.07
+            political_reform = universal_voting
+            set_country_flag = 8871_passed
         }
     }
 
@@ -804,13 +830,9 @@ political_decisions = {
         picture = treaty_of_petropolis_stamp
         potential = {
             tag = BRZ
-            OR = {
-				AND = {
-					owns = 3382
-					owns = 3381
-					NOT = { owns = 2549 }
-				}
-			}
+			owns = 3382
+			owns = 3381
+			NOT = { owns = 2549 }
             NOT = { has_country_flag = treaty_of_petropolis }
             NOT = { has_country_flag = signed_treaty_of_petropolis }
         }

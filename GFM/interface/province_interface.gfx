@@ -552,8 +552,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_terrainimg_palermo"
-		texturefile = "gfx\\interface\\terrain_palermo.tga"
+		name = "GFX_terrainimg_stralsund"
+		texturefile = "gfx\\interface\\terrain_stralsund.tga"
 		norefcount = yes
 	}
 
@@ -2274,5 +2274,16 @@ spriteTypes = {
 	norefcount = yes
     }
 
+    spriteType = {
+	name = "GFX_terrainimg_tegucigalpa"
+	texturefile = "gfx\\interface\\terrain_tegucigalpa.tga"
+	norefcount = yes
+    }
+
+	spriteType = {
+	name = "GFX_terrainimg_belize"
+	texturefile = "gfx\\interface\\terrain_belize.tga"
+	norefcount = yes
+    }
 
 }

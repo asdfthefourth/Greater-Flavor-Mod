@@ -2131,4 +2131,16 @@ blockade_rosas_desc;After the Argentine Confederation declared war on Peru-Boliv
 carmen_harbor_title;Carmen de Patagones;;;;;;;;;;;;;
 carmen_harbor_desc;The city of Carmen de Patagones, founded by the Spanish in the late 18th century, has been one of the few successful settlements on Patagonia. The city, already having served a crucial role as a naval base during the Cisplatine War, could be a very important harbor in the Atlantic Ocean, reducing our dependency on the port of Buenos Aires, and strengthen our claims on Patagonia.;;;;;;;;;;;;;
 establish_ypf_oil_title;Create YPF;;;;;;;;;;;;;
-establish_ypf_oil_title;Yacimientos Petrolíferos Fiscales, YPF for short, was the company created by Argentine president Hipólito Yrigoyen after the discovery of the first oil deposits in Comodoro Rivadavia, and was the first entirely state-run oil company in the world. The region's settlements grew rapidly, and the company at one point had fifty thousand workers.;;;;;;;;;;;;;
+establish_ypf_oil_desc;Yacimientos Petrolíferos Fiscales, YPF for short, was the company created by Argentine president Hipólito Yrigoyen after the discovery of the first oil deposits in Comodoro Rivadavia, and was the first entirely state-run oil company in the world. The region's settlements grew rapidly, and the company at one point had fifty thousand workers.;;;;;;;;;;;;;
+chaco_cotton_title;Plant Cotton in the Gran Chaco;;;;;;;;;;;;;
+chaco_cotton_desc;Ever since we took control of the Gran Chaco, exploitation of its vast woodland has been rampant. Over the years, due to deforestation and regulations of the government, the timber production has drastically slowed down. However, we could help the region's economy by encouraging cotton plantations.;;;;;;;;;;;;;
+law_8871_title;The Sáenz Peña Law;;;;;;;;;;;;;
+law_8871_desc;The Sáenz Peña Law was Law 8871 of Argentina, sanctioned by the National Congress on 10 February 1912, which established the universal, secret and compulsory male suffrage though the creation of an electoral list. The law, however, did not account for non-naturalized immigrants.;;;;;;;;;;;;;
+potrero_de_los_funes_title;Build the Potrero de los Funes Dam;;;;;;;;;;;;;
+potrero_de_los_funes_desc;A proposal to build a dam in the province of San Luis utilizing the Potrero river has been brought forth. Doing it, albeit somewhat expensive, would bring the region far greater prosperity, and possibly attract tourism.;;;;;;;;;;;;;
+build_san_roque_dam_title;Build the San Roque Dam;;;;;;;;;;;;;
+build_san_roque_dam_desc;Several proposals have been brought up to construct a dam in the fertile Quisquisacate Valley using the Cosquín and San Antonio rivers. If it were to be completed, it would be the largest dam in the world and help supply Córdoba with electricity and water, aside from possibly attracting settlers to the shores of the dam.;;;;;;;;;;;;;
+galapagos_concession_title;Demand the Galapagos Islands;;;;;;;;;;;;;
+galapagos_concession_desc;With Ecuador being defeated, we can demand the Galapagos Islands from them.;;;;;;;;;;;;;
+caja_de_conversion_title;Caja de Conversión;;;;;;;;;;;;;
+caja_de_conversion_desc;The Caja de Conversión was a financial institution of $COUNTRY$ created in 1890 during president Carlos Pellegrini, through Law 2,241. Predecessor of the Central Bank of $COUNTRY$, its main function was to organize national issues and attend to the circulation and gradual amortization of legal tender, independently of the National Government.;;;;;;;;;;;;;

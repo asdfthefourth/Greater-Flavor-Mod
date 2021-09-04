@@ -1122,17 +1122,17 @@ western_presence_research = {
 }
 
 foreign_smugglers = {
-    poor_life_needs = -0.05
-    middle_life_needs = -0.05
-    rich_life_needs = -0.05
+    #poor_life_needs = -0.05
+    #middle_life_needs = -0.05
+    #rich_life_needs = -0.05
     pop_militancy_modifier = 0.05
     icon = 12
 }
 
 foreign_trading_post = {
-    poor_life_needs = -0.1
-    middle_life_needs = -0.1
-    rich_life_needs = -0.1
+    #poor_life_needs = -0.1
+    #middle_life_needs = -0.1
+    #rich_life_needs = -0.1
     pop_militancy_modifier = 0.05
     icon = 11
 }
@@ -1145,6 +1145,12 @@ silk_famine = {
 
 naval_school = {
     navy_tech_research_bonus = 0.05
+    leadership_modifier = 0.01
+    icon = 17
+}
+
+aviation_school = {
+    army_tech_research_bonus = 0.05
     leadership_modifier = 0.01
     icon = 17
 }
@@ -1844,6 +1850,13 @@ central_bank_established = {
     icon = 11
 }
 
+caja_conversion = {
+    poor_savings_modifier = 0.1
+    tax_efficiency = 0.05
+    tariff_efficiency_modifier = 0.05
+    icon = 11
+}
+
 belgian_bank = {
     loan_interest = -0.25
     poor_savings_modifier = 0.2
@@ -2059,7 +2072,7 @@ small_country_draft = {
 nationalist_agitation = {
     pop_consciousness_modifier = 0.2
     pop_militancy_modifier = 0.25
-    immigrant_push = -0.50
+    immigrant_push = -0.15
     icon = 4
 }
 
@@ -3448,14 +3461,14 @@ DIM_flooding = {
 cultuurstelsel = {
     local_RGO_output = 0.1
     pop_militancy_modifier = 0.05
-    poor_life_needs = 0.1
+    #poor_life_needs = 0.1
     icon = 11
 }
 
 cultuurstelsel_reformed = {
     local_RGO_output = -0.05
     pop_militancy_modifier = -0.05
-    poor_life_needs = -0.05
+    #poor_life_needs = -0.05
     icon = 12
 }
 
@@ -4259,7 +4272,7 @@ peacetime_mobilization = {
 
 rebuilding_city = {
     population_growth = 0.001
-    poor_life_needs = -0.8
+    #poor_life_needs = -0.8
     rich_income_modifier = 0.25
     local_RGO_output = 0.5
     icon = 11
@@ -4618,7 +4631,7 @@ social_spen_cleanup = {
 	icon = 10
 }
 
-francisco_morázan = {
+francisco_morazan = {
     prestige = 0.010
     org_regain = 0.05
     icon = 3
@@ -4671,8 +4684,18 @@ french_blockade = {
     global_immigrant_attract = -1
     icon = 8
 }
+british_blockade = {
+	immigrant_attract = -5
+	local_artisan_output = -2
+	local_factory_output = -2
+	local_repair = -2
+	local_RGO_output = -5
+	local_ship_build = -2
+	population_growth = -0.001
+    icon = 8
+}
 serfdom_emigration_cooldown = {
-	immigrant_push = -0.80
+	#immigrant_push = -0.80
 }
 
 ypf_oil = {
@@ -4680,4 +4703,17 @@ ypf_oil = {
     farm_rgo_size = 0.5
     immigrant_attract = 0.05
     icon = 1
+}
+
+embalse = {
+    immigrant_attract = 0.02
+    population_growth = 0.0005
+    local_RGO_output = 0.20
+    icon = 13
+}
+
+mar_chiquita_tourism = {
+    immigrant_attract = 0.2
+    population_growth = 0.0005
+    icon = 11
 }

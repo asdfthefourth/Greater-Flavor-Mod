@@ -1,4 +1,520 @@
 country_event = {
+    id = 123851
+    title = "The Samoan Compromise"
+    desc = "Germany has agreed to the proposed settlement to the Samoan Crisis, ceding the Solomon and Santa Cruz Islands to the United Kingdom while receiving the two main islands of Samoa and leaving the rest to the United States."
+    picture = "samoan_storm"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Huzzah!"
+		ai_chance = { factor = 1 }
+    }
+}
+country_event = {
+    id = 123850
+    title = "The compromise has failed"
+    desc = "Germany has proven unwilling to compromise on the competing claims on Samoa despite Anglo-American accord. How shall we react to this?"
+    picture = "samoan_storm"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Samoa isn't worth a conflict."
+		ai_chance = { factor = 1 }
+    }
+	option = {
+        name = "Then we shall take it ourselves! §RGain 1 infamy§W"
+		casus_belli = { target = SMO type = establish_protectorate_casus_belli months = 36 }
+		badboy = 1
+		ai_chance = { factor = 1 }
+    }
+}
+country_event = {
+    id = 123849
+    title = "The Samoan Crisis"
+    desc = "Competing British, American and German claims on Samoa led to all three of us dispatching warships 24/7 to stake said claims. A tropical storm just sank all but one British corvette. Britain wishes to compromise, America has agreed."
+    picture = "samoan_storm"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Let's solve this diplomatically."
+		inherit = SMO
+		random_owned = {
+            limit = { province_id = 2544 USA = { exists = yes } }
+            secede_province = USA
+        }
+        random_owned = {
+            limit = { province_id = 2544 US2 = { exists = yes } }
+            secede_province = US2
+        }
+		2534 = { secede_province = ENG }
+		2536 = { secede_province = ENG }
+		ENG = { country_event = 123851 }
+		any_country = {
+			limit = {
+				OR = {
+					tag = USA
+					tag = US2
+				}
+				exists = yes
+			}
+			country_event = 123851
+		}
+		ai_chance = { factor = 1 }
+    }
+	option = {
+        name = "We will not compromise! §RGain 1 infamy§W"
+		casus_belli = { target = SMO type = establish_protectorate_casus_belli months = 36 }
+		badboy = 1
+		relation = { who = USA value = -50 }
+		relation = { who = US2 value = -50 }
+		relation = { who = ENG value = -50 }
+		any_country = {
+			limit = {
+				OR = {
+					tag = USA
+					tag = US2
+				}
+				exists = yes
+			}
+			country_event = 123850
+		}
+		ENG = { country_event = 123850 }
+		ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+    id = 123848
+    title = "The Samoan Crisis"
+    desc = "Competing British, American and German claims on Samoa led to all three of us dispatching warships 24/7 to stake said claims. A tropical storm just sank all but one British corvette. Britain tried to compromise, but America would not relent."
+    picture = "samoan_storm"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Waver our claims, Samoa isn't worth conflict."
+		ai_chance = { factor = 1 }
+    }
+	option = {
+        name = "We will not back down! §RGain 1 infamy§W"
+		casus_belli = { target = SMO type = establish_protectorate_casus_belli months = 36 }
+		badboy = 1
+		ai_chance = { factor = 1 }
+    }
+}
+country_event = {
+    id = 123847
+    title = "The Samoan Crisis"
+    desc = "Following our attempt at negotiating a compromise to the competing claims over the island of Samoa, the United States have proven themselves unwilling to settle for less than total control and broke relations."
+    picture = "samoan_storm_three"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Waver our claims, Samoa isn't worth conflict."
+		ai_chance = { factor = 1 }
+    }
+	option = {
+        name = "We will not back down! §RGain 1 infamy§W"
+		casus_belli = { target = SMO type = establish_protectorate_casus_belli months = 36 }
+		badboy = 1
+		ai_chance = { factor = 1 }
+    }
+}
+country_event = {
+    id = 123846
+    title = "The Samoan Crisis"
+    desc = "Competing British, American and German claims on Samoa led to all three of us dispatching warships 24/7 to stake said claims. A tropical storm just sank all but one British corvette. Britain wishes to compromise on the matter."
+    picture = "samoan_storm_three"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Let's solve this diplomatically."
+		GER = { country_event = 123849 }
+		ai_chance = { factor = 1 }
+    }
+	option = {
+        name = "We will not compromise! §RGain 1 infamy§W"
+		casus_belli = { target = SMO type = establish_protectorate_casus_belli months = 36 }
+		badboy = 1
+		relation = { who = ENG value = -50 }
+		relation = { who = GER value = -50 }
+		ENG = { country_event = 123847 }
+		GER = { country_event = 123848 }
+		ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+    id = 123845
+    title = "The Samoan Crisis"
+    desc = "Competing British, American and German claims on Samoa led to all three of us dispatching warships 24/7 to stake said claims. A tropical storm just sank all but one British corvette. Britain has refused to compromise."
+    picture = "samoan_storm_three"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Waver our claims, Samoa isn't worth conflict."
+		ai_chance = { factor = 1 }
+    }
+	option = {
+        name = "We will not back down! §RGain 1 infamy§W"
+		casus_belli = { target = SMO type = establish_protectorate_casus_belli months = 36 }
+		badboy = 1
+		ai_chance = { factor = 1 }
+    }
+}
+country_event = {
+    id = 123844
+    title = "The Samoan Crisis"
+    desc = "Competing British, American and German claims on Samoa led to all three of us dispatching warships 24/7 to stake said claims. A tropical storm just sank all but one British corvette. Britain has refused to compromise."
+    picture = "samoan_storm"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Waver our claims, Samoa isn't worth conflict."
+		ai_chance = { factor = 1 }
+    }
+	option = {
+        name = "We will not back down! §RGain 1 infamy§W"
+		casus_belli = { target = SMO type = establish_protectorate_casus_belli months = 36 }
+		badboy = 1
+		ai_chance = { factor = 1 }
+    }
+}
+country_event = {
+    id = 123843
+    title = "The Samoan Crisis"
+    desc = "Competing British, American and German claims on Samoa led to all three of us dispatching warships 24/7 to stake said claims. A tropical storm just sank all but one British corvette."
+    picture = "samoan_storm_two"
+	fire_only_once = yes
+	trigger = {
+       owns = 1898
+	   tag = ENG
+	   has_country_flag = samoa_claimant
+	   OR = {
+		USA = { has_country_flag = samoa_claimant }
+		US2 = { has_country_flag = samoa_claimant }
+	   }
+	   GER = { has_country_flag = samoa_claimant }
+	   2543 = { owned_by = SMO }
+	   2544 = { owned_by = SMO }
+    }
+    mean_time_to_happen = {
+        months = 2
+    }
+    option = {
+        name = "Let's solve this diplomatically."
+		any_country = {
+			limit = {
+				OR = {
+					tag = USA
+					tag = US2
+				}
+				exists = yes
+			}
+			country_event = 123846
+		}
+		ai_chance = { factor = 1 }
+    }
+	option = {
+        name = "We will not compromise! §RGain 1 infamy§W"
+		casus_belli = { target = SMO type = establish_protectorate_casus_belli months = 36 }
+		badboy = 1
+		relation = { who = USA value = -50 }
+		relation = { who = US2 value = -50 }
+		relation = { who = GER value = -50 }
+		any_country = {
+			limit = {
+				OR = {
+					tag = USA
+					tag = US2
+				}
+				exists = yes
+			}
+			country_event = 123845
+		}
+		GER = { country_event = 123844 }
+		ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+    id = 123842
+    title = "The Two Sicilies stand by the contract"
+    desc = "With French support, the Dual Sicilians have refused our demands to end their contract with the French to grant them a monopoly on Sicilian sulfur exports."
+    picture = "british_blockade"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Reinstall the treaty of 1814!"
+		casus_belli = { target = SIC type = add_to_sphere months = 36 }
+		war = {
+			target = SIC
+			attacker_goal = { casus_belli = add_to_sphere }
+			defender_goal = { casus_belli = humiliate_no_infamy }
+		}
+		ai_chance = { factor = 70 }
+    }
+	option = {
+        name = "We must directly control the island of Sicily! §RGain 6 infamy§W"
+		badboy = 6
+		casus_belli = { target = SIC type = acquire_state months = 36 }
+		war = {
+			target = SIC
+			attacker_goal = { casus_belli = acquire_state state_province_id = 762 }
+			defender_goal = { casus_belli = humiliate_no_infamy }
+		}
+		ai_chance = { factor = 15 }
+    }
+	option = {
+        name = "Just blockade them another year to make a point."
+		762 = { add_province_modifier = { name = british_blockade duration = 365 } }
+		763 = { add_province_modifier = { name = british_blockade duration = 365 } }
+		764 = { add_province_modifier = { name = british_blockade duration = 365 } }
+		ai_chance = { factor = 15 }
+    }
+}
+country_event = {
+    id = 123841
+    title = "The Two Sicilies stand by the contract"
+    desc = "Despite being without French support, the Dual Sicilians have refused our demands to end their contract with the French to grant them a monopoly on Sicilian sulfur exports."
+    picture = "british_blockade"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Reinstall the treaty of 1814!"
+		casus_belli = { target = SIC type = add_to_sphere months = 36 }
+		war = {
+			target = SIC
+			attacker_goal = add_to_sphere
+			defender_goal = humiliate_no_infamy
+		}
+		ai_chance = { factor = 70 }
+    }
+	option = {
+        name = "We must directly control the island of Sicily! §RGain 6 infamy§W"
+		badboy = 6
+		casus_belli = { target = SIC type = acquire_state months = 36 }
+		war = {
+			target = SIC
+			attacker_goal = acquire_state state_province_id = 762
+			defender_goal = humiliate_no_infamy
+		}
+		ai_chance = { factor = 15 }
+    }
+	option = {
+        name = "Just blockade them another year to make a point."
+		762 = { add_province_modifier = { name = british_blockade duration = 365 } }
+		763 = { add_province_modifier = { name = british_blockade duration = 365 } }
+		764 = { add_province_modifier = { name = british_blockade duration = 365 } }
+		ai_chance = { factor = 15 }
+    }
+}
+country_event = {
+    id = 123839
+    title = "France supports us"
+    desc = "France has stood by our side and promised to come to our defense in the event of war with Britain over the recent sulfur contract."
+    picture = "british_blockade"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "We will not bow to the Brits!"
+		create_alliance = SIC
+		ENG = { country_event = 123842 }
+		ai_chance = { factor = 85 }
+    }
+	option = {
+        name = "No blood will be shed over sulfur."
+		ENG = { country_event = 123836 }
+		ai_chance = { factor = 15 }
+    }
+}
+country_event = {
+    id = 123840
+    title = "France abandons us"
+    desc = "In face of the strong possibility of a war with Britain, France has abandoned us in the face of danger."
+    picture = "british_blockade"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "We will not bow to the Brits!"
+		create_alliance = SIC
+		ENG = { country_event = 123841 }
+		ai_chance = { factor = 15 }
+    }
+	option = {
+        name = "No blood will be shed over sulfur."
+		ENG = { country_event = 123836 }
+		ai_chance = { factor = 85 }
+    }
+}
+country_event = {
+    id = 123837
+    title = "The Sulfur War"
+    desc = "In response to our Sicilian sulfur export monopoly contract, Britain has dispatched a naval task force to prevent the outflow of French-controlled sulfur from Sicily via blockade."
+    picture = "british_blockade"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "The Two Sicilies have our support."
+		create_alliance = SIC
+		SIC = { country_event = 123839 }
+		ai_chance = { factor = 0.5 }
+    }
+	option = {
+        name = "No blood will be shed over sulfur."
+		end_alliance = SIC
+		diplomatic_influence = { who = SIC value = -200 }
+		SIC = { country_event = 123840 }
+		ai_chance = { factor = 0.5 }
+    }
+}
+country_event = {
+    id = 123838
+    title = "The Two Sicilies end the contract"
+    desc = "Under pressure from the British blockade, the Two Sicilies has decided to abandon its new contract with us and reinstate British trade influence."
+    picture = "british_blockade"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Curses!"
+		diplomatic_influence = { who = SIC value = -200 }
+		relation = { who = ENG value = -80 }
+		ai_chance = { factor = 1 }
+    }
+}
+country_event = {
+    id = 123836
+    title = "The Two Sicilies back down"
+    desc = "Intimidated by our naval show of force, king Ferdinand II agreed to waver the contract with France assigning them a sulfur export monopoly on Sicily."
+    picture = "british_blockade"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Splendid."
+		prestige = 15
+		FRA = { country_event = 123838 }
+		ai_chance = { factor = 1 }
+    }
+}
+country_event = {
+    id = 123835
+    title = "The Sulfur War"
+    desc = "Upon being notified of the new sulfur export contract with France, the British government dispatched the Mediterranean squadron from Malta to blockade our ports, preventing sulfur exports, until the French monopoly is recalled."
+    picture = "british_blockade"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "This isn't worth a war."
+		prestige = -20
+		ENG = { country_event = { id = 123836 days = 75 } }
+		762 = { add_province_modifier = { name = british_blockade duration = 75 } }
+		763 = { add_province_modifier = { name = british_blockade duration = 75 } }
+		764 = { add_province_modifier = { name = british_blockade duration = 75 } }
+		ai_chance = { factor = 0.75 }
+    }
+	option = {
+        name = "The contract will be upheld!"
+		FRA = { country_event = { id = 123837 days = 75 } }
+		762 = { add_province_modifier = { name = british_blockade duration = 75 } }
+		763 = { add_province_modifier = { name = british_blockade duration = 75 } }
+		764 = { add_province_modifier = { name = british_blockade duration = 75 } }
+		ai_chance = { factor = 0.25 }
+    }
+}
+country_event = {
+    id = 123834
+    title = "The French monopoly"
+    desc = "Since 1814 when we liberated the Two Sicilies from Napoleonic occupation, they have been in accordance to a contract giving us the rights to shipping Sicilian sulfur. However, France has signed a new contract taking our monopoly."
+    picture = "carusi"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Dispatch a task force to blockade them into submission!"
+		SIC = { country_event = 123835 }
+		ai_chance = { factor = 1 }
+    }
+	option = {
+        name = "We won't risk lives over sulfur."
+		prestige = -35
+		relation = { who = SIC value = 50 }
+		diplomatic_influence = { who = SIC value = -50 }
+		ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+    id = 123833
+    title = "France signs the sulfur contract"
+    desc = "This morning, the French ambassador agreed to the new French sulfur export monopoly, finalizing the contract with which it is determined."
+    picture = "carusi"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Splendid!"
+		ENG = { country_event = { id = 123834 days = 7 } }
+    }
+}
+country_event = {
+    id = 123832
+    title = "France refuses the sulfur contract"
+    desc = "This morning, the French ambassador decided against the contract determining new sulfur export monopoly, citing concerns over relations with Britain."
+    picture = "carusi"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Pity that."
+    }
+}
+country_event = {
+    id = 123831
+    title = "A sulfur contract with the Two Sicilies"
+    desc = "King Ferdinand II has signed a contract to hand us a monopoly on sulfur shipping from Sicily. This will limit the British influence in the area, but it won't come cheap."
+    picture = "carusi"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Sign it."
+		diplomatic_influence = { who = SIC value = 100 }
+		relation = { who = SIC value = 400 }
+		ENG = { diplomatic_influence = { who = SIC value = -200 } }
+		ENG = { relation = { who = SIC value = -100 } }
+		relation = { who = ENG value = -100 }
+		SIC = { country_event = 123833 }
+		treasury = -150000
+		ai_chance = { 
+			factor = 99
+			modifier = { factor = 0 NOT = { money = 150000 } }
+		}
+    }
+	option = {
+        name = "We can't afford it."
+		diplomatic_influence = { who = SIC value = -200 }
+		relation = { who = SIC value = -50 }
+		relation = { who = ENG value = 50 }
+		SIC = { country_event = 123832 }
+		prestige = -15
+		ai_chance = { 
+			factor = 1
+			modifier = { factor = 100 NOT = { money = 150000 } }
+		}
+    }
+}
+country_event = {
+    id = 123830
+    title = "The rise of Hobyo"
+    desc = "Yusuf Ali Kenadid has arrived from Arabia with a band of Hadhrami musketeers, overpowered the locals and established a new sultanate with himself at its head."
+    picture = "rise_of_hobyo"
+	fire_only_once = yes
+	trigger = {
+       owns = 1871
+	   tag = MAJ
+	   NOT = { exists = HBY }
+    }
+    mean_time_to_happen = {
+        months = 2
+    }
+    option = {
+        name = "Worrying."
+		1871 = { secede_province = HBY }
+		ai_chance = { factor = 1 }
+    }
+}
+country_event = {
     id = 123828
     title = "The Shogun breaks off negotiations"
     desc = "Despite our show of force and continued negotiations, the Shogunate has opted to defend Tsushima at all costs. This means war!"
@@ -203,7 +719,7 @@ country_event = {
     }
 }
 country_event = {
-    id = 123817
+    id = 123829
     title = "The Hecker uprising"
     desc = "Revolutionary leaders Friedrich Hecker, Gustav von Struve, and others tried to overthrow the monarchy and begin a republic. Setting out to march on Freiburg from Konstanz, he didn't get enough recruits and was crushed."
     picture = "kandern"
@@ -271,7 +787,7 @@ country_event = {
         prestige = 5
 		country_event = 123817
 		relation = { who = FROM value = -50 }
-		ai_chance = { factor = 15 }
+		ai_chance = { factor = 85 }
     }
 	option = {
         name = "We have no choice other than accepting."
@@ -284,7 +800,7 @@ country_event = {
 		}
 		set_variable = { which = china_destablization value = 1 }
 		relation = { who = FROM value = 50 }
-		ai_chance = { factor = 85 }
+		ai_chance = { factor = 15 }
     }
 }
 country_event = {
@@ -977,6 +1493,7 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = SAT
+		exists = yes
 		year = 1862
     }
     mean_time_to_happen = {
@@ -2947,7 +3464,7 @@ country_event = {
         }
     }
     option = {
-        name = "Bulgaria shall be freed!"
+        name = "Bulgaria shall be free!"
         any_pop = {
             limit = {
                 has_pop_culture = bulgarian
@@ -3189,8 +3706,9 @@ country_event = {
     desc = "The Albanians are revolting against our rule."
     fire_only_once = yes
     picture = "ALB_revolt_3"
-    #mean_time_to_happen = { months = 5 }
-	mean_time_to_happen = { months = 100000 }
+	
+    mean_time_to_happen = { months = 5 }
+	
     trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
         tag = TUR
@@ -3243,6 +3761,9 @@ country_event = {
             defender_goal = { casus_belli = acquire_core_state state_province_id = 853 }
         }
         change_tag_no_core_switch = ALB
+		ai_chance = {
+			factor = 0
+		}
     }
 }
 country_event = {
@@ -3286,9 +3807,10 @@ country_event = {
         1780 = {
             secede_province = ALB
         }
+		casus_belli = { target = ALB type = conquest months = 36 }
         war = {
             target = ALB
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest }
             defender_goal = { casus_belli = acquire_core_state state_province_id = 853 }
         }
     }
@@ -3313,9 +3835,10 @@ country_event = {
         1780 = {
             secede_province = ALB
         }
+		casus_belli = { target = ALB type = conquest months = 36 }
         war = {
             target = ALB
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest }
             defender_goal = { casus_belli = acquire_core_state state_province_id = 853 }
         }
         change_tag_no_core_switch = ALB
@@ -3438,7 +3961,7 @@ country_event = {
         }
     }
     option = {
-        name = "Crush them!"
+        name = "Albania shall be free!"
         any_pop = {
             limit = {
                 has_pop_culture = albanian
@@ -4325,9 +4848,10 @@ country_event = {
         798 = {
             secede_province = SRR
         }
+		casus_belli = { target = SRR type = conquest months = 12 }
         war = {
             target = SRR
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest }
             defender_goal = { casus_belli = status_quo }
         }
     }
@@ -4343,9 +4867,10 @@ country_event = {
         798 = {
             secede_province = SRR
         }
+		casus_belli = { target = SRR type = conquest months = 12 }
         war = {
             target = SRR
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest }
             defender_goal = { casus_belli = status_quo }
         }
         change_tag_no_core_switch = SRR
@@ -4545,9 +5070,10 @@ country_event = {
         850 = {
             secede_province = ALB
         }
+		casus_belli = { target = ALB type = conquest_low months = 36 }
         war = {
             target = ALB
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest_low }
             defender_goal = { casus_belli = acquire_core_state state_province_id = 887 }
         }
     }
@@ -4575,9 +5101,10 @@ country_event = {
         850 = {
             secede_province = ALB
         }
+		casus_belli = { target = ALB type = conquest_low months = 36 }
         war = {
             target = ALB
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest_low }
             defender_goal = { casus_belli = acquire_core_state state_province_id = 887 }
         }
         change_tag_no_core_switch = ALB
@@ -4727,9 +5254,10 @@ country_event = {
         2209 = {
             remove_core = SPA
         }
+		casus_belli = { target = CUB type = conquest_low months = 36 }
         war = {
             target = CUB
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest_low }
             defender_goal = { casus_belli = acquire_core_state state_province_id = 2209 }
         }
     }

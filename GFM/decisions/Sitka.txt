@@ -1,5 +1,107 @@
 political_decisions = {
-    sudeten_treaty = {
+	wilkes_expedition = {
+		picture = wilkes_expedition
+        potential = {
+            tag = USA
+			NOT = { has_country_flag = wilkes_expedition_sent }
+        }
+        allow = {
+			war = no
+			is_vassal = no
+			is_greater_power = yes
+			money = 100000
+			idealism = 1
+		}
+        effect = {
+			set_country_flag = wilkes_expedition_sent
+			prestige = 10
+			treasury = -50000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	claim_samoa = {
+		picture = samoa_map
+        potential = {
+            OR = {
+				AND = {
+					tag = GER
+					owns = 2536
+				}
+				AND = {
+					tag = ENG
+					owns = 2454
+				}
+				AND = {
+					tag = USA
+					owns = 658
+				}
+			}
+			NOT = { has_country_flag = samoa_claimant }
+        }
+        allow = {
+			war = no
+			is_vassal = no
+			is_greater_power = yes
+		}
+        effect = {
+			set_country_flag = samoa_claimant
+			prestige = 5
+			diplomatic_influence = { who = SMO value = 150 }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	sulfur_contract = {
+		picture = ferdinand_two
+        potential = {
+            tag = SIC
+			SYC = { all_core = { owned_by = THIS } }
+			NOT = { has_country_flag = sulfur_contracted }
+			NOT = { year = 1841 }
+			owns = 762
+			exists = ENG
+			exists = FRA
+        }
+        allow = {
+			war = no
+			is_vassal = no
+			in_sphere = FRA
+			NOT = { year = 1841 }
+		}
+        effect = {
+			set_country_flag = sulfur_contracted
+			FRA = { country_event = 123831 }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    barcelona_rail = {
+		picture = barcelona_rail
+        potential = {
+			NOT = { has_country_flag = barcelona_rail }
+			owns = 498
+        }
+        allow = {
+			war = no
+			is_vassal = no
+			money = 80000
+			year = 1848
+		}
+        effect = {
+			set_country_flag = barcelona_rail
+			treasury = -50000
+			activate_technology = experimental_railroad
+			498 = { infrastructure = 1 }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	sudeten_treaty = {
 		picture = gtfo
         potential = {
             OR = {
@@ -8831,8 +8933,8 @@ political_decisions = {
             2380 = { change_province_name = "Miramar" life_rating = 2 }
             2380 = {
                 add_province_modifier = {
-                    name = recently_built_city
-                    duration = 13140
+                    name = mar_chiquita_tourism
+                    duration = -1
                 }
             }
         }
