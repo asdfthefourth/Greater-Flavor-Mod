@@ -43,7 +43,7 @@ political_decisions = {
 		potential = {
 		}
 		effect = {
-			country_event = 777770401
+			set_country_flag = Major_Defeated
 		}
 		ai_will_do = {
 			factor = 0
