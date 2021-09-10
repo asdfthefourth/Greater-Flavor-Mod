@@ -1,0 +1,843 @@
+country_event = {
+    id = 777770399
+    title = "Self Tag War Debug Secondary"
+    desc = "This nation will be considered a minor vanquished state."
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "Huzzah!"
+        set_country_flag = SecondVictorGWRTEST
+    }
+}
+
+country_event = {
+    id = 777770400
+    title = "Self Tag War Debug Minor"
+    desc = "This nation will be considered a minor vanquished state."
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "Huzzah!"
+        set_country_flag = VanquishedStateMinorGWRTEST
+    }
+}
+
+country_event = {
+    id = 777770401
+    title = "Self Tag War Debug Major"
+    desc = "This nation will be considered a major vanquished state."
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "Huzzah!"
+        set_country_flag = VanquishedStateMajorGWRTEST
+    }
+}
+
+country_event = {
+    id = 777770402
+    title = "You have chosen to be dismembered"
+    desc = "Prepare to be disintergrated."
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "oh no!"
+        random_country = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 777770403
+			}
+		}
+    }
+}
+country_event = {
+    id = 777770403
+    title = "The $CAPITAL$ Conference has been called!"
+    desc = "This decision is to inform you the following events will allow you do to dismantle recent enemies."
+	major = yes
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_global_flag = DismantlementConferenceUnderwayGWRTEST
+		set_country_flag = ChairingDismantlementGWRREWORK
+        random_country = {
+			any_country = {
+				limit = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+				}
+				country_event = 777770406
+				country_event = 777770412
+			}
+		}
+        random_country = {
+			any_country = {
+				limit = {
+					has_country_flag = VanquishedStateMinorGWRTEST
+					is_greater_power = no
+					NOT = {
+						OR = {
+							is_vassal = yes
+							is_substate = yes
+						}
+					}
+				}
+				country_event = 777770415
+			}
+		}
+        random_country = {
+			any_country = {
+				limit = {
+					has_country_flag = VanquishedStateMinorGWRTEST
+					is_greater_power = yes
+					NOT = {
+						OR = {
+							is_vassal = yes
+							is_substate = yes
+						}
+					}
+				}
+				country_event = 777770416
+			}
+		}
+        random_country = {
+			any_country = {
+				limit = {
+					has_country_flag = VanquishedStateMinorGWRTEST
+					OR = {
+						is_vassal = yes
+						is_substate = yes
+					}
+				}
+				country_event = 777770417
+			}
+		}
+    }
+}
+
+country_event = {
+    id = 777770406
+    title = "How we are to be treated in defeat must now be considered"
+    desc = "We will now be dismantled."
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		any_country = {
+			limit = {
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				overlord = {
+					OR = {
+						has_country_flag = VanquishedStateMajorGWRTEST
+					}
+				}
+			}
+			country_event = 777770409
+		}
+		any_country = {
+			limit = {
+				any_core = {
+					owner = {
+						has_country_flag = VanquishedStateMajorGWRTEST
+					}
+				}
+				exists = no
+				NOT = { tag = ITA }
+				NOT = { tag = SCA }
+				NOT = { tag = HND }
+				NOT = { tag = ROM }
+				NOT = { tag = GER }
+				NOT = { tag = IBR }
+				NOT = { tag = JAN }
+				NOT = { tag = USS }
+				NOT = { tag = BGR }
+				NOT = { tag = UBD }
+				NOT = { has_country_flag = AlreadyPingedGWRTEST }
+				NOT = { has_country_flag = VanquishedStateMajorGWRTEST }
+			}
+		country_event = 777770408
+		set_country_flag = AlreadyPingedGWRTEST
+		set_country_flag = RewriteableNewStateGWRTEST
+		}
+		any_country = {
+			limit = {
+				any_core = {
+					owner = {
+						has_country_flag = VanquishedStateMajorGWRTEST
+					}
+				}
+				exists = yes
+				NOT = { has_country_flag = AlreadyPingedGWRTEST }
+				NOT = { has_country_flag = VanquishedStateMajorGWRTEST }
+			}
+		country_event = 777770407
+		set_country_flag = AlreadyPingedGWRTEST
+		}
+    }
+}
+
+country_event = {
+    id = 777770407
+    title = "Is this what liberation feels like?"
+    desc = "Our freedom is being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		any_country = {
+			limit = {
+				has_country_flag = ChairingDismantlementGWRREWORK
+				NOT = { tag = FROM }
+			}
+			country_event = 777770411
+		}
+    }
+}
+
+country_event = {
+    id = 777770408
+    title = "Is this what freedom feels like?"
+    desc = "Our freedom is being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_country_flag = RewriteableNewStateGWRTEST
+		any_country = {
+			limit = {
+				has_country_flag = ChairingDismantlementGWRREWORK
+			}
+			country_event = 777770410
+		}
+    }
+}
+
+country_event = {
+    id = 777770409
+    title = "Is this what idependence feels like?"
+    desc = "Our freedom is being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		any_country = {
+			limit = {
+				has_country_flag = ChairingDismantlementGWRREWORK
+			}
+			country_event = 777770423
+		}
+    }
+}
+
+country_event = {
+    id = 777770410
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			country_event = 777770424
+			
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_country_flag = IndependenceSelectedGWRTEST
+			country_event = 777770424
+			
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet (Overwrite new states)"
+        any_country = {
+            limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+					has_country_flag = RewriteableNewStateGWRTEST
+				}
+                exists = yes
+                FROM = { exists = no }
+            }
+            release = FROM
+        }
+        any_country = {
+			limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+					has_country_flag = RewriteableNewStateGWRTEST
+				}
+			}
+            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
+        }
+        any_owned = { limit = { is_core = UTI } secede_province = FROM remove_core = UTI }
+		create_vassal = FROM
+		create_alliance = FROM
+		badboy = 4
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet"
+        any_country = {
+            limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+				}
+                exists = yes
+                FROM = { exists = no }
+            }
+            release = FROM
+        }
+        any_country = {
+			limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+				}
+			}
+            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
+        }
+        any_owned = { limit = { is_core = UTI } secede_province = FROM remove_core = UTI }
+		create_vassal = FROM
+		create_alliance = FROM
+		badboy = 4
+    }
+    option = {
+        name = "$FROMCOUNTRY$ lands shall be ours"
+        any_country = {
+            limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+				}
+                exists = yes
+                FROM = { exists = no }
+            }
+            release = FROM
+        }
+        any_country = {
+			limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+				}
+			}
+            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
+        }
+        any_owned = { limit = { is_core = UTI } secede_province = THIS remove_core = UTI }
+		badboy = 10
+    }
+    option = {
+        name = "$FROMCOUNTRY$ will remain as they are"
+		badboy = 0
+    }
+}
+
+country_event = {
+    id = 777770411
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "Lands claimed by $FROMCOUNTRY$ are present within the borders of the defeated, should we demand they are returned to the claiment?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall have their lands returned (Overwrite new states)"
+        any_country = {
+            limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+					has_country_flag = RewriteableNewStateGWRTEST
+				}
+                exists = yes
+                FROM = { exists = no }
+            }
+            release = FROM
+        }
+        any_country = {
+			limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+					has_country_flag = RewriteableNewStateGWRTEST				
+				}
+			}
+            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
+        }
+        any_owned = { limit = { is_core = UTI } secede_province = FROM remove_core = UTI }
+		infamy = 0.1
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist have their lands returned"
+        any_country = {
+            limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+				}
+                exists = yes
+                FROM = { exists = no }
+            }
+            release = FROM
+        }
+        any_country = {
+			limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST				
+				}
+			}
+            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
+        }
+        any_owned = { limit = { is_core = UTI } secede_province = FROM remove_core = UTI }
+		infamy = 0.1
+    }
+    option = {
+        name = "$FROMCOUNTRY$ lands shall be ours"
+        any_country = {
+            limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+				}
+                exists = yes
+                FROM = { exists = no }
+            }
+            release = FROM
+        }
+        any_country = {
+			limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+				}
+			}
+            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
+        }
+        any_owned = { limit = { is_core = UTI } secede_province = THIS remove_core = UTI }
+		infamy = 10
+    }
+    option = {
+        name = "$FROMCOUNTRY$ will not recive new cores"
+		infamy = 0
+    }
+}
+
+country_event = {
+    id = 777770412
+    title = "How do we treat from $FROMCOUNTRY$?"
+    desc = "$FROMCOUNTRY$ was a major adversary in our recent great war, how do we want to treat them?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "Issue full forgiveness"
+		badboy = -0.5
+        random_country = {
+			any_country = {
+				limit = {
+					tag = THIS
+				}
+				relation = {
+					who = FROM
+					value = 40
+				}
+			}
+		}
+    }
+    option = {
+        name = "Their future is not significant to us"
+		badboy = 0
+    }
+    option = {
+        name = "Require only demilitarisation"
+		badboy = 1
+    }
+    option = {
+        name = "Require only minor reparations"
+		badboy = 2
+    }
+    option = {
+        name = "Push for total destabalisation"
+		badboy = 7.5
+    }
+}
+
+country_event = {
+    id = 777770415
+    title = "How we are to be treated in defeat must now be considered"
+    desc = "We are at the mercy of the victors."
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+        random_country = {
+			any_country = {
+				limit = {
+					has_country_flag = ChairingDismantlementGWRREWORK
+				}
+				country_event = 777770420
+			}
+		}
+
+    }
+}
+
+country_event = {
+    id = 777770416
+    title = "How we are to be treated in defeat must now be considered"
+    desc = "We are at the mercy of the victors."
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+        random_country = {
+			any_country = {
+				limit = {
+					has_country_flag = ChairingDismantlementGWRREWORK
+				}
+				country_event = 777770421
+			}
+		}
+    }
+}
+
+country_event = {
+    id = 777770417
+    title = "How we are to be treated in defeat must now be considered"
+    desc = "We are at the mercy of the victors."
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+        random_country = {
+			any_country = {
+				limit = {
+					has_country_flag = ChairingDismantlementGWRREWORK
+				}
+				country_event = 777770422
+			}
+		}
+    }
+}
+
+country_event = {
+    id = 777770429
+    trigger = {
+		has_global_flag = DismantlementConferenceUnderwayGWRTEST
+		has_country_flag = ChairingDismantlementGWRREWORK
+    }
+    title = "The $CAPITAL$ Conference has Concluded"
+    desc = "The new world order has been established."
+	major = yes
+	
+    mean_time_to_happen =  { 
+		days = 2
+		
+        modifier = {
+			year = 1836	
+			factor = 1
+		}
+	}
+	
+    option = {
+        name = "Very Well Indeed"
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+					has_country_flag = VanquishedStateMinorGWRTEST
+					has_country_flag = RewriteableNewStateGWRTEST	
+				}
+			}
+			clr_country_flag = VanquishedStateMajorGWRTEST
+			clr_country_flag = VanquishedStateMinorGWRTEST
+			clr_country_flag = RewriteableNewStateGWRTEST	
+		}
+		any_country = {
+			limit = {
+				has_country_flag = ChairingDismantlementGWRREWORK
+			}
+			clr_country_flag = ChairingDismantlementGWRREWORK
+		}
+		clr_country_flag = ChairingDismantlementGWRREWORK
+		clr_global_flag = DismantlementConferenceUnderwayGWRTEST
+    }
+}
+
+country_event = {
+    id = 777770420
+    title = "How do we treat from $FROMCOUNTRY$?"
+    desc = "$FROMCOUNTRY$ was a minor adversary in our recent great war, how do we want to treat them? (Note: Our current infamy $INFAMY$ is §R $BADBOY$ §R)"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "Bring them into our orbit"
+		badboy = 3
+        random_country = {
+			any_country = {
+				limit = {
+					tag = THIS
+				}
+				create_vassal = FROM
+				create_alliance = FROM
+			}
+		}
+    }
+    option = {
+        name = "Issue full forgiveness"
+		badboy = -0.5
+        random_country = {
+			any_country = {
+				limit = {
+					tag = THIS
+				}
+				relation = {
+					who = FROM
+					value = 40
+				}
+			}
+		}
+    }
+    option = {
+        name = "Their future is not significant to us"
+		badboy = 0
+    }
+    option = {
+        name = "Require only demilitarisation"
+		badboy = 1
+    }
+    option = {
+        name = "Require only minor reparations"
+		badboy = 2
+    }
+    option = {
+        name = "Push for total destabalisation"
+		badboy = 7.5
+    }
+}
+
+country_event = {
+    id = 777770421
+    title = "How do we treat from $FROMCOUNTRY$?"
+    desc = "$FROMCOUNTRY$ was a minor adversary in our recent great war. However they are a great power so will not accept total submission, how do we want to treat them? (Note: Our current infamy is §R$BADBOY$§R)"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "Issue full forgiveness"
+		badboy = -0.5
+        random_country = {
+			any_country = {
+				limit = {
+					tag = THIS
+				}
+				relation = {
+					who = FROM
+					value = 40
+				}
+			}
+		}
+    }
+    option = {
+        name = "Their future is not significant to us"
+		badboy = 0
+    }
+    option = {
+        name = "Require only demilitarisation"
+		badboy = 1
+    }
+    option = {
+        name = "Require only minor reparations"
+		badboy = 2
+    }
+    option = {
+        name = "Push for total destabalisation"
+		badboy = 7.5
+    }
+}
+
+country_event = {
+    id = 777770422
+    title = "How do we treat from $FROMCOUNTRY$?"
+    desc = "$FROMCOUNTRY$ was a minor adversary in our recent great war. However they are a vassal state who was fighting for their overlord. how do we want to treat them? (Note: Our current infamy is �R$BADBOY$�R)"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "Bring them into our orbit"
+		badboy = 3
+        random_country = {
+			any_country = {
+				limit = {
+					tag = THIS
+				}
+				create_vassal = FROM
+				create_alliance = FROM
+			}
+		}
+    }
+    option = {
+        name = "Issue full forgiveness and freedom"
+		badboy = -0.5
+        random_country = {
+			any_country = {
+				limit = {
+					tag = THIS
+				}
+				relation = {
+					who = FROM
+					value = 100
+				}
+				release_vassal = FROM
+			}
+		}
+    }
+    option = {
+        name = "Their future is not significant to us"
+		badboy = 0
+    }
+    option = {
+        name = "Require only demilitarisation"
+		badboy = 1
+    }
+    option = {
+        name = "Require only minor reparations"
+		badboy = 2
+    }
+    option = {
+        name = "Push for total destabalisation"
+		badboy = 7.5
+    }
+}
+
+country_event = {
+    id = 777770423
+    title = "How do we treat $FROMCOUNTRY$?"
+    desc = "$FROMCOUNTRY$ is a vassal state of our recent enemy however was not directly our enemy. how do we want to treat them?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "Bring them into our orbit"
+		badboy = 5
+        random_country = {
+			any_country = {
+				limit = {
+					tag = THIS
+				}
+				create_vassal = FROM
+				create_alliance = FROM
+			}
+		}
+    }
+    option = {
+        name = "Issue full forgiveness and freedom"
+		badboy = -0.5
+        random_country = {
+			any_country = {
+				limit = {
+					tag = THIS
+				}
+				relation = {
+					who = FROM
+					value = 100
+				}
+				release_vassal = FROM
+			}
+		}
+    }
+    option = {
+        name = "Their future is not significant to us"
+		badboy = 0
+    }
+    option = {
+        name = "Require only demilitarisation"
+		badboy = 1
+    }
+    option = {
+        name = "Require only minor reparations"
+		badboy = 2
+    }
+    option = {
+        name = "Push for total destabalisation"
+		badboy = 7.5
+    }
+}
+
+country_event = {
+    id = 777770424
+    title = "$FROMCOUNTRY$ has asked for us to be released, Is this what liberation feels like?"
+    desc = "Our freedom is being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		any_country = {
+			limit = {
+				has_country_flag = SecondVictorGWRTEST
+			}
+			country_event = 777770427
+		}
+    }
+}
+
+country_event = {
+    id = 777770427
+    title = "What is our stance on $FROMCOUNTRY$?"
+    desc = "The Conference Chair wishes to create a $FROMCOUNTRY$. The proposal overwrites current plans, How do we respond?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ Should exist!"
+		FROM = {
+			set_country_flag = IndependenceSelectedGWRTEST
+			country_event = 777770426
+		}
+        any_country = {
+            limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+					has_country_flag = RewriteableNewStateGWRTEST
+				}
+                exists = yes
+                FROM = { exists = no }
+            }
+            release = FROM
+        }
+        any_country = {
+			limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+					has_country_flag = RewriteableNewStateGWRTEST				
+				}
+			}
+            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
+        }
+        any_owned = { limit = { is_core = UTI } secede_province = FROM remove_core = UTI }
+		badboy = 0.1
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ Should not exist!"
+		FROM = {
+			set_country_flag = IndependenceSelectedGWRTEST
+			country_event = 777770426
+		}
+        any_country = {
+            limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+					has_country_flag = RewriteableNewStateGWRTEST
+				}
+                exists = yes
+                FROM = { exists = no }
+            }
+            release = FROM
+        }
+        any_country = {
+			limit = {
+				OR = {
+					has_country_flag = VanquishedStateMajorGWRTEST
+					has_country_flag = RewriteableNewStateGWRTEST				
+				}
+			}
+            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
+        }
+        any_owned = { limit = { is_core = UTI } secede_province = FROM remove_core = UTI }
+		badboy = 0.1
+    }
+    option = {
+        name = "We have no stance on $FROMCOUNTRY$."
+		badboy = 0
+    }
+}
