@@ -366,7 +366,7 @@ province_event = {
             citizenship_policy = residency
             public_meetings = yes_meeting
         }
-        OR = {
+        or = {
             full_citizenship = 10
             limited_citizenship = 10
         }

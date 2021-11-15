@@ -48,12 +48,12 @@
         size = 1000
     }
     artisans = {
-        culture = avadhi
+        culture = hindi
         religion = hindu
         size = 1000
     }
     artisans = {
-        culture = panjabi
+        culture = urdu
         religion = sunni
         size = 1000
     }
@@ -65,7 +65,7 @@
     farmers = {
         culture = afro_french
         religion = catholic
-        size = 35300
+        size = 38300
     }
 }
 #Cap Haitien (204000/51000 POPS)
@@ -85,19 +85,19 @@
     artisans = {
         culture = mulatto
         religion = catholic
-        size = 2250
+        size = 2550
     }
 
     soldiers = {
         culture = mulatto
         religion = catholic
-        size = 1000
+        size = 2000
     }
 
     farmers = {
         culture = afro_french
         religion = catholic
-        size = 14825
+        size = 15825
     }
 
 }
@@ -113,7 +113,7 @@
     farmers = {
         culture = afro_french
         religion = catholic
-        size = 4300
+        size = 4500
     }
 
     artisans = {
@@ -132,7 +132,7 @@
     farmers = {
         culture = afro_french
         religion = catholic
-        size = 2400
+        size = 2500
     }
 
     artisans = {
@@ -167,7 +167,7 @@
     farmers = {
         culture = caribeno
         religion = catholic
-        size = 6025
+        size = 6175
     }
 
     clergymen = {
@@ -191,7 +191,7 @@
     farmers = {
         culture = afro_latino
         religion = catholic
-        size = 2500
+        size = 2575
     }
 }
 3319 = {
@@ -222,7 +222,7 @@
     farmers = {
         culture = afro_french
         religion = catholic
-        size = 11425
+        size = 12825
     }
 
 }
@@ -254,12 +254,12 @@
     farmers = {
         culture = afro_french
         religion = catholic
-        size = 9525
+        size = 9825
     }
     farmers = {
         culture = mulatto
         religion = catholic
-        size = 3925
+        size = 3825
     }
 
 }

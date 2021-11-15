@@ -3,6 +3,5 @@ controller = PER
 add_core = PER
 add_core = TKM
 add_core = KHR
-trade_goods = timber
+trade_goods = wool
 life_rating = 35
-terrain = montane_forest

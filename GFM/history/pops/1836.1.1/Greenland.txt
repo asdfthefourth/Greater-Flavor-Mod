@@ -1,52 +1,37 @@
 #Greenland (7500)
 #Ruled by Denmark 1836
-#Godthab (5712/1428 POPS)
+#Godthab (4220/1055 POPS)
 251 = {
     bureaucrats = {
         culture = danish
         religion = protestant
-        size = 26
+        size = 25
     }
 
     clergymen = {
         culture = danish
         religion = protestant
-        size = 13
+        size = 23
     }
 
     artisans = {
         culture = danish
         religion = protestant
-        size = 21
-    }
-	
-	farmers = {
-        culture = danish
-        religion = protestant
-        size = 167
+        size = 23
     }
 
     farmers = {
         culture = inuit
         religion = protestant
-        size = 1220
+        size = 1400
     }
 }
 
-#South Greenland Ice Shelf (84/21 POPS)
+#Egedesminde (816/204 POPS)
 2636 = {
     farmers = {
         culture = inuit
         religion = protestant
-        size = 21
-    }
-}
-
-#North Greenland Ice Shelf (84/21 POPS)
-468 = {
-    farmers = {
-        culture = inuit
-        religion = protestant
-        size = 21
+        size = 505
     }
 }

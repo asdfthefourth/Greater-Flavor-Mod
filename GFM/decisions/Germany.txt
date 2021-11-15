@@ -287,7 +287,6 @@ political_decisions = {
     }
 
     niederwald_denkmal = {
-		picture = niederwald_denkmal
         potential = {
             OR = {
                 tag = GER
@@ -312,7 +311,6 @@ political_decisions = {
     }
 
     schwabing_circles = {
-		picture = schwabing_circles
         potential = {
             is_culture_group = germanic
             owns = 599
@@ -332,7 +330,6 @@ political_decisions = {
     }
 
     support_biesterfelds = {
-		picture = support_biesterfelds
         potential = {
             OR = {
                 tag = LIP
@@ -357,7 +354,6 @@ political_decisions = {
     }
 
     support_schaumburgs = {
-		picture = support_schaumburgs
         potential = {
             OR = {
                 tag = LIP
@@ -436,7 +432,6 @@ political_decisions = {
     }
 
     the_heligoland_question = {
-		picture = the_heligoland_question
         potential = {
             OR = {
                 tag = GER
@@ -674,7 +669,6 @@ political_decisions = {
     }
 
     league_of_three_emperors = {
-		picture = league_of_three_emperors
         potential = {
             tag = GER
             OR = {
@@ -914,7 +908,7 @@ political_decisions = {
             set_country_flag = von_bismarck_appointed
             add_country_modifier = {
                 name = otto_von_bismarck
-                duration = -1
+                duration = 12775
             }
             any_pop = {
                 limit = { is_culture_group = germanic }
@@ -928,76 +922,6 @@ political_decisions = {
                     value = conservative
                 }
             }
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-	
-	remove_bismarck = {
-		picture = dropping_the_pilot
-        potential = {
-            OR = {
-                tag = NGF
-                tag = GER
-            }
-            OR = {
-                government = absolute_monarchy
-                government = absolute_empire
-                government = prussian_constitutionalism
-                government = semi_constitutional_empire
-            }
-            year = 1890
-			has_global_flag = fthree_is_dead
-            has_country_flag = von_bismarck_appointed
-			NOT = { has_country_flag = von_bismarck_resigned }
-			has_country_modifier = otto_von_bismarck
-        }
-
-        allow = {
-            war = no
-        }
-
-        effect = {
-            set_country_flag = von_bismarck_resigned
-            remove_country_modifier = otto_von_bismarck
-			add_country_modifier = {
-				name = wilhelminism
-				duration = -1
-			}
-			
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-	
-	februar_erlasse = {
-		picture = kaiser_erlasse
-        potential = {
-            OR = {
-                tag = NGF
-                tag = GER
-            }
-            OR = {
-                government = absolute_monarchy
-                government = absolute_empire
-                government = prussian_constitutionalism
-                government = semi_constitutional_empire
-            }
-			has_global_flag = fthree_is_dead
-			NOT = { safety_regulations = good_safety }
-        }
-
-        allow = {
-            war = no
-            year = 1890
-        }
-
-        effect = {
-            social_reform = good_safety
-			any_pop = {
-				militancy = -0.5
-				consciousness = -0.85
-			}
         }
 
         ai_will_do = { factor = 1 }
@@ -1262,4 +1186,52 @@ political_decisions = {
             }
         }
     }
+
+#    sudeteland_exchange = {
+#        picture = treaty_signing
+#        potential = {
+#            OR = {
+#                tag = NGF
+#                tag = PRU
+#                tag = GER
+#            }
+#            owns = 631
+#            owns = 632
+#            owns = 688
+#            owns = 689
+#            owns = 2584
+#            NOT = { owns = 625 }
+#            NOT = { has_country_flag = sudeteland_treaty }
+#            625 = {
+#                owner = {
+#                    ai = yes
+#                    owns = 627
+#                    owns = 628
+#                    owns = 629
+#                }
+#            }
+#        }
+#
+#        allow = {
+#            war = no
+#            money = 45000
+#        }
+#
+#        effect = {
+#            set_country_flag = sudeteland_treaty
+#            625 = {
+#                owner = {
+#                    treasury = 40000
+#                    relation = { who = THIS value = 100 }
+#                    631 = { secede_province = THIS }
+#                    632 = { secede_province = THIS }
+#                    689 = { secede_province = THIS }
+#                    2584 = { secede_province = THIS }
+#                }
+#            }
+#            627 = { secede_province = THIS }
+#            628 = { secede_province = THIS }
+#            629 = { secede_province = THIS }
+#        }
+#    }
 }

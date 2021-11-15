@@ -135,7 +135,6 @@ country_event = {
                 war = no
             }
             THIS = {
-				# Audax Validator "." Ignore_NEXT
                 war = {
                     attacker_goal = {
                         casus_belli = call_allies_cb
@@ -451,7 +450,6 @@ country_event = {
             tag = TUR
             tag = JAP
             tag = TKG
-			tag = US2
         }
         OR = {
             has_country_flag = ultimatum_accepted
@@ -853,7 +851,7 @@ country_event = {
         random_country = {
             limit = {
                 NOT = { tag = THIS }
-                THIS = { any_owned_province = { is_core = GHN } }
+                THIS = { any_owned_province = { is_core = ASH } }
                 has_country_flag = ghana_master
             }
             country_event = 961000
@@ -1981,7 +1979,6 @@ country_event = {
             tag = KUK
             tag = TUR
             tag = JAP
-			tag = US2
         }
         is_greater_power = no
         is_secondary_power = no
@@ -2169,14 +2166,12 @@ country_event = {
                             government = democracy
                             government = hms_government
                             government = constitutional_empire
-							has_country_flag = Government_Democracy
                         }
                         THIS = {
                             OR = {
                                 government = democracy
                                 government = hms_government
                                 government = constitutional_empire
-								has_country_flag = Government_Democracy
                             }
                         }
                         FROM = {
@@ -2351,14 +2346,12 @@ country_event = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
-					has_country_flag = Government_Democracy
                 }
                 FROM = {
                     OR = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
-						has_country_flag = Government_Democracy
                     }
                 }
                 any_greater_power = {
@@ -2458,7 +2451,6 @@ country_event = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
-					has_country_flag = Government_Democracy
                 }
                 NOT = { ruling_party_ideology = communist }
                 FROM = { government = proletarian_dictatorship }
@@ -2469,7 +2461,6 @@ country_event = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
-					has_country_flag = Government_Democracy
                 }
                 NOT = { ruling_party_ideology = fascist }
                 FROM = { government = fascist_dictatorship }
@@ -2482,7 +2473,6 @@ country_event = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
-						has_country_flag = Government_Democracy
                     }
                 }
             }
@@ -2504,7 +2494,6 @@ country_event = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
-						has_country_flag = Government_Democracy
                     }
                 }
             }
@@ -3398,7 +3387,7 @@ country_event = {
         random_country = {
             limit = {
                 NOT = { tag = THIS }
-                THIS = { any_owned_province = { is_core = GHN } }
+                THIS = { any_owned_province = { is_core = ASH } }
                 has_country_flag = ghana_master
             }
             country_event = 961000
@@ -3663,7 +3652,7 @@ country_event = {
     news_desc_long = "EVTDESC96010_NEWS_LONG"
     news_desc_medium = "EVTDESC96010_NEWS_MEDIUM"
     news_desc_short = "EVTDESC96010_NEWS_SHORT"
-    picture = "dismantle_rus"
+    picture = "greatpowers"
     major = yes
 
     trigger = {
@@ -4065,7 +4054,6 @@ country_event = {
                 any_core = { owned_by = THIS }
             }
             government = democracy
-			set_country_flag = Government_Democracy
             political_reform = population_equal_weight
             political_reform = wealth_weighted_voting
             political_reform = yes_meeting
@@ -4101,7 +4089,6 @@ country_event = {
                 any_core = { owned_by = THIS }
             }
             government = democracy
-			set_country_flag = Government_Democracy
             political_reform = population_equal_weight
             political_reform = wealth_weighted_voting
             political_reform = yes_meeting
@@ -4174,7 +4161,7 @@ country_event = {
                     tag = JAP
                 }
                 NOT = {
-                    tag = BKY
+                    tag = AKH
                     tag = ALT
                     tag = TNT
                     tag = DON
@@ -4221,7 +4208,6 @@ country_event = {
                 any_core = { owned_by = THIS }
             }
             government = democracy
-			set_country_flag = Government_Democracy
             political_reform = population_equal_weight
             political_reform = wealth_weighted_voting
             political_reform = yes_meeting
@@ -4280,7 +4266,6 @@ country_event = {
             random = {
                 chance = 25
                 government = democracy
-				set_country_flag = Government_Democracy
                 political_reform = population_equal_weight
                 political_reform = wealth_weighted_voting
                 political_reform = yes_meeting
@@ -4322,7 +4307,6 @@ country_event = {
                 any_core = { owned_by = THIS }
             }
             government = democracy
-			set_country_flag = Government_Democracy
             political_reform = population_equal_weight
             political_reform = wealth_weighted_voting
             political_reform = yes_meeting
@@ -4353,7 +4337,6 @@ country_event = {
                 any_core = { owned_by = THIS }
             }
             government = democracy
-			set_country_flag = Government_Democracy
             political_reform = population_equal_weight
             political_reform = wealth_weighted_voting
             political_reform = yes_meeting
@@ -4384,7 +4367,6 @@ country_event = {
                 any_core = { owned_by = THIS }
             }
             government = democracy
-			set_country_flag = Government_Democracy
             political_reform = population_equal_weight
             political_reform = wealth_weighted_voting
             political_reform = yes_meeting
@@ -4415,7 +4397,6 @@ country_event = {
                 any_core = { owned_by = THIS }
             }
             government = democracy
-			set_country_flag = Government_Democracy
             political_reform = population_equal_weight
             political_reform = wealth_weighted_voting
             political_reform = yes_meeting
@@ -4446,7 +4427,6 @@ country_event = {
                 any_core = { owned_by = THIS }
             }
             government = democracy
-			set_country_flag = Government_Democracy
             political_reform = population_equal_weight
             political_reform = wealth_weighted_voting
             political_reform = yes_meeting
@@ -4480,7 +4460,6 @@ country_event = {
                 chance = 25
                 civilized = yes
                 government = democracy
-				set_country_flag = Government_Democracy
                 political_reform = population_equal_weight
                 political_reform = wealth_weighted_voting
                 political_reform = yes_meeting
@@ -4515,7 +4494,6 @@ country_event = {
                 chance = 25
                 civilized = yes
                 government = democracy
-				set_country_flag = Government_Democracy
                 political_reform = population_equal_weight
                 political_reform = wealth_weighted_voting
                 political_reform = yes_meeting
@@ -4550,7 +4528,6 @@ country_event = {
                 chance = 25
                 civilized = yes
                 government = democracy
-				set_country_flag = Government_Democracy
                 political_reform = population_equal_weight
                 political_reform = wealth_weighted_voting
                 political_reform = yes_meeting
@@ -4600,7 +4577,6 @@ country_event = {
                 chance = 50
                 country_event = 96012
                 government = democracy
-				set_country_flag = Government_Democracy
                 political_reform = population_equal_weight
                 political_reform = wealth_weighted_voting
                 political_reform = yes_meeting
@@ -4639,7 +4615,6 @@ country_event = {
                 chance = 50
                 civilized = yes
                 government = democracy
-				set_country_flag = Government_Democracy
                 political_reform = population_equal_weight
                 political_reform = wealth_weighted_voting
                 political_reform = yes_meeting
@@ -4677,7 +4652,6 @@ country_event = {
             random = {
                 chance = 25
                 government = democracy
-				set_country_flag = Government_Democracy
                 political_reform = population_equal_weight
                 political_reform = wealth_weighted_voting
                 political_reform = yes_meeting
@@ -4721,7 +4695,6 @@ country_event = {
                         any_core = { owned_by = THIS }
                     }
                     government = democracy
-					set_country_flag = Government_Democracy
                     political_reform = population_equal_weight
                     political_reform = wealth_weighted_voting
                     political_reform = yes_meeting
@@ -4750,7 +4723,6 @@ country_event = {
                         any_core = { owned_by = THIS }
                     }
                     government = democracy
-					set_country_flag = Government_Democracy
                     political_reform = population_equal_weight
                     political_reform = wealth_weighted_voting
                     political_reform = yes_meeting
@@ -4945,7 +4917,7 @@ country_event = {
         random_country = {
             limit = {
                 NOT = { tag = THIS }
-                THIS = { any_owned_province = { is_core = GHN } }
+                THIS = { any_owned_province = { is_core = ASH } }
                 has_country_flag = ghana_master
             }
             country_event = 961000
@@ -5209,7 +5181,7 @@ country_event = {
     news_desc_long = "EVTDESC96010_NEWS_LONG"
     news_desc_medium = "EVTDESC96010_NEWS_MEDIUM"
     news_desc_short = "EVTDESC96010_NEWS_SHORT"
-    picture = "dismantle_usa"
+    picture = "greatpowers"
     major = yes
 
     trigger = {
@@ -5222,7 +5194,7 @@ country_event = {
             has_country_flag = ultimatum_accepted
             has_country_flag = dismantling_treaty
         }
-        OR = { tag = USA tag = US2 }
+        tag = USA
         OR = {
             has_country_flag = ultimatum_accepted
             has_country_flag = dismantling_treaty
@@ -5422,7 +5394,7 @@ country_event = {
                 THIS = {
                     any_owned_province = {
                         is_core = MEX
-                        NOT = { OR = { is_core = USA is_core = US2 } }
+                        NOT = { is_core = USA }
                     }
                 }
             }
@@ -5430,7 +5402,7 @@ country_event = {
                 any_owned = {
                     limit = {
                         is_core = MEX
-                        NOT = { OR = { is_core = USA is_core = US2 } }
+                        NOT = { is_core = USA }
                     }
                     secede_province = MEX
                 }
@@ -5480,7 +5452,7 @@ country_event = {
                 exists = no
                 any_core = { owned_by = THIS }
             }
-            TEX_132 = { remove_core = USA remove_core = US2 }
+            TEX_132 = { remove_core = USA }
             THIS = {
                 any_owned = {
                     limit = {
@@ -5687,7 +5659,7 @@ country_event = {
         random_country = {
             limit = {
                 NOT = { tag = THIS }
-                THIS = { any_owned_province = { is_core = GHN } }
+                THIS = { any_owned_province = { is_core = ASH } }
                 has_country_flag = ghana_master
             }
             country_event = 961000
@@ -5952,7 +5924,7 @@ country_event = {
     news_desc_long = "EVTDESC96010_NEWS_LONG"
     news_desc_medium = "EVTDESC96010_NEWS_MEDIUM"
     news_desc_short = "EVTDESC96010_NEWS_SHORT"
-    picture = "uk_dismantle"
+    picture = "greatpowers"
     major = yes
 
     trigger = {
@@ -6423,7 +6395,7 @@ country_event = {
         random_country = {
             limit = {
                 NOT = { tag = THIS }
-                THIS = { any_owned_province = { is_core = GHN } }
+                THIS = { any_owned_province = { is_core = ASH } }
                 has_country_flag = ghana_master
             }
             country_event = 961000
@@ -6689,7 +6661,7 @@ country_event = {
     news_desc_long = "EVTDESC96010_NEWS_LONG"
     news_desc_medium = "EVTDESC96010_NEWS_MEDIUM"
     news_desc_short = "EVTDESC96010_NEWS_SHORT"
-    picture = "dismantle_jap"
+    picture = "greatpowers"
     major = yes
 
     trigger = {
@@ -7080,7 +7052,7 @@ country_event = {
         random_country = {
             limit = {
                 NOT = { tag = THIS }
-                THIS = { any_owned_province = { is_core = GHN } }
+                THIS = { any_owned_province = { is_core = ASH } }
                 has_country_flag = ghana_master
             }
             country_event = 961000
@@ -7345,7 +7317,7 @@ country_event = {
     news_desc_long = "EVTDESC96010_NEWS_LONG"
     news_desc_medium = "EVTDESC96010_NEWS_MEDIUM"
     news_desc_short = "EVTDESC96010_NEWS_SHORT"
-    picture = "dismantle_fra"
+    picture = "greatpowers"
     major = yes
 
     trigger = {
@@ -7526,23 +7498,12 @@ country_event = {
                 secede_province = ITA
             }
             473 = { add_core = ITA secede_province = ITA }
-			3434 = {
-                add_core = ITA
-                secede_province = ITA
-            }
-			721 = {
-                add_core = ITA
-                secede_province = ITA
-            }
-			3435 = {
-                add_core = ITA
-                secede_province = ITA
-            }
 
             454 = { secede_province = ITA }
             3313 = { secede_province = ITA }
             467 = { secede_province = ITA }
             3432 = { secede_province = ITA }
+            468 = { secede_province = ITA }
             469 = { secede_province = ITA }
             470 = { secede_province = ITA }
             471 = { secede_province = ITA }
@@ -7551,7 +7512,6 @@ country_event = {
             limit = {
                 tag = SAR
                 NOT = { exists = ITA }
-				NOT = { exists = ITS }
                 truce_with = THIS
             }
             SAR_466 = { add_core = SAR secede_province = SAR }
@@ -7574,7 +7534,6 @@ country_event = {
                 NOT = { owns = 405 }
                 OR = {
                     tag = BEL
-					tag = BNF
                     tag = NET
                     tag = FLA
                 }
@@ -7592,7 +7551,6 @@ country_event = {
             457 = { add_core = SPA secede_province = SPA }
             460 = { add_core = SPA secede_province = SPA }
             464 = { add_core = SPA secede_province = SPA }
-			3472 = { add_core = SPA secede_province = SPA }
         }
         random_country = {
             limit = {
@@ -7602,7 +7560,6 @@ country_event = {
             457 = { add_core = SPC secede_province = SPC }
             460 = { add_core = SPC secede_province = SPC }
             464 = { add_core = SPC secede_province = SPC }
-			3472 = { add_core = SPC secede_province = SPC }
         }
 
         #if any Congress Poland cores owned, re-add cores to Russia
@@ -7918,7 +7875,7 @@ country_event = {
         random_country = {
             limit = {
                 NOT = { tag = THIS }
-                THIS = { any_owned_province = { is_core = GHN } }
+                THIS = { any_owned_province = { is_core = ASH } }
                 has_country_flag = ghana_master
             }
             country_event = 961000
@@ -8183,7 +8140,7 @@ country_event = {
     news_desc_long = "EVTDESC96010_NEWS_LONG"
     news_desc_medium = "EVTDESC96010_NEWS_MEDIUM"
     news_desc_short = "EVTDESC96010_NEWS_SHORT"
-    picture = "dismantle_aus"
+    picture = "greatpowers"
     major = yes
 
     trigger = {
@@ -8713,7 +8670,7 @@ country_event = {
         random_country = {
             limit = {
                 NOT = { tag = THIS }
-                THIS = { any_owned_province = { is_core = GHN } }
+                THIS = { any_owned_province = { is_core = ASH } }
                 has_country_flag = ghana_master
             }
             country_event = 961000
@@ -8978,7 +8935,7 @@ country_event = {
     news_desc_long = "EVTDESC96010_NEWS_LONG"
     news_desc_medium = "EVTDESC96010_NEWS_MEDIUM"
     news_desc_short = "EVTDESC96010_NEWS_SHORT"
-    picture = "dismantle_ottos"
+    picture = "greatpowers"
     major = yes
 
     trigger = {
@@ -9694,7 +9651,7 @@ country_event = {
         random_country = {
             limit = {
                 NOT = { tag = THIS }
-                THIS = { any_owned_province = { is_core = GHN } }
+                THIS = { any_owned_province = { is_core = ASH } }
                 has_country_flag = ghana_master
             }
             country_event = 961000
@@ -10205,7 +10162,6 @@ country_event = {
             OR = {
                 government = democracy
                 government = hms_government
-				has_country_flag = Government_Democracy
             }
         }
         modifier = {
@@ -10931,7 +10887,6 @@ country_event = {
         clr_country_flag = semi_constitutional_monarchy_gov
         clr_country_flag = constitutional_monarchy_gov
         set_country_flag = democracy_gov
-		set_country_flag = Government_Democracy
         clr_country_flag = presidential_dictatorship_gov
         clr_country_flag = fascist_gov
         clr_country_flag = anarcho_liberal_gov
@@ -11029,7 +10984,6 @@ country_event = {
         clr_country_flag = semi_constitutional_monarchy_gov
         clr_country_flag = constitutional_monarchy_gov
         clr_country_flag = democracy_gov
-		clr_country_flag = Government_Democracy
         clr_country_flag = presidential_dictatorship_gov
         set_country_flag = fascist_gov
         clr_country_flag = anarcho_liberal_gov
@@ -11147,7 +11101,6 @@ country_event = {
         clr_country_flag = fascist_gov
         clr_country_flag = anarcho_liberal_gov
         clr_country_flag = election_started
-		clr_country_flag = Government_Democracy
         clr_country_flag = conservative_party_in_power
         clr_country_flag = liberal_party_in_power
         clr_country_flag = reactionary_party_in_power
@@ -11221,7 +11174,6 @@ country_event = {
     id = 96090
     title = "EVTNAME96090" #End of the Monarchy
     desc = "EVTDESC96090"
-	picture = "misc_revolt"
     major = yes
 
     trigger = {
@@ -11260,7 +11212,6 @@ country_event = {
             }
             owner = {
                 government = democracy
-				set_country_flag = Government_Democracy
                 election = yes
             }
         }
@@ -11323,7 +11274,7 @@ country_event = {
                 factor = 4
             }
             scaled_militancy = {
-                ideology = radical
+                ideology = anarcho_liberal
                 factor = 8
             }
             scaled_militancy = {
@@ -12168,10 +12119,10 @@ country_event = {
             limit = {
                 THIS = { has_country_flag = ghana_organized }
                 tag = FROM
-                any_owned_province = { is_core = GHN }
+                any_owned_province = { is_core = ASH }
             }
             any_owned = {
-                limit = { is_core = GHN }
+                limit = { is_core = ASH }
                 secede_province = THIS
             }
         }
@@ -12260,17 +12211,4 @@ country_event = {
         }
 
     }
-}
-
-
-country_event = {
-	id = 4435
-	title = "We're no strangers to love"
-	desc = "RICKROLL"
-	picture = "rick_astley"
-	is_triggered_only = yes	
-	option = {
-		name = "Never gonna make you cry, never gonna say goodbye, never gonna tell a lie and hurt you."
-		add_country_modifier = { name = rick_rolled duration = -1 }
-	}
 }

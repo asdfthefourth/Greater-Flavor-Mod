@@ -1,86 +1,56 @@
  political_decisions = {
-    a_railroad_to_uruguay = {
-        picture = banda_oriental
+    a_telegraph_line_to_uruguay = { #original VIP event idea by General Perón, scripted by Scythe
+        picture = ems_dispatch
         potential = {
-            OR = {
+            tag = ARG
             exists = URU
-			owns = 2344
-			}
-            primary_culture = platinean
-			NOT = { tag = URU }
             revolution_n_counterrevolution = 1
-            NOT = { has_country_flag = a_railroad_to_uruguay }
+            NOT = { has_country_flag = a_telegraph_line_to_uruguay }
         }
         allow = {
-            integral_rail_system = 1
-			money = 150000
-			OR = {
-			    owns = 2347
-				AND = {
-					NOT = { war_with = URU }
-			        relation = { who = URU value = 10 }
-			}
+            electricity = 1
+            relation = { who = URU value = 10 }
+            NOT = { war_with = URU }
         }
-	}
         effect = {
-            treasury = -150000
-			prestige = 10
-			relation = { who = URU value = 65 }
-			2344 = { infrastructure = 5 }
-			2345 = { infrastructure = 5 }
-			2359 = { infrastructure = 5 }
-			2360 = { infrastructure = 5 }
-            set_country_flag = a_railroad_to_uruguay
+            relation = { who = URU value = 35 }
+            treasury = -400
+            set_country_flag = a_telegraph_line_to_uruguay
         }
     }
 
-	found_the_school_of_military_aviation = {
+    found_the_school_of_military_aviation = { #original VIP event idea by General Perón, scripted by Scythe
         picture = found_the_school_of_military_aviation
-		potential = {
-			owns = 2379
-			NOT = { has_country_flag = pilot_school }
-			revolution_n_counterrevolution = 1
-		}
-		allow = {
-			invention = military_aviation
-			money = 5000
-		}
-		effect = {
-		    treasury = -5000
-			prestige = 5
-			years_of_research = 0.3
-            add_country_modifier = { name = aviation_school duration = -1 }
-			any_pop = {
-				limit = {
-					type = soldiers
-				}
-				consciousness = -1.5
-			}
-			any_pop = {
-				limit = {
-					type = officers
-				}
-				consciousness = -1.5
-			}
-			leadership = 25
-			set_country_flag = pilot_school
+        potential = {
+            OR = {
+                tag = ARG
+                tag = LPL
+            }
+            owns = 2379 #Cordoba de Argentina
+            year = 1900
+            NOT = { has_country_flag = foundation_of_the_school_of_military_aviation }
+        }
+        allow = {
+            aeronautics = 1
+        }
+        effect = {
+            years_of_research = 0.1
+            soldiers = { consciousness = -1 }
+            officers = { consciousness = -1 }
+            prestige = 10
+            set_country_flag = foundation_of_the_school_of_military_aviation
         }
     }
 
     state_visit_to_argentina = { #original VIP event idea by General Perón, scripted by Scythe
         picture = court_yard_speech
         potential = {
-            OR = {
+            tag = BRZ
             exists = ARG
-			exists = ARC
-			exists = LPL
-			}
-			tag = BRZ
             NOT = { has_country_flag = state_visit_to_argentina }
             OR = {
                 government = presidential_dictatorship
                 government = democracy
-				has_country_flag = Government_Democracy
             }
         }
 
@@ -90,11 +60,18 @@
         }
 
         effect = {
-            prestige = 3
             ARG = {
                 country_event = 146605
                 relation = { who = THIS value = 35 }
             }
+            any_country = { #if the relations between Chile and Argentina are bad, decrease relations between Chile and Brazil as well
+                limit = {
+                    tag = CHL
+                    NOT = { relation = { who = ARG value = 0 } }
+                }
+                relation = { who = BRZ value = -20 }
+            }
+            prestige = 3
             set_country_flag = state_visit_to_argentina
         }
     }
@@ -163,10 +140,7 @@
     establish_the_observatorio_astronomico = { #original VIP event idea by mfigueras, text and script by Scythe
         picture = vesuvius_observatory
         potential = {
-		OR = {
             tag = ECU
-			tag = GCO
-			}
             owns = 2279 #Quito
             empiricism = 1
             OR = {
@@ -190,9 +164,10 @@
                     relation = { who = THIS value = 0 }
                 }
             }
+
         }
         effect = {
-            years_of_research = 0.3
+            research_points = 600
             random_country = {
                 limit = {
                     exists = yes
@@ -209,27 +184,6 @@
         }
 
         ai_will_do = { factor = 1 }
-    }
-
-	galapagos_concession = {
-		potential = {
-            ECU = {
-                is_disarmed = yes
-                truce_with = THIS
-				owns = 2285
-            }
-			total_amount_of_ships = 40
-        }
-        allow = {
-			war = no
-        }
-        effect = {
-            badboy = 0.1
-			2285 = { secede_province = THIS }
-        }
-        ai_will_do = {
-            factor = 0
-        }
     }
 
     paraguayan_law_of_the_free_womb = { #original VIP event by PMLF
@@ -267,7 +221,7 @@
         picture = occupy_misiones
         potential = {
             tag = PRG
-            year = 1843
+            NOT = { accepted_culture = guarani }
             any_owned_province = { has_pop_culture = guarani }
             NOT = { has_country_flag = start_the_campaign_against_the_guaranis }
         }
@@ -279,20 +233,18 @@
         }
         effect = {
             treasury = 200
-            any_pop = { limit = { culture = guarani } consciousness = 2 militancy = 3 }
+            any_pop = { limit = { culture = guarani } consciousness = 1 militancy = 2 }
             any_owned = {
                 limit = {
                     culture = guarani
                     OR = {
                         trade_goods = timber
                         trade_goods = tropical_wood
-						trade_goods = tobacco
-						trade_goods = grain
                     }
                 }
                 add_province_modifier = {
                     name = colonial_exploitation
-                    duration = 4015
+                    duration = 3650
                 }
             }
             set_country_flag = start_the_campaign_against_the_guaranis
@@ -322,10 +274,9 @@
                 random = {
                     chance = 25
                     consciousness = 1
-					literacy = 0.10
                 }
             }
-            years_of_research = 0.1
+            research_points = 200
             treasury = -1550
             set_country_flag = student_exchange_and_importation_of_technicians
         }
@@ -416,8 +367,6 @@
             }
         }
         effect = {
-			set_country_flag = serfdom_abolished_generic
-			clr_country_flag = serfdom_not_abolished
             political_reform = peonage
             any_country = {
                 limit = {
@@ -440,20 +389,20 @@
                 militancy = -2
                 consciousness = 1
             }
-            #any_owned = {
-            #    limit = {
-            #        has_pop_type = serfs
-            #        has_pop_type = labourers
-            #    }
-            #    any_pop = { limit = { type = serfs } pop_type = labourers }
-            #}
-            #any_owned = {
-            #    limit = {
-            #        has_pop_type = serfs
-            #        has_pop_type = farmers
-            #    }
-            #    any_pop = { limit = { type = serfs } pop_type = farmers }
-            #}
+            any_owned = {
+                limit = {
+                    has_pop_type = serfs
+                    has_pop_type = labourers
+                }
+                any_pop = { limit = { type = serfs } pop_type = labourers }
+            }
+            any_owned = {
+                limit = {
+                    has_pop_type = serfs
+                    has_pop_type = farmers
+                }
+                any_pop = { limit = { type = serfs } pop_type = farmers }
+            }
             any_pop = {
                 limit = {
                     is_primary_culture = yes
@@ -462,11 +411,12 @@
                 consciousness = 2
                 militancy = 2
             }
+            clr_country_flag = serfdom_not_abolished
             treasury = -25000
             upper_house = { ideology = conservative value = 0.15 }
             set_country_flag = the_final_abolishment_of_serfdom
         }
-		
+
         ai_will_do = { factor = 1 }
     }
 }

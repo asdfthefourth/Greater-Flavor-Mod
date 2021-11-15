@@ -6,7 +6,7 @@ country_event = {
 
     title = "EVTNAME44330"
     desc = "EVTDESC44330"
-    picture = "newfoundland_colony"
+    picture = "danishgovernment"
 
     major = yes
 
@@ -51,7 +51,7 @@ country_event = {
     }
 
     option = {
-        name = "This can only be good for the empire. §GLose 3 infamy§W"
+        name = "EVT44330OPTA"
         clr_country_flag = NEW_independence_refused
         prestige = -10
         badboy = -3
@@ -70,7 +70,6 @@ country_event = {
         NEW = {
             prestige = -80
             government = dominion
-			set_country_flag = Government_Dominion
         }
         relation = {
             who = NEW
@@ -103,10 +102,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy	
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -159,10 +155,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy	
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -223,7 +216,7 @@ country_event = {
         }
     }
 	option = {
-		name = "Never! Suppress them all! §RGain 5 infamy§W"
+		name = "Never! Suppress them all!"
 		set_country_flag = NEW_independence_resoundly_refused
 		prestige = 10
 		badboy = 5
@@ -243,7 +236,7 @@ country_event = {
 
     title = "EVTNAME44331"
     desc = "EVTDESC44331"
-    picture = "rejoin_uk"
+    picture = "danishgovernment"
     major = yes
 
     trigger = {
@@ -286,7 +279,7 @@ country_event = {
 
     title = "EVTNAME44332"
     desc = "EVTDESC44332"
-    picture = "australia_colony"
+    picture = "danishgovernment"
 
     major = yes
 
@@ -340,7 +333,6 @@ country_event = {
         create_vassal = AST
         AST = {
             government = dominion
-			set_country_flag = Government_Dominion
             prestige = -80
         }
         relation = {
@@ -374,10 +366,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy	
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -430,10 +419,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy	
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -478,7 +464,6 @@ country_event = {
         AST = {
             prestige = -80
             government = dominion
-			set_country_flag = Government_Dominion
         }
         relation = {
             who = AST
@@ -497,7 +482,7 @@ country_event = {
         }
     }
 	option = {
-		name = "Never! Suppress them all! §RGain 5 infamy§W"
+		name = "Never! Suppress them all!"
 		set_country_flag = AST_independence_resoundly_refused
 		prestige = 10
 		badboy = 5
@@ -518,7 +503,7 @@ country_event = {
 
     title = "EVTNAME44333"
     desc = "EVTDESC44333"
-    picture = "new_zealand_colony"
+    picture = "danishgovernment"
 
     major = yes
 
@@ -559,7 +544,7 @@ country_event = {
     }
 
     option = {
-        name = "This can only be good for the empire. §GLose 3 infamy§W"
+        name = "EVT44330OPTA"
         clr_country_flag = NZL_independence_refused
         prestige = -15
         badboy = -3
@@ -577,7 +562,6 @@ country_event = {
             prestige = -80
             capital = 2512
             government = dominion
-			set_country_flag = Government_Dominion
         }
         relation = {
             who = NZL
@@ -612,10 +596,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy	
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -670,10 +651,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy	
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -718,7 +696,6 @@ country_event = {
             prestige = -80
             capital = 2512
             government = dominion
-			set_country_flag = Government_Dominion
         }
         relation = {
             who = NZL
@@ -737,7 +714,7 @@ country_event = {
         }
     }
 	option = {
-		name = "Never! Suppress them all! §RGain 5 infamy§W"
+		name = "Never! Suppress them all!"
 		set_country_flag = NZL_independence_resoundly_refused
 		prestige = 10
 		badboy = 5
@@ -758,7 +735,7 @@ country_event = {
 
     title = "EVTNAME44334"
     desc = "EVTDESC44334"
-    picture = "cape_colony"
+    picture = "danishgovernment"
 
     major = yes
 
@@ -832,7 +809,6 @@ country_event = {
         release_vassal = SAF
         SAF = {
             government = dominion
-			set_country_flag = Government_Dominion
             prestige = -80
             capital = 2087
         }
@@ -867,10 +843,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy	
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -939,10 +912,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy	
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -1464,7 +1434,7 @@ country_event = {
 
     title = "EVTNAME44341"
     desc = "EVTDESC44341"
-    picture = "rhodesia_colony"
+    picture = "danishgovernment"
 
     major = yes
 
@@ -1514,7 +1484,7 @@ country_event = {
             limit = { location = { is_core = RHO } }
             militancy = -10
         }
-        RHO = { government = dominion set_country_flag = Government_Dominion all_core = { remove_core = ENG } }
+        RHO = { government = dominion all_core = { remove_core = ENG } }
         ZAM = { all_core = { remove_core = RHO } }
         any_owned = { limit = { is_core = RHO } secede_province = RHO }
         create_vassal = RHO
@@ -1541,10 +1511,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy	
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -1599,10 +1566,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy	
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5

@@ -120,10 +120,7 @@ country_event = {
     picture = "danishgovernment"
 
     trigger = {
-        OR = {
-			tag = NET
-			tag = BNF
-		}
+        tag = NET
         war = no
         is_disarmed = no
         NOT = { has_country_modifier = punitive_effects }
@@ -137,7 +134,7 @@ country_event = {
                 is_vassal = no
                 NOT = { in_sphere = THIS }
             }
-            BGN = {
+            BUL = {
                 neighbour = THIS
                 exists = yes
                 NOT = { civilized = yes }
@@ -214,7 +211,7 @@ country_event = {
             casus_belli = BAL
             casus_belli = KTI
             casus_belli = LAN
-            casus_belli = BGN
+            casus_belli = BUL
             casus_belli = PTK
             casus_belli = STG
             casus_belli = SBS
@@ -243,7 +240,7 @@ country_event = {
                     tag = SAK
                     tag = KTI
                     tag = LAN
-                    tag = BGN
+                    tag = BUL
                     tag = PTK
                     tag = SBS
                     tag = STG
@@ -259,7 +256,7 @@ country_event = {
             }
             leave_alliance = THIS
             relation = { who = THIS value = -100 }
-            add_casus_belli = { target = THIS type = establish_protectorate_casus_belli_no_infamy months = 24 }
+            add_casus_belli = { target = NET type = establish_protectorate_casus_belli_no_infamy months = 24 }
         }
         random_country = {
             limit = {
@@ -267,7 +264,7 @@ country_event = {
                     tag = SAK
                     tag = SLW
                     tag = KTI
-                    tag = BGN
+                    tag = BUL
                     tag = PTK
                     tag = SBS
                     tag = STG
@@ -281,9 +278,9 @@ country_event = {
                 NOT = { in_sphere = THIS }
                 NOT = { civilized = yes }
             }
-            leave_alliance = THIS
-            relation = { who = THIS value = -100 }
-            add_casus_belli = { target = THIS type = demand_concession_casus_belli_no_infamy months = 24 }
+            leave_alliance = NET
+            relation = { who = NET value = -100 }
+            add_casus_belli = { target = NET type = demand_concession_casus_belli_no_infamy months = 24 }
         }
         random_country = {
             limit = {
@@ -294,7 +291,7 @@ country_event = {
                     tag = BAL
                     tag = KTI
                     tag = LAN
-                    tag = BGN
+                    tag = BUL
                     tag = PTK
                     tag = SBS
                     tag = STG
@@ -308,9 +305,9 @@ country_event = {
                 NOT = { civilized = yes }
                 THIS = { nationalism_n_imperialism = 1 NOT = { has_global_flag = berlin_conference } }
             }
-            leave_alliance = THIS
-            relation = { who = THIS value = -100 }
-            add_casus_belli = { target = THIS type = establish_protectorate_casus_belli_no_infamy months = 24 }
+            leave_alliance = NET
+            relation = { who = NET value = -100 }
+            add_casus_belli = { target = NET type = establish_protectorate_casus_belli_no_infamy months = 24 }
         }
         random_country = {
             limit = {
@@ -321,7 +318,7 @@ country_event = {
                     tag = BAL
                     tag = KTI
                     tag = LAN
-                    tag = BGN
+                    tag = BUL
                     tag = PTK
                     tag = SBS
                     tag = STG
@@ -335,9 +332,9 @@ country_event = {
                 NOT = { civilized = yes }
                 THIS = { nationalism_n_imperialism = 1 NOT = { has_global_flag = berlin_conference } }
             }
-            leave_alliance = THIS
-            relation = { who = THIS value = -100 }
-            add_casus_belli = { target = THIS type = demand_concession_casus_belli_no_infamy months = 24 }
+            leave_alliance = NET
+            relation = { who = NET value = -100 }
+            add_casus_belli = { target = NET type = demand_concession_casus_belli_no_infamy months = 24 }
         }
         random_country = {
             limit = {
@@ -348,7 +345,7 @@ country_event = {
                     tag = BAL
                     tag = KTI
                     tag = LAN
-                    tag = BGN
+                    tag = BUL
                     tag = PTK
                     tag = SBS
                     tag = STG
@@ -362,9 +359,9 @@ country_event = {
                 NOT = { civilized = yes }
                 THIS = { nationalism_n_imperialism = 1 has_global_flag = berlin_conference }
             }
-            leave_alliance = THIS
-            relation = { who = THIS value = -100 }
-            add_casus_belli = { target = THIS type = establish_protectorate_casus_belli_no_infamy months = 24 }
+            leave_alliance = NET
+            relation = { who = NET value = -100 }
+            add_casus_belli = { target = NET type = establish_protectorate_casus_belli_no_infamy months = 24 }
         }
         random_country = {
             limit = {
@@ -375,7 +372,7 @@ country_event = {
                     tag = BAL
                     tag = KTI
                     tag = LAN
-                    tag = BGN
+                    tag = BUL
                     tag = PTK
                     tag = SBS
                     tag = STG
@@ -389,9 +386,9 @@ country_event = {
                 NOT = { civilized = yes }
                 THIS = { nationalism_n_imperialism = 1 has_global_flag = berlin_conference }
             }
-            leave_alliance = THIS
-            relation = { who = THIS value = -100 }
-            add_casus_belli = { target = THIS type = demand_concession_casus_belli_no_infamy months = 24 }
+            leave_alliance = NET
+            relation = { who = NET value = -100 }
+            add_casus_belli = { target = NET type = demand_concession_casus_belli_no_infamy months = 24 }
         }
         ai_chance = {
             factor = 95
@@ -413,7 +410,7 @@ country_event = {
                     tag = BAL
                     tag = KTI
                     tag = LAN
-                    tag = BGN
+                    tag = BUL
                     tag = PTK
                     tag = SBS
                     tag = STG
@@ -421,7 +418,7 @@ country_event = {
                 exists = yes
                 NOT = { vassal_of = THIS }
             }
-            relation = { who = THIS value = 25 }
+            relation = { who = NET value = 25 }
         }
 
         ai_chance = { factor = 5 }
@@ -751,7 +748,7 @@ province_event = {
                 remove_core = BRU
                 remove_core = STG
                 remove_core = SBS
-                remove_core = BGN
+                remove_core = BUL
                 remove_core = BTN
                 remove_core = RIA
                 remove_core = PTK
@@ -832,7 +829,7 @@ province_event = {
                 remove_core = BRU
                 remove_core = STG
                 remove_core = SBS
-                remove_core = BGN
+                remove_core = BUL
                 remove_core = BTN
                 remove_core = RIA
                 remove_core = PTK

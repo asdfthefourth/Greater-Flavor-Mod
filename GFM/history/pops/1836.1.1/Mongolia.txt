@@ -281,13 +281,7 @@
     farmers = {
         culture = mongol
         religion = gelugpa
-        size = 31000
-    }
-	
-	farmers = {
-        culture = tatar
-        religion = gelugpa
-        size = 4000
+        size = 35000
     }
 }
 #Bulgan (84000/21000 POPS)
@@ -319,13 +313,7 @@
     farmers = {
         culture = mongol
         religion = gelugpa
-        size = 14125
-    }
-	
-	farmers = {
-        culture = tatar
-        religion = gelugpa
-        size = 3000
+        size = 17125
     }
 }
 #Khovd (120000/30000 POPS)

@@ -873,67 +873,10 @@
     }
 
 }
-
-#Karimabad
 3323 = {
-	
-	aristocrats = {
-        culture = pamiri
-        religion = shiite
-        size = 15
-    }
-
-    clergymen = {
-        culture = pamiri
-        religion = shiite
-        size = 25
-    }
-
-    soldiers = {
-        culture = pamiri
-        religion = shiite
-        size = 10
-    }
-
     farmers = {
-        culture = pamiri
-        religion = shiite
-        size = 4010
-    }
-
-    aristocrats = {
-        culture = pamiri
-        religion = shiite
-        size = 70
-    }
-
-    clergymen = {
-        culture = pamiri
-        religion = shiite
-        size = 70
-    }
-
-    artisans = {
-        culture = pamiri
-        religion = shiite
-        size = 130
-    }
-
-    soldiers = {
-        culture = pamiri
-        religion = shiite
-        size = 1050
-    }
-
-    farmers = {
-        culture = pamiri
-        religion = shiite
-        size = 6750
-    }
-	
-	farmers = {
-        culture = kashmiri
-        religion = shiite
-        size = 250
+        culture = uighur
+        religion = sunni
+        size = 2700
     }
 }

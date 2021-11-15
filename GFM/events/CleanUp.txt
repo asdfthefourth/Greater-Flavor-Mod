@@ -82,10 +82,7 @@ country_event = {
     trigger = {
         is_vassal = no
         civilized = yes
-		OR = {
-			government = democracy
-			has_country_flag = Government_Democracy
-		}
+        government = democracy
         ruling_party_ideology = reactionary
         average_militancy = 3
         OR = {
@@ -139,7 +136,6 @@ country_event = {
         set_country_flag = presidential_dictatorship_gov
         clr_country_flag = fascist_gov
         clr_country_flag = radical_gov
-		clr_country_flag = Government_Democracy
         government = presidential_dictatorship
         political_reform = none_voting
         political_reform = party_appointed
@@ -166,7 +162,7 @@ country_event = {
     news_desc_long = "EVTDESC60020_NEWS_LONG"
     news_desc_medium = "EVTDESC60020_NEWS_MEDIUM"
     news_desc_short = "EVTDESC60020_NEWS_SHORT"
-    picture = "radical_takeover"
+    picture = "election"
 
     trigger = {
         is_vassal = no
@@ -219,6 +215,11 @@ country_event = {
         social_reform = no_subsidies
         social_reform = no_pensions
         social_reform = no_health_care
+        clr_country_flag = everywhere_genocide_only
+        clr_country_flag = non_colonial_genocide_only
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         country_event = 800053
     }
 }
@@ -232,7 +233,7 @@ country_event = {
     news_desc_long = "EVTDESC60030_NEWS_LONG"
     news_desc_medium = "EVTDESC60030_NEWS_MEDIUM"
     news_desc_short = "EVTDESC60030_NEWS_SHORT"
-    picture = "fascist_group"
+    picture = "Fascist"
 
     trigger = {
         is_vassal = no
@@ -279,6 +280,11 @@ country_event = {
         political_reform = state_controlled
         political_reform = underground_parties
         political_reform = culture_voting_only
+        clr_country_flag = everywhere_genocide_only
+        clr_country_flag = non_colonial_genocide_only
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         prestige_factor = -0.05
         country_event = 800051
     }
@@ -292,7 +298,7 @@ country_event = {
     news_desc_long = "EVTDESC60050_NEWS_LONG"
     news_desc_medium = "EVTDESC60050_NEWS_MEDIUM"
     news_desc_short = "EVTDESC60050_NEWS_SHORT"
-    picture = "the_thaw"
+    picture = "senate_debate"
 
     trigger = {
         OR = {
@@ -314,6 +320,11 @@ country_event = {
     major = yes
     option = {
         name = "EVTOPTA60050"
+        clr_country_flag = everywhere_genocide_only
+        clr_country_flag = non_colonial_genocide_only
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
@@ -322,7 +333,6 @@ country_event = {
         clr_country_flag = presidential_dictatorship_gov
         clr_country_flag = fascist_gov
         clr_country_flag = radical_gov
-		set_country_flag = Government_Democracy
         remove_country_modifier = fight_the_power
         government = democracy
         election = yes
@@ -352,6 +362,11 @@ country_event = {
 
     option = {
         name = "EVTOPTA60040"
+        clr_country_flag = everywhere_genocide_only
+        clr_country_flag = non_colonial_genocide_only
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         clr_country_flag = communist_gov
         set_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
@@ -360,7 +375,6 @@ country_event = {
         clr_country_flag = presidential_dictatorship_gov
         clr_country_flag = fascist_gov
         clr_country_flag = radical_gov
-		clr_country_flag = Government_Democracy
         government = absolute_monarchy
     }
 }
@@ -388,6 +402,11 @@ country_event = {
 
     option = {
         name = "EVTNAME60060"
+        clr_country_flag = everywhere_genocide_only
+        clr_country_flag = non_colonial_genocide_only
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         government = prussian_constitutionalism
         random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
         clr_country_flag = communist_gov
@@ -398,7 +417,6 @@ country_event = {
         clr_country_flag = presidential_dictatorship_gov
         clr_country_flag = fascist_gov
         clr_country_flag = radical_gov
-		clr_country_flag = Government_Democracy
     }
 }
 
@@ -432,6 +450,11 @@ country_event = {
 
     option = {
         name = "EVTOPTA60070"
+        clr_country_flag = everywhere_genocide_only
+        clr_country_flag = non_colonial_genocide_only
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
@@ -440,7 +463,6 @@ country_event = {
         clr_country_flag = presidential_dictatorship_gov
         clr_country_flag = fascist_gov
         clr_country_flag = radical_gov
-		clr_country_flag = Government_Democracy
         government = hms_government
         random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
     }
@@ -458,10 +480,7 @@ country_event = {
     picture = "communist_crowd"
 
     trigger = {
-		OR = {
-			government = democracy
-			has_country_flag = Government_Democracy
-		}
+        government = democracy
         vote_franschise = none_voting
         OR = {
             ruling_party_ideology = conservative
@@ -487,7 +506,11 @@ country_event = {
         set_country_flag = presidential_dictatorship_gov
         clr_country_flag = fascist_gov
         clr_country_flag = radical_gov
-		clr_country_flag = Government_Democracy
+        clr_country_flag = everywhere_genocide_only
+        clr_country_flag = non_colonial_genocide_only
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
     }
 }
 
@@ -500,13 +523,10 @@ country_event = {
     news_desc_long = "EVTDESC60080_NEWS_LONG"
     news_desc_medium = "EVTDESC60080_NEWS_MEDIUM"
     news_desc_short = "EVTDESC60080_NEWS_SHORT"
-    picture = "bourgeouis_takeover"
+    picture = "communist_crowd"
 
     trigger = {
-		OR = {
-			government = democracy
-			has_country_flag = Government_Democracy
-		}
+        government = democracy
         vote_franschise = none_voting
         ruling_party_ideology = radical
         civilized = yes
@@ -527,7 +547,11 @@ country_event = {
         clr_country_flag = presidential_dictatorship_gov
         clr_country_flag = fascist_gov
         set_country_flag = radical_gov
-		clr_country_flag = Government_Democracy
+        clr_country_flag = everywhere_genocide_only
+        clr_country_flag = non_colonial_genocide_only
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
     }
 }
 
@@ -540,13 +564,10 @@ country_event = {
     news_desc_long = "EVTDESC60080_NEWS_LONG"
     news_desc_medium = "EVTDESC60080_NEWS_MEDIUM"
     news_desc_short = "EVTDESC60080_NEWS_SHORT"
-    picture = "commie_kick"
+    picture = "communist_crowd"
 
     trigger = {
-		OR = {
-			government = democracy
-			has_country_flag = Government_Democracy
-		}
+        government = democracy
         vote_franschise = none_voting
         ruling_party_ideology = communist
         civilized = yes
@@ -567,7 +588,11 @@ country_event = {
         clr_country_flag = presidential_dictatorship_gov
         clr_country_flag = fascist_gov
         clr_country_flag = radical_gov
-		clr_country_flag = Government_Democracy
+        clr_country_flag = everywhere_genocide_only
+        clr_country_flag = non_colonial_genocide_only
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
     }
 }
 
@@ -580,13 +605,10 @@ country_event = {
     news_desc_long = "EVTDESC60080_NEWS_LONG"
     news_desc_medium = "EVTDESC60080_NEWS_MEDIUM"
     news_desc_short = "EVTDESC60080_NEWS_SHORT"
-    picture = "military_coup_major"
+    picture = "communist_crowd"
 
     trigger = {
-		OR = {
-			government = democracy
-			has_country_flag = Government_Democracy
-		}
+        government = democracy
         vote_franschise = none_voting
         ruling_party_ideology = fascist
         civilized = yes
@@ -608,7 +630,11 @@ country_event = {
         clr_country_flag = presidential_dictatorship_gov
         set_country_flag = fascist_gov
         clr_country_flag = radical_gov
-		clr_country_flag = Government_Democracy
+        clr_country_flag = everywhere_genocide_only
+        clr_country_flag = non_colonial_genocide_only
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
     }
 }
 country_event = {
@@ -632,6 +658,11 @@ country_event = {
 
     option = {
         name = "EVTOPTA60040"
+        clr_country_flag = everywhere_genocide_only
+        clr_country_flag = non_colonial_genocide_only
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         clr_country_flag = communist_gov
         set_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
@@ -667,6 +698,11 @@ country_event = {
 
     option = {
         name = "EVTNAME60060"
+        clr_country_flag = everywhere_genocide_only
+        clr_country_flag = non_colonial_genocide_only
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         government = semi_constitutional_empire
         random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
         clr_country_flag = communist_gov
@@ -710,6 +746,11 @@ country_event = {
 
     option = {
         name = "EVTOPTA60070"
+        clr_country_flag = everywhere_genocide_only
+        clr_country_flag = non_colonial_genocide_only
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
@@ -756,12 +797,14 @@ country_event = {
             NOT = { tag = SWI }
             sphere_owner = { neighbour = THIS }
         }
-        OR = {
-            NOT = { tag = NEN }
-            has_country_flag = usstatehood_we_have_applied
-            OR = { AND = { USA = { ai = yes } exists = USA } AND = { US2 = { ai = yes } exists = US2 } }
+        AND = {
+            OR = {
+                NOT = { tag = NEN }
+                has_country_flag = usstatehood_we_have_applied
+                USA = { ai = yes }
+            }
+            139 = { owned_by = USA }
         }
-        139 = { OR = { owned_by = USA owned_by = US2 } }
         NOT = {
             tag = KUK
             tag = AUS
@@ -1037,7 +1080,6 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-		# Audax Validator "." Ignore_NEXT
         any_owned = {
             limit = {
                 is_core = OCC
@@ -1173,7 +1215,7 @@ country_event = {
 #        name = "EVT6016813OPTA"
 #        government = absolute_monarchy
 #    }
-# }
+#}
 
 
 #Party Loyalty cleanup
@@ -1186,9 +1228,8 @@ country_event = {
 
     option = {
         name = "EVT6016814OPTA"
-        #USAASSUMEDOESNTNEEDUSTWO
+        #USA
         USA = {
-			# Audax Validator "." Ignore_NEXT
             210 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1199,7 +1240,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             232 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1210,7 +1250,6 @@ country_event = {
                     loyalty_value = -13
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             213 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1221,7 +1260,6 @@ country_event = {
                     loyalty_value = -13
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             220 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1232,7 +1270,6 @@ country_event = {
                     loyalty_value = -13
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             221 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1243,7 +1280,6 @@ country_event = {
                     loyalty_value = -13
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             139 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1254,7 +1290,6 @@ country_event = {
                     loyalty_value = -10
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             169 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1265,7 +1300,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             170 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1276,7 +1310,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             171 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1287,7 +1320,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             172 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1298,7 +1330,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             173 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1309,7 +1340,6 @@ country_event = {
                     loyalty_value = -10
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             178 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1320,7 +1350,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             179 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1331,7 +1360,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             180 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1342,7 +1370,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             181 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1353,7 +1380,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             182 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1364,7 +1390,6 @@ country_event = {
                     loyalty_value = -7
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             184 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1375,7 +1400,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             185 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1386,7 +1410,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             186 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1397,7 +1420,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             189 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1408,7 +1430,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             190 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1419,7 +1440,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             191 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1430,7 +1450,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             195 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1441,7 +1460,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             198 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1452,7 +1470,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             204 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1463,7 +1480,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             206 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1478,7 +1494,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             209 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1489,7 +1504,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             212 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1500,7 +1514,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             217 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1511,7 +1524,6 @@ country_event = {
                     loyalty_value = -10
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             219 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1522,7 +1534,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             222 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1533,7 +1544,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             231 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1544,7 +1554,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             236 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1555,7 +1564,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             237 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1566,7 +1574,6 @@ country_event = {
                     loyalty_value = -10
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             244 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1577,7 +1584,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             245 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1588,7 +1594,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             246 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1599,7 +1604,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             2555 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1610,7 +1614,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             2556 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1621,7 +1624,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             183 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1632,7 +1634,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             239 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1643,7 +1644,6 @@ country_event = {
                     loyalty_value = -17
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             147 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1654,7 +1654,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             148 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1665,7 +1664,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             149 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1676,7 +1674,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             150 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1687,7 +1684,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             165 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1698,7 +1694,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             166 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1709,7 +1704,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             167 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1720,7 +1714,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             168 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1731,7 +1724,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             174 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1742,7 +1734,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             175 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1753,7 +1744,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             176 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1764,7 +1754,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             187 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1775,7 +1764,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             188 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1786,7 +1774,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             192 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1797,7 +1784,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             194 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1808,7 +1794,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             196 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1819,7 +1804,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             197 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1830,14 +1814,12 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             200 = {
                 party_loyalty = {
                     ideology = conservative
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             205 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1852,7 +1834,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             207 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1863,7 +1844,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             208 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1874,7 +1854,6 @@ country_event = {
                     loyalty_value = -15
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             229 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1885,7 +1864,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             230 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1896,7 +1874,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             243 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1907,7 +1884,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             233 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1918,7 +1894,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             234 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1929,7 +1904,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             235 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1940,7 +1914,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             238 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1951,7 +1924,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             240 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1962,7 +1934,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             241 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1973,7 +1944,6 @@ country_event = {
                     loyalty_value = -7
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             242 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1984,7 +1954,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             247 = {
                 party_loyalty = {
                     ideology = liberal
@@ -1995,7 +1964,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             248 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2006,7 +1974,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             249 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2017,7 +1984,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             140 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2028,7 +1994,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             141 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2039,7 +2004,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             142 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2050,7 +2014,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             143 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2061,7 +2024,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             144 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2072,7 +2034,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             145 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2083,7 +2044,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             146 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2094,7 +2054,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             163 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2105,7 +2064,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             177 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2116,7 +2074,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             199 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2127,7 +2084,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             201 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2138,7 +2094,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             211 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2149,7 +2104,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             214 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2160,7 +2114,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             215 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2171,7 +2124,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             216 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2182,7 +2134,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             218 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2193,7 +2144,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             223 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2204,7 +2154,6 @@ country_event = {
                     loyalty_value = -10
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             224 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2215,7 +2164,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             226 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2226,7 +2174,6 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             227 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2237,14 +2184,12 @@ country_event = {
                     loyalty_value = -12
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             164 = {
                 party_loyalty = {
                     ideology = liberal
                     loyalty_value = -10
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             193 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2255,7 +2200,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             225 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2266,7 +2210,6 @@ country_event = {
                     loyalty_value = -10
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             228 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2277,7 +2220,6 @@ country_event = {
                     loyalty_value = -10
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             202 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2288,7 +2230,6 @@ country_event = {
                     loyalty_value = -5
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             60 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2299,14 +2240,12 @@ country_event = {
                     loyalty_value = -25
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             2146 = {
                 party_loyalty = {
                     ideology = liberal
                     loyalty_value = -40
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             2627 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2321,8 +2260,7 @@ country_event = {
 
         #UK
         ENG = {
-			# Audax Validator "." Ignore_NEXT
-				266 = {
+            266 = {
                     party_loyalty = {
                         ideology = conservative
                         loyalty_value = -17
@@ -2332,7 +2270,6 @@ country_event = {
                         loyalty_value = -12
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 267 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2343,7 +2280,6 @@ country_event = {
                         loyalty_value = -12
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 272 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2354,7 +2290,6 @@ country_event = {
                         loyalty_value = -12
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 273 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2365,7 +2300,6 @@ country_event = {
                         loyalty_value = -12
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 274 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2376,7 +2310,6 @@ country_event = {
                         loyalty_value = -12
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 276 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2387,7 +2320,6 @@ country_event = {
                         loyalty_value = -12
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 278 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2398,7 +2330,6 @@ country_event = {
                         loyalty_value = -12
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 285 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2409,7 +2340,6 @@ country_event = {
                         loyalty_value = -12
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 291 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2420,7 +2350,6 @@ country_event = {
                         loyalty_value = -12
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 293 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2431,7 +2360,6 @@ country_event = {
                         loyalty_value = -12
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 294 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2446,7 +2374,6 @@ country_event = {
                         loyalty_value = -5
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 295 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2457,7 +2384,6 @@ country_event = {
                         loyalty_value = -12
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 296 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2468,7 +2394,6 @@ country_event = {
                         loyalty_value = -17
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 297 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2479,7 +2404,6 @@ country_event = {
                         loyalty_value = -12
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 270 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2490,14 +2414,12 @@ country_event = {
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 1724 = {
                     party_loyalty = {
                         ideology = liberal
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 275 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2508,7 +2430,6 @@ country_event = {
                         loyalty_value = -10
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 298 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2519,7 +2440,6 @@ country_event = {
                         loyalty_value = -17
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 303 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2530,7 +2450,6 @@ country_event = {
                         loyalty_value = -12
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 254 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2541,7 +2460,6 @@ country_event = {
                         loyalty_value = -5
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 255 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2552,7 +2470,6 @@ country_event = {
                         loyalty_value = -5
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 256 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2563,7 +2480,6 @@ country_event = {
                         loyalty_value = -5
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 257 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2574,49 +2490,42 @@ country_event = {
                         loyalty_value = -5
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 258 = {
                     party_loyalty = {
                         ideology = liberal
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 259 = {
                     party_loyalty = {
                         ideology = liberal
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 260 = {
                     party_loyalty = {
                         ideology = liberal
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 261 = {
                     party_loyalty = {
                         ideology = liberal
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 262 = {
                     party_loyalty = {
                         ideology = liberal
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 263 = {
                     party_loyalty = {
                         ideology = liberal
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 264 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2627,14 +2536,12 @@ country_event = {
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 265 = {
                     party_loyalty = {
                         ideology = liberal
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 268 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2645,7 +2552,6 @@ country_event = {
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 269 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2656,7 +2562,6 @@ country_event = {
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 271 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2667,7 +2572,6 @@ country_event = {
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 277 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2678,7 +2582,6 @@ country_event = {
                         loyalty_value = -5
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 279 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2689,7 +2592,6 @@ country_event = {
                         loyalty_value = -10
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 280 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2700,7 +2602,6 @@ country_event = {
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 281 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2711,21 +2612,18 @@ country_event = {
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 282 = {
                     party_loyalty = {
                         ideology = liberal
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 283 = {
                     party_loyalty = {
                         ideology = liberal
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 288 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2736,7 +2634,6 @@ country_event = {
                         loyalty_value = -10
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 289 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2747,7 +2644,6 @@ country_event = {
                         loyalty_value = -10
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 290 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2758,7 +2654,6 @@ country_event = {
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 299 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2769,7 +2664,6 @@ country_event = {
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 300 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2780,7 +2674,6 @@ country_event = {
                         loyalty_value = -20
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 301 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2791,7 +2684,6 @@ country_event = {
                         loyalty_value = -5
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 284 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2802,7 +2694,6 @@ country_event = {
                         loyalty_value = -15
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 286 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2813,7 +2704,6 @@ country_event = {
                         loyalty_value = -15
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 287 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2824,7 +2714,6 @@ country_event = {
                         loyalty_value = -5
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 292 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2835,7 +2724,6 @@ country_event = {
                         loyalty_value = -5
                     }
                 }
-			# Audax Validator "." Ignore_NEXT
                 302 = {
                     party_loyalty = {
                         ideology = conservative
@@ -2849,7 +2737,6 @@ country_event = {
         }
         #Portugal
         POR = {
-			# Audax Validator "." Ignore_NEXT
             521 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2859,28 +2746,24 @@ country_event = {
         }
         #Uruguay
         URU = {
-			# Audax Validator "." Ignore_NEXT
             2344 = {
                 party_loyalty = {
                     ideology = liberal
                     loyalty_value = -30
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             2345 = {
                 party_loyalty = {
                     ideology = conservative
                     loyalty_value = -25
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             2347 = {
                 party_loyalty = {
                     ideology = conservative
                     loyalty_value = -25
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             2346 = {
                 party_loyalty = {
                     ideology = conservative
@@ -2890,7 +2773,6 @@ country_event = {
         }
         #Switzerland
         SWI = {
-			# Audax Validator "." Ignore_NEXT
             603 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2901,7 +2783,6 @@ country_event = {
                     loyalty_value = -1
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             604 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2912,7 +2793,6 @@ country_event = {
                     loyalty_value = -1
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             605 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2923,7 +2803,6 @@ country_event = {
                     loyalty_value = -1
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             607 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2934,7 +2813,6 @@ country_event = {
                     loyalty_value = -1
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             608 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2945,7 +2823,6 @@ country_event = {
                     loyalty_value = -1
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             609 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2956,7 +2833,6 @@ country_event = {
                     loyalty_value = -20
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             606 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2967,7 +2843,6 @@ country_event = {
                     loyalty_value = -20
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             2568 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2978,7 +2853,6 @@ country_event = {
                     loyalty_value = -20
                 }
             }
-			# Audax Validator "." Ignore_NEXT
             611 = {
                 party_loyalty = {
                     ideology = liberal
@@ -2998,24 +2872,26 @@ country_event = {
     id = 6016815
     title = "EVTNAME6016815"
     desc = "EVTDESC6016815"
-    picture = "splendid_isolation_evt"
+    picture = "abraham_speech"
     major = yes
-	is_triggered_only = yes
+
+    trigger = {
+        ai = no
+        NOT = { has_global_flag = isolation_setup }
+    }
+
+    fire_only_once = yes
+    mean_time_to_happen = { days = 1 }
 
     option = {
         name = "EVT6016814OPTA"
         set_global_flag = yes_isolation
-        random_country = {
-            limit = {
-                tag = FRA
-                ai = no
-            }
-            country_event = 60168150
-        }
+        set_global_flag = isolation_setup
     }
 
     option = {
         name = "EVT6016815OPTB"
+        set_global_flag = isolation_setup
     }
 }
 #Credits
@@ -3023,93 +2899,26 @@ country_event = {
     id = 60168151
     title = "EVTNAME60168151"
     desc = "EVTDESC60168151"
-    picture = "gettysburg_address"
+    picture = "abraham_speech"
     major = yes
     fire_only_once = yes
 
     trigger = {
-		OR = {
-			AND = {
-				tag = ENG
-				ai = no
-			}
-			AND = {
-				ENG = { ai = yes }
-				ai = no
-			}
-		}
+        ai = no
+        NOT = { has_global_flag = credits }
     }
 
+    fire_only_once = yes
     mean_time_to_happen = { days = 1 }
 
     immediate = {
+        set_global_flag = HFMe_MOD_ACTIVE
         set_global_flag = GFM_MOD_ACTIVE
     }
 
     option = {
         name = "EVT60168151OPTA"
-		country_event = 60168153
-    }
-}
-#Speed
-country_event = {
-    id = 60168153
-    title = "Speed"
-    desc = "SPEEDEXPLAINED"
-    picture = "speedy_train"
-    major = yes
-    is_triggered_only = yes
-
-    option = {
-        name = "Hm, I'll consider it."
-		prestige = 0.1
-		country_event = 60168152
-    }
-}
-#France explained
-country_event = {
-    id = 60168150
-    title = "How to get Napoleon III"
-    desc = "NAPOLEONEXPLAINED"
-    picture = "napoleon_explanation"
-    major = yes
-    fire_only_once = yes
-	is_triggered_only = yes
-	
-	option = {
-        name = "Thank you for explaining!"
-		treasury = 1
-    }
-}
-#MP or SP
-country_event = {
-    id = 60168152
-    title = "Are you playing SP or MP?"
-    desc = "Please select whether you are playing a singleplayer or multiplayer game. This will impact multiplayer balancing and remove some exploitable singleplayer features."
-    picture = "abraham_speech"
-    major = yes
-	is_triggered_only = yes
-
-    immediate = {
-        set_country_flag = mp_or_sp
-    }
-
-	option = {
-        name = "I'm a sigma, I play alone."
-		treasury = 1
-		country_event = 6016815
-    }
-
-    option = {
-        name = "I have friends to game with."
-        set_global_flag = you_are_playing_mp
-		clr_country_flag = show_the_build_decisions
-		any_country = {
-			clr_country_flag = show_the_build_decisions
-			add_country_modifier = { name = lower_infamy duration = -1 }
-		}
-		add_country_modifier = { name = lower_infamy duration = -1 }
-		country_event = 6016815
+        set_global_flag = credits
     }
 }
 #End war with non-existent nations
@@ -3166,43 +2975,117 @@ country_event = {
         ITA = { all_core = { add_core = ITS } }
         ITA = { all_core = { remove_core = ITA } }
     }
+    ai_chance = {
+        factor = 100
+    }
 }
 
-#Vassal Stolen CB - Vassals bounce event to player
+#Ghost Units Cleanup 2/2
 country_event = {
-	id = 6016855
-	title = "EVTNAME6016855"
-	desc = "EVTDESC6016855"
-	picture = "danishgovernment"
+    id = 6016819
+    title = "EVTNAME6016819"
+    desc = "EVTDESC6016819"
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	option = {
-		name = "EVT6016855OPTA"
-		FROM = { country_event = 6016856 }
-	}
+    immediate = {
+        political_reform = no_slavery
+        political_reform = debtors_prisons
+        FROM = {
+            random_owned = {
+                secede_province = THIS
+            }
+        }
+    }
+
+    option = {
+        name = "EVT6016819OPTA"
+        set_country_flag = ghost_country
+        add_country_modifier = { name = neutrality_modifier duration = -1 }
+        political_reform = closed_borders
+        treasury = 1000
+        neutrality = yes
+        any_country = {
+            limit = { war_with = THIS }
+            end_war = THIS
+        }
+        random_owned = {
+            limit = { owner = { civilized = no } }
+            owner = {
+                civilized = yes
+                set_country_flag = uncivilized_on_absorb
+            }
+        }
+    }
 }
 
-#Vassal Stolen CB - Player chooses which vassal they are targeting
+#Ghost Units Cleanup 1/2
 country_event = {
-	id = 6016856
-	title = "EVTNAME6016856"
-	desc = "EVTDESC6016856"
-	picture = "danishgovernment"
+    id = 6016821
+    title = "EVTNAME6016819"
+    desc = "EVTDESC6016819"
 
-	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    immediate = {
+        FROM = {
+            any_owned = {
+                limit = {
+                    OR = {
+                        province_id = 3486
+                        province_id = 3487
+                        province_id = 3488
+                        province_id = 3489
+                    }
+                }
+                secede_province = TMT
+            }
+        }
+    }
+
+    option = {
+        name = "EVT6016819OPTA"
+        add_country_modifier = { name = neutrality_modifier duration = -1 }
+        political_reform = closed_borders
+        treasury = 1000
+        neutrality = yes
+        any_country = {
+            limit = { war_with = THIS }
+            end_war = THIS
+        }
+        any_country = {
+            limit = {
+                exists = no
+                is_greater_power = no
+                has_country_flag = existing_country
+                capital_scope = { NOT = { province_control_days = 120 } }
+                OR = {
+                    is_mobilised = yes
+                    total_amount_of_ships = 1
+                }
+            }
+            country_event = 6016819
+        }
+    }
+}
+
+country_event = {
+	id = 4778779
+	title = "sdafsd"
+	desc = "descf"
+	
 	is_triggered_only = yes
-
+	
 	option = {
-		name = "EVT6016856OPTA"
-		random_owned = {
-			limit = { owner = { NOT = { has_country_flag = picked_steal_target } } }
-			owner = { set_country_flag = picked_steal_target FROM = { set_country_flag = transfer_to_new_overlord } }
+		name = "sus"
+		any_country = {
+			limit = {
+				tag = VNZ
+			}
+			any_owned = {
+				secede_province = THIS
+			}
 		}
-	}
-
-	option = {
-		name = "EVT6016856OPTB"
 	}
 }
 
@@ -3214,13 +3097,11 @@ country_event = {
     picture = "danishgovernment"
 
     is_triggered_only = yes
-
+	
     option = {
         name = "EVT6016823OPTA"
-        FROM = {
-			create_vassal = THIS
-			country_event = 6016826
-		}
+        FROM = { create_vassal = THIS }
+		FROM = { country_event = 6016826 }
     }
 }
 
@@ -3264,9 +3145,9 @@ country_event = {
 	title = "EVTNAME6016826"
 	desc = "EVTDESC6016826"
 	picture = "danishgovernment"
-
+	
 	is_triggered_only = yes
-
+	
 	option = {
 		name = "EVT6016826OPTA"
 		any_country = {
@@ -3283,92 +3164,18 @@ country_event = {
 }
 
 country_event = {
-	id = 4778821
-	title = "AI: French Rev Sanity Check"
-	desc = "This decision for AI. If you got this...something is wrong."
-
-	is_triggered_only = yes
-
-	option = {
-		name = "Sanity Check"
-		FROM = { clr_country_flag = french_rev_sanity_check }
-	}
-}
-
-country_event = {
-	id = 47787801
-	title = "Government Flag Cleanup"
-	desc = "This event fires in case an incorrect government flag exists on your country, and exists to prevent bugs. If this event fires for you, please report it!"
+	id = 4778727
+	title = "Modifier Cleanup"
+	desc = "If you're seeing this, something went wrong. This event should fix that!"
 	picture = "danishgovernment"
-
-	allow_multiple_instances = no
-
+	
 	trigger = {
-		OR = {
-			AND = {
-				OR = {
-					government = proletarian_dictatorship
-					government = presidential_dictatorship
-					government = colonial_company
-					government = parliamentary_republic
-					government = dominion
-					government = fascist_dictatorship
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-					government = hms_government
-					government = theocracy
-					government = absolute_empire
-					government = semi_constitutional_empire
-					government = constitutional_empire
-				}
-				has_country_flag = Government_Democracy
-			}
-			AND = {
-				OR = {
-					government = proletarian_dictatorship
-					government = presidential_dictatorship
-					government = colonial_company
-					government = parliamentary_republic
-					government = democracy
-					government = fascist_dictatorship
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-					government = hms_government
-					government = theocracy
-					government = absolute_empire
-					government = semi_constitutional_empire
-					government = constitutional_empire
-				}
-				has_country_flag = Government_Dominion
-			}
-		}
+		war = no
+		has_country_modifier = disable_conquest_cb
 	}
-
-	mean_time_to_happen = { days = 1 }
-
-	immediate = {
-		clr_country_flag = Government_Democracy
-		clr_country_flag = Government_Dominion
-	}
-
+	
 	option = {
-		name = "Good thing the modders added this event..."
-		random_owned = {
-			limit = {
-				owner = {
-					government = democracy
-				}
-			}
-			owner = { set_country_flag = Government_Democracy }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					government = dominion
-				}
-			}
-			owner = { set_country_flag = Government_Dominion }
-		}
+		name = "Nice!"
+		remove_country_modifier = disable_conquest_cb
 	}
 }
-

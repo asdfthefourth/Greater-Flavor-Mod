@@ -1,7 +1,9 @@
 capital = 1251
 primary_culture = marathi
 culture = avadhi
+culture = bihari
 culture = tamil
+culture = kanauji
 culture = rajput
 culture = bengali
 culture = panjabi
@@ -71,4 +73,6 @@ schools = unciv_tech_school
 # Inventions
 #bottling_process = yes
 modern_winemaking = yes
-
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes

@@ -127,10 +127,8 @@ political_decisions = {
             NOT = {
                 has_global_flag = bulgaria_romania_formed
                 tag = BGR
-				tag = HUR
                 tag = URP
                 exists = BGR
-				exists = HUR
                 exists = URP
                 exists = ROM
                 is_culture_group = pan_romanian
@@ -193,17 +191,6 @@ political_decisions = {
                 }
                 annex_to = THIS
             }
-			any_country = {
-				limit = {
-					in_sphere = THIS
-				}
-				any_owned = {
-					limit = {
-						is_core = ROM
-					}
-					secede_province = THIS
-				}
-			}
             any_owned = {
                 limit = {
                     is_core = THIS
@@ -211,13 +198,7 @@ political_decisions = {
                 }
                 remove_core = ROM
             }
-			any_owned = {
-				limit = {
-					is_core = ROM
-				}
-				secede_province = ROM
-			}
-            create_vassal = ROM
+            release_vassal = ROM
             create_alliance = ROM
             diplomatic_influence = {
                 who = ROM
@@ -251,18 +232,6 @@ political_decisions = {
                     remove_core = BKV
                 }
             }
-			random_owned = {
-				limit = { MDV = { exists = no } }
-				owner = { MDV = { all_core = { remove_core = MDV } } }
-			}
-			random_owned = {
-				limit = { WAL = { exists = no } }
-				owner = { WAL = { all_core = { remove_core = WAL } } }
-			}
-			random_owned = {
-				limit = { MOL = { exists = no } }
-				owner = { MOL = { all_core = { remove_core = MOL } } }
-			}
         }
         ai_will_do = {
             factor = 1
@@ -284,6 +253,7 @@ political_decisions = {
             is_culture_group = pan_romanian
             exists = ROM
             NOT = {
+                has_country_flag = ghost_country
                 has_country_flag = unite_with_romania
                 tag = ROM
                 tag = MDV
@@ -440,7 +410,7 @@ political_decisions = {
             add_accepted_culture = czech
             add_accepted_culture = slovak
             change_tag = CZH
-            capital = 3483
+            capital = 625
             any_country = {
                 limit = {
                     war = no
@@ -482,7 +452,7 @@ political_decisions = {
         }
 
         effect = {
-            capital = 3483
+            capital = 625
             prestige = 5
             primary_culture = czech
             remove_accepted_culture = slovak
@@ -623,14 +593,12 @@ political_decisions = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
-					has_country_flag = Government_Democracy
                 }
                 CRO = {
                     NOT = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
-						has_country_flag = Government_Democracy
                     }
                 }
             }
@@ -641,14 +609,12 @@ political_decisions = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
-						has_country_flag = Government_Democracy
                     }
                 }
                 NOT = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
-					has_country_flag = Government_Democracy
                 }
             }
             modifier = {
@@ -1423,52 +1389,52 @@ political_decisions = {
     }
 
 
-    invite_greece_to_YUG = {
-        picture = form_yugoslavia
-        potential = {
-            tag = YUG
-            GRE = {
-                exists = yes
-                NOT = {
-                    has_country_flag = greece_has_got_a_brand_new_bag
-                    has_country_flag = not_join_yugoslavia
-                    all_core = { owned_by = GRE }
-                }
-            }
-            NOT = { has_country_flag = invited_greeks_to_YUG }
-        }
-    
-        allow = {
-            war = no
-            is_greater_power = yes
-            revolution_n_counterrevolution = 1
-            GRE = {
-                war = no
-                neighbour = YUG
-                NOT = { truce_with = THIS }
-                OR = {
-                    is_vassal = no
-                    vassal_of = THIS
-                }
-                in_sphere = THIS
-            }
-        }
-    
-        effect = {
-            set_country_flag = invited_greeks_to_YUG
-            GRE = { country_event = 11120 }
-        }
-    
-        ai_will_do = {
-            factor = 1
-        }
-    }
+    #invite_greece_to_YUG = {
+    #    picture = form_yugoslavia
+    #    potential = {
+    #        tag = YUG
+    #        GRE = {
+    #            exists = yes
+    #            NOT = {
+    #                has_country_flag = greece_has_got_a_brand_new_bag
+    #                has_country_flag = not_join_yugoslavia
+    #                all_core = { owned_by = GRE }
+    #            }
+    #        }
+    #        NOT = { has_country_flag = invited_greeks_to_YUG }
+    #    }
+    #
+    #    allow = {
+    #        war = no
+    #        is_greater_power = yes
+    #        revolution_n_counterrevolution = 1
+    #        GRE = {
+    #            war = no
+    #            neighbour = YUG
+    #            NOT = { truce_with = THIS }
+    #            OR = {
+    #                is_vassal = no
+    #                vassal_of = THIS
+    #            }
+    #            in_sphere = THIS
+    #        }
+    #    }
+    #
+    #    effect = {
+    #        set_country_flag = invited_greeks_to_YUG
+    #        GRE = { country_event = 11120 }
+    #    }
+    #
+    #    ai_will_do = {
+    #        factor = 1
+    #    }
+    #}
 
     embrace_bosnians_YUG = {
         picture = embrace_minority
         potential = {
             tag = YUG
-            any_owned_province = { any_pop = { has_pop_culture = bosniak } }
+            any_owned_province = { culture = bosniak }
             NOT = {
                 primary_culture = bosniak
                 accepted_culture = bosniak
@@ -1509,7 +1475,7 @@ political_decisions = {
         picture = embrace_minority
         potential = {
             tag = YUG
-            any_owned_province = { any_pop = { has_pop_culture = bulgarian } }
+            any_owned_province = { culture = bulgarian }
             NOT = {
                 primary_culture = bulgarian
                 accepted_culture = bulgarian
@@ -1550,56 +1516,54 @@ political_decisions = {
         }
     }
 
-    embrace_greeks_YUG = {
-        picture = embrace_minority
-        potential = {
-            tag = YUG
-            any_owned_province = { any_pop = { has_pop_culture = greek } }
-            NOT = {
-                primary_culture = greek
-                accepted_culture = greek
-            }
-        }
-    
-        allow = {
-            prestige = 50
-			citizenship_policy = full_citizenship
-            citizens_rights = all_voting_pops
-            revolution_n_counterrevolution = 1
-            social_science = 1
-            psychoanalysis = 1
-            NOT = {
-                any_owned_province = {
-                    culture = greek
-                    average_militancy = 2
-                }
-            }
-        }
-    
-        effect = {
-            add_accepted_culture = greek
-            prestige = -25
-            any_pop = {
-                limit = { has_pop_culture = greek }
-                consciousness = -4
-                militancy = -4
-            }
-            any_pop = {
-                limit = {
-                    is_primary_culture = no
-                    is_accepted_culture = no
-                }
-                consciousness = 4
-                militancy = 4
-            }
-        }
-    }
+    #embrace_greeks_YUG = {
+    #    picture = embrace_minority
+    #    potential = {
+    #        tag = YUG
+    #        any_owned_province = { culture = greek }
+    #        NOT = {
+    #            primary_culture = greek
+    #            accepted_culture = greek
+    #        }
+    #    }
+    #
+    #    allow = {
+    #        prestige = 50
+    #        revolution_n_counterrevolution = 1
+    #        social_science = 1
+    #        psychoanalysis = 1
+    #        NOT = {
+    #            any_owned_province = {
+    #                culture = greek
+    #                average_militancy = 2
+    #            }
+    #        }
+    #    }
+    #
+    #    effect = {
+    #        add_accepted_culture = greek
+    #        prestige = -25
+    #        any_pop = {
+    #            limit = { has_pop_culture = greek }
+    #            consciousness = -4
+    #            militancy = -4
+    #        }
+    #        any_pop = {
+    #            limit = {
+    #                is_primary_culture = no
+    #                is_accepted_culture = no
+    #            }
+    #            consciousness = 4
+    #            militancy = 4
+    #        }
+    #    }
+    #}
 
     embrace_albanians_YUG = {
         picture = embrace_minority
         potential = {
             tag = YUG
-            any_owned_province = { any_pop = { has_pop_culture = albanian } }
+            any_owned_province = { culture = albanian }
             NOT = {
                 primary_culture = albanian
                 accepted_culture = albanian
@@ -2108,7 +2072,7 @@ political_decisions = {
                     months = 6
                 }
             }
-            CRO = { all_core = { limit = { NOT = { province_id = 3289 } } remove_core = HUN remove_core = HUR } }
+            CRO = { all_core = { remove_core = HUN } }
             CRO = { all_core = { remove_core = AUS } }
             CRO = { all_core = { remove_core = KUK } }
         }
@@ -2171,15 +2135,10 @@ political_decisions = {
     claim_fiume = {
         picture = fiume_port
         potential = {
-            OR = {
-				tag = HUN
-				tag = HUR
-			}
+            tag = HUN
             owns = 773
             778 = { NOT = { is_core = HUN } }
-            778 = { NOT = { is_core = HUR } }
             773 = { is_core = HUN }
-            773 = { is_core = HUR }
         }
 
         allow = {
@@ -2189,13 +2148,6 @@ political_decisions = {
 
         effect = {
             778 = { add_core = HUN }
-			any_country = {
-				limit = {
-					tag = HUR
-					exists = yes
-				}
-				778 = { add_core = HUR }
-			}
             badboy = 1
         }
         ai_will_do = { factor = 1 }
@@ -2332,13 +2284,6 @@ political_decisions = {
         potential = {
             NOT = { tag = CRO }
             NOT = { tag = BOS }
-			NOT = { tag = ALB }
-			NOT = { tag = DLM }
-			NOT = {
-				AND = { tag = AUS 2582 = { is_core = AUS } }
-				AND = { tag = KUK 2582 = { is_core = KUK } }
-				AND = { tag = DNB 2582 = { is_core = DNB } }
-			}
             any_owned_province = { is_core = MON }
             NOT = { has_global_flag = montenegro_organized }
             year = 1870
@@ -2365,9 +2310,6 @@ political_decisions = {
             MON = { all_core = { remove_core = CRO } }
             MON = { all_core = { remove_core = DLM } }
             MON = { all_core = { remove_core = KUK } }
-			MON = { all_core = { remove_core = AUS } }
-			MON = { all_core = { remove_core = DNB } }
-			MON = { all_core = { remove_core = ALB } }
         }
         ai_will_do = { factor = 1 }
     }
@@ -2401,20 +2343,15 @@ political_decisions = {
     }
 
     forcefully_remove_turkish_pops = {
-        picture = remove_undesireables
+        picture = remove_undersireables
         potential = {
             ideological_thought = 1
             has_pop_culture = turkish
-			OR = {
-				ruling_party_ideology = reactionary
-				ruling_party_ideology = fascist
-			}
             NOT = {
                 has_country_modifier = turkish_oppression
                 vassal_of = TUR
                 government = proletarian_dictatorship
                 government = democracy
-				has_country_flag = Government_Democracy
                 nationalvalue = nv_liberty
                 nationalvalue = nv_equality
             }
@@ -2425,7 +2362,6 @@ political_decisions = {
                 tag = BUL
                 tag = SLO
                 tag = ROM
-				tag = HUR
                 tag = CRO
                 tag = BOS
                 tag = MON
@@ -2452,22 +2388,19 @@ political_decisions = {
             any_pop = {
                 limit = {
                     culture = turkish
+                    876 = { owned_by = TUR }
                 }
-                reduce_pop = 0.8
+                move_pop = 876
+            }
+            any_pop = {
+                limit = {
+                    culture = turkish
+                    NOT = { 876 = { owned_by = TUR } }
+                }
+                reduce_pop = 0.35
                 militancy = 9
                 consciousness = 7
             }
-			any_country = {
-				limit = {
-					primary_culture = turkish
-				}
-				any_pop = {
-					limit = {
-						culture = turkish
-					}
-					reduce_pop = 1.1
-				}
-			}
             any_pop = {
                 limit = {
                     OR = {
@@ -2529,101 +2462,4 @@ political_decisions = {
             }
         }
     }
-	
-	balkan_population_exchange = {
-        picture = population_to_turkey
-        potential = {
-            mass_politics = 1
-            has_pop_culture = turkish
-            NOT = {
-                vassal_of = TUR
-				government = fascist_dictatorship
-				ruling_party_ideology = fascist
-				ruling_party_ideology = reactionary
-				TUR = {
-					any_owned_province = { is_core = THIS }
-				}
-				has_country_flag = balkan_population_exchange_done
-            }
-            OR = {
-                tag = YUG
-                tag = SER
-                tag = ALB
-                tag = BUL
-                tag = SLO
-                tag = ROM
-				tag = HUR
-                tag = CRO
-                tag = BOS
-                tag = MON
-                tag = GRE
-                tag = BYZ
-                tag = ARM
-                tag = CLC
-                tag = BGR
-            }
-        }
-        allow = {
-            war = no
-            relation = {
-                who = TUR
-                value = 100
-            }
-			money = 1000000
-        }
-        effect = {
-			treasury = -1000000
-			set_country_flag = balkan_population_exchange_done
-            relation = { who = TUR value = 50 }
-			any_pop = {
-				consciousness = 2
-			}
-            any_pop = {
-                limit = {
-                    culture = turkish
-					location = { 
-						OR = {
-							is_core = THIS
-							NOT = { is_core = TUR }
-						}
-					}
-                }
-                reduce_pop = 0.8
-            }
-			any_pop = {
-				limit = {
-					OR = {
-						is_primary_culture = yes
-						is_accepted_culture = yes
-					}
-				}
-				reduce_pop = 1.2
-			}
-			TUR = {
-				any_pop = {
-					limit = {
-						culture = turkish
-					}
-					reduce_pop = 1.1
-				}
-				any_pop = {
-					limit = {
-						OR = {
-							is_primary_culture = THIS
-							is_accepted_culture = THIS
-						}
-					}
-					reduce_pop = 0.8
-				}
-			}
-        }
-        ai_will_do = {
-            factor = 0.7
-            modifier = {
-                factor = 0
-                NOT = { any_owned_province = { pop_majority_culture = turkish } }
-            }
-        }
-    }
-	
 }

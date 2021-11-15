@@ -63,7 +63,7 @@ country_event = {
     }
 
     option = {
-        name = "Our rightful territory must be returned. §RGain 3.5 infamy§W"
+        name = "Our rightful territory must be returned."
         badboy = 3.5
         any_country = {
             limit = {

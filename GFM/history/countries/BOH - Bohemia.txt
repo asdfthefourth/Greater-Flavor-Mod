@@ -1,4 +1,4 @@
-capital = 3483
+capital = 625
 primary_culture = czech
 culture = western_slavic
 religion = catholic
@@ -71,4 +71,10 @@ upper_house = {
     radical = 0
     socialist = 0
     communist = 0
+}
+
+1861.1.1 = {
+# Technologies
+
+#Inventions
 }

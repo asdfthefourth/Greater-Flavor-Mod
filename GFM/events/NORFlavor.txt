@@ -213,7 +213,7 @@ country_event = {
         months = 5
 
         modifier = {
-            factor = 1.45 #increase likelihood to happen
+            factor = 0.75 #increase likelihood to happen
             year = 1851
         }
 
@@ -223,7 +223,7 @@ country_event = {
         }
 		
         modifier = {
-            factor = 0.45 #increase likelihood to happen
+            factor = 1 #increase likelihood to happen
             year = 1853
         }
     }
@@ -248,6 +248,7 @@ country_event = {
         }
         set_global_flag = Thrane
 		political_reform = non_socialist
+		militancy = 2
     }
 	
     option = {
@@ -297,21 +298,21 @@ country_event = {
         set_country_flag = sami_accepted
         prestige = 5
         add_accepted_culture = sami
-        3338 = { add_core = NOR }
-        3339 = { add_core = NOR }
+        NOR = { add_core = 3338 }
+        NOR = { add_core = 3339 }
+        NOR = { add_core = 3340 }
         any_pop = {
             limit = { has_pop_culture = sami }
             militancy = -10
             literacy = 0.50
         }
         307 = { change_province_name = "Guovdageaidnu" }
-		ai_chance = { factor = 0 }
     }
     option = {
         name = "REJECTSAMI"
         badboy = 2
-        306 = { remove_core = SMI }
-		307 = { remove_core = SMI }
+        SMI = { remove_core = 306 }
+        SMI = { remove_core = 307 }
         any_pop = {
             limit = { has_pop_culture = sami }
             militancy = 10
@@ -327,7 +328,6 @@ country_event = {
 			duration = -1
 			}
 		}
-		ai_chance = { factor = 1 }
     }
 }
 
@@ -373,7 +373,6 @@ country_event = {
     option = {
         name = "They were once Norwegian, now they're Norwegian once more!"
         prestige = 2
-		# Audax Validator "." Ignore_NEXT
 		253 = { assimilate = yes }
     }
 }
@@ -389,7 +388,7 @@ country_event = {
     }
     fire_only_once = yes
     mean_time_to_happen = {
-        days = 1
+        months = 0
     }
     option = {
         name = "bomuldsfabrique_option"
@@ -413,7 +412,7 @@ country_event = {
     }
     fire_only_once = yes
     mean_time_to_happen = {
-        months = 1
+        months = 0
     }
     option = {
         name = "bomuldsfabrique_option2"
@@ -429,7 +428,6 @@ country_event = {
     trigger = {
         year = 1904
 		owns = 308
-		NOT = { owns = 549 }
     }
     fire_only_once = yes
     mean_time_to_happen = {
@@ -482,10 +480,10 @@ country_event = {
         name = "alesundrebuilt_option1"
 		308 = { add_province_modifier = {
 	        name = alesundfire_rebuilt
-	        duration = 72
+	        duration = -1
             }
+			life_rating = 2
 		}
-		308 = { remove_province_modifier = alesundfire_destroyed }
 		prestige = 5
     }
 }
@@ -500,12 +498,12 @@ country_event = {
         tag = NOR
         NOR = { is_vassal = no }
     }
+    fire_only_once = yes
     mean_time_to_happen = {
         months = 1
     }
     option = {
         name = "NOR_REPUBLIC"
-		clr_country_flag = Government_Dominion
         prestige = 5
         government = parliamentary_republic
         any_pop = {
@@ -516,7 +514,6 @@ country_event = {
         name = "NOR_MONARCHY"
         prestige = 5
         government = hms_government
-		clr_country_flag = Government_Dominion
         any_pop = {
 			militancy = -10
 		}
@@ -525,7 +522,6 @@ country_event = {
         name = "NOR_ABSOLUTE_MONARCHY"
         prestige = 5
         government = prussian_constitutionalism
-		clr_country_flag = Government_Dominion
         nationalvalue = nv_order
         any_pop = {
 			militancy = -2
@@ -565,24 +561,20 @@ country_event = {
         name = "LANDSMAAL"
         prestige = 12
         remove_accepted_culture = danish
-		any_pop = {
-			limit = { strata = rich }
-			militancy = 7
-		}
-		any_pop = {
-			limit = { strata = poor }
-			militancy = -5
-		}
-		any_pop = {
-			limit = { strata = middle }
-			militancy = -3
-		}
+        any_pop = {
+        rich_strata = {
+            militancy = 7
+            }
+        poor_strata = {
+            militancy = -5
+            }
+        middle_strata = {
+            militancy = -3
+            }
+        }
         308 = { change_province_name = "Ålesund" }
         305 = { change_province_name = "Trondheim" }
-        313 = { 
-		    change_province_name = "Oslo"
-			state_scope = { change_region_name = "Austlandet" }
-		}
+        313 = { change_province_name = "Oslo" }
         305 = { change_province_name = "Nidaros" }
         309 = { change_province_name = "Bjørgvin" }
         316 = { change_province_name = "Borg" }
@@ -600,7 +592,7 @@ country_event = {
     option = {
         name = "LANDSMAAL_AND_RIKSMAAL"
         remove_accepted_culture = danish
-        #militancy = -10
+        militancy = -10
         308 = { change_province_name = "Ålesund" }
         305 = { change_province_name = "Trondheim" }
         add_country_modifier = {
@@ -690,12 +682,9 @@ country_event = {
 	        duration = -1 }
 		}
         any_pop = {
-            limit = {
-				OR = {
-					has_pop_culture = irish
-					has_pop_culture = scottish
-				}
-			}
+            limit = { 
+			    has_pop_culture = irish
+				has_pop_culture = scottish }
             militancy = -2
             literacy = 0.20
         }
@@ -755,12 +744,9 @@ country_event = {
 	        duration = -1 }
 		}
         any_pop = {
-            limit = {
-				OR = {
-					has_pop_culture = irish
-					has_pop_culture = scottish
-				}
-			}
+            limit = { 
+			    has_pop_culture = irish
+				has_pop_culture = scottish }
             militancy = 2
             literacy = 0.05
         }

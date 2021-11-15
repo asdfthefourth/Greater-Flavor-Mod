@@ -12,6 +12,7 @@ country_event = {
         MON = { owns = 2583 }
         owns = 2577
         owns = 2582
+        owns = 3375
         owns = 2569
         NOT = {
             has_country_flag = montenegroannex
@@ -24,7 +25,7 @@ country_event = {
     }
 
     option = {
-        name = "EVTOPTA203770 §RGain 3 infamy§W"
+        name = "EVTOPTA203770"
         random_country = {
             limit = {
                 tag = MON
@@ -74,7 +75,6 @@ country_event = {
             government = absolute_monarchy
             government = prussian_constitutionalism
             government = presidential_dictatorship
-			has_country_flag = Government_Democracy
         }
     }
 
@@ -213,7 +213,6 @@ country_event = {
             government = absolute_monarchy
             government = prussian_constitutionalism
             government = presidential_dictatorship
-			has_country_flag = Government_Democracy
         }
     }
 
@@ -390,7 +389,10 @@ country_event = {
             factor = 0.75
         }
         modifier = {
-            government = proletarian_dictatorship
+            OR = {
+                government = proletarian_dictatorship
+                government = bourgeois_dictatorship
+            }
             factor = 2
         }
         modifier = {
@@ -491,7 +493,10 @@ country_event = {
             factor = 0.75
         }
         modifier = {
-            government = proletarian_dictatorship
+            OR = {
+                government = proletarian_dictatorship
+                government = bourgeois_dictatorship
+            }
             factor = 2
         }
         modifier = {
@@ -667,7 +672,10 @@ country_event = {
             factor = 0.75
         }
         modifier = {
-            government = proletarian_dictatorship
+            OR = {
+                government = proletarian_dictatorship
+                government = bourgeois_dictatorship
+            }
             factor = 2
         }
         modifier = {
@@ -802,6 +810,7 @@ country_event = {
         TUR = {
             NOT = {
                 owns = 800
+                owns = 3375
                 owns = 3420
                 owns = 2583
                 owns = 2569
@@ -888,15 +897,16 @@ country_event = {
     trigger = {
         has_country_flag = come_to_the_new_world
         NOT = {
-            has_country_modifier = slow_immigration_boom
+            has_country_modifier = small_immigration_boom
         }
     }
     mean_time_to_happen = {
-        months = 1500
+        days = 1
     }
     option = {
         name = "Keep 'em coming."
-        add_country_modifier = { name = slow_immigration_boom duration = 365 }
+        add_country_modifier = { name = slow_immigration_boom duration = 1825 }
+        clr_country_flag = come_to_the_new_world
 
     }
 }
@@ -963,7 +973,6 @@ country_event = {
             nationalvalue = nv_liberty
             government = democracy
             government = hms_government
-			has_country_flag = Government_Democracy
             ruling_party_ideology = conservative
             ruling_party_ideology = liberal
             ruling_party_ideology = socialist

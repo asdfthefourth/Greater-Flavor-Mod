@@ -42,11 +42,13 @@ country_event = {
     picture = "cape_map"
 
     trigger = {
-        primary_culture = boer
-        owns = 2049
-        owns = 2050
-        owns = 2051
-        owns = 2052
+        AND = {
+            primary_culture = boer
+            owns = 2049
+            owns = 2050
+            owns = 2051
+            owns = 2052
+        }
         NOT = { has_country_flag = rename_mozambican_provinces_boer }
     }
 
@@ -81,8 +83,10 @@ country_event = {
     picture = "cape_map"
 
     trigger = {
-        primary_culture = boer
-        owns = 2087
+        AND = {
+            primary_culture = boer
+            owns = 2087
+        }
         NOT = { has_country_flag = rename_cape_colony_boer }
     }
 
@@ -154,11 +158,13 @@ country_event = {
     picture = "fascist_march"
 
     trigger = {
-        primary_culture = boer
-        OR = {
-            government = fascist_dictatorship
-            government = presidential_dictatorship
-            ruling_party_ideology = reactionary
+        AND = {
+            primary_culture = boer
+            OR = {
+                government = fascist_dictatorship
+                government = presidential_dictatorship
+                ruling_party_ideology = reactionary
+            }
         }
         is_vassal = no
         NOT = { has_global_flag = unified_south_africa }
@@ -335,58 +341,60 @@ country_event = {
         ORA = {
             all_core = { add_core = TRN }
         }
-		leave_alliance = ORA
-		war = {
-			target = ORA
-			attacker_goal = {
-				casus_belli = conquest
-			}
-			defender_goal = {
-				casus_belli = status_quo
-			}
-		call_ally = no
-		}
-		any_pop = {
-			limit = {
-				is_primary_culture = yes
-			}
-			scaled_militancy = {
-				ideology = reactionary
-				factor = -4
-			}
-			scaled_militancy = {
-				ideology = conservative
-				factor = -2
-			}
-			scaled_militancy = {
-				ideology = liberal
-				factor = 3
-			}
-			scaled_militancy = {
-				ideology = radical
-				factor = 5
+        TRN = {
+            leave_alliance = ORA
+            war = {
+                target = ORA
+                attacker_goal = {
+                    casus_belli = conquest
+                }
+                defender_goal = {
+                    casus_belli = status_quo
+                }
+            call_ally = no
             }
-			scaled_militancy = {
-				ideology = socialist
-				factor = 6
-			}
-		}
-		any_pop = {
-			limit = {
-				is_primary_culture = no
-			}
-			militancy = 2
-			consciousness = 2
-		}
-		any_pop = {
-			limit = {
-				location = { province_id = 2110 } #Schoeman, leader in Zoutpansberg was opposed
-				location = { province_id = 2109 } #Joubert, leader in Lydenberg was opposed
-			}
-			consciousness = 2
-			militancy = 2
-		}
-		badboy = 5
+            any_pop = {
+            limit = {
+                    is_primary_culture = yes
+                }
+                scaled_militancy = {
+                    ideology = reactionary
+                    factor = -4
+                }
+                scaled_militancy = {
+                    ideology = conservative
+                    factor = -2
+                }
+                scaled_militancy = {
+                    ideology = liberal
+                    factor = 3
+                }
+                scaled_militancy = {
+                    ideology = radical
+                    factor = 5
+                }
+                scaled_militancy = {
+                    ideology = socialist
+                    factor = 6
+                }
+            }
+            any_pop = {
+                limit = {
+                    is_primary_culture = no
+                }
+                militancy = 2
+                consciousness = 2
+            }
+            any_pop = {
+                limit = {
+                    location = { province_id = 2110 } #Schoeman, leader in Zoutpansberg was opposed
+                    location = { province_id = 2109 } #Joubert, leader in Lydenberg was opposed
+                }
+                consciousness = 2
+                militancy = 2
+            }
+            badboy = 5
+        }
         ai_chance = {
             factor = 50
         }
@@ -437,15 +445,18 @@ country_event = {
     picture = "cape_map"
 
     trigger = {
-        primary_culture = boer
-        owns = 2087
-        owns = 2100
-        owns = 2098
-        owns = 2111
-        owns = 2113
-        owns = 2114
-        owns = 2105
-        owns = 2094
+        AND = {
+            primary_culture = boer
+            owns = 2087
+            owns = 2100
+            owns = 2098
+            owns = 2111
+            owns = 2113
+            owns = 2114
+            owns = 2105
+            owns = 2094
+
+        }
         invention = manifest_destiny
         NOT = { has_country_flag = united_boer_saf_fired }
     }
@@ -615,11 +626,13 @@ country_event = {
     picture = "cape_map"
 
     trigger = {
-        primary_culture = boer
-        owns = 2113
-        owns = 2112
-        owns = 2111
-        owns = 2104
+        AND = {
+            primary_culture = boer
+            owns = 2113
+            owns = 2112
+            owns = 2111
+            owns = 2104
+        }
         NOT = { has_country_flag = rename_natal_boer }
     }
 
@@ -698,9 +711,11 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-        2068 = { owned_by = SAF }
-        2070 = { owned_by = SAF }
-        2635 = { owned_by = SAF }
+        AND = {
+            2068 = { owned_by = SAF }
+            2070 = { owned_by = SAF }
+            2635 = { owned_by = SAF }
+        }
         NOT = { has_country_flag = rename_mashonaland_boer }
     }
 
@@ -809,18 +824,20 @@ country_event = {
 
     trigger = {
         primary_culture = boer
-        OR = {
-            ruling_party_ideology = liberal
-            ruling_party_ideology = communist
-            ruling_party_ideology = socialist
-        }
-        any_owned_province = {
+        AND = {
             OR = {
-                is_core = XHO
-                is_core = ZUL
-                is_core = SHO
-                is_core = MAT
-                is_core = TSW
+                ruling_party_ideology = liberal
+                ruling_party_ideology = communist
+                ruling_party_ideology = socialist
+            }
+            any_owned_province = {
+                OR = {
+                    is_core = XHO
+                    is_core = ZUL
+                    is_core = SHO
+                    is_core = MAT
+                    is_core = TSW
+                }
             }
         }
         NOT = { has_country_flag = native_reintegration_boer }
@@ -837,14 +854,16 @@ country_event = {
         }
         any_pop = {
             limit = {
-                OR = {
-                    has_pop_culture = boer
-                    has_pop_culture = british
-                }
-                OR = {
-                    pop_majority_ideology = conservative
-                    pop_majority_ideology = reactionary
-                    pop_majority_ideology = fascist
+                AND = {
+                    OR = {
+                        has_pop_culture = boer
+                        has_pop_culture = british
+                    }
+                    OR = {
+                        pop_majority_ideology = conservative
+                        pop_majority_ideology = reactionary
+                        pop_majority_ideology = fascist
+                    }
                 }
             }
             militancy = 3
@@ -912,14 +931,16 @@ country_event = {
         set_country_flag = native_slaughter
         any_pop = {
             limit = {
-                OR = {
-                    has_pop_culture = boer
-                    has_pop_culture = british
-                }
-                OR = {
-                    pop_majority_ideology = reactionary
-                    pop_majority_ideology = fascist
-                    pop_majority_ideology = conservative
+                AND = {
+                    OR = {
+                        has_pop_culture = boer
+                        has_pop_culture = british
+                    }
+                    OR = {
+                        pop_majority_ideology = reactionary
+                        pop_majority_ideology = fascist
+                        pop_majority_ideology = conservative
+                    }
                 }
             }
             militancy = -1
@@ -959,14 +980,16 @@ country_event = {
         set_country_flag = native_displacement
         any_pop = {
             limit = {
-                OR = {
-                    has_pop_culture = boer
-                    has_pop_culture = british
-                }
-                OR = {
-                    pop_majority_ideology = reactionary
-                    pop_majority_ideology = fascist
-                    pop_majority_ideology = conservative
+                AND = {
+                    OR = {
+                        has_pop_culture = boer
+                        has_pop_culture = british
+                    }
+                    OR = {
+                        pop_majority_ideology = reactionary
+                        pop_majority_ideology = fascist
+                        pop_majority_ideology = conservative
+                    }
                 }
             }
             militancy = -1
@@ -1179,7 +1202,7 @@ country_event = {
     id = 6020
     title = "EVTNAME6020" #Transvaal Civil war Flavor
     desc = "EVTDESC6020"
-    picture = "schoeman_rifles"
+    picture = schoeman_rifles
 
     major = yes
     fire_only_once = yes
@@ -1192,7 +1215,6 @@ country_event = {
             government = democracy
             government = hms_government
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         NOT = {
             has_country_flag = transvaal_civil_war_happened
@@ -1202,7 +1224,6 @@ country_event = {
                 government = democracy
                 government = hms_government
                 government = constitutional_empire
-				has_country_flag = Government_Democracy
             }
         }
     }
@@ -1463,7 +1484,7 @@ country_event = {
     id = 6024
     title = "EVTNAME6024" #Inherit Zoutpansberg
     desc = "EVTDESC6024"
-	picture = "boer_army_two"
+
     major = yes
     fire_only_once = yes
 
@@ -1770,8 +1791,10 @@ country_event = {
         2101 = { #Oranje owns Bloemfontein
             owned_by = THIS
         }
-        ENG = { owns = 2087 } #Cape Town
-        ENG = { owns = 2093 } #Calvinia
+        AND = {
+            ENG = { owns = 2087 } #Cape Town
+            ENG = { owns = 2093 } #Calvinia
+        }
         OR = {
             ENG = { owns = 2094 } #Kimberley
             ORA = { owns = 2094 } #Kimberley
@@ -1826,12 +1849,14 @@ country_event = { #Petition Portugal for port access
     trigger = {
         tag = TRN #Event for Transvaal
         money = 10000 #This will cost money for the railroads
-		2110 = { #Transvaal owns Zotspanberg
-			owned_by = THIS
-		}
-		2105 = { #Transvaal owns Pretoria
-			owned_by = THIS
-		}
+        AND = {
+            2110 = { #Transvaal owns Zotspanberg
+                owned_by = THIS
+            }
+            2105 = { #Transvaal owns Pretoria
+                owned_by = THIS
+            }
+        }
         2049 = { #Portugal owns Louren??o Marques
             owned_by = POR
         }
@@ -1964,8 +1989,10 @@ country_event = { #We have a port of our own
     picture = "walvis"
 
     trigger = {
-        has_country_flag = portugal_port_access #has access through Portuguese ports
-        total_num_of_ports = 1 #no longer landlocked
+        AND =  {
+                has_country_flag = portugal_port_access #has access through Portuguese ports
+                total_num_of_ports = 1 #no longer landlocked
+            }
         NOT = { has_country_flag = we_have_port }
     }
 
@@ -2000,21 +2027,23 @@ country_event = { #Ask UK for port access through the Cape
         tag = ORA #Event for Oranje
         money = 6000 #This will cost money for the railroads
         in_sphere = ENG
-		2101 = { #Oranje owns Bloemfontein
-			owned_by = THIS
-		}
-		2013 = { #Oranje owns Philippolis
-			owned_by = THIS
-		}
-		2558 = { #UK owns Calvinia
-			owned_by = ENG
-		}
-		2093 = { #UK owns De Aar
-			owned_by = ENG
-		}
-		2087 = { #UK owns the Cape
-			owned_by = ENG
-		}
+        AND = {
+            2101 = { #Oranje owns Bloemfontein
+                owned_by = THIS
+            }
+            2013 = { #Oranje owns Philippolis
+                owned_by = THIS
+            }
+            2558 = { #UK owns Calvinia
+                owned_by = ENG
+            }
+            2093 = { #UK owns De Aar
+                owned_by = ENG
+            }
+            2087 = { #UK owns the Cape
+                owned_by = ENG
+            }
+        }
         NOT = {
             AND =  {
                 has_country_flag = cape_port_access
@@ -2133,8 +2162,10 @@ country_event = { #We have a port of our own
     picture = "walvis"
 
     trigger = {
-		has_country_flag = cape_port_access #has access through UK controlled Cape
-        total_num_of_ports = 1 #no longer landlocked
+        AND =  {
+                has_country_flag = cape_port_access #has access through UK controlled Cape
+                total_num_of_ports = 1 #no longer landlocked
+            }
     }
 
     mean_time_to_happen = {
@@ -2323,7 +2354,7 @@ country_event = { #Oranje Asks for the Transvaal
     id = 6046
     title = "EVTNAME6046"
     desc = "EVTDESC6046"
-    picture = "boer_army"
+    picture = "big_ben_finished"
 
     is_triggered_only = yes
 
@@ -2467,7 +2498,7 @@ country_event = {
     id = 6051
     title = "EVTNAME6051" #Jameson Raid
     desc = "EVTDESC6051"
-    picture = "jamesonlaststand"
+    picture = "schoeman_rifles"
 
     fire_only_once = yes
 
@@ -2682,11 +2713,13 @@ country_event = {
         NOT = {
             alliance_with = ORA
         }
-        ORA = {
-            is_vassal = no
-        }
-        TRN = {
-            is_vassal = no
+        AND = {
+            ORA = {
+                is_vassal = no
+            }
+            TRN = {
+                is_vassal = no
+            }
         }
         NOT = { has_country_flag = zar_ora_alliance }
     }
@@ -2743,7 +2776,7 @@ country_event = {
     id = 60200
     title = "EVTNAME60200" #Transvaal Civil war Flavor
     desc = "EVTDESC60200"
-    picture = "schoeman_rifles"
+    picture = schoeman_rifles
 
     major = yes
     fire_only_once = yes
@@ -2787,7 +2820,7 @@ country_event = {
     }
 
     option = {
-        name = "Let the negotiations begin. §RGain 4 infamy§W"
+        name = "Let the negotiations begin."
         badboy = 4
         set_country_flag = annexed_puppet_SAF
         THIS = { inherit = TSW }

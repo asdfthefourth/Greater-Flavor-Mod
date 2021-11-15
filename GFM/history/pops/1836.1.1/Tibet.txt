@@ -317,25 +317,7 @@
     farmers = {
         culture = tibetan
         religion = gelugpa
-        size = 13010
-    }
-
-	artisans = {
-        culture = assamese
-        religion = hindu
-        size = 300
-    }
-
-    soldiers = {
-        culture = assamese
-        religion = hindu
-        size = 300
-    }
-
-    farmers = {
-        culture = assamese
-        religion = hindu
-        size = 3750
+        size = 12010
     }
 
     aristocrats = {
@@ -365,7 +347,7 @@
     farmers = {
         culture = kachin
         religion = animist
-        size = 1555
+        size = 3555
     }
 
     aristocrats = {
@@ -383,7 +365,7 @@
     artisans = {
         culture = asian_minor
         religion = animist
-        size = 900
+        size = 1900
     }
 
     soldiers = {
@@ -395,7 +377,7 @@
     farmers = {
         culture = asian_minor
         religion = animist
-        size = 1460
+        size = 3460
     }
 
 }

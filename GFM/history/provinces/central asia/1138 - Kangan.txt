@@ -1,7 +1,7 @@
-owner = KGN
-controller = KGN
+owner = ABU
+controller = ABU
 add_core = PER
-add_core = KGN
+add_core = QAS
 trade_goods = fish
 life_rating = 35
-terrain = coastal_desert
+terrain = semidesert

@@ -14,7 +14,7 @@ country_event = {
     news_desc_long = "EVTDESC95500_NEWS_LONG"
     news_desc_medium = "EVTDESC95500_NEWS_MEDIUM"
     news_desc_short = "EVTDESC95500_NEWS_SHORT"
-    picture = "berlin_conference"
+    picture = "scramble_for_africa"
     major = yes
 
     trigger = {
@@ -95,7 +95,6 @@ country_event = {
         NOT = { tag = ALD }
         NOT = { tag = TRI }
         NOT = { tag = EGY }
-		NOT = { tag = ETH }
         NOT = { tag = LIB }
     }
 
@@ -1024,6 +1023,7 @@ country_event = {
         SUD = {
             civilized = no
             government = theocracy
+            set_country_flag = theocratic_government
             ruling_party_ideology = reactionary
             political_reform = none_voting
             political_reform = party_appointed
@@ -1108,7 +1108,6 @@ country_event = {
         2081 = { empty = yes }
         owns = 2083
         invention = the_dark_continent
-		NOT = { has_global_flag = colonial_railroading_disabled }
     }
 
     fire_only_once = yes

@@ -7,11 +7,11 @@ POR = {
 }
 
 CLA = {
-    value = 150
+    value = 30
 }
 
 WRI = {
-    value = 150
+    value = 40
 }
 
 BEN = {

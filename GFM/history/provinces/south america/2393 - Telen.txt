@@ -1,3 +1,2 @@
 trade_goods = wool
-terrain = plains
 life_rating = 15

@@ -1,5 +1,3 @@
-ASH = { truce_until = 1890.1.1 }
-
 MOS = {
     value = 20
 }
@@ -20,7 +18,7 @@ WRI = {
     value = 25
 }
 KNG = {
-    value = 180
+    value = 150
 }
 DAH = {
     value = 45

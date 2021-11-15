@@ -1,6 +1,6 @@
 army = {
     name = "Armata Principatul Moldovei"
-    location = 670
+    location = 673
     regiment = {
         name= "1. Infanterie Moldovei"
         type = infantry
@@ -16,7 +16,7 @@ army = {
     regiment = {
         name= "3. Infanterie Moldovei"
         type = infantry
-        home = 671
+        home = 673
     }
 
 }

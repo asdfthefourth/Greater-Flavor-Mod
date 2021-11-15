@@ -926,13 +926,7 @@
     farmers = {
         culture = north_german
         religion = catholic
-        size = 8330
-    }
-	
-	farmers = {
-        culture = north_german
-        religion = catholic
-        size = 45
+        size = 8375
     }
 
     artisans = {

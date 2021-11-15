@@ -17,7 +17,7 @@ political_decisions = {
             set_country_flag = republic_founded
             random_owned = {
                 limit = {
-                    owner = { NOT = { OR = { government = democracy has_country_flag = Government_Democracy } } }
+                    owner = { NOT = { government = democracy } }
                 }
                 owner = { government = democracy }
             }
@@ -63,7 +63,6 @@ political_decisions = {
     }
 
     sand_river_convention = {
-		picture = sand_river_convention
         potential = {
             is_our_vassal = TRN
             TRN = { NOT = { any_owned_province = { is_core = THIS } } }
@@ -84,7 +83,6 @@ political_decisions = {
     }
 
     orange_river_convention = {
-		picture = orange_river_convention
         potential = {
             is_our_vassal = ORA
             NOT = { has_country_flag = boer_accepted }
@@ -281,41 +279,24 @@ political_decisions = {
 		picture = claim_transvaal
         potential = {
             primary_culture = boer
-			NOT = { 2088 = { is_core = THIS } }
-			NOT = { 2558 = { is_core = THIS } }
-			NOT = { 2093 = { is_core = THIS } }
-			NOT = { 2094 = { is_core = THIS } }
-			NOT = { 2095 = { is_core = THIS } }
+			NOT = { ENG_2092 = { is_core = THIS } }
         }
 
         allow = {
-			OR = {
-				2088 = { NOT = { is_core = THIS } owned_by = THIS }
-				2558 = { NOT = { is_core = THIS } owned_by = THIS }
-				2093 = { NOT = { is_core = THIS } owned_by = THIS }
-				2094 = { NOT = { is_core = THIS } owned_by = THIS }
-				2095 = { NOT = { is_core = THIS } owned_by = THIS }
-			}
+			2088 = { NOT = { is_core = THIS } owner = { tag = THIS } }
+			2558 = { NOT = { is_core = THIS } owner = { tag = THIS } }
+			2093 = { NOT = { is_core = THIS } owner = { tag = THIS } }
+			2094 = { NOT = { is_core = THIS } owner = { tag = THIS } }
+			2095 = { NOT = { is_core = THIS } owner = { tag = THIS } }
         }
 
         effect = {
             prestige = 10
-			random_owned = { limit = { province_id = 2088 } change_province_name = "Springbok" }
-            random_owned = { limit = { province_id = 2558 } change_province_name = "De Aar" }
-            random_owned = { limit = { province_id = 2093 } change_province_name = "Calvinia" }
-            random_owned = { limit = { province_id = 2094 } change_province_name = "Kimberley" }
-			any_owned = {
-				limit = {
-					OR = {
-						province_id = 2088
-						province_id = 2558
-						province_id = 2093
-						province_id = 2094
-						province_id = 2095
-					}
-				}
-				add_core = THIS
-			}
+			
+			random_owned = { limit = { province_id = 2088 } change_province_name = "Springbok" add_core = SAF }
+            random_owned = { limit = { province_id = 2558 } change_province_name = "De Aar" add_core = SAF }
+            random_owned = { limit = { province_id = 2093 } change_province_name = "Calvinia" add_core = SAF }
+            random_owned = { limit = { province_id = 2094 } change_province_name = "Kimberley" add_core = SAF }
         }
 
         ai_will_do = {
@@ -435,7 +416,6 @@ political_decisions = {
                 tag = SAF
                 SAF = { exists = no }
             }
-			NOT = { has_global_flag = won_boer_war }
         }
 
         allow = {
@@ -481,6 +461,7 @@ political_decisions = {
             OR = {
                 tag = ENG
                 tag = ENL
+				tag = ENG
             }
             2093 = {
                 empty = no

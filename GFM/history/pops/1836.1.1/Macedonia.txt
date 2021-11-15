@@ -29,7 +29,7 @@
     farmers = {
         culture = turkish
         religion = sunni
-        size = 22225
+        size = 25225
     }
 
     aristocrats = {
@@ -133,7 +133,6 @@
         religion = jewish
         size = 300
     }
-	
 }
 #Monastir Region (268000) #see Greece.txt for balance of region
 #under the rule of Ottoman Empire in 1836

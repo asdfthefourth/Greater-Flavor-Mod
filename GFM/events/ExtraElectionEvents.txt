@@ -14,7 +14,6 @@ country_event = {
     picture = "election_crowd"
 
     trigger = {
-		ai = no
         NOT = { has_country_flag = spectator ai = yes }
         election = yes
         war = yes
@@ -563,7 +562,6 @@ country_event = {
     picture = "communist_riot"
 
     trigger = {
-		ai = no
         election = yes
         OR = {
             average_militancy = 5
@@ -1111,7 +1109,6 @@ country_event = {
     picture = "demonstration"
 
     trigger = {
-		ai = no
         election = yes
         OR = {
             average_militancy = 3
@@ -1642,7 +1639,6 @@ country_event = {
     picture = "election"
 
     trigger = {
-		ai = no
         election = yes
         any_owned_province = {
             is_colonial = no
@@ -2182,7 +2178,6 @@ country_event = {
     picture = "election"
 
     trigger = {
-		ai = no
         election = yes
         any_owned_province = {
             is_colonial = no
@@ -2208,8 +2203,8 @@ country_event = {
                 NOT = { liberal = 0.25 }
             }
             AND = {
-                ruling_party_ideology = radical
-                NOT = { radical = 0.25 }
+                ruling_party_ideology = anarcho_liberal
+                NOT = { anarcho_liberal = 0.25 }
             }
             AND = {
                 ruling_party_ideology = socialist
@@ -2335,13 +2330,13 @@ country_event = {
         }
         any_pop = {
             limit = {
-                country = { ruling_party_ideology = radical }
+                country = { ruling_party_ideology = anarcho_liberal }
                 location = { has_province_modifier = support_the_government }
                 is_primary_culture = yes
                 NOT = { unemployment = 0.01 }
                 NOT = { militancy = 0.5 }
             }
-            ideology = { value = radical factor = 0.05 }
+            ideology = { value = anarcho_liberal factor = 0.05 }
         }
         any_pop = {
             limit = {
@@ -2807,7 +2802,6 @@ country_event = {
     picture = "chartists"
 
     trigger = {
-		ai = no
         election = yes
         war = no
         NOT = {
@@ -3261,7 +3255,6 @@ country_event = {
     picture = "election_win"
 
     trigger = {
-		ai = no
         election = no
         has_country_flag = election_initialized
         ruling_party_ideology = conservative
@@ -3344,13 +3337,11 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-                    OR = {
-						government = democracy
-						has_country_flag = Government_Democracy
-					}
+                    government = democracy
                 }
             }
             owner = {
+                remove_country_modifier = louis_napoleon_iii
                 remove_country_modifier = dom_pedro_ii
             }
         }
@@ -3470,7 +3461,6 @@ country_event = {
     picture = "election_win"
 
     trigger = {
-		ai = no
         election = no
         has_country_flag = election_initialized
         ruling_party_ideology = socialist
@@ -3554,10 +3544,7 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-                    OR = {
-						government = democracy
-						has_country_flag = Government_Democracy
-					}
+                    government = democracy
                 }
             }
             owner = {
@@ -3681,7 +3668,6 @@ country_event = {
     picture = "election_win"
 
     trigger = {
-		ai = no
         election = no
         has_country_flag = election_initialized
         ruling_party_ideology = liberal
@@ -3765,10 +3751,7 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-                    OR = {
-						government = democracy
-						has_country_flag = Government_Democracy
-					}
+                    government = democracy
                 }
             }
             owner = {
@@ -3892,7 +3875,6 @@ country_event = {
     picture = "election_win"
 
     trigger = {
-		ai = no
         election = no
         has_country_flag = election_initialized
         ruling_party_ideology = communist
@@ -3976,10 +3958,7 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-                    OR = {
-						government = democracy
-						has_country_flag = Government_Democracy
-					}
+                    government = democracy
                 }
             }
             owner = {
@@ -4103,7 +4082,6 @@ country_event = {
     picture = "election_win"
 
     trigger = {
-		ai = no
         election = no
         has_country_flag = election_initialized
         ruling_party_ideology = fascist
@@ -4187,10 +4165,7 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-                    OR = {
-						government = democracy
-						has_country_flag = Government_Democracy
-					}
+                    government = democracy
                 }
             }
             owner = {
@@ -4305,7 +4280,6 @@ country_event = {
     picture = "election_win"
 
     trigger = {
-		ai = no
         election = no
         has_country_flag = election_initialized
         ruling_party_ideology = reactionary
@@ -4388,10 +4362,7 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-                    OR = {
-						government = democracy
-						has_country_flag = Government_Democracy
-					}
+                    government = democracy
                 }
             }
             owner = {
@@ -4515,10 +4486,9 @@ country_event = {
     picture = "election_win"
 
     trigger = {
-		ai = no
         election = no
         has_country_flag = election_initialized
-        ruling_party_ideology = radical
+        ruling_party_ideology = anarcho_liberal
         NOT = { has_country_flag = spectator ai = yes }
     }
 
@@ -4599,10 +4569,7 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-					OR = {
-						government = democracy
-						has_country_flag = Government_Democracy
-					}
+                    government = democracy
                 }
             }
             owner = {
@@ -4627,15 +4594,15 @@ country_event = {
                         }
                     }
                     ideology = {
-                        value = radical
+                        value = anarcho_liberal
                         factor = 0.02
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = -2
                     }
                     scaled_consciousness = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = -2
                     }
                 }
@@ -4664,15 +4631,15 @@ country_event = {
                         }
                     }
                     ideology = {
-                        value = radical
+                        value = anarcho_liberal
                         factor = 0.02
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = -2
                     }
                     scaled_consciousness = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = -2
                     }
                 }
@@ -4697,15 +4664,15 @@ country_event = {
                         }
                     }
                     ideology = {
-                        value = radical
+                        value = anarcho_liberal
                         factor = 0.05
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = -2
                     }
                     scaled_consciousness = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = -2
                     }
                 }
@@ -4732,12 +4699,11 @@ country_event = {
     picture = "election"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
         NOT = { has_country_flag = silent_elections }
-        NOT = { is_ideology_enabled = radical }
+        NOT = { is_ideology_enabled = anarcho_liberal }
         NOT = { is_ideology_enabled = socialist }
         NOT = { is_ideology_enabled = communist }
         NOT = { is_ideology_enabled = fascist }
@@ -4858,12 +4824,11 @@ country_event = {
     picture = "election"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
         NOT = { has_country_flag = silent_elections }
-        is_ideology_enabled = radical
+        is_ideology_enabled = anarcho_liberal
         NOT = { is_ideology_enabled = socialist }
         NOT = { is_ideology_enabled = communist }
         NOT = { is_ideology_enabled = fascist }
@@ -4973,11 +4938,11 @@ country_event = {
                 location = { is_colonial = no }
             }
             ideology = {
-                value = radical
+                value = anarcho_liberal
                 factor = 0.05
             }
             scaled_consciousness = {
-                ideology = radical
+                ideology = anarcho_liberal
                 factor = 2
             }
         }
@@ -4985,7 +4950,7 @@ country_event = {
             factor = 10
             modifier = {
                 factor = 5
-                ruling_party_ideology = radical
+                ruling_party_ideology = anarcho_liberal
             }
         }
     }
@@ -5007,12 +4972,11 @@ country_event = {
     picture = "election"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
         NOT = { has_country_flag = silent_elections }
-        NOT = { is_ideology_enabled = radical }
+        NOT = { is_ideology_enabled = anarcho_liberal }
         is_ideology_enabled = socialist
         NOT = { is_ideology_enabled = communist }
         NOT = { is_ideology_enabled = fascist }
@@ -5156,12 +5120,11 @@ country_event = {
     picture = "election"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
         NOT = { has_country_flag = silent_elections }
-        is_ideology_enabled = radical
+        is_ideology_enabled = anarcho_liberal
         is_ideology_enabled = socialist
         NOT = { is_ideology_enabled = communist }
         NOT = { is_ideology_enabled = fascist }
@@ -5271,11 +5234,11 @@ country_event = {
                 location = { is_colonial = no }
             }
             ideology = {
-                value = radical
+                value = anarcho_liberal
                 factor = 0.05
             }
             scaled_consciousness = {
-                ideology = radical
+                ideology = anarcho_liberal
                 factor = 2
             }
         }
@@ -5283,7 +5246,7 @@ country_event = {
             factor = 10
             modifier = {
                 factor = 5
-                ruling_party_ideology = radical
+                ruling_party_ideology = anarcho_liberal
             }
         }
     }
@@ -5329,12 +5292,11 @@ country_event = {
     picture = "election"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
         NOT = { has_country_flag = silent_elections }
-        is_ideology_enabled = radical
+        is_ideology_enabled = anarcho_liberal
         is_ideology_enabled = socialist
         is_ideology_enabled = communist
         NOT = { is_ideology_enabled = fascist }
@@ -5444,11 +5406,11 @@ country_event = {
                 location = { is_colonial = no }
             }
             ideology = {
-                value = radical
+                value = anarcho_liberal
                 factor = 0.05
             }
             scaled_consciousness = {
-                ideology = radical
+                ideology = anarcho_liberal
                 factor = 2
             }
         }
@@ -5456,7 +5418,7 @@ country_event = {
             factor = 10
             modifier = {
                 factor = 5
-                ruling_party_ideology = radical
+                ruling_party_ideology = anarcho_liberal
             }
         }
     }
@@ -5530,12 +5492,11 @@ country_event = {
     picture = "election"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
         NOT = { has_country_flag = silent_elections }
-        is_ideology_enabled = radical
+        is_ideology_enabled = anarcho_liberal
         is_ideology_enabled = socialist
         is_ideology_enabled = communist
         is_ideology_enabled = fascist
@@ -5645,11 +5606,11 @@ country_event = {
                 location = { is_colonial = no }
             }
             ideology = {
-                value = radical
+                value = anarcho_liberal
                 factor = 0.05
             }
             scaled_consciousness = {
-                ideology = radical
+                ideology = anarcho_liberal
                 factor = 2
             }
         }
@@ -5657,7 +5618,7 @@ country_event = {
             factor = 10
             modifier = {
                 factor = 5
-                ruling_party_ideology = radical
+                ruling_party_ideology = anarcho_liberal
             }
         }
     }
@@ -5763,12 +5724,11 @@ country_event = {
     picture = "election"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
         NOT = { has_country_flag = silent_elections }
-        NOT = { is_ideology_enabled = radical }
+        NOT = { is_ideology_enabled = anarcho_liberal }
         is_ideology_enabled = socialist
         is_ideology_enabled = communist
         NOT = { is_ideology_enabled = fascist }
@@ -5937,10 +5897,9 @@ country_event = {
     id = 999022
     title = "EVTNAME999022"
     desc = "EVTDESC999022"
-    picture = "streetfight"
+    picture = "streetriot"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
@@ -6070,7 +6029,6 @@ country_event = {
     picture = "Socialism"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         socialist = 5
@@ -6186,7 +6144,6 @@ country_event = {
     picture = "Socialism"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         OR = {
@@ -6319,7 +6276,6 @@ country_event = {
     picture = "Fascist"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         fascist = 5
@@ -6442,7 +6398,6 @@ country_event = {
     picture = "Finepeople"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         liberal = 5
@@ -6509,7 +6464,7 @@ country_event = {
 
         modifier = {
             factor = 0.75
-            OR = {
+            or = {
                 has_country_modifier = springtime_of_nations
                 has_country_modifier = global_liberal_agitation
             }
@@ -6551,19 +6506,18 @@ country_event = {
     picture = "AnarchoLiberals"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         OR = {
-            radical = 5
+            anarcho_liberal = 5
             liberal = 30
         }
         literacy = 0.5
-        NOT = { ruling_party_ideology = radical }
+        NOT = { ruling_party_ideology = anarcho_liberal }
         NOT = { has_country_modifier = election_cooldown }
         NOT = { has_country_flag = silent_elections }
         NOT = { has_country_flag = anarcho_liberal_surge }
-        is_ideology_enabled = radical
+        is_ideology_enabled = anarcho_liberal
         NOT = { has_country_flag = spectator ai = yes }
     }
 
@@ -6619,7 +6573,7 @@ country_event = {
 
         modifier = {
             factor = 0.75
-            OR = {
+            or = {
                 has_country_modifier = springtime_of_nations
                 has_country_modifier = global_liberal_agitation
             }
@@ -6642,11 +6596,11 @@ country_event = {
                 literacy = 0.5
             }
             ideology = {
-                value = radical
+                value = anarcho_liberal
                 factor = 0.05
             }
             scaled_consciousness = {
-                ideology = radical
+                ideology = anarcho_liberal
                 factor = 3
             }
         }
@@ -6661,7 +6615,6 @@ country_event = {
     picture = "finepeople"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         OR = {
@@ -6729,7 +6682,7 @@ country_event = {
 
         modifier = {
             factor = 0.75
-            OR = {
+            or = {
                 has_country_modifier = springtime_of_nations
                 has_country_modifier = global_liberal_agitation
             }
@@ -6789,7 +6742,6 @@ country_event = {
     picture = "election"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         conservative = 5
@@ -6855,7 +6807,7 @@ country_event = {
 
         modifier = {
             factor = 1.5
-            OR = {
+            or = {
                 has_country_modifier = springtime_of_nations
                 has_country_modifier = global_liberal_agitation
             }
@@ -6896,7 +6848,6 @@ country_event = {
     picture = "Voting"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
@@ -7025,7 +6976,6 @@ country_event = {
     picture = "Voting"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
@@ -7154,7 +7104,6 @@ country_event = {
     picture = "Voting"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
@@ -7299,7 +7248,6 @@ country_event = {
     picture = "Voting"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
@@ -7444,7 +7392,6 @@ country_event = {
     picture = "Harassment"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
@@ -7586,7 +7533,6 @@ country_event = {
     picture = "treaty"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
@@ -7729,7 +7675,6 @@ country_event = {
     picture = "Voting"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
@@ -7872,7 +7817,6 @@ country_event = {
     picture = "Strike"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
@@ -8033,7 +7977,6 @@ country_event = {
     picture = "Strike"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
@@ -8214,7 +8157,6 @@ country_event = {
     picture = "Revolution"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         war = yes
@@ -8287,7 +8229,7 @@ country_event = {
 
     option = {
         name = "We will encourage the jingoists."
-        war_exhaustion = -0.5
+        war_exhaustion = -10
         any_pop = {
             limit = {
                 location = { is_colonial = no }
@@ -8341,7 +8283,6 @@ country_event = {
     picture = "Revolution"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         war = no
@@ -8395,7 +8336,7 @@ country_event = {
 
     option = {
         name = "We will encourage the jingoists."
-        war_exhaustion = -0.5
+        war_exhaustion = -10
         add_country_modifier = {
             name = CB_gen_plus
             duration = 120
@@ -8458,7 +8399,6 @@ country_event = {
     picture = "senate_debate"
 
     trigger = {
-		ai = no
         has_country_flag = election_initialized
         election = yes
         NOT = { has_country_modifier = election_cooldown }
@@ -8656,7 +8596,6 @@ country_event = {
     picture = "Bankruptcy"
 
     trigger = {
-		ai = no
         government = prussian_constitutionalism
         ruling_party_ideology = communist
         NOT = { has_country_flag = political_showdown }
@@ -8943,9 +8882,8 @@ country_event = {
     picture = "Bankruptcy"
 
     trigger = {
-		ai = no
         government = prussian_constitutionalism
-        ruling_party_ideology = radical
+        ruling_party_ideology = anarcho_liberal
         NOT = { has_country_flag = political_showdown }
         NOT = { has_country_flag = spectator ai = yes }
     }
@@ -8992,10 +8930,10 @@ country_event = {
         any_pop = {
             limit = {
                 location = { is_colonial = no }
-                radical = 20
+                anarcho_liberal = 20
             }
             ideology = {
-                value = radical
+                value = anarcho_liberal
                 factor = 0.10
             }
             militancy = 6
@@ -9053,12 +8991,12 @@ country_event = {
             limit = {
                 location = { is_colonial = no }
                 OR = {
-                    radical = 20
+                    anarcho_liberal = 20
                     liberal = 30
                 }
             }
             ideology = {
-                value = radical
+                value = anarcho_liberal
                 factor = 0.10
             }
             militancy = 6
@@ -9177,12 +9115,12 @@ country_event = {
             limit = {
                 location = { is_colonial = no }
                 OR = {
-                    radical = 10
+                    anarcho_liberal = 10
                     liberal = 30
                 }
             }
             ideology = {
-                value = radical
+                value = anarcho_liberal
                 factor = 0.10
             }
             militancy = 6
@@ -9209,7 +9147,6 @@ country_event = {
     picture = "Unite"
 
     trigger = {
-		ai = no
         government = hms_government
         election = no
         OR = {
@@ -9239,7 +9176,7 @@ country_event = {
             }
             AND = {
                 has_country_flag = anarcho_liberal_election_win
-                NOT = { ruling_party_ideology = radical }
+                NOT = { ruling_party_ideology = anarcho_liberal }
             }
         }
         NOT = { has_country_flag = no_constitutional_crisis }
@@ -9330,11 +9267,11 @@ country_event = {
                         factor = 4
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 2
                     }
                     scaled_consciousness = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 4
                     }
                     scaled_militancy = {
@@ -9403,11 +9340,11 @@ country_event = {
                         factor = 4
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 2
                     }
                     scaled_consciousness = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 4
                     }
                     scaled_militancy = {
@@ -9460,11 +9397,11 @@ country_event = {
                         factor = 4
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 1
                     }
                     scaled_consciousness = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 2
                     }
                     scaled_militancy = {
@@ -9533,11 +9470,11 @@ country_event = {
                         factor = 4
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 2
                     }
                     scaled_consciousness = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 4
                     }
                     scaled_militancy = {
@@ -9598,11 +9535,11 @@ country_event = {
                         factor = 4
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 2
                     }
                     scaled_consciousness = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 4
                     }
                     scaled_militancy = {
@@ -9654,11 +9591,11 @@ country_event = {
                         factor = 4
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 2
                     }
                     scaled_consciousness = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 4
                     }
                     scaled_militancy = {
@@ -9692,7 +9629,7 @@ country_event = {
             limit = {
                 owner = {
                     NOT = { has_country_flag = anarcho_liberal_election_win }
-                    ruling_party_ideology = radical
+                    ruling_party_ideology = anarcho_liberal
                 }
             }
             owner = {
@@ -9828,7 +9765,7 @@ country_event = {
             limit = {
                 owner = {
                     has_country_flag = tory_election_win
-                    ruling_party_ideology = radical
+                    ruling_party_ideology = anarcho_liberal
                 }
             }
             owner = {
@@ -9838,7 +9775,7 @@ country_event = {
                         location = { is_colonial = no }
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 2
                     }
                     scaled_militancy = {
@@ -9996,7 +9933,7 @@ country_event = {
             limit = {
                 owner = {
                     has_country_flag = socialist_election_win
-                    ruling_party_ideology = radical
+                    ruling_party_ideology = anarcho_liberal
                 }
             }
             owner = {
@@ -10006,7 +9943,7 @@ country_event = {
                         location = { is_colonial = no }
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 2
                     }
                     scaled_militancy = {
@@ -10116,7 +10053,7 @@ country_event = {
             limit = {
                 owner = {
                     has_country_flag = liberal_election_win
-                    ruling_party_ideology = radical
+                    ruling_party_ideology = anarcho_liberal
                 }
             }
             owner = {
@@ -10126,7 +10063,7 @@ country_event = {
                         location = { is_colonial = no }
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 2
                     }
                     scaled_militancy = {
@@ -10284,7 +10221,7 @@ country_event = {
             limit = {
                 owner = {
                     has_country_flag = communist_election_win
-                    ruling_party_ideology = radical
+                    ruling_party_ideology = anarcho_liberal
                 }
             }
             owner = {
@@ -10294,7 +10231,7 @@ country_event = {
                         location = { is_colonial = no }
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 2
                     }
                     scaled_militancy = {
@@ -10428,7 +10365,7 @@ country_event = {
             limit = {
                 owner = {
                     has_country_flag = fascist_election_win
-                    ruling_party_ideology = radical
+                    ruling_party_ideology = anarcho_liberal
                 }
             }
             owner = {
@@ -10438,7 +10375,7 @@ country_event = {
                         location = { is_colonial = no }
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 2
                     }
                     scaled_militancy = {
@@ -10548,7 +10485,7 @@ country_event = {
             limit = {
                 owner = {
                     has_country_flag = reactionary_election_win
-                    ruling_party_ideology = radical
+                    ruling_party_ideology = anarcho_liberal
                 }
             }
             owner = {
@@ -10558,7 +10495,7 @@ country_event = {
                         location = { is_colonial = no }
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = 2
                     }
                     scaled_militancy = {
@@ -10648,7 +10585,7 @@ country_event = {
                 }
             }
             owner = {
-                ruling_party_ideology = radical
+                ruling_party_ideology = anarcho_liberal
                 any_pop = {
                     limit = {
                         location = { is_colonial = no }
@@ -10658,7 +10595,7 @@ country_event = {
                         factor = 2
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = -1
                     }
                 }
@@ -10672,7 +10609,7 @@ country_event = {
                 }
             }
             owner = {
-                ruling_party_ideology = radical
+                ruling_party_ideology = anarcho_liberal
                 any_pop = {
                     limit = {
                         location = { is_colonial = no }
@@ -10682,7 +10619,7 @@ country_event = {
                         factor = 2
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = -1
                     }
                 }
@@ -10696,7 +10633,7 @@ country_event = {
                 }
             }
             owner = {
-                ruling_party_ideology = radical
+                ruling_party_ideology = anarcho_liberal
                 any_pop = {
                     limit = {
                         location = { is_colonial = no }
@@ -10706,7 +10643,7 @@ country_event = {
                         factor = 2
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = -1
                     }
                 }
@@ -10720,7 +10657,7 @@ country_event = {
                 }
             }
             owner = {
-                ruling_party_ideology = radical
+                ruling_party_ideology = anarcho_liberal
                 any_pop = {
                     limit = {
                         location = { is_colonial = no }
@@ -10730,7 +10667,7 @@ country_event = {
                         factor = 2
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = -1
                     }
                 }
@@ -10744,7 +10681,7 @@ country_event = {
                 }
             }
             owner = {
-                ruling_party_ideology = radical
+                ruling_party_ideology = anarcho_liberal
                 any_pop = {
                     limit = {
                         location = { is_colonial = no }
@@ -10754,7 +10691,7 @@ country_event = {
                         factor = 2
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = -1
                     }
                 }
@@ -10768,7 +10705,7 @@ country_event = {
                 }
             }
             owner = {
-                ruling_party_ideology = radical
+                ruling_party_ideology = anarcho_liberal
                 any_pop = {
                     limit = {
                         location = { is_colonial = no }
@@ -10778,7 +10715,7 @@ country_event = {
                         factor = 2
                     }
                     scaled_militancy = {
-                        ideology = radical
+                        ideology = anarcho_liberal
                         factor = -1
                     }
                 }

@@ -124,10 +124,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -157,7 +154,6 @@ country_event = {
     }
     option = {
         name = "EVT90017OPTB"
-		set_global_flag = pls_dont_revolt_hungary
         badboy = -5
         prestige = -25
         release_vassal = HUN
@@ -216,10 +212,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -400,10 +393,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -478,10 +468,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -665,10 +652,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -743,10 +727,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -934,10 +915,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -1012,10 +990,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -1195,10 +1170,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -1273,10 +1245,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -1458,10 +1427,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -1536,10 +1502,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -1831,10 +1794,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -1901,10 +1861,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -2067,10 +2024,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -2145,10 +2099,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -2303,10 +2254,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -2381,10 +2329,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -2448,11 +2393,10 @@ country_event = {
     id = 90032
 
     title = "EVTNAME90032"
-    desc = "EVTDESC90032"
+    desc = "EVTDESC90033"
     picture = "Ottoman"
 
     trigger = {
-		has_global_flag = cre_revolt_has_happened
         war = no
         NOT = {
             exists = IRQ
@@ -2551,10 +2495,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -2629,10 +2570,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -2786,10 +2724,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.5
@@ -2864,10 +2799,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -3489,7 +3421,7 @@ country_event = {
         }
     }
     option = {
-        name = "Never! §RGain 1 infamy§W"
+        name = "EVT90017OPTC"
         set_country_flag = no_grand_duchy_finland
         badboy = 1
         any_pop = {
@@ -3620,10 +3552,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 0.5
@@ -3803,10 +3732,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.5
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-				}
+                government = democracy
             }
             modifier = {
                 factor = 1.25

@@ -21,7 +21,6 @@ country_event = {
             government = democracy
             government = hms_government
             government = constitutional_empire
-			has_country_flag = Government_Democracy
             poor_strata_everyday_needs = 0.75 #will not fire if poor are getting 75%+ everyday needs
         }
     }
@@ -75,7 +74,6 @@ country_event = {
             consciousness = 3
         }
         government = democracy
-		set_country_flag = Government_Democracy
         ruling_party_ideology = liberal
         political_reform = universal_weighted_voting
         political_reform = population_equal_weight
@@ -109,7 +107,6 @@ country_event = {
             government = democracy
             government = hms_government
             government = constitutional_empire
-			has_country_flag = Government_Democracy
             poor_strata_everyday_needs = 0.95 #will not fire if poor are getting 95%+ everyday needs
         }
     }
@@ -169,7 +166,6 @@ country_event = {
             government = democracy
             government = hms_government
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
     }
 
@@ -217,7 +213,6 @@ country_event = {
             government = democracy
             government = hms_government
             government = constitutional_empire
-			has_country_flag = Government_Democracy
             year = 1915
         }
     }
@@ -263,7 +258,7 @@ country_event = {
         government = presidential_dictatorship
         NOT = {
             has_country_flag = mexico_1836_set_up
-            year = 1855
+            year = 1860
         }
     }
 
@@ -321,16 +316,6 @@ country_event = {
                 duration = 1095
             }
         }
-		2172 = {
-			add_province_modifier = {
-				name =	mexico_city_buff
-				duration = -1
-			}
-		}
-		add_country_modifier = {
-			name = santa_ana_rule
-			duration = -1
-		}
     }
 }
 
@@ -501,7 +486,6 @@ country_event = {
     id = 44820
     title = "EVTNAME44820" #Republic of the Rio Grande
     desc = "EVTDESC44820"
-	major = yes
     picture = "mexico_soldiers"
 
     fire_only_once = yes
@@ -532,10 +516,6 @@ country_event = {
             any_pop = { militancy = -6 }
             relation = {
                 who = USA
-                value = 50
-            }
-            relation = {
-                who = US2
                 value = 50
             }
             relation = {
@@ -570,10 +550,6 @@ country_event = {
             any_pop = { militancy = -6 }
             relation = {
                 who = USA
-                value = 50
-            }
-            relation = {
-                who = US2
                 value = 50
             }
             relation = {
@@ -612,7 +588,6 @@ country_event = {
             government = democracy
             government = hms_government
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         any_owned_province = { is_core = YUC }
         year = 1841
@@ -685,19 +660,13 @@ country_event = {
 
     trigger = {
         tag = YUC
-        OR = {
-			government = democracy
-			has_country_flag = Government_Democracy
-		}
+        government = democracy
         is_vassal = no
         war = no
         UCA = {
             war = no
             neighbour = THIS
-			OR = {
-				government = democracy
-				has_country_flag = Government_Democracy	
-			}
+            government = democracy
             is_vassal = no
             has_country_flag = native_protection_act_enacted
             NOT = { citizens_rights = primary_culture_only }
@@ -763,16 +732,17 @@ country_event = {
         name = "EVT44825OPTA"
         set_country_flag = treaty_of_guadalupe_hidalgo
         prestige_factor = -0.5
+        USA = { set_country_flag = mexico_defeated }
         treasury = 100000
         random_owned = {
             limit = {
-                owner = { OR = { war_with = USA war_with = US2 } }
+                owner = { war_with = USA }
             }
-            owner = { end_war = USA end_war = US2 }
+            owner = { end_war = USA }
             any_country = {
                 limit = {
                     war_with = THIS
-                    OR = { alliance_with = USA alliance_with = US2 }
+                    alliance_with = USA
                 }
                 end_war = THIS
             }
@@ -800,66 +770,32 @@ country_event = {
             }
             remove_core = MEX
         }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				any_owned = {
-					limit = {
-						OR = {
-							is_core = USA
-							region = TEX_132
-							region = MEX_94
-							region = MEX_97
-							region = MEX_85_1
-							region = MEX_85_2
-							region = USA_106
-							region = USA_111
-							region = USA_126
-							region = USA_129
-							province_id = 100
-							province_id = 101
-							province_id = 103
-							province_id = 104
-							province_id = 105
-							province_id = 2148
-							province_id = 3460
-						}
-					}
-					secede_province = USA
-				}
-				USA = { country_event = 44826 }
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				any_owned = {
-					limit = {
-						OR = {
-							is_core = US2
-							region = TEX_132
-							region = MEX_94
-							region = MEX_97
-							region = MEX_85_1
-							region = MEX_85_2
-							region = USA_106
-							region = USA_111
-							region = USA_126
-							region = USA_129
-							province_id = 100
-							province_id = 101
-							province_id = 103
-							province_id = 104
-							province_id = 105
-							province_id = 2148
-							province_id = 3460
-						}
-					}
-					secede_province = US2
-				}
-				US2 = { country_event = 44826 }
-			}
-		}
+        any_owned = {
+            limit = {
+                OR = {
+                    is_core = USA
+                    region = TEX_132
+                    region = MEX_94
+                    region = MEX_97
+                    region = MEX_85_1
+                    region = MEX_85_2
+                    region = USA_106
+                    region = USA_111
+                    region = USA_126
+                    region = USA_129
+                    province_id = 100
+                    province_id = 101
+                    province_id = 103
+                    province_id = 104
+                    province_id = 105
+                    province_id = 2148
+                    province_id = 3460
+                }
+            }
+            secede_province = USA
+        }
+
+        USA = { country_event = 44826 }
 
         random_owned = {
             limit = { exists = CAL }
@@ -874,14 +810,7 @@ country_event = {
     option = {
         name = "EVT44825OPTB"
         war_exhaustion = 20
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = { USA = { country_event = 44827 } }
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = { US2 = { country_event = 44827 } }
-		}
+        USA = { country_event = 44827 }
         ai_chance = {
             factor = 10
         }
@@ -920,62 +849,29 @@ country_event = {
             value = 200
         }
         FROM = {
-            random_owned = {
-				limit = { owner = { USA = { exists = yes } } }
-				owner = {
-					any_owned = {
-						limit = {
-							OR = {
-								is_core = USA
-								region = TEX_132
-								region = MEX_94
-								region = MEX_97
-								region = MEX_85_1
-								region = MEX_85_2
-								region = USA_106
-								region = USA_111
-								region = USA_126
-								region = USA_129
-								province_id = 100
-								province_id = 101
-								province_id = 103
-								province_id = 104
-								province_id = 105
-								province_id = 2148
-							}
-						}
-						secede_province = USA
-					}
-				}
-			}
-			random_owned = {
-				limit = { owner = { US2 = { exists = yes } } }
-				owner = {
-					any_owned = {
-						limit = {
-							OR = {
-								is_core = US2
-								region = TEX_132
-								region = MEX_94
-								region = MEX_97
-								region = MEX_85_1
-								region = MEX_85_2
-								region = USA_106
-								region = USA_111
-								region = USA_126
-								region = USA_129
-								province_id = 100
-								province_id = 101
-								province_id = 103
-								province_id = 104
-								province_id = 105
-								province_id = 2148
-							}
-						}
-						secede_province = US2
-					}
-				}
-			}
+            any_owned = {
+                limit = {
+                    OR = {
+                        is_core = USA
+                        region = TEX_132
+                        region = MEX_94
+                        region = MEX_97
+                        region = MEX_85_1
+                        region = MEX_85_2
+                        region = USA_106
+                        region = USA_111
+                        region = USA_126
+                        region = USA_129
+                        province_id = 100
+                        province_id = 101
+                        province_id = 103
+                        province_id = 104
+                        province_id = 105
+                        province_id = 2148
+                    }
+                }
+                secede_province = USA
+            }
         }
     }
 }
@@ -992,6 +888,30 @@ country_event = {
     option = {
         name = "EVT44827OPTA"
         set_country_flag = mexico_refused_treaty
+        random_owned = {
+            limit = {
+                owner = { ai = yes }
+                OR = {
+                    is_core = USA
+                    region = TEX_132
+                    region = MEX_94
+                    region = MEX_97
+                    region = MEX_85_1
+                    region = MEX_85_2
+                    region = USA_106
+                    region = USA_111
+                    region = USA_126
+                    region = USA_129
+                    province_id = 100
+                    province_id = 101
+                    province_id = 103
+                    province_id = 104
+                    province_id = 105
+                    province_id = 2148
+                }
+            }
+            secede_province = USA
+        }
         war_exhaustion = -20
     }
 }
@@ -1025,7 +945,6 @@ country_event = {
     option = {
         name = "EVT44830OPTA"
         government = democracy
-		set_country_flag = Government_Democracy
         ruling_party_ideology = liberal
 
         add_country_modifier = {
@@ -1080,10 +999,7 @@ country_event = {
         tag = MEX
         war = no
         ai = yes
-		OR = {
-			government = democracy
-			has_country_flag = Government_Democracy	
-		}
+        government = democracy
         year = 1876
         NOT = { year = 1900 }
     }
@@ -1154,16 +1070,6 @@ country_event = {
         national_provinces_occupied = 0.25
         any_owned_province = { country_units_in_province = MEX }
         NOT = { has_country_flag = santa_ana_captured }
-		OR = {
-			AND = {
-				TEX = { ai = yes }
-				MEX = { ai = yes }
-			}
-			AND = {
-				any_owned_province = { country_units_in_province = TEX }
-				NOT = { blockade = 1 }
-			}
-		}
     }
 
     mean_time_to_happen = {
@@ -1220,20 +1126,6 @@ country_event = {
         war_exhaustion = 20
         prestige = -25
         end_war = TEX
-		any_country = {
-			limit = {
-				tag = USA
-				ai = yes
-			}
-			end_war = THIS
-		}
-		any_country = {
-			limit = {
-				tag = US2
-				ai = yes
-			}
-			end_war = THIS
-		}
         TEX = {
             any_owned = {
                 limit = { is_core = MEX }
@@ -1255,20 +1147,6 @@ country_event = {
         war_exhaustion = 40
         prestige = -10
         end_war = TEX
-		any_country = {
-			limit = {
-				tag = USA
-				ai = yes
-			}
-			end_war = THIS
-		}
-		any_country = {
-			limit = {
-				tag = US2
-				ai = yes
-			}
-			end_war = THIS
-		}
         TEX = { country_event = 44843 }
         add_country_modifier = {
             name = power_vacuum
@@ -1295,16 +1173,8 @@ country_event = {
                 any_greater_power = { war_with = USA }
             }
             modifier = {
-                factor = 6
-                any_greater_power = { war_with = US2 }
-            }
-            modifier = {
                 factor = 4
-                USA = { NOT = { military_score = THIS } exists = USA }
-            }
-            modifier = {
-                factor = 4
-                US2 = { NOT = { military_score = THIS } exists = US2 }
+                USA = { NOT = { military_score = THIS } }
             }
         }
     }
@@ -1380,14 +1250,7 @@ country_event = {
             }
             change_controller = TEX
         }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = { USA = { country_event = 44846 } }
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = { US2 = { country_event = 44846 } }
-		}
+        USA = { country_event = 44846 }
         ai_chance = {
             factor = 100
         }
@@ -1421,7 +1284,7 @@ country_event = {
         part_of_sphere = no
         MEX = {
             war_with = TEX
-            NOT = { war_with = USA war_with = US2 }
+            NOT = { war_with = USA }
         }
     }
 
@@ -1432,13 +1295,7 @@ country_event = {
     option = {
         name = "EVT44844OPTA"
         remove_country_modifier = treaties_of_velasco
-        random_owned = { limit = { owner = { USA = { exists = yes } } }
-			owner = { USA = { country_event = 44846 } }
-		}
-		random_owned = { limit = { owner = { US2 = { exists = yes } } }
-			owner = { US2 = { country_event = 44846 } }
-		}
-		
+        USA = { country_event = 44846 }
         ai_chance = {
             factor = 100
         }
@@ -1500,433 +1357,9 @@ country_event = {
         name = "EVT110053OPTA" # He got what was coming!
         prestige = 2
         relation = { who = USA value = 30 }
-		relation = { who = US2 value = 30 }
         any_pop = {
             limit = { is_culture_group = native_american }
             militancy = 6
         }
-    }
-}
-
-country_event = {
-    id = 111010
-    title = "The Revolution of Ayutla"
-    desc = "Santa Anna has become deeply unpopular with the Mexican people and general staff, leading to a revolution by Juan Álvarez, Tomás Moreno, and Nicolás Bravo to depose him. Without support, he was ousted almost bloodlessly."
-    picture = "plan_ayutla"
-
-    trigger = {
-        tag = MEX
-        year = 1855
-		has_country_modifier = santa_ana_rule
-    }
-
-    mean_time_to_happen = { months = 3 }
-    fire_only_once = yes
-
-    option = {
-        name = "EVT110053OPTA" # He got what was coming!
-        prestige = 5
-		ruling_party_ideology = liberal
-		government = democracy
-		set_country_flag = Government_Democracy
-		set_country_flag = do_1857_constitution
-    }
-}
-
-country_event = {
-    id = 111011
-    title = "The Reform War"
-    desc = "Our recent reforms have caused outrage among the conservative and religious populace, with the pope excommunicating anyone who accepts the constitution. This has led to a conservative uprising."
-    picture = "reformist_war"
-    is_triggered_only = yes
-    fire_only_once = yes
-    option = {
-        name = "We shall defend the constitution!"
-		all_core = { add_core = MEE }
-		set_country_flag = reform_war
-		any_owned = {
-			limit = {
-				OR = {
-					province_id = 3456
-					province_id = 2140
-					province_id = 2137
-					province_id = 2141
-					province_id = 2157
-					province_id = 2156
-					province_id = 2143
-					province_id = 2144
-					province_id = 2142
-					province_id = 2145
-					province_id = 2154
-					province_id = 2153
-					province_id = 2183
-					province_id = 2185
-					province_id = 2184
-					province_id = 2165
-					province_id = 2181
-					province_id = 3402
-					province_id = 2182
-					province_id = 2177
-					province_id = 2178
-					province_id = 2159
-					province_id = 2173
-					province_id = 2176
-					province_id = 2174
-					province_id = 2175
-					province_id = 2172
-				}
-			}
-			secede_province = MEE
-		}
-		MEE = { capital = 2172 }
-		define_general = { name = "Ignacio Zaragoza" personality = implacable background = cursed_luck }
-		war = {
-			target = MEE
-			attacker_goal = { casus_belli = civil_war }
-			defender_goal = { casus_belli = civil_war }
-			call_ally = no
-		}
-    }
-	option = {
-        name = "Depose these heathens!"
-		all_core = { add_core = MEE }
-		set_country_flag = reform_war
-		any_owned = {
-			limit = {
-				OR = {
-					province_id = 3456
-					province_id = 2140
-					province_id = 2137
-					province_id = 2141
-					province_id = 2157
-					province_id = 2156
-					province_id = 2143
-					province_id = 2144
-					province_id = 2142
-					province_id = 2145
-					province_id = 2154
-					province_id = 2153
-					province_id = 2183
-					province_id = 2185
-					province_id = 2184
-					province_id = 2165
-					province_id = 2181
-					province_id = 3402
-					province_id = 2182
-					province_id = 2177
-					province_id = 2178
-					province_id = 2159
-					province_id = 2173
-					province_id = 2176
-					province_id = 2174
-					province_id = 2175
-					province_id = 2172
-				}
-			}
-			secede_province = MEE
-		}
-		MEE = { capital = 2172 }
-		define_general = { name = "Ignacio Zaragoza" personality = implacable background = cursed_luck }
-		change_tag_no_core_switch = MEE
-		war = {
-			target = MEX
-			attacker_goal = { casus_belli = civil_war }
-			defender_goal = { casus_belli = civil_war }
-			call_ally = no
-		}
-    }
-}
-
-country_event = {
-    id = 111012
-    title = "France proposes intervention in Mexico"
-    desc = "In the Reform War, both sides of the civil war went into deep debt with us and France. The liberal government is refusing to pay the rebels' debts, therefore France is calling for intervention."
-    picture = "deliberation"
-    is_triggered_only = yes
-    option = {
-        name = "No blood will be spilled over Mexico."
-		FRA = { country_event = 111013 }
-		relation = { who = FRA value = -50 }
-		ai_chance = { factor = 0 }
-    }
-	option = {
-        name = "An excellent proposal!"
-		FRA = { country_event = 111014 }
-		country_event = { id = 111024 days = 7 }
-		set_country_flag = helping_in_the_mex_intervention
-		ai_chance = { factor = 1 }
-    }
-}
-
-country_event = {
-    id = 111013
-    title = "$FROMCOUNTRY$ declines intervention in Mexico"
-    desc = "Following our proposal to land in Mexico to impose debt payments, $FROMCOUNTRY$ has refused to participate."
-    picture = "deliberation"
-    is_triggered_only = yes
-    fire_only_once = yes
-    option = {
-        name = "We don't need them!"
-    }
-}
-country_event = {
-    id = 111014
-    title = "$FROMCOUNTRY$ joins intervention in Mexico"
-    desc = "Following our proposal to land in Mexico to impose debt payments, $FROMCOUNTRY$ has agreed to participate."
-    picture = "deliberation"
-    is_triggered_only = yes
-    fire_only_once = yes
-    option = {
-        name = "Welcome aboard!"
-    }
-}
-country_event = {
-    id = 111015
-    title = "The Intervention"
-    desc = "Now that our negotiations with Spain and Britain are finished, the time has come to impose our will on Mexico!"
-    picture = "french_mee"
-    is_triggered_only = yes
-    fire_only_once = yes
-    option = {
-        name = "Vive la France!"
-		casus_belli = { target = MEX type = cut_down_to_size months = 36 }
-		war = {
-			target = MEX
-			attacker_goal = { casus_belli = cut_down_to_size }
-			defender_goal = { casus_belli = status_quo }
-			call_ally = no
-		}
-		MEX = { country_event = 111016 }
-    }
-}
-country_event = {
-    id = 111016
-    title = "The French intervention"
-    desc = "During the Reform War, both us liberals and the conservatives went into debt with foreign powers. Our refusal to pay the rebels' debts has lead to the French invading us to enforce payments."
-    picture = "french_mee"
-    is_triggered_only = yes
-    fire_only_once = yes
-    option = {
-        name = "We will fight tooth and nail!"
-    }
-}
-
-country_event = {
-    id = 111017
-    title = "The Capture of Mexico City"
-    desc = "Our troops triumphantly marched into Mexico City this morning. We could end the war and enforce the debts now, but we could also push our gains and attempt to install Maximilian von Habsburg as emperor of Mexico."
-    picture = "french_entry_mexico_city"
-
-    trigger = {
-        tag = FRA
-        OR = {
-			2172 = { controlled_by = FRA }
-			2172 = { controlled_by = SPA }
-			2172 = { controlled_by = SPC }
-			2172 = { controlled_by = ENG }
-		}
-		has_global_flag = french_intervention_in_mexico
-    }
-
-    mean_time_to_happen = { days = 1 }
-    fire_only_once = yes
-
-    option = {
-        name = "We will settle for the debts."
-		any_country = {
-			limit = {
-				has_country_flag = helping_in_the_mex_intervention
-			}
-			country_event = 111018
-		}
-		MEX = { country_event = 111019 }
-		end_war = MEX
-		relation = { who = MEX value = 200 }
-		treasury = 80000
-    }
-	
-	option = {
-        name = "Mexico will be subjugated! §RGain 8 infamy§W"
-		badboy = 8
-		set_country_flag = installing_max
-		any_owned = {
-			limit = {
-				OR = {
-					province_id = 2184
-					province_id = 2165
-					province_id = 2164
-					province_id = 2162
-					province_id = 2163
-					province_id = 2175
-					province_id = 2172
-					province_id = 2173
-				}
-			}
-			secede_province = MEE
-		}
-		MEX = { all_core = { add_core = MEE } }
-		MEE = { government = semi_constitutional_empire ruling_party_ideology = conservative }
-		create_alliance = MEE
-		diplomatic_influence = { who = MEE value = 400 }
-		relation = { who = MEE value = 400 }
-		any_country = {
-			limit = {
-				has_country_flag = helping_in_the_mex_intervention
-			}
-			country_event = 111020
-		}
-		MEX = { country_event = 111021 }
-    }
-}
-
-country_event = {
-    id = 111018
-    title = "The Capture of Mexico City"
-    desc = "With the capture of Mexico City, the war is won and we can make our demands to Mexico."
-    picture = "french_entry_mexico_city"
-	is_triggered_only = yes
-    fire_only_once = yes
-
-    option = {
-        name = "Splendid!"
-		MEX = { country_event = 111019 }
-		end_war = MEX
-		relation = { who = MEX value = 200 }
-		treasury = 80000
-    }
-}
-
-country_event = {
-    id = 111019
-    title = "The Capture of Mexico City"
-    desc = "With the fall of our capital, we are left with no choice but to pay our debts."
-    picture = "french_entry_mexico_city"
-	is_triggered_only = yes
-    fire_only_once = yes
-
-    option = {
-        name = "We won't forget this!"
-		treasury = -80000
-    }
-}
-
-country_event = {
-    id = 111020
-    title = "France's ulterior motives"
-    desc = "It has come to light that France intends to impose Maximilian von Habsburg as their puppet ruler of Mexico. We shan't lose lives aiding French opportunism!"
-    picture = "french_entry_mexico_city"
-	is_triggered_only = yes
-    fire_only_once = yes
-
-    option = {
-        name = "They were planning this all along!"
-		end_war = MEX
-		relation = { who = MEX value = 200 }
-		relation = { who = FRA value = -50 }
-    }
-}
-
-country_event = {
-    id = 111021
-    title = "The Capture of Mexico City"
-    desc = "Our capital has fallen, and Maximilian I has been crowned as France's puppet emperor. His government has taken office, beginning new reforms unpopular with both conservatives and liberals."
-    picture = "french_entry_mexico_city"
-	is_triggered_only = yes
-    fire_only_once = yes
-
-    option = {
-        name = "We will fight to the death!"
-		any_owned = {
-			limit = {
-				OR = {
-					province_id = 2184
-					province_id = 2165
-					province_id = 2164
-					province_id = 2162
-					province_id = 2163
-					province_id = 2175
-					province_id = 2172
-					province_id = 2173
-				}
-			}
-			secede_province = MEE
-		}
-		MEE = { capital = 2172 }
-		war = {
-			target = MEE
-			attacker_goal = { casus_belli = annex_core_country }
-		}
-		add_country_modifier = {
-			name = all_or_nothing
-			duration = 730
-		}
-		set_country_flag = cinco_del_mayo_can_happen
-    }
-}
-
-country_event = {
-    id = 111022
-    title = "Cinco del Mayo"
-    desc = "Our troops have recaptured Mexico City, expelling the French invaders and the government of Maximilian I. To send a warning against further interventions, he was executed by a firing squad."
-    picture = "death_of_max"
-
-    trigger = {
-        tag = MEX
-		has_global_flag = french_intervention_in_mexico
-		has_country_flag = cinco_del_mayo_can_happen
-		exists = yes
-		OR = {
-			2172 = { controlled_by = MEX }
-			AND = {
-				exists = MEE
-				MEE = { war = no }
-			}
-		}
-    }
-
-    mean_time_to_happen = { days = 1 }
-    fire_only_once = yes
-
-    option = {
-        name = "Huzzah!"
-		end_war = MEE
-		MEE = { all_core = { remove_core = MEE } }
-		MEE = { annex_to = MEX }
-		FRA = { country_event = 111023 }
-    }
-}
-
-country_event = {
-    id = 111023
-    title = "Cinco del Mayo"
-    desc = "Mexico has recaptured Mexico City, executing Maximilian and his government and routing our forces. We have no choice but to retreat."
-    picture = "death_of_max"
-	is_triggered_only = yes
-    fire_only_once = yes
-
-    option = {
-        name = "Sacré Bleu!"
-		end_war = MEX
-		relation = { who = MEX value = 200 }
-    }
-}
-
-country_event = {
-    id = 111024
-    title = "The Intervention"
-    desc = "Now that the negotiations with France are finished, the time has come to invade Mexico to enforce its debts."
-    picture = "french_mee"
-	is_triggered_only = yes
-    fire_only_once = yes
-
-    option = {
-        name = "All aboard the transports!"
-		casus_belli = { target = MEX type = war_reparations months = 36 }
-		war = {
-			target = MEX 
-			attacker_goal = { casus_belli = war_reparations } 
-			defender_goal = { casus_belli = status_quo } 
-			call_ally = no
-		}
     }
 }

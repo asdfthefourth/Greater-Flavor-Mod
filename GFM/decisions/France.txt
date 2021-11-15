@@ -8,45 +8,24 @@ political_decisions = {
             primary_culture = french
             is_greater_power = yes
             capital = 425
-			OR = {
-				USA = {
-					exists = yes
-					OR = {
-						government = democracy
-						has_country_flag = Government_Democracy
-					}
-					owns = 232
-				}
-				US2 = {
-					exists = yes
-					OR = {
-						government = democracy
-						has_country_flag = Government_Democracy
-					}
-					owns = 232
-				}
-			}
-            OR = {
-                government = constitutional_empire
-                government = hms_government
+            USA = {
+				exists = yes
                 government = democracy
-				has_country_flag = Government_Democracy
+                owns = 232
+            }
+            THIS = {
+                OR = {
+                    government = constitutional_empire
+                    government = hms_government
+                    government = democracy
+                }
             }
             year = 1850
         }
 
         allow = {
             regenerative_furnaces = 1
-			OR = {
-				AND = {
-					USA = { slavery = no_slavery }
-					USA = { exists = yes }
-				}
-				AND = {
-					US2 = { slavery = no_slavery }
-					US2 = { exists = yes }
-				}
-			}
+            USA = { slavery = no_slavery }
         }
 
         effect = {
@@ -58,22 +37,7 @@ political_decisions = {
                 who = USA
                 value = 50
             }
-            relation = {
-                who = US2
-                value = 50
-            }
-			random_owned = {
-				limit = {
-					owner = { USA = { exists = yes } }
-				}
-				owner = { USA = { country_event = 19300 } }
-			}
-			random_owned = {
-				limit = {
-					owner = { US2 = { exists = yes } }
-				}
-				owner = { US2 = { country_event = 19300 } }
-			}
+            USA = { country_event = 19300 }
         }
         ai_will_do = {
             factor = 1
@@ -81,15 +45,10 @@ political_decisions = {
                 factor = 0
                 NOT = { relation = { who = USA value = -50 } }
             }
-            modifier = {
-                factor = 0
-                NOT = { relation = { who = US2 value = -50 } }
-            }
         }
     }
 
     support_french_foreign_legion = {
-		picture = support_french_foreign_legion
         potential = {
             primary_culture = french
             is_greater_power = yes
@@ -164,7 +123,6 @@ political_decisions = {
     }
 
     palais_garnier = {
-		picture = palais_garnier
         potential = {
             NOT = { has_country_flag = palais_garnier_built }
             primary_culture = french
@@ -254,7 +212,7 @@ political_decisions = {
             is_greater_power = yes
             capital = 425
             NOT = {
-                has_global_flag = the_eiffel_tower_was_built
+                has_country_flag = the_eiffel_tower_was_built
             }
 
             OR = {
@@ -274,7 +232,8 @@ political_decisions = {
 
         effect = {
             country_event = 37236
-            set_global_flag = the_eiffel_tower_was_built
+            FRA = { set_country_flag = the_eiffel_tower_was_built }
+            BOR = { set_country_flag = the_eiffel_tower_was_built }
         }
 
         ai_will_do = { factor = 1 }
@@ -478,7 +437,12 @@ political_decisions = {
             capital = 425
             state_n_government = 1
             1097 = { empty = yes }
+            OR = {
+                government = hms_government
+                government = prussian_constitutionalism
+                government = absolute_monarchy
             }
+        }
 
         allow = {
             war = no
@@ -514,10 +478,12 @@ political_decisions = {
         effect = {
             FRA = { set_country_flag = enacted_french_schooling set_country_flag = french_assimilation }
             BOR = { set_country_flag = enacted_french_schooling set_country_flag = french_assimilation }
+            remove_accepted_culture = picard
             remove_accepted_culture = arpitan
             remove_accepted_culture = breton
             remove_accepted_culture = wallonian
             remove_accepted_culture = occitan
+            remove_accepted_culture = rhinelander
             any_owned = {
                 limit = {
                     is_core = THIS
@@ -539,6 +505,7 @@ political_decisions = {
                             is_core = RHI
                             THIS = { has_country_flag = chose_door_one }
                         }
+                        culture = picard
                         culture = occitan
                     }
                 }
@@ -573,16 +540,21 @@ political_decisions = {
             }
             random_owned = {
                 limit = {
+                    PIC = { exists = no }
+                }
+                PIC = { all_core = { remove_core = PIC } }
+            }
+            random_owned = {
+                limit = {
+                    NRM = { exists = no }
+                }
+                NRM = { all_core = { remove_core = NRM } }
+            }
+            random_owned = {
+                limit = {
                     WLL = { exists = no }
                 }
-                owner = {
-					any_owned = {
-						limit = {
-							is_core = WLL
-						}
-						remove_core = WLL
-					}
-				}
+                WLL = { all_core = { remove_core = WLL } }
             }
             random_owned = {
                 limit = {
@@ -697,33 +669,32 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-	#The Devil's Island
-	devil_island = {
-		picture = FRA_devils_island
-		potential = {
-			primary_culture = french
-			is_greater_power = yes
-			capital = 425
-			GUY = { exists = no }
-			owns = 2241 #Cayenne
-			year = 1852
-			penal_system = colonial_transportation
-			NOT = { has_country_flag = devil_island }
-			NOT = { has_country_modifier = penal_colonies }
-		}
-		
-		allow = {
-			money = 5000
-		}
+#The Devil's Island
+devil_island = {
+    picture = FRA_devils_island
+    potential = {
+        primary_culture = french
+        is_greater_power = yes
+        capital = 425
+        GUY = { exists = no }
+        owns = 2241 #Cayenne
+        year = 1852
+        penal_system = colonial_transportation
+        NOT = { has_country_flag = devil_island }
+        NOT = { has_country_modifier = penal_colonies }
+    }
+    allow = {
+        money = 5000
+    }
 
-		effect = {
-			FRA = { set_country_flag = devil_island }
-			BOR = { set_country_flag = devil_island }
-			treasury = -5000
-			prestige = 5
-			2241 = { life_rating = 1 }
-			add_country_modifier = { name = penal_colonies duration = -1 }
-		}
-	}
+    effect = {
+        FRA = { set_country_flag = devil_island }
+        BOR = { set_country_flag = devil_island }
+        treasury = -5000
+        prestige = 5
+        2241 = { life_rating = 1 }
+        add_country_modifier = { name = penal_colonies duration = -1 }
+    }
+}
 
 }

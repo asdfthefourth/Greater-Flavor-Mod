@@ -135,6 +135,8 @@ political_decisions = {
             tag = PRU
             AUS = {
                 is_greater_power = yes
+                NOT = { relation = { who = THIS value = 10 } }
+                NOT = { alliance_with = THIS }
                 has_cultural_sphere = yes
                 exists = yes
                 NOT = { war_with = THIS }
@@ -148,10 +150,6 @@ political_decisions = {
             NOT = { has_country_flag = brothers_war_winner }
             NOT = { has_country_flag = begin_austro_prussian_war }
             NOT = { has_country_flag = prussian_italian_alliance }
-			AUS = {
-                NOT = { relation = { who = THIS value = 10 } }
-                NOT = { alliance_with = THIS }
-			}
         }
 
         allow = {
@@ -185,7 +183,6 @@ political_decisions = {
                     AND = {
                         NOT = { year = 1864 }
                         NOT = { exists = ITA }
-						NOT = { exists = ITS }
                     }
                     AND = {
                         NOT = { year = 1860 }
@@ -280,16 +277,6 @@ political_decisions = {
                 limit = {
                     exists = yes
                     tag = HUN
-                }
-                any_owned = {
-                    limit = { is_core = AUS }
-                    add_core = THIS
-                }
-            }
-            random_country = {
-                limit = {
-                    exists = yes
-                    tag = HUR
                 }
                 any_owned = {
                     limit = { is_core = AUS }
@@ -507,11 +494,6 @@ political_decisions = {
                     exists = yes
                     truce_with = THIS
                 }
-                HUR = {
-                    ai = yes
-                    exists = yes
-                    truce_with = THIS
-                }
                 KUK = {
                     ai = yes
                     exists = yes
@@ -530,8 +512,6 @@ political_decisions = {
             create_vassal = BAN
             792 = {    add_core = BAN    secede_province = THIS    }
             2538 = { secede_province = THIS    }
-			3330 = { secede_province = THIS    }
-			3331 = { secede_province = THIS    }
             791 = {    secede_province = THIS    }
             any_owned = {
                 limit = { is_core = BAN }
@@ -539,8 +519,6 @@ political_decisions = {
             }
             792 = {    secede_province = BAN }
             2538 = { secede_province = BAN }
-			3330 = { secede_province = BAN }
-			3331 = { secede_province = BAN }
             791 = {    secede_province = BAN }
             set_country_flag = ger_ai_banat
         }

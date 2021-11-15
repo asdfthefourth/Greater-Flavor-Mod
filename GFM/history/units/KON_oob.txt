@@ -23,7 +23,7 @@ KUB = {
 }
 
 LUN = {
-    value = 180
+    value = 50
 }
 
 army = {

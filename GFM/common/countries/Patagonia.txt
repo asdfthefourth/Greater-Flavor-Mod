@@ -1,6 +1,4 @@
-color = { 48  126  72 }
-hms_government = { 63  147  62 }
-absolute_monarchy = { 63  147  62 }
+color = { 219  182  182 }
 graphical_culture = SouthAmericanGC
 
 party = {

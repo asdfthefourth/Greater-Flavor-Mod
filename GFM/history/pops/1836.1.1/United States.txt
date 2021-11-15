@@ -1145,51 +1145,6 @@
         size = 300
     }
 }
-
-#Fort Ross, negligeable pops
-3340 = {
-    aristocrats = {
-        culture = russian
-        religion = orthodox
-        size = 2
-    }
-
-    clergymen = {
-        culture = russian
-        religion = orthodox
-        size = 3
-    }
-
-    soldiers = {
-        culture = russian
-        religion = orthodox
-        size = 10
-    }
-
-    farmers = {
-        culture = russian
-        religion = orthodox
-        size = 45
-    }
-
-    farmers = {
-        culture = native_american_minor
-        religion = animist
-        size = 5
-    }
-	
-	farmers = {
-        culture = mexican
-        religion = catholic
-        size = 15
-    }
-	
-	farmers = {
-        culture = yankee
-        religion = protestant
-        size = 5
-    }
-}
 #Truckee (4000/1000 POPS)
 86 = {
     aristocrats = {
@@ -2141,11 +2096,89 @@
     farmers = {
         culture = native_american_minor
         religion = animist
-        size = 3200
+        size = 1800
     }
 }
 #Coeur d'Alene (4000/1000 POPS)
 92 = {
+
+    clergymen = {
+        culture = yankee
+        religion = protestant
+        size = 5
+    }
+
+    artisans = {
+        culture = yankee
+        religion = protestant
+        size = 5
+    }
+
+    soldiers = {
+        culture = yankee
+        religion = protestant
+        size = 20
+    }
+
+    farmers = {
+        culture = yankee
+        religion = protestant
+        size = 30
+    }
+
+    soldiers = {
+        culture = native_american_minor
+        religion = animist
+        size = 150
+    }
+
+    farmers = {
+        culture = native_american_minor
+        religion = animist
+        size = 900
+    }
+}
+#Plummer (XXX/XXX POPS)
+3475 = {
+
+    clergymen = {
+        culture = yankee
+        religion = protestant
+        size = 5
+    }
+
+    artisans = {
+        culture = yankee
+        religion = protestant
+        size = 5
+    }
+
+    soldiers = {
+        culture = yankee
+        religion = protestant
+        size = 20
+    }
+
+    farmers = {
+        culture = yankee
+        religion = protestant
+        size = 30
+    }
+
+    soldiers = {
+        culture = native_american_minor
+        religion = animist
+        size = 150
+    }
+
+    farmers = {
+        culture = native_american_minor
+        religion = animist
+        size = 900
+    }
+}
+#Lapwai (XXX/XXX POPS)
+3476 = {
 
     clergymen = {
         culture = yankee
@@ -8321,7 +8354,7 @@
     farmers = {
         culture = yankee
         religion = protestant
-        size = 1875
+        size = 1475
     }
 
     aristocrats = {
@@ -8351,7 +8384,7 @@
     farmers = {
         culture = dixie
         religion = protestant
-        size = 15200
+        size = 19300
     }
 
     clergymen = {
@@ -8375,7 +8408,7 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 7600
+        size = 7500
     }
 }
 #Knoxville (116000/29000 POPS)
@@ -8499,7 +8532,7 @@
     farmers = {
         culture = yankee
         religion = protestant
-        size = 5475
+        size = 2475
     }
 
     aristocrats = {
@@ -8529,7 +8562,7 @@
     farmers = {
         culture = dixie
         religion = protestant
-        size = 15000
+        size = 13000
     }
 
     clergymen = {
@@ -8970,7 +9003,7 @@
     farmers = {
         culture = dixie
         religion = protestant
-        size = 21800
+        size = 22800
     }
 
     clergymen = {
@@ -8994,7 +9027,7 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 18300
+        size = 15300
     }
 }
 #Mobile (140000/35000 POPS)
@@ -9506,7 +9539,7 @@
     farmers = {
         culture = dixie
         religion = protestant
-        size = 21825
+        size = 24825
     }
 
     clergymen = {
@@ -9530,10 +9563,9 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 18475
+        size = 20475
     }
 }
-#Atlanta
 204 = {
     aristocrats = {
         culture = dixie

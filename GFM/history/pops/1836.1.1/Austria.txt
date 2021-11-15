@@ -47,13 +47,7 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 49900
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = catholic
-        size = 425
+        size = 50325
     }
 }
 #Salzburg (136000/34000 POPS)
@@ -85,13 +79,7 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 24841
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = catholic
-        size = 134
+        size = 24975
     }
 }
 #Bregenz (132000/33000 POPS)
@@ -201,13 +189,7 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 70210
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = catholic
-        size = 465
+        size = 70675
     }
 }
 #Judenburg (168000/42000 POPS)
@@ -245,13 +227,7 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 34259
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = catholic
-        size = 891
+        size = 35150
     }
 }
 #Klagenfurt (188000/47000 POPS)
@@ -310,37 +286,31 @@
         religion = catholic
         size = 2335
     }
-	
     aristocrats = {
         culture = south_german
         religion = catholic
         size = 200
     }
-	
     clergymen = {
         culture = south_german
         religion = catholic
         size = 300
     }
-	
     farmers = {
         culture = slovene
         religion = catholic
         size = 10172
     }
-	
     soldiers = {
         culture = slovene
         religion = catholic
         size = 500
     }
-	
     artisans = {
         culture = slovene
         religion = catholic
         size = 1000
     }
-	
     artisans = {
         culture = south_german
         religion = catholic
@@ -432,7 +402,7 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 185050
+        size = 186250
     }
 
     clergymen = {
@@ -444,7 +414,7 @@
     artisans = {
         culture = czech
         religion = catholic
-        size = 5850
+        size = 5950
     }
 
     clergymen = {
@@ -456,13 +426,7 @@
     artisans = {
         culture = hungarian
         religion = catholic
-        size = 940
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = catholic
-        size = 1340
+        size = 980
     }
 
     ######Jews
@@ -576,13 +540,7 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 49830
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = catholic
-        size = 870
+        size = 50700
     }
 }
 #Linz (588000/147000 POPS)
@@ -666,7 +624,7 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 39475
+        size = 40075
     }
 
     clergymen = {
@@ -714,7 +672,7 @@
     farmers = {
         culture = hungarian
         religion = protestant
-        size = 1770
+        size = 1790
     }
 
     clergymen = {
@@ -739,12 +697,6 @@
         culture = croat
         religion = catholic
         size = 5625
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = catholic
-        size = 620
     }
 }
 

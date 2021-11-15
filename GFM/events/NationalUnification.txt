@@ -44,7 +44,7 @@ country_event = {
             owner = { remove_accepted_culture = french }
         }
         random_owned = {
-            limit = { owner = { is_culture_group = italian accepted_culture = south_german } }
+            limit = { owner = { OR = { is_culture_group = italian is_culture_group = germanic } accepted_culture = south_german } }
             owner = { remove_accepted_culture = south_german }
         }
         random_owned = {
@@ -72,7 +72,9 @@ country_event = {
                 add_accepted_culture = avadhi
                 add_accepted_culture = marathi
                 add_accepted_culture = rajput
+                add_accepted_culture = bihari
                 add_accepted_culture = bengali
+                add_accepted_culture = kanauji
                 add_accepted_culture = panjabi
             }
         }
@@ -129,10 +131,7 @@ country_event = {
             }
             modifier = {
                 factor = 10
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy	
-				}
+                government = democracy
             }
             modifier = {
                 factor = 2
@@ -255,15 +254,19 @@ country_event = {
             }
             modifier = {
                 factor = 2
-                tag = NGF
-                is_greater_power = no
+                AND = {
+                    tag = NGF
+                    is_greater_power = no
+                }
             }
             modifier = {
                 factor = 5
-				tag = PRU
-				FROM = {
-					ai = yes
-				}
+                AND = {
+                    tag = PRU
+                    FROM = {
+                        ai = yes
+                    }
+                }
             }
             modifier = {
                 factor = 5
@@ -361,7 +364,6 @@ country_event = {
                     government = hms_government
                     government = semi_constitutional_empire
                     government = constitutional_empire
-					has_country_flag = Government_Democracy
                 }
                 FROM = {
                     OR = {
@@ -370,7 +372,6 @@ country_event = {
                         government = hms_government
                         government = semi_constitutional_empire
                         government = constitutional_empire
-						has_country_flag = Government_Democracy
                     }
                 }
             }
@@ -456,22 +457,6 @@ country_event = {
                 secede_province = THIS
             }
         }
-		any_owned = {
-            limit = {
-                province_id = 3397
-				757 = { owned_by = SIC }
-				SIC = { is_greater_power = yes }
-            }
-            secede_province = THIS  
-		}
-		any_owned = {
-            limit = {
-                province_id = 3398
-				2567 = { owned_by = SIC }
-				SIC = { is_greater_power = yes }
-            }
-            secede_province = THIS  
-		}
         random_country = {
             limit = { is_sphere_leader_of = PAP }
             set_country_flag = objects_to_italy
@@ -968,10 +953,7 @@ country_event = {
             }
             modifier = {
                 factor = 10
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy	
-				}
+                government = democracy
             }
             modifier = {
                 factor = 2
@@ -1091,7 +1073,6 @@ country_event = {
                 government = hms_government
                 government = constitutional_empire
                 government = democracy
-				has_country_flag = Government_Democracy
             }
         }
     }
@@ -1302,14 +1283,12 @@ country_event = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
-					has_country_flag = Government_Democracy
                 }
                 FROM = {
                     NOT = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
-						has_country_flag = Government_Democracy
                     }
                 }
             }
@@ -1489,16 +1468,10 @@ country_event = {
     id = 11122
     title = "EVTNAME11122"
     desc = "EVTDESC11122"
-    picture = "Celebration"
+    picture = "celebration"
 
     trigger = {
         ai = yes
-		YUG = {
-			exists = yes
-		}
-		NOT = {
-			tag = YUG
-		}
         war = no
         part_of_sphere = yes
         is_culture_group = south_slavic
@@ -1657,7 +1630,6 @@ country_event = {
                     government = hms_government
                     government = constitutional_empire
                     government = semi_constitutional_empire
-					has_country_flag = Government_Democracy
                 }
                 FROM = {
                     OR = {
@@ -1666,7 +1638,6 @@ country_event = {
                         government = hms_government
                         government = constitutional_empire
                         government = semi_constitutional_empire
-						has_country_flag = Government_Democracy
                     }
                 }
             }

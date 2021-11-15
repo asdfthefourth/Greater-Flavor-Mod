@@ -6,7 +6,6 @@ country_event = {
     picture = "disease"
 
     trigger = {
-		ai = no
         NOT = { poor_strata_everyday_needs = 0.8 }
         total_pops = 50000
         any_owned_province = {
@@ -61,10 +60,8 @@ country_event = {
     picture = "starving"
 
     trigger = {
-		ai = no
         NOT = { poor_strata_life_needs = 0.8 }
         NOT = { government = democracy }
-		NOT = { has_country_flag = Government_Democracy }
         total_pops = 50000
     }
 
@@ -80,7 +77,6 @@ country_event = {
                 government = hms_government
                 government = constitutional_empire
                 government = dominion
-				has_country_flag = Government_Dominion
             }
         }
     }
@@ -128,7 +124,6 @@ country_event = {
     picture = "disease"
 
     trigger = {
-		ai = no
         NOT = { poor_strata_everyday_needs = 0.90 }
         total_pops = 50000
         any_owned_province = {
@@ -213,7 +208,6 @@ country_event = {
     picture = "disease"
 
     trigger = {
-		ai = no
         NOT = { poor_strata_life_needs = 0.9 }
         NOT = { has_country_modifier = pandemic_influenza }
         total_pops = 50000
@@ -348,7 +342,6 @@ country_event = {
     picture = "Cholera"
 
     trigger = {
-		ai = no
         total_pops = 50000
         OR = {
             num_of_cities = 3
@@ -543,7 +536,6 @@ country_event = {
     picture = "smallpox"
 
     trigger = {
-		ai = no
         NOT = { poor_strata_everyday_needs = 0.5 }
         total_pops = 50000
         any_owned_province = {
@@ -559,6 +551,12 @@ country_event = {
             NOT = { poor_strata_life_needs = 0.9 }
             NOT = { AND = { continent = oceania civilized = no } }
         }
+#        modifier = {
+#            factor = 0.9
+#            NOT = {
+#                luxury_needs = 0.9
+#            }
+#        }
         modifier = {
             factor = 1.5
             organic_chemistry = 1

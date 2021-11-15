@@ -427,6 +427,10 @@ steamer_transports = {
             factor = 3
             mechanical_production = 1
         }
+        modifier = {
+            factor = 2
+            clean_coal = 1
+        }
     }
     effect = {
         activate_unit = steam_transport
@@ -523,6 +527,10 @@ protected_cruisers = {
             factor = 3
             invention = ironclads
         }
+        modifier = {
+            factor = 3
+            cheap_steel = 1
+        }
     }
     effect = {
         activate_unit = cruiser
@@ -550,6 +558,10 @@ pre_dreadnought = {
         modifier = {
             factor = 3
             invention = ironclads
+        }
+        modifier = {
+            factor = 2
+            cheap_steel = 1
         }
         modifier = {
             factor = 2
@@ -940,6 +952,10 @@ armour_piercing_exploding_projectiles = {
             factor = 3
             invention = armour_piercing_projectiles
         }
+        modifier = {
+            factor = 2
+            cheap_iron = 1
+        }
     }
     effect = {
         navy_base = {
@@ -961,6 +977,10 @@ armoured_turrets = {
         modifier = {
             factor = 3
             invention = ironclads
+        }
+        modifier = {
+            factor = 3
+            cheap_iron = 1
         }
     }
     effect = {
@@ -1053,6 +1073,10 @@ armoured_citadels = {
             factor = 3
             invention = armoured_turrets
         }
+        modifier = {
+            factor = 2
+            cheap_steel = 1
+        }
     }
     effect = {
         battleship = {
@@ -1132,6 +1156,10 @@ heavy_armour_plates = {
     limit = { advanced_naval_design = 1 }
     chance = {
         base = 3
+        modifier = {
+            factor = 3
+            cheap_steel = 1
+        }
         modifier = {
             factor = 2
             invention = martin_steel
@@ -1254,6 +1282,10 @@ advanced_fire_control = {
         modifier = {
             factor = 2
             advanced_metallurgy = 1
+        }
+        modifier = {
+            factor = 3
+            cheap_steel = 1
         }
         modifier = {
             factor = 2

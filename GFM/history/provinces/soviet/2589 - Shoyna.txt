@@ -1,6 +1,6 @@
-owner = SOC
-controller = SOC
-add_core = SOC
+owner = TKG
+controller = TKG
+add_core = TKG
 trade_goods = fish
 terrain = small_island
 life_rating = 31

@@ -539,7 +539,7 @@
 }
 
 #Seiyun
-1161 = {
+3273 = {
     aristocrats = {
         culture = bedouin
         religion = sunni

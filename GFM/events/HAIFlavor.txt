@@ -51,10 +51,7 @@ country_event = {
     trigger = {
         tag = HAI
         year = 1847
-		OR = {
-			government = democracy
-			has_country_flag = Government_Democracy	
-		}
+        government = democracy
         NOT = { year = 1859 }
     }
 
@@ -93,13 +90,13 @@ country_event = {
 		name = "NO! The republic must stand! The military of Haiti will defend our constitution."
 		any_pop = {
 			limit = {
-				pop_majority_ideology = reactionary
+				ideology = reactionary
 			}
 			militancy = 9
 		}
 		any_pop = {
 			limit = {
-				pop_majority_ideology = liberal
+				ideology = liberal
 			}
 			militancy = -2
 		}
@@ -241,34 +238,13 @@ country_event = {
             add_country_modifier = { name = unrecognized_country duration = 3650 }
         }
         relation = { who = DOM value = -400 }
-        random_owned = {
-			limit = {
-				owner = { USA = { exists = yes } }
-			}
-			owner = {
-				USA = {
-					diplomatic_influence = {
-						who = DOM
-						value = 400
-					}
-					relation = { who = DOM value = 200 }
-				}
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = { US2 = { exists = yes } }
-			}
-			owner = {
-				US2 = {
-					diplomatic_influence = {
-						who = DOM
-						value = 400
-					}
-					relation = { who = DOM value = 200 }
-				}
-			}
-		}
+        USA = {
+            diplomatic_influence = {
+                who = DOM
+                value = 400
+            }
+            relation = { who = DOM value = 200 }
+        }
         DOM = {
             capital_scope = {
                 sub_unit = { type = infantry value = current }
@@ -283,7 +259,6 @@ country_event = {
                 sub_unit = { type = artillery value = current }
             }
         }
-		casus_belli = { target = DOM type = conquest months = 36 }
         war = {
             target = DOM
             attacker_goal = { casus_belli = conquest }
@@ -307,7 +282,6 @@ country_event = {
             add_accepted_culture = afro_latino
         }
         relation = { who = DOM value = -400 }
-		casus_belli = { target = DOM type = conquest months = 36 }
         war = {
             target = DOM
             attacker_goal = { casus_belli = conquest }
@@ -344,7 +318,6 @@ country_event = {
                     }
                 }
                 any_country = { limit = { is_greater_power = yes } relation = { who = USA value = -100 } }
-				any_country = { limit = { is_greater_power = yes } relation = { who = US2 value = -100 } }
             }
             treasury = -100000
         }
@@ -417,6 +390,10 @@ country_event = {
         FRA = { country_event = 45107 }
         ai_chance = {
             factor = 33
+            modifier = {
+                factor = 3
+                has_country_modifier = malevolent_ai
+            }
         }
     }
 }
@@ -450,28 +427,12 @@ country_event = {
     option = {
         name = "EVT45107OPTB"
         badboy = 8
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				relation = { who = USA value = -200 }
-				add_casus_belli = {
-					target = USA
-					type = cut_down_to_size
-					months = 48
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				relation = { who = US2 value = -200 }
-				add_casus_belli = {
-					target = US2
-					type = cut_down_to_size
-					months = 48
-				}
-			}
-		}
+        relation = { who = USA value = -200 }
+        add_casus_belli = {
+            target = USA
+            type = cut_down_to_size
+            months = 48
+        }
         casus_belli = {
             target = FROM
             type = war_reparations
@@ -493,28 +454,12 @@ country_event = {
     option = {
         name = "EVT45107OPTC"
         badboy = 10
-        random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				relation = { who = USA value = -300 }
-				add_casus_belli = {
-					target = USA
-					type = cut_down_to_size
-					months = 48
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				relation = { who = US2 value = -300 }
-				add_casus_belli = {
-					target = US2
-					type = cut_down_to_size
-					months = 48
-				}
-			}
-		}
+        relation = { who = USA value = -300 }
+        add_casus_belli = {
+            target = USA
+            type = cut_down_to_size
+            months = 48
+        }
         casus_belli = {
             target = FROM
             type = conquest
@@ -552,13 +497,13 @@ country_event = {
     }
 
     option = {
-        name = "Vive la Haiti!"
-        prestige = 20
+        name = "Vive la Haiti"
+        prestige = 50
         years_of_research = 1
         any_owned = {
             add_province_modifier = {
                 name = colonial_recruitment
-                duration = 365
+                duration = 1825
             }
         }
     }
@@ -581,7 +526,7 @@ country_event = {
         months = 2
     }
     option = {
-        name = "Expell the Domincans. §RGain 5 infamy§W"
+        name = "Expell the Domincans"
         badboy = 5
         any_pop = {
             limit = {

@@ -1,8 +1,6 @@
-owner = MKU
-controller = MKU
-add_core = MKU
-add_core = KDS
+owner = PER
+controller = PER
 add_core = PER
-add_core = AZB
+add_core = LUR
 trade_goods = cotton
 life_rating = 35

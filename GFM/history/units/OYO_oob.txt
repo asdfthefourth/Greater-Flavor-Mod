@@ -7,7 +7,7 @@ POR = {
 }
 
 BEN = {
-    value = 130
+    value = 30
 }
 
 DAH = {

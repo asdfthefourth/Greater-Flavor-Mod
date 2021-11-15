@@ -33,10 +33,7 @@ political_decisions = {
     latin_monetary_union_BEL = {
         picture = lmu
         potential = {
-            OR = {
-				tag = BEL
-				tag = BNF
-			}
+            tag = BEL
             NOT = {
                 has_country_flag = joined_lmu
             }

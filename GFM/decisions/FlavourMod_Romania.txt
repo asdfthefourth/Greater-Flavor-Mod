@@ -45,7 +45,6 @@ political_decisions = {
             OR = {
                 primary_culture = romanian
                 tag = BGR
-				tag = HUR
             }
             OR = {
                 slavery = yes_slavery

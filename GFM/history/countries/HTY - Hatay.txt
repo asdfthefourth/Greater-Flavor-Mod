@@ -1,6 +1,5 @@
 capital = 900
-primary_culture = azerbaijani
-culture = turkish
+primary_culture = turkish
 religion = sunni
 government = absolute_monarchy
 plurality = 5.0
@@ -16,6 +15,10 @@ foreign_officers = yes_foreign_officers
 foreign_naval_officers = yes_foreign_naval_officers
 land_reform = yes_land_reform
 monetary_reform = yes_monetary_reform
+
+# Technologies
+flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
 
 # Political reforms
 slavery = yes_slavery

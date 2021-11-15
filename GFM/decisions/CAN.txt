@@ -98,20 +98,13 @@ political_decisions = {
                     owns = 19
                 }
             }
-            OR = {
-				USA = {
-					has_country_flag = oregon_treaty
-				}
-				US2 = {
-					has_country_flag = oregon_treaty
-				}
-			}
-				
+            USA = {
+                has_country_flag = oregon_treaty
+            }
             NOT = { has_country_flag = british_columbia_organized }
         }
         allow = {
             NOT = { war_with = USA }
-			NOT = { war_with = US2 }
             COL = {
                 all_core = {
                     OR = {
@@ -153,7 +146,6 @@ political_decisions = {
                         any_owned = {
                             remove_core = RPL
                             remove_core = USA
-							remove_core = US2
                             remove_core = THIS
                         }
                     }
@@ -189,14 +181,12 @@ political_decisions = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
-					has_country_flag = Government_Democracy
                 }
             }
             OR = {
                 government = democracy
                 government = hms_government
                 government = constitutional_empire
-				has_country_flag = Government_Democracy
             }
             exists = CAN
             any_owned_province = {
@@ -432,7 +422,7 @@ political_decisions = {
                 infrastructure = 1 owner = { treasury = -2000 }
             }
             25 = {
-                change_province_name = "Calgary" #checked
+                change_province_name = "Calgary"
                 life_rating = 15
                 add_province_modifier = { name = gateway_to_america duration = 720 }
                 any_pop = { limit = { location = { province_id = 26 } is_culture_group = british } reduce_pop = 3 }
@@ -445,14 +435,14 @@ political_decisions = {
                 any_pop = { limit = { location = { province_id = 27 } is_culture_group = british } reduce_pop = 3 }
                 any_pop = { limit = { location = { province_id = 27 } is_culture_group = neo_european_cultures } reduce_pop = 3 }
             }
-            69 = { change_province_name = "Edmundston" } #checked
-            41 = { change_province_name = "Brandon" } #checked
-            30 = { change_province_name = "Nashlyn" } #checked
-            34 = { change_province_name = "Saskatoon" } #checked 
-            35 = { change_province_name = "Regina" } #checked
-            22 = { change_province_name = "Bonnyville" } #checked
-            26 = { change_province_name = "Red Deer" } #checked
-            24 = { change_province_name = "Onefour" } #checked
+            69 = { change_province_name = "Edmundston" }
+            41 = { change_province_name = "Brandon" }
+            30 = { change_province_name = "Regina" }
+            34 = { change_province_name = "Saskatoon" }
+            35 = { change_province_name = "Maple Creek" }
+            22 = { change_province_name = "Bonnyville" }
+            26 = { change_province_name = "Red Deer" }
+            24 = { change_province_name = "Medicine Hat" }
         }
         ai_will_do = { factor = 1 }
     }
@@ -572,6 +562,7 @@ political_decisions = {
         potential = {
             owns = 57
             57 = { NOT = { life_rating = 36 } }
+            57 = { NOT = { has_province_modifier = genocide } }
         }
 
         allow = {

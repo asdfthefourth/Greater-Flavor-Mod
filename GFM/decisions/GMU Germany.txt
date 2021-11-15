@@ -16,10 +16,11 @@
 
 political_decisions = {
     the_grunderzeit2 = {
-        picture = the_grunderzeit
+        picture = the_grunderzeit2
         potential = {
             is_culture_group = germanic
-            NOT = { capital = 619 }
+            NOT = { tag = AUS }
+            NOT = { tag = KUK }
             NOT = { has_country_flag = grunderzeit_we_have_done }
         }
 

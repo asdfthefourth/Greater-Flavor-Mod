@@ -10,18 +10,20 @@ country_event = {
     option = {
         name = "USE THIS OPTION FIRST"
         any_owned = {
-			limit = {
-				is_core = THIS
-			}
-            any_pop = {
-                limit = {
-                    is_primary_culture = no
-                    is_accepted_culture = no
-                    type = craftsmen
+            is_core = THIS
+                any_pop = {
+                    limit = {
+                        AND = {
+                            is_primary_culture = no
+                            is_accepted_culture = no
+                        }
+                        type = craftsmen
+                    }
+                    pop_type = farmers
                 }
-                pop_type = farmers
-            }
+
         }
+
     }
 }
 
@@ -37,18 +39,20 @@ country_event = {
     option = {
         name = "USE THIS OPTION SECOND"
         any_owned = {
-			limit = {
-				is_core = THIS
-			}
-            any_pop = {
-                limit = {
-                    is_primary_culture = no
-                    is_accepted_culture = no
-                    type = farmers
-                    unemployment = 0.99
+            is_core = THIS
+                any_pop = {
+                    limit = {
+                        AND = {
+                            is_primary_culture = no
+                            is_accepted_culture = no
+                        }
+                        type = farmers
+                        unemployment = 0.99
+                    }
+                    pop_type = labourers
                 }
-                pop_type = labourers
-            }
+
         }
+
     }
 }

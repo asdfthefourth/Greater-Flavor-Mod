@@ -7,7 +7,7 @@ country_event = {
     news_desc_long = "EVTDESC36898_NEWS_LONG"
     news_desc_medium = "EVTDESC36898_NEWS_MEDIUM"
     news_desc_short = "EVTDESC36898_NEWS_SHORT"
-    picture = "queenvictoria_coronation"
+    picture = "queenvictoria"
 
 
     trigger = {
@@ -663,11 +663,10 @@ country_event = {
             tag = ENL
         }
         year = 1850
-        OR = { exists = USA exists = US2 }
+        exists = USA
         NOT = {
             year = 1855
             war_with = USA
-			war_with = US2
         }
     }
 
@@ -2464,7 +2463,7 @@ country_event = {
         badboy = 1
         relation = { who = LHJ value = -400 }
         diplomatic_influence = { who = LHJ value = -400 }
-         casus_belli = {
+         casus_belli ={
             target = LHJ
             type = establish_protectorate_casus_belli
             months = 50
@@ -2885,18 +2884,22 @@ country_event = {
                 }
                 secede_province = RUS
             }
-			release_vassal = CRL
-			release_vassal = HNZ
-			release_vassal = KSN
             ai_chance = {
-                factor = 100
+                factor = 95
+                modifier = {
+                    factor = 100
+                    OR = {
+                        vassal_of = ENG
+                        in_sphere = ENG
+                    }
+                }
             }
     }
 
     option = {
         name = "EVT3697010OPTB"
         relation = { who = ENG value = -100 }
-        ai_chance = { factor = 0 }
+        ai_chance = { factor = 5 }
     }
 }
 
@@ -3356,8 +3359,7 @@ country_event = {
     mean_time_to_happen = { months = 2 }
 
     option = {
-        name = "EVTOPTA315003"		
-		# Audax Validator "." Ignore_NEXT
+        name = "EVTOPTA315003"
         random_owned = { limit = { is_capital = yes } assimilate = yes }
         any_pop = { limit = { NOT = { is_primary_culture = yes } } militancy = 3 consciousness = 4 }
         any_owned = { limit = { is_core = THIS } add_province_modifier = { name = cultural_resurgence duration = 3650 } }
@@ -3371,14 +3373,13 @@ country_event = {
     title = "EVTNAME315004"
     desc = "EVTDESC315004"
     news = yes
-	major = yes
     news_desc_long = "EVTDESC315004_NEWS_LONG"
     news_desc_medium = "EVTDESC315004_NEWS_MEDIUM"
     news_desc_short = "EVTDESC315004_NEWS_SHORT"
     picture = "dr_livingstone"
 
     trigger = {
-        OR = { tag = USA tag = US2 }
+        tag = USA
         exists = yes
         has_global_flag = american_civil_war_has_happened
         year = 1871
@@ -3394,8 +3395,8 @@ country_event = {
 
     option = {
         name = "EVTOPTA315004"
-        random_owned = { limit = { owner = { tag = ENG } } owner = { prestige = 15 relation = { who = USA value = 10 } relation = { who = US2 value = 10 } } }
-        random_owned = { limit = { OR = { owner = { tag = USA } owner = { tag = US2 } } }
+        random_owned = { limit = { owner = { tag = ENG } } owner = { prestige = 15 relation = { who = USA value = 10 } } }
+        random_owned = { limit = { owner = { tag = USA } }
             owner = {
                 prestige = 15
                 relation = { who = ENG value = 10 }
@@ -3429,11 +3430,7 @@ country_event = {
         months = 36 #Three years
         modifier = {
             factor = 1.50
-            relation = { who = USA value = 100 } exists = USA
-        }
-        modifier = {
-            factor = 1.50
-            relation = { who = US2 value = 100 } exists = US2
+            relation = { who = USA value = 100 }
         }
     }
 
@@ -3441,42 +3438,20 @@ country_event = {
         name = "EVT110081OPTA" #Support Paulet!
         badboy = 5
         inherit = HAW
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				relation = { who = USA value = -200 }
-				USA = {
-					casus_belli = {
-						target = ENG
-						type = free_peoples
-						months = 30
-					}
-					casus_belli = {
-						target = ENG
-						type = humiliate
-						months = 30
-					}
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				relation = { who = US2 value = -200 }
-				US2 = {
-					casus_belli = {
-						target = ENG
-						type = free_peoples
-						months = 30
-					}
-					casus_belli = {
-						target = ENG
-						type = humiliate
-						months = 30
-					}
-				}
-			}
-		}
+        relation = { who = USA value = -200 }
+        USA = {
+            casus_belli = {
+                target = ENG
+                type = free_peoples
+                months = 30
+            }
+            casus_belli = {
+                target = ENG
+                type = humiliate
+                months = 30
+            }
+        }
+
         ai_chance = { factor = 2 }
     }
 
@@ -3486,7 +3461,6 @@ country_event = {
         treasury = 2500
         HAW = { treasury = -2500 }
         relation = { who = USA value = -100 }
-		relation = { who = US2 value = -100 }
         relation = { who = HAW value = -200 }
         diplomatic_influence = { who = HAW value = 400 }
 
@@ -3499,7 +3473,6 @@ country_event = {
         prestige = -5
         relation = { who = HAW value = 50 }
         relation = { who = USA value = 50 }
-		relation = { who = US2 value = 50 }
 
         ai_chance = { factor = 80 }
     }
@@ -3839,7 +3812,6 @@ country_event = {
     id = 99957
     title = "EVTNAME99957"
     desc = "EVTDESC99957"
-	picture = "end_of_isolation"
     major = yes
 
     trigger = {
@@ -4004,10 +3976,15 @@ country_event = {
         invention = the_dark_continent
         MNP = {
             war = no
+            civilized = no
             vassal_of = ENG
             exists = yes
             neighbour = ENG
             NOT = { truce_with = ENG }
+        }
+        OR = {
+            war_policy = jingoism
+            war_policy = pro_military
         }
         NOT = { has_country_flag = anglo_manipur_war }
     }
@@ -4345,7 +4322,7 @@ country_event = {
     id = 999100
     title = "EVTNAME999100"
     desc = "EVTDESC999100"
-    picture = "imperial_conference_nineteenseven"
+    picture = "big_ben_finished"
     major = yes
 
     trigger = {
@@ -4378,10 +4355,10 @@ country_event = {
     option = {
         name = "EVT999100OPTA"
         prestige = -25
-        AST = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
-        CAN = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
-        NEW = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
-        NZL = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
+        AST = {  prestige = -80 government = dominion }
+        CAN = {  prestige = -80 government = dominion }
+        NEW = {  prestige = -80 government = dominion }
+        NZL = {  prestige = -80 government = dominion }
         random_country = {
             limit = {
                 tag = SAF
@@ -4389,7 +4366,7 @@ country_event = {
                 primary_culture = british
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         random_country = {
             limit = {
@@ -4398,7 +4375,7 @@ country_event = {
                 primary_culture = british
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         random_country = {
             limit = {
@@ -4406,7 +4383,7 @@ country_event = {
                 exists = yes
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         random_country = {
             limit = {
@@ -4414,7 +4391,7 @@ country_event = {
                 exists = yes
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         any_greater_power = {
             diplomatic_influence = { who = AST value = -400 }
@@ -4429,10 +4406,10 @@ country_event = {
     option = {
         name = "EVT999100OPTB"
         prestige = -25
-        AST = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
-        CAN = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
-        NEW = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
-        NZL = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
+        AST = {  prestige = -80 government = dominion }
+        CAN = {  prestige = -80 government = dominion }
+        NEW = {  prestige = -80 government = dominion }
+        NZL = {  prestige = -80 government = dominion }
         random_country = {
             limit = {
                 tag = SAF
@@ -4440,7 +4417,7 @@ country_event = {
                 primary_culture = british
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         random_country = {
             limit = {
@@ -4449,7 +4426,7 @@ country_event = {
                 primary_culture = british
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         random_country = {
             limit = {
@@ -4457,7 +4434,7 @@ country_event = {
                 exists = yes
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         random_country = {
             limit = {
@@ -4465,7 +4442,7 @@ country_event = {
                 exists = yes
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         any_greater_power = {
             diplomatic_influence = { who = AST value = -400 }
@@ -4473,17 +4450,17 @@ country_event = {
             diplomatic_influence = { who = NEW value = -400 }
             diplomatic_influence = { who = NZL value = -400 }
         }
-        set_country_flag = imperial_preference set_country_flag = Government_Dominion
+        set_country_flag = imperial_preference
     }
 
     ###Grant Dominion Status, Grant Irish Home Rule###
     option = {
         name = "EVT999100OPTC"
         prestige = -75
-        AST = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
-        CAN = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
-        NEW = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
-        NZL = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
+        AST = {  prestige = -80 government = dominion }
+        CAN = {  prestige = -80 government = dominion }
+        NEW = {  prestige = -80 government = dominion }
+        NZL = {  prestige = -80 government = dominion }
         random_country = {
             limit = {
                 tag = SAF
@@ -4491,7 +4468,7 @@ country_event = {
                 primary_culture = british
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion 
+            prestige = -80 government = dominion
         }
         random_country = {
             limit = {
@@ -4500,7 +4477,7 @@ country_event = {
                 primary_culture = british
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         random_country = {
             limit = {
@@ -4508,7 +4485,7 @@ country_event = {
                 exists = yes
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         random_country = {
             limit = {
@@ -4516,7 +4493,7 @@ country_event = {
                 exists = yes
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         ###Irish Free State###
         clr_country_flag = IRE_independence_refused
@@ -4551,12 +4528,10 @@ country_event = {
                 prestige = -80
                 government = dominion
                 any_owned = {
-                    limit = {
-						region = ENG_254
-						NOT = {
-							province_id = 3378
-						}
-					}
+                    limit = { region = ENG_254 }
+                    NOT = {
+                        province_id = 3378
+                    }
                     add_core = THIS
                     secede_province = THIS
                 }
@@ -4576,10 +4551,10 @@ country_event = {
     option = {
         name = "EVT999100OPTD"
         prestige = -75
-        AST = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
-        CAN = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
-        NEW = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
-        NZL = {  prestige = -80 government = dominion set_country_flag = Government_Dominion }
+        AST = {  prestige = -80 government = dominion }
+        CAN = {  prestige = -80 government = dominion }
+        NEW = {  prestige = -80 government = dominion }
+        NZL = {  prestige = -80 government = dominion }
         random_country = {
             limit = {
                 tag = SAF
@@ -4587,7 +4562,7 @@ country_event = {
                 primary_culture = british
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         random_country = {
             limit = {
@@ -4596,7 +4571,7 @@ country_event = {
                 primary_culture = british
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         random_country = {
             limit = {
@@ -4604,7 +4579,7 @@ country_event = {
                 exists = yes
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         random_country = {
             limit = {
@@ -4612,7 +4587,7 @@ country_event = {
                 exists = yes
                 vassal_of = ENG
             }
-            prestige = -80 government = dominion set_country_flag = Government_Dominion
+            prestige = -80 government = dominion
         }
         ###Irish Free State###
         clr_country_flag = IRE_independence_refused
@@ -4645,8 +4620,7 @@ country_event = {
             }
             IRE = {
                 prestige = -80
-                government = dominion 
-				set_country_flag = Government_Dominion
+                government = dominion
                 any_owned = {
                     limit = { region = ENG_254 }
                     add_core = THIS
@@ -4670,7 +4644,7 @@ country_event = {
     id = 999101
     title = "EVTNAME999101"
     desc = "EVTDESC999101"
-    picture = "imperial_conference_nineteenseven_two"
+    picture = "big_ben_finished"
     major = yes
     fire_only_once = yes
 
@@ -4744,7 +4718,7 @@ country_event = {
 country_event = {
     id = 21370001
     title = "The Commonwealth wants to buy Trinidad and Tobago"
-    desc = "Diplomats from Poland have approached our goverment today with a proposition to buy the Caribbean islands of Trinidad and Tobago for a good price to retake back their once existing colonies. What will be our answear?"
+    desc = "Diplomats from Poland have approached our goverment today with a proposition to buy the carribean island's of Trinidad and Tobago for a good price to retake back their once existing colonies. What will be our answear?"
 
     is_triggered_only = yes
 
@@ -4907,9 +4881,12 @@ country_event = {
 		days = 1
 	}
 	
+	immediate = {
+		set_country_flag = british_kicked_out_of_SAF
+	}
+	
 	option = {
 		name = "This is a serious setback."
-		set_country_flag = british_kicked_out_of_SAF
 		prestige = -25
 		any_country = {
 			limit = {
@@ -4964,25 +4941,14 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = { months = 1 }
-	
 	option = {
 		name = "Excellent."
 		prestige = 10
 		ENG = {
 			any_owned = {
 				limit = {
-					OR = {
-						region = ENG_2087 #Cape Colony
-						region = ENG_2096 #Eastern Cape
-						region = ZUL_2113 #Zululand
-						region = ORA_2103 #Basutoland
-						region = ENG_2092 #Northern Cape
-						region = TRN_2108 #Typ-Gariep
-						region = ENG_2074 #Bechuanaland
-					}
+					continent = africa
 				}
-				remove_core = ENG
 				secede_province = THIS
 			}
 		}

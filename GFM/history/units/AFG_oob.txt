@@ -74,10 +74,27 @@ army = {
         type = cavalry
         home = 1216
     }
+}
+
+army = {
+    name = "Army of Kohun-dil-Khan"
+    location = 1215
     regiment = {
-        name= "1. Popozai"
+        name= "1. Durranni"
         type = irregular
-        home = 1213
+        home = 1215
+    }
+
+    regiment = {
+        name= "2. Durranni"
+        type = irregular
+        home = 1215
+    }
+
+    regiment = {
+        name= "3. Durranni"
+        type = irregular
+        home = 1214
     }
     regiment = {
         name= "2. Popozai"
@@ -86,6 +103,11 @@ army = {
     }
     regiment = {
         name= "3. Popozai"
+        type = irregular
+        home = 1213
+    }
+    regiment = {
+        name= "1. Tajiki"
         type = irregular
         home = 1213
     }

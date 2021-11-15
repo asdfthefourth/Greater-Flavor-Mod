@@ -1,6 +1,11 @@
-owner = CIR
-controller = CIR
+owner = ABK
+controller = ABK
+add_core = ABK
 add_core = CIR
+add_core = GEO
 trade_goods = grain
 life_rating = 35
-terrain = sochi
+1861.1.1 = {
+    owner = RUS
+    controller = RUS
+}

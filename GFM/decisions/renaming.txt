@@ -2,10 +2,7 @@ political_decisions = {
     slovene_rename_slo = {
         picture = gtfo
         potential = {
-            OR = {
-				tag = SLO
-				tag = YUG
-			}
+            tag = SLO
             owns = 767
             owns = 768
             owns = 3282
@@ -124,7 +121,6 @@ political_decisions = {
                 primary_culture = hungarian
                 tag = KUK
                 tag = DNB
-				tag = HUR
             }
             owns = 2538
             owns = 791
@@ -245,10 +241,7 @@ political_decisions = {
     banat_rename_rom = {
         picture = gtfo
         potential = {
-            OR = {
-				primary_culture = romanian
-				tag = BGR
-			}
+            primary_culture = romanian
             owns = 652
             owns = 653
             NOT = { has_global_flag = banat_rename_rom }
@@ -621,10 +614,7 @@ political_decisions = {
     northern_transylvania_rename_rom = {
         picture = gtfo
         potential = {
-            OR = {
-				primary_culture = romanian
-				tag = BGR
-			}
+            primary_culture = romanian
             owns = 651
             owns = 654
             owns = 661
@@ -737,10 +727,7 @@ political_decisions = {
     southern_transylvania_rename_rom = {
         picture = gtfo
         potential = {
-            OR = {
-				primary_culture = romanian
-				tag = BGR
-			}
+            primary_culture = romanian
             owns = 647
             owns = 655
             owns = 656
@@ -842,9 +829,6 @@ political_decisions = {
                 change_province_name = "Bratislava"
                 state_scope = { change_region_name = "Slovensko" }
             }
-            635 = {
-                state_scope = { change_region_name = "Kom·rno" }
-            }
             634 = { change_province_name = "TrencÌn" }
             635 = { change_province_name = "Nitra" }
             636 = { change_province_name = "Bansk· Bystrica" }
@@ -864,7 +848,6 @@ political_decisions = {
             OR = {
                 primary_culture = hungarian
                 tag = KUK
-				tag = HUR
             }
             owns = 633
             owns = 634
@@ -885,9 +868,6 @@ political_decisions = {
             633 = {
                 change_province_name = "Pozsony"
                 state_scope = { change_region_name = "Pozsony" }
-            }
-            635 = {
-                state_scope = { change_region_name = "Kom·rom" }
             }
             634 = { change_province_name = "TrencsÈn" }
             635 = { change_province_name = "Nyitra" }
@@ -931,9 +911,6 @@ political_decisions = {
             633 = {
                 change_province_name = "Preﬂburg"
                 state_scope = { change_region_name = "Preﬂburg" }
-            }
-            635 = {
-                state_scope = { change_region_name = "Komorn" }
             }
             634 = { change_province_name = "Trentschin" }
             635 = { change_province_name = "Neutra" }
@@ -981,7 +958,6 @@ political_decisions = {
             3333 = { change_province_name = "Pribram" }
             3334 = { change_province_name = "Kutna Hora" }
             3483 = { change_province_name = "Praha" }
-			3335 = { change_province_name = "ZlÌn" }
         }
         ai_will_do = { factor = 1 }
     }
@@ -990,13 +966,7 @@ political_decisions = {
         picture = gtfo
         potential = {
             is_culture_group = germanic
-            NOT = { 
-                is_culture_group = czecho_slovak_culture_group
-                tag = SLV
-                tag = CZH
-                accepted_culture = czech
-				tag = DNB 
-			}
+            NOT = { tag = DNB }
             owns = 625 #Prague
             owns = 626 #Hradec Kralove
             owns = 631 #Brno
@@ -1022,7 +992,6 @@ political_decisions = {
             3333 = { change_province_name = "Freiberg" }
             3334 = { change_province_name = "Kuttenberg" }
             3483 = { change_province_name = "Prag" }
-			3335 = { change_province_name = "Zlin" }
         }
         ai_will_do = { factor = 1 }
     }
@@ -1071,14 +1040,7 @@ political_decisions = {
         picture = gtfo
         potential = {
             is_culture_group = germanic
-            NOT = { 
-				tag = DNB 
-				tag = AUB
-                is_culture_group = czecho_slovak_culture_group
-                tag = SLV
-                tag = CZH
-                accepted_culture = czech
-			}
+            NOT = { tag = DNB tag = AUB }
             owns = 627 #Karlsbad
             owns = 628 #Aussig
             owns = 629 #Plzen
@@ -1126,14 +1088,9 @@ political_decisions = {
 
         effect = {
             set_country_flag = monte_carlo_casino
-			prestige = 1
-            3251 = { 
-			    trade_goods = precious_metal
-				add_province_modifier = { 
-				    name = casino 
-					duration = -1 
-				}
-			}
+            3251 = {
+                trade_goods = precious_metal
+            }
         }
         ai_will_do = { factor = 1 }
     }
@@ -1408,19 +1365,15 @@ political_decisions = {
         potential = {
             is_culture_group = germanic
             NOT = {
-                tag = DNB
-                accepted_culture = polish
-                primary_culture = polish
                 AND = {
                     tag = DNB
                     accepted_culture = polish
                 }
-                tag = WSF
-				tag = HAI
             }
             OR = {
                 AND = { owns = 682 NOT = { has_global_flag = prussian_silesia_rename_german } }
                 AND = { owns = 689 NOT = { has_global_flag = austrian_silesia_rename_german } }
+                AND = { owns = 3277 NOT = { has_global_flag = austrian_silesia_rename_german } }
             }
         }
 
@@ -1477,7 +1430,6 @@ political_decisions = {
                 tag = WSF
 				tag = HAI
             }
-			NOT = { is_culture_group = germanic }
             OR = {
                 AND = { owns = 682 NOT = { has_global_flag = prussian_silesia_rename_polish } }
                 AND = { owns = 689 NOT = { has_global_flag = austrian_silesia_rename_polish } }
@@ -1530,17 +1482,7 @@ political_decisions = {
         potential = {
             is_culture_group = czecho_slovak_culture_group
             owns = 689
-            NOT = { 
-				has_global_flag = austrian_silesia_rename_czech 
-				is_culture_group = germanic
-                primary_culture = polish
-                AND = {
-                    tag = DNB
-                    accepted_culture = polish
-                }
-                tag = WSF
-				tag = HAI
-			}
+            NOT = { has_global_flag = austrian_silesia_rename_czech }
         }
 
         allow = {
@@ -1556,7 +1498,7 @@ political_decisions = {
                     change_province_name = "Tesin"
                 }
                 2584 = { change_province_name = "BÌlsko"  }
-                685 = { change_province_name = "HlucÌn"  }
+                685 = { change_province_name = "Hluƒç√≠n"  }
                 owner = {
                     set_global_flag = austrian_silesia_rename_czech
                     clr_global_flag = austrian_silesia_rename_polish
@@ -1926,7 +1868,6 @@ political_decisions = {
             OR = {
                 primary_culture = hungarian
                 tag = KUK
-				tag = HUR
             }
             owns = 642
             NOT = { has_global_flag = transdanubia_rename_hun }
@@ -1984,7 +1925,6 @@ political_decisions = {
             OR = {
                 primary_culture = hungarian
                 tag = KUK
-				tag = HUR
             }
             owns = 641
             NOT = { has_global_flag = central_hungary_rename_hun }
@@ -2157,7 +2097,6 @@ political_decisions = {
                 primary_culture = hungarian
                 tag = KUK
                 tag = DNB
-				tag = HUR
             }
             owns = 771
             owns = 772
@@ -2295,7 +2234,6 @@ political_decisions = {
                 primary_culture = hungarian
                 tag = KUK
                 tag = DNB
-				tag = HUR
             }
             owns = 777
             owns = 779
@@ -2903,150 +2841,6 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
-	
-	ostpreussen_rename = {
-        picture = gtfo
-        potential = {
-            OR = {
-                AND = {
-                    is_culture_group = germanic
-                    owns = 695 
-					NOT = { has_global_flag = german_renamed_ostpreussen }
-                }
-                AND = {
-                    is_culture_group = east_slavic
-                    owns = 695 
-					NOT = { has_global_flag = russian_renamed_ostpreussen }
-                }
-                AND = {
-                    is_culture_group = polish_culture_group
-                    owns = 695 
-					NOT = { has_global_flag = polish_renamed_ostpreussen }
-                }
-                AND = {
-                    is_culture_group = baltic
-                    owns = 695 
-					NOT = { has_global_flag = baltic_renamed_ostpreussen }
-                }
-            }
-        }
-
-        allow = {
-            war = no
-        }
-
-        effect = {
-            ###German###
-            random_owned = {
-                limit = {
-                    province_id = 695
-                    owner = {
-                        is_culture_group = germanic
-                    }
-                }
-                695 = {
-                    change_province_name = "Kˆnigsberg"
-                    state_scope = {
-                        change_region_name = "Ostpreuﬂen"
-                    }
-                }
-                697 = { change_province_name = "Gumbinnen" }
-                698 = { change_province_name = "Memel" }
-				3329 = { change_province_name = "Allenstein" }
-				3328 = { change_province_name = "Elbing" }
-				3326 = { change_province_name = "Osterode" }
-				3327 = { change_province_name = "Ortelsburg" }
-                owner = {
-                    set_global_flag = german_renamed_ostpreussen
-                    clr_global_flag = russian_renamed_ostpreussen
-					clr_global_flag = polish_renamed_ostpreussen
-					clr_global_flag = baltic_renamed_ostpreussen
-                }
-            }
-            ###Slavic###
-            random_owned = {
-                limit = {
-                    province_id = 695
-                    owner = {
-                        is_culture_group = east_slavic
-                    }
-                }
-                695 = {
-                    change_province_name = "Kalinigrad"
-                    state_scope = {
-                        change_region_name = "VostÛchnaya Pr˙ssiya"
-                    }
-                }
-                697 = { change_province_name = "Gusev" }
-                698 = { change_province_name = "Klaipeda" }
-				3329 = { change_province_name = "Olsztyn" }
-				3328 = { change_province_name = "Elblag" }
-				3326 = { change_province_name = "Ostroda" }
-				3327 = { change_province_name = "Szczytno" }
-                owner = {
-                    clr_global_flag = german_renamed_ostpreussen
-                    set_global_flag = russian_renamed_ostpreussen
-					clr_global_flag = polish_renamed_ostpreussen
-					clr_global_flag = baltic_renamed_ostpreussen
-                }
-            }
-            ###Polish###
-            random_owned = {
-                limit = {
-                    province_id = 695
-                    owner = {
-                        is_culture_group = polish
-                    }
-                }
-                695 = {
-                    change_province_name = "KrÛlewiec"
-                    state_scope = {
-                        change_region_name = "Prusy Wschodnie"
-                    }
-                }
-                697 = { change_province_name = "Gabin" }
-                698 = { change_province_name = "Klajpeda" }
-				3329 = { change_province_name = "Olsztyn" }
-				3328 = { change_province_name = "Elblag" }
-				3326 = { change_province_name = "OstrÛda" }
-				3327 = { change_province_name = "Szczytno" }
-                owner = {
-                    clr_global_flag = german_renamed_ostpreussen
-                    clr_global_flag = russian_renamed_ostpreussen
-					set_global_flag = polish_renamed_ostpreussen
-					clr_global_flag = baltic_renamed_ostpreussen
-                }
-            }
-            ###Baltic###
-            random_owned = {
-                limit = {
-                    province_id = 695
-                    owner = {
-                        is_culture_group = baltic
-                    }
-                }
-                695 = {
-                    change_province_name = "Karaliaucius"
-                    state_scope = {
-                        change_region_name = "Rytu Prusija"
-                    }
-                }
-                697 = { change_province_name = "Gumbine" }
-                698 = { change_province_name = "Klaipeda" }
-				3329 = { change_province_name = "Olötynas" }
-				3328 = { change_province_name = "Elbingas" }
-				3326 = { change_province_name = "Ostruda" }
-				3327 = { change_province_name = "äcytnas" }
-                owner = {
-                    clr_global_flag = german_renamed_ostpreussen
-                    clr_global_flag = russian_renamed_ostpreussen
-					clr_global_flag = polish_renamed_ostpreussen
-					set_global_flag = baltic_renamed_ostpreussen
-                }
-            }
-        }
-        ai_will_do = { factor = 1 }
-    }
 
     lorraine_rename = {
         picture = gtfo
@@ -3107,16 +2901,12 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
     germanize_crimea = {
-        #picture = germanize_crimea
+        picture = germanize_crimea
         potential = {
             is_culture_group = germanic
             owns = 964
             owns = 966
             owns = 967
-			owns = 3437
-			owns = 3438
-			owns = 3439
-			owns = 3436
             NOT = {
                 has_global_flag = germanized_crimea
             }
@@ -3127,27 +2917,19 @@ political_decisions = {
             owns = 964
             owns = 966
             owns = 967
-			owns = 3437
-			owns = 3438
-			owns = 3439
-			owns = 3436
         }
 
         effect = {
             prestige = 5
             964 = { change_province_name = "Gotenburg" }
             966 = { change_province_name = "Kertsch" }
-            967 = { change_province_name = "Kaiserstadt" }
-			3438 = { change_province_name = "Jalta" }
-			3439 = { change_province_name = "Feodossija" }
-			3437 = { change_province_name = "Dschankoj" }
-			3436 = { change_province_name = "Jewpatorija" }
+            967 = { change_province_name = "Kaiserstadt"}
             set_global_flag = germanized_crimea
         }
     }
 
     restore_crimea = {
-        #picture = germanize_crimea
+        picture = germanize_crimea
         potential = {
             OR = {
                 primary_culture = russian
@@ -3157,10 +2939,6 @@ political_decisions = {
             owns = 964
             owns = 966
             owns = 967
-			owns = 3437
-			owns = 3438
-			owns = 3439
-			owns = 3436
         }
         allow = {
             OR = {
@@ -3170,10 +2948,6 @@ political_decisions = {
             owns = 964
             owns = 966
             owns = 967
-			owns = 3437
-			owns = 3438
-			owns = 3439
-			owns = 3436
         }
 
         effect = {
@@ -3186,20 +2960,14 @@ political_decisions = {
             967 = {
                 change_province_name = "Sevastopol"
             }
-			3438 = { change_province_name = "Yalta" }
-			3439 = { change_province_name = "Feodosia" }
-			3437 = { change_province_name = "Dzhankoi" }
-			3436 = { change_province_name = "Yevpatoria" }
+
             clr_global_flag = germanized_crimea
         }
     }
     rename_artois_NET = {
         picture = NET_claim_artois
         potential = {
-            OR = {
-				tag = NET
-				tag = BNF
-			}
+            tag = NET
             owns = 399 #Lille
             owns = 400 #Dunkirk
             owns = 401 #Arras
@@ -3257,14 +3025,10 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
     }
-    bessarabia_rename_rom = {
+        bessarabia_rename_rom = {
         picture = gtfo
         potential = {
-            OR = {
-				primary_culture = romanian
-				tag = BGR
-                tag = HUR
-			}
+            primary_culture = romanian
             owns = 676
             owns = 677
             owns = 673
@@ -3325,11 +3089,7 @@ political_decisions = {
     bukovina_rename_rom = {
         picture = gtfo
         potential = {
-            OR = {
-				primary_culture = romanian
-				tag = BGR
-                tag = HUR
-			}
+            primary_culture = romanian
             owns = 662
             owns = 663
             NOT = { has_global_flag = bukovina_rename_rom }
@@ -3411,12 +3171,6 @@ political_decisions = {
                 }
                 AND = {
                     primary_culture = hungarian
-                    owns = 623
-                    NOT = { has_global_flag = burgenland_rename_hun }
-
-                }
-                AND = {
-                    tag = HUR
                     owns = 623
                     NOT = { has_global_flag = burgenland_rename_hun }
 
@@ -3610,7 +3364,6 @@ political_decisions = {
         #alert = yes
         potential = {
             OR = {
-                tag = HUR
                 is_culture_group = pan_albanian
                 is_culture_group = pan_romanian
                 is_culture_group = south_slavic
@@ -3672,7 +3425,6 @@ political_decisions = {
         #alert = yes
         potential = {
             OR = {
-                tag = HUR
                 is_culture_group = pan_albanian
                 is_culture_group = pan_romanian
                 is_culture_group = south_slavic
@@ -3792,7 +3544,6 @@ political_decisions = {
                 tag = AUS
                 tag = DNB
                 tag = HUN
-				tag = HUR
                 tag = GCF
                 tag = GER
             }
@@ -4222,11 +3973,8 @@ political_decisions = {
                     change_region_name = "Eastern Macedonia"
                 }
             }
-			823 = { change_province_name = "Serres" }
-			825 = { change_province_name = "Kavala" }
             829 = { change_province_name = "X·nthi" }
-            830 = { change_province_name = "DidymÛteicho" }
-			3304 = { change_province_name = "Gjumjurdschina" }
+            830 = { change_province_name = "Alexandroupoli" }
             prestige = 2
         }
         ai_will_do = { factor = 1 }
@@ -4257,10 +4005,7 @@ political_decisions = {
                 }
             }
             829 = { change_province_name = "Ksanti" }
-            830 = { change_province_name = "Dimotika" }
-			823 = { change_province_name = "Syar" }
-			825 = { change_province_name = "Kavala" }
-			3304 = { change_province_name = "Komotini" }
+            830 = { change_province_name = "Orestias" }
             prestige = 2
         }
         ai_will_do = { factor = 1 }
@@ -4291,10 +4036,7 @@ political_decisions = {
                 }
             }
             829 = { change_province_name = "IskeÁe" }
-            830 = { change_province_name = "Dimetoka" }
-			823 = { change_province_name = "Siruz" }
-			825 = { change_province_name = "Kavala" }
-			3304 = { change_province_name = "G¸m¸lcine" }
+            830 = { change_province_name = "Orestias" }
         }
         ai_will_do = { factor = 1 }
     }
@@ -4484,20 +4226,6 @@ political_decisions = {
 
                     }
                 }
-		AND = {
-                    primary_culture = finnish
-                    OR = {
-                        AND = { owns = 356 NOT = { has_global_flag = finnish_renamed_daugavpils } }
-                        AND = { owns = 354 NOT = { has_global_flag = finnish_renamed_lativa } }
-                    }
-                }
-		AND = {
-                    primary_culture = swedish
-                    OR = {
-                        AND = { owns = 356 NOT = { has_global_flag = swedish_renamed_daugavpils } }
-                        AND = { owns = 354 NOT = { has_global_flag = swedish_renamed_lativa } }
-                    }
-                }
                 AND = {
                     OR = {
                         primary_culture = latvian
@@ -4536,8 +4264,6 @@ political_decisions = {
                     set_global_flag = german_renamed_daugavpils
                     clr_global_flag = latvian_renamed_daugavpils
                     clr_global_flag = russian_renamed_daugavpils
-		    clr_global_flag = finnish_renamed_daugavpils
-		    clr_global_flag = swedish_renamed_daugavpils
                 }
             }
             random_owned = {
@@ -4547,7 +4273,6 @@ political_decisions = {
                         is_culture_group = germanic
                     }
                 }
-		354 = { change_province_name = "Riga" }
                 355 = { change_province_name = "Wolmar" }
                 357 = {
                     change_province_name = "Mitau"
@@ -4561,8 +4286,6 @@ political_decisions = {
                     set_global_flag = german_renamed_lativa
                     clr_global_flag = latvian_renamed_lativa
                     clr_global_flag = russian_renamed_lativa
-		    clr_global_flag = finnish_renamed_lativa
-		    clr_global_flag = swedish_renamed_lativa
                 }
             }
 
@@ -4582,8 +4305,6 @@ political_decisions = {
                     set_global_flag = latvian_renamed_daugavpils
                     clr_global_flag = german_renamed_daugavpils
                     clr_global_flag = russian_renamed_daugavpils
-		    clr_global_flag = finnish_renamed_daugavpils
-		    clr_global_flag = swedish_renamed_daugavpils
                 }
             }
             random_owned = {
@@ -4593,7 +4314,6 @@ political_decisions = {
                         primary_culture = latvian
                     }
                 }
-		354 = { change_province_name = "Riga" }
                 355 = { change_province_name = "Valmiera" }
                 357 = {
                     change_province_name = "Jelgava"
@@ -4607,8 +4327,6 @@ political_decisions = {
                     set_global_flag = latvian_renamed_lativa
                     clr_global_flag = german_renamed_lativa
                     clr_global_flag = russian_renamed_lativa
-		    clr_global_flag = finnish_renamed_lativa
-		    clr_global_flag = swedish_renamed_lativa
                 }
             }
 
@@ -4625,8 +4343,6 @@ political_decisions = {
                     set_global_flag = russian_renamed_daugavpils
                     clr_global_flag = german_renamed_daugavpils
                     clr_global_flag = latvian_renamed_daugavpils
-		    clr_global_flag = finnish_renamed_daugavpils
-		    clr_global_flag = swedish_renamed_daugavpils
                 }
             }
             random_owned = {
@@ -4636,7 +4352,6 @@ political_decisions = {
                         is_culture_group = east_slavic
                     }
                 }
-		354 = { change_province_name = "Riga" }
                 355 = { change_province_name = "Vol'mar" }
                 357 = {
                     change_province_name = "Elgava"
@@ -4650,97 +4365,8 @@ political_decisions = {
                     set_global_flag = russian_renamed_lativa
                     clr_global_flag = latvian_renamed_lativa
                     clr_global_flag = german_renamed_lativa
-		    clr_global_flag = finnish_renamed_lativa
-		    clr_global_flag = swedish_renamed_lativa
                 }
             }
-			
-	    ###Finnish###
-            random_owned = {
-                limit = {
-                    province_id = 356
-                    owner = {
-                        primary_culture = finnish
-                    }
-                }
-                356 = { change_province_name = "V‰in‰nlinna" }
-                owner = {
-                    set_global_flag = finnish_renamed_daugavpils
-                    clr_global_flag = german_renamed_daugavpils
-                    clr_global_flag = latvian_renamed_daugavpils
-		    clr_global_flag = russian_renamed_daugavpils
-		    clr_global_flag = swedish_renamed_daugavpils
-                }
-            }
-            random_owned = {
-                limit = {
-                    province_id = 354
-                    owner = {
-                        primary_culture = finnish
-                    }
-                }
-		354 = { change_province_name = "Riika" }
-                355 = { change_province_name = "Volmari" }
-                357 = {
-                    change_province_name = "Jalgab"
-                    state_scope = {
-                        change_region_name = "Kurlandaa"
-                    }
-                }
-		358 = { change_province_name = "Vanta" }
-		359 = { change_province_name = "Liepo" }
-                owner = {
-                    set_global_flag = finnish_renamed_lativa
-                    clr_global_flag = latvian_renamed_lativa
-                    clr_global_flag = german_renamed_lativa
-		    clr_global_flag = russian_renamed_lativa
-		    clr_global_flag = swedish_renamed_lativa
-                }
-            }
-			
-	    ###Swedish###
-            random_owned = {
-                limit = {
-                    province_id = 356
-                    owner = {
-                        primary_culture = swedish
-                    }
-                }
-                356 = { change_province_name = "D¸naburg" }
-                owner = {
-                    set_global_flag = swedish_renamed_daugavpils
-                    clr_global_flag = german_renamed_daugavpils
-                    clr_global_flag = latvian_renamed_daugavpils
-		    clr_global_flag = russian_renamed_daugavpils
-		    clr_global_flag = finnish_renamed_daugavpils
-                }
-            }
-            random_owned = {
-                limit = {
-                    province_id = 354
-                    owner = {
-                        primary_culture = swedish
-                    }
-                }
-		354 = { change_province_name = "Riga" }
-                355 = { change_province_name = "Waldemar" }
-                357 = {
-                    change_province_name = "Jalgava"
-                    state_scope = {
-                        change_region_name = "Kurland"
-                    }
-                }
-		358 = { change_province_name = "Vindau" }
-		359 = { change_province_name = "Lipau" }
-                owner = {
-                    set_global_flag = swedish_renamed_lativa
-                    clr_global_flag = latvian_renamed_lativa
-                    clr_global_flag = german_renamed_lativa
-		    clr_global_flag = russian_renamed_lativa
-		    clr_global_flag = finnish_renamed_lativa
-                }
-            }	
-	
         }
 
 
@@ -4814,7 +4440,7 @@ political_decisions = {
                 362 = { change_province_name = "Mariampol" }
                 363 = { change_province_name = "Ponewesch" }
                 364 = { change_province_name = "Schaulen" }
-                3366 = { change_province_name = "Krottingen" }
+                365 = { change_province_name = "Krottingen" }
                 owner = {
                     set_global_flag = german_renamed_lithuania
                     clr_global_flag = lithuanian_renamed_lithuania
@@ -4879,7 +4505,7 @@ political_decisions = {
                 362 = { change_province_name = "Marijampole" }
                 363 = { change_province_name = "Paneveûys" }
                 364 = { change_province_name = "äiauliai" }
-                3366 = { change_province_name = "Palanga" }
+                365 = { change_province_name = "Palanga" }
                 owner = {
                     set_global_flag = lithuanian_renamed_lithuania
                     clr_global_flag = german_renamed_lithuania
@@ -4948,7 +4574,7 @@ political_decisions = {
                 362 = { change_province_name = "Mariyampole" }
                 363 = { change_province_name = "Ponevezh" }
                 364 = { change_province_name = "Shyaulyai" }
-                3366 = { change_province_name = "Palanga" }
+                365 = { change_province_name = "Palanga" }
                 owner = {
                     set_global_flag = russian_renamed_lithuania
                     clr_global_flag = german_renamed_lithuania
@@ -5010,7 +4636,7 @@ political_decisions = {
                 362 = { change_province_name = "Mariampol" }
                 363 = { change_province_name = "Poniewiez" }
                 364 = { change_province_name = "Szawle" }
-                3366 = { change_province_name = "Polaga" }
+                365 = { change_province_name = "Polaga" }
                 owner = {
                     set_global_flag = polish_renamed_lithuania
                     clr_global_flag = german_renamed_lithuania
@@ -5152,7 +4778,6 @@ political_decisions = {
                 owner = {
                     set_global_flag = france_rename_namur
                     clr_global_flag = dutch_rename_namur
-					clr_global_flag = german_rename_namur
                 }
             }
             random_owned = {
@@ -5161,7 +4786,6 @@ political_decisions = {
                 owner = {
                     set_global_flag = france_rename_tournai
                     clr_global_flag = dutch_rename_tournai
-					clr_global_flag = german_rename_tournai
                 }
             }
             random_owned = {
@@ -5170,7 +4794,6 @@ political_decisions = {
                 owner = {
                     set_global_flag = france_rename_charleroi
                     clr_global_flag = dutch_rename_charleroi
-					clr_global_flag = german_rename_charleroi
                 }
             }
         }
@@ -5294,7 +4917,6 @@ political_decisions = {
         potential = {
             OR = {
                 tag = USA
-				tag = US2
                 tag = TEX
             }
             TEX = { all_core = { owned_by = THIS } }
@@ -5400,7 +5022,9 @@ political_decisions = {
         picture = map_sapmi
         potential = {
             NOT = { has_global_flag = northern_norway_fin }
-            primary_culture = finnish
+            OR = {
+                primary_culture = finnish
+            }
             owns = 306
             owns = 307
         }
@@ -5691,6 +5315,8 @@ political_decisions = {
                349 = { owned_by = THIS }
                350 = { owned_by = THIS }
                352 = { owned_by = THIS }
+               3367 = { owned_by = THIS }
+               3368 = { owned_by = THIS }
                351 = { owned_by = THIS }
                353 = { owned_by = THIS }
             }
@@ -5730,7 +5356,7 @@ political_decisions = {
             OR = {
 			    primary_culture = north_german
 				primary_culture = south_german
-				primary_culture = volga_german
+				primary_culture = east_german
 			}
             OR = {
                349 = { owned_by = THIS }
@@ -5845,7 +5471,7 @@ political_decisions = {
         potential = {
             has_global_flag = hebrides_renamed
 			OR = {
-                primary_culture = british
+                primary_culture = english
 				primary_culture = scottish
 				primary_culture = irish
 				}
@@ -5900,7 +5526,7 @@ political_decisions = {
         potential = {
             has_global_flag = leinster_renamed
 			OR = {
-                primary_culture = british
+                primary_culture = english
 				primary_culture = irish
 				primary_culture = scottish
 				}
@@ -5956,7 +5582,7 @@ political_decisions = {
         potential = {
             has_global_flag = munster_renamed
 			OR = {
-                primary_culture = british
+                primary_culture = english
 				primary_culture = irish
 				primary_culture = scottish
 				}
@@ -6010,7 +5636,7 @@ political_decisions = {
         potential = {
             has_global_flag = ulster_renamed
 			OR = {
-                primary_culture = british
+                primary_culture = english
 				primary_culture = irish
 				primary_culture = scottish
 				}
@@ -6064,7 +5690,7 @@ political_decisions = {
         potential = {
             has_global_flag = connacht_renamed
 			OR = {
-                primary_culture = british
+                primary_culture = english
 				primary_culture = irish
 				primary_culture = scottish
 				}
@@ -6120,7 +5746,7 @@ political_decisions = {
         potential = {
             has_global_flag = highlands_renamed
 			OR = {
-                primary_culture = british
+                primary_culture = english
 				primary_culture = irish
 				primary_culture = scottish
 				}
@@ -6180,7 +5806,7 @@ political_decisions = {
         potential = {
             has_global_flag = lowlands_renamed
 			OR = {
-                primary_culture = british
+                primary_culture = english
 				primary_culture = irish
 				primary_culture = scottish
 				}
@@ -6206,6 +5832,202 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+	latvia_rename_fin = {
+        picture = map_livonia
+        potential = {
+            NOT = { has_global_flag = latvia_renamed_fin }
+            primary_culture = finnish
+            OR = {
+               354 = { owned_by = THIS }
+               355 = { owned_by = THIS }
+               356 = { owned_by = THIS }
+               357 = { owned_by = THIS }
+               358 = { owned_by = THIS }
+               359 = { owned_by = THIS }
+               3424 = { owned_by = THIS }
+			   3423 = { owned_by = THIS }
+			   3365 = { owned_by = THIS }
+            }
+        }
+
+        allow = {
+            war = no
+            354 = { owned_by = THIS }
+            355 = { owned_by = THIS }
+            356 = { owned_by = THIS }
+            357 = { owned_by = THIS }
+            358 = { owned_by = THIS }
+            359 = { owned_by = THIS }
+            3424 = { owned_by = THIS }
+			3423 = { owned_by = THIS }
+		    3365 = { owned_by = THIS }
+        }
+
+        effect = {
+            set_global_flag = latvia_renamed_fin
+            clr_global_flag = latvia_renamed_rus
+            clr_global_flag = latvia_renamed_ubd
+			clr_global_flag = latvia_renamed_swe
+            354 = { change_province_name = "Riika" }
+            355 = { change_province_name = "Volmari" }
+            356 = { change_province_name = "V‰in‰nlinna" }
+            357 = { change_province_name = "Jalgab" }
+            358 = { change_province_name = "Vanta" }
+            359 = { change_province_name = "Liepo" }
+            3424 = { change_province_name = "Salacgriva" }
+			3423 = { change_province_name = "Kuolka" }
+		    3365 = { change_province_name = "Abrene" }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	latvia_rename_rus = {
+        picture = map_livonia
+        potential = {
+            NOT = { has_global_flag = latvia_renamed_rus }
+            primary_culture = russian
+            OR = {
+               354 = { owned_by = THIS }
+               355 = { owned_by = THIS }
+               356 = { owned_by = THIS }
+               357 = { owned_by = THIS }
+               358 = { owned_by = THIS }
+               359 = { owned_by = THIS }
+               3424 = { owned_by = THIS }
+			   3423 = { owned_by = THIS }
+			   3365 = { owned_by = THIS }
+            }
+        }
+
+        allow = {
+            war = no
+            354 = { owned_by = THIS }
+            355 = { owned_by = THIS }
+            356 = { owned_by = THIS }
+            357 = { owned_by = THIS }
+            358 = { owned_by = THIS }
+            359 = { owned_by = THIS }
+            3424 = { owned_by = THIS }
+			3423 = { owned_by = THIS }
+		    3365 = { owned_by = THIS }
+        }
+
+        effect = {
+            set_global_flag = latvia_renamed_rus
+            clr_global_flag = latvia_renamed_fin
+            clr_global_flag = latvia_renamed_ubd
+			clr_global_flag = latvia_renamed_swe
+            354 = { change_province_name = "Riga" }
+            355 = { change_province_name = "Volodimirec" }
+            356 = { change_province_name = "Borisoglebsk" }
+            357 = { change_province_name = "Jelgava" }
+            358 = { change_province_name = "Vindava" }
+            359 = { change_province_name = "Libava" }
+            3424 = { change_province_name = "Salacgriva" }
+			3423 = { change_province_name = "Domesnes" }
+		    3365 = { change_province_name = "Abrene" }
+        }
+        ai_will_do = { factor = 1 }
+    }
+    latvia_rename_ubd = {
+        picture = map_livonia
+        potential = {
+            NOT = { has_global_flag = latvia_renamed_ubd }
+            OR = {
+			    primary_culture = north_german
+				primary_culture = south_german
+				primary_culture = east_german
+			}
+            OR = {
+               354 = { owned_by = THIS }
+               355 = { owned_by = THIS }
+               356 = { owned_by = THIS }
+               357 = { owned_by = THIS }
+               358 = { owned_by = THIS }
+               359 = { owned_by = THIS }
+               3424 = { owned_by = THIS }
+			   3423 = { owned_by = THIS }
+			   3365 = { owned_by = THIS }
+            }
+        }
+
+        allow = {
+            war = no
+            354 = { owned_by = THIS }
+            355 = { owned_by = THIS }
+            356 = { owned_by = THIS }
+            357 = { owned_by = THIS }
+            358 = { owned_by = THIS }
+            359 = { owned_by = THIS }
+            3424 = { owned_by = THIS }
+			3423 = { owned_by = THIS }
+		    3365 = { owned_by = THIS }
+        }
+
+        effect = {
+            set_global_flag = latvia_renamed_ubd
+            clr_global_flag = latvia_renamed_fin
+            clr_global_flag = latva_renamed_rus
+			clr_global_flag = latvia_renamed_swe
+            354 = { change_province_name = "Riga" }
+            355 = { change_province_name = "Wolmar" }
+            356 = { change_province_name = "D¸naburg" }
+            357 = { change_province_name = "Mitau" }
+            358 = { change_province_name = "Windau" }
+            359 = { change_province_name = "Libau" }
+            3424 = { change_province_name = "Neubad" }
+			3423 = { change_province_name = "Domesnes" }
+		    3365 = { change_province_name = "Abrene" }
+        }
+        ai_will_do = { factor = 1 }
+    }
+    latvia_rename_swe = {
+        picture = map_livonia
+        potential = {
+            NOT = { has_global_flag = latvia_renamed_swe }
+            tag = SWE
+            OR = {
+               354 = { owned_by = THIS }
+               355 = { owned_by = THIS }
+               356 = { owned_by = THIS }
+               357 = { owned_by = THIS }
+               358 = { owned_by = THIS }
+               359 = { owned_by = THIS }
+               3424 = { owned_by = THIS }
+			   3423 = { owned_by = THIS }
+			   3365 = { owned_by = THIS }
+            }
+        }
+
+        allow = {
+            war = no
+            354 = { owned_by = THIS }
+            355 = { owned_by = THIS }
+            356 = { owned_by = THIS }
+            357 = { owned_by = THIS }
+            358 = { owned_by = THIS }
+            359 = { owned_by = THIS }
+            3424 = { owned_by = THIS }
+			3423 = { owned_by = THIS }
+		    3365 = { owned_by = THIS }
+        }
+
+        effect = {
+            set_global_flag = latvia_renamed_swe
+            clr_global_flag = latvia_renamed_fin
+            clr_global_flag = latvia_renamed_rus
+			clr_global_flag = latvia_renamed_ubd
+            354 = { change_province_name = "Riga" }
+            355 = { change_province_name = "Valdemar" }
+            356 = { change_province_name = "D¸naburg" }
+            357 = { change_province_name = "Mitau" }
+            358 = { change_province_name = "Vindau" }
+            359 = { change_province_name = "Libau" }
+            3424 = { change_province_name = "Solkustarna" }
+			3423 = { change_province_name = "Domesnes" }
+		    3365 = { change_province_name = "Abrene" }
+        }
+        ai_will_do = { factor = 1 }
+    }
     jemtland_rename_nor = {
         picture = jemtland
         potential = {
@@ -6225,12 +6047,10 @@ political_decisions = {
         effect = {
             prestige = 5
             set_global_flag = jemtland_renamed
-			# Audax Validator "." Ignore_NEXT
             319 = {
 				change_province_name = "ÿstersund"
 				assimilate = yes
 			}
-			# Audax Validator "." Ignore_NEXT
             329 = {
 				change_province_name = "Oddevald"
 				assimilate = yes
@@ -6254,12 +6074,10 @@ political_decisions = {
         effect = {
             prestige = 5
             clr_global_flag = jemtland_renamed
-			# Audax Validator "." Ignore_NEXT
             319 = {
 				change_province_name = "÷stersund"
 				assimilate = yes
 			}
-			# Audax Validator "." Ignore_NEXT
             329 = {
 				change_province_name = "Gˆteborg"
 				assimilate = yes
@@ -6393,12 +6211,10 @@ political_decisions = {
 
         effect = {
             set_global_flag = scania_renamed
-			# Audax Validator "." Ignore_NEXT
             334 = {
 				change_province_name = "Malm¯"
 				assimilate = yes
 			}
-			# Audax Validator "." Ignore_NEXT
             335 = {
 				change_province_name = "Bleking"
 				assimilate = yes
@@ -6424,12 +6240,10 @@ political_decisions = {
 
         effect = {
             clr_global_flag = scania_renamed
-			# Audax Validator "." Ignore_NEXT
             334 = {
 				change_province_name = "Malmˆ"
 				assimilate = yes
 			}
-			# Audax Validator "." Ignore_NEXT
             335 = {
 				change_province_name = "Karlskrona"
 				assimilate = yes
@@ -6445,7 +6259,6 @@ political_decisions = {
 				tag = DNN
 				tag = NOR
 			}
-			NOT = { has_country_flag = sami_renamed }
         }
 
         allow = {
@@ -6454,1439 +6267,14 @@ political_decisions = {
             owns = 307
             owns = 3338
             owns = 3339
-			
+            owns = 3340
         }
 
         effect = {
             prestige = 5
-			set_country_flag = sami_renamed
             3338 = { change_province_name = "Giron" }
             3339 = { change_province_name = "Roavvenj·rga" }
         }
-        ai_will_do = { factor = 1 }
-    }
-	florida_rename_usa = {
-        potential = {
-            has_global_flag = florida_renamed
-            OR = {
-				tag = USA
-				tag = FSA
-				tag = CSA
-				tag = US2
-			}
-			owns = 200
-			owns = 199
-			owns = 198
-			owns = 197
-			owns = 194
-			owns = 140
-        }
-
-        allow = {
-            war = no
-            owns = 200
-			owns = 199
-			owns = 198
-			owns = 197
-			owns = 194
-			owns = 140
-        }
-
-        effect = {
-            prestige = 2
-			clr_global_flag = florida_renamed
-            197 = { change_province_name = "Mobile" }
-			198 = { change_province_name = "Tallahassee" }
-			199 = { change_province_name = "St Augustine" }
-			200 = { change_province_name = "Tampa" }
-			140 = { change_province_name = "Baton Rouge" }
-			194 = { change_province_name = "Biloxi" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-    florida_rename_mex = {
-        potential = {
-            NOT = { has_global_flag = florida_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 200
-			owns = 199
-			owns = 198
-			owns = 197
-			owns = 194
-			owns = 140
-        }
-
-        allow = {
-            war = no
-            owns = 200
-			owns = 199
-			owns = 198
-			owns = 197
-			owns = 194
-			owns = 140
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = florida_renamed
-            197 = { change_province_name = "Puerto Uague" }
-			198 = { change_province_name = "La Conocida" }
-			199 = { change_province_name = "Mediadura" }
-			200 = { change_province_name = "Venecia" }
-			140 = { change_province_name = "Escondido" }
-			194 = { change_province_name = "Mueble" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	louisiana_rename = {
-        picture = new_france_louisiana
-        potential = {
-            OR = {
-                AND = {
-                    OR = {
-                        primary_culture = french_canadian
-                        primary_culture = neo_zelandais
-                        primary_culture = french_australian
-                        primary_culture = cajun
-                        primary_culture = louisianan
-                        is_culture_group = french
-                    }
-                    OR = {
-                        AND = { owns = 139 NOT = { has_global_flag = french_renamed_louisiana } }
-                        AND = { owns = 143 NOT = { has_global_flag = french_renamed_arkansas } }
-                        AND = { owns = 130 NOT = { has_global_flag = french_renamed_oklahoma } }
-                        AND = { owns = 148 NOT = { has_global_flag = french_renamed_missouri } }
-                        AND = { owns = 154 NOT = { has_global_flag = french_renamed_iowa } }
-                        AND = { owns = 126 NOT = { has_global_flag = french_renamed_kansas } }
-                        AND = { owns = 124 NOT = { has_global_flag = french_renamed_nebraska } }
-                        AND = { owns = 155 NOT = { has_global_flag = french_renamed_minnesota } }
-                        AND = { owns = 120 NOT = { has_global_flag = french_renamed_south_dakota } }
-                        AND = { owns = 117 NOT = { has_global_flag = french_renamed_north_dakota } }
-                        AND = { owns = 116 NOT = { has_global_flag = french_renamed_montana } }
-                        AND = { owns = 112 NOT = { has_global_flag = french_renamed_wyoming } }
-                        AND = { owns = 78 NOT = { has_global_flag = french_renamed_washington } }
-                        AND = { owns = 81 NOT = { has_global_flag = french_renamed_oregon } }
-                        AND = { owns = 91 NOT = { has_global_flag = french_renamed_idaho } }
-                    }
-                }
-                AND = {
-                    is_culture_group = american_cultures
-                    OR = {
-                        AND = { owns = 139 has_global_flag = french_renamed_louisiana }
-                        AND = { owns = 139 has_global_flag = mex_louisianna_renamed }
-                        AND = { owns = 143 has_global_flag = french_renamed_arkansas }
-                        AND = { owns = 143 has_global_flag = mex_arkansas_renamed }
-                        AND = { owns = 130 has_global_flag = french_renamed_oklahoma }
-                        AND = { owns = 130 has_global_flag = oklahoma_renamed }
-                        AND = { owns = 148 has_global_flag = french_renamed_missouri }
-                        AND = { owns = 148 has_global_flag = mex_missouri_renamed }
-                        AND = { owns = 154 has_global_flag = french_renamed_iowa }
-                        AND = { owns = 154 has_global_flag = mex_iowa_renamed }
-                        AND = { owns = 126 has_global_flag = french_renamed_kansas }
-                        AND = { owns = 126 has_global_flag = kansas_renamed }
-                        AND = { owns = 124 has_global_flag = french_renamed_nebraska }
-						AND = { owns = 124 has_global_flag = mex_nebraska_renamed }
-                        AND = { owns = 155 has_global_flag = french_renamed_minnesota }
-						AND = { owns = 155 has_global_flag = mex_minnesota_renamed }
-                        AND = { owns = 120 has_global_flag = french_renamed_south_dakota }
-						AND = { owns = 120 has_global_flag = mex_s_dakota_renamed }
-                        AND = { owns = 117 has_global_flag = french_renamed_north_dakota }
-						AND = { owns = 117 has_global_flag = mex_n_dakota_renamed }
-                        AND = { owns = 116 has_global_flag = french_renamed_montana }
-						AND = { owns = 116 has_global_flag = montana_renamed }
-                        AND = { owns = 112 has_global_flag = french_renamed_wyoming }
-                        AND = { owns = 112 has_global_flag = wyoming_renamed }
-                        AND = { owns = 78 has_global_flag = french_renamed_washington }
-						AND = { owns = 78 has_global_flag = w_washington_renamed }
-						AND = { owns = 78 has_global_flag = e_washington_renamed }
-                        AND = { owns = 81 has_global_flag = french_renamed_oregon }
-						AND = { owns = 81 has_global_flag = oregon_renamed }
-                        AND = { owns = 91 has_global_flag = french_renamed_idaho }
-						AND = { owns = 91 has_global_flag = mex_idaho_renamed }
-                    }
-                }
-            }
-        }
-
-        allow = {
-            war = no
-        }
-
-        effect = {
-            ###Louisiana - American###
-            random_owned = {
-                limit = {
-                    province_id = 139 #New Orleans
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                139 = {
-                    change_province_name = "New Orleans"
-                    state_scope = {
-                        change_region_name = "Louisiana"
-                    }
-                }
-                140 = { change_province_name = "Baton Rouge" }
-                141 = { change_province_name = "Lake Charles" }
-                142 = { change_province_name = "Shreveport" }
-                owner = { clr_global_flag = french_renamed_louisiana }
-				owner = { clr_global_flag = mex_louisianna_renamed }
-            }
-            ###Louisiana - French###
-            random_owned = {
-                limit = {
-                    province_id = 139 #New Orleans
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                139 = {
-                    change_province_name = "Nouvelle-OrlÈans"
-                    state_scope = {
-                        change_region_name = "Basse-Louisiane"
-                    }
-                }
-                140 = { change_province_name = "B‚ton-Rouge" }
-                141 = { change_province_name = "Lac Charles" }
-                142 = { change_province_name = "Madele" }
-                owner = { set_global_flag = french_renamed_louisiana }
-				owner = { clr_global_flag = mex_louisianna_renamed_renamed }
-            }
-            ###Arkansas - American###
-            random_owned = {
-                limit = {
-                    province_id = 143
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                #Arkansas
-                143 = {
-                    change_province_name = "Little Rock"
-                    state_scope = {
-                        change_region_name = "Arkansas"
-                    }
-                }
-                144 = { change_province_name = "Hotsprings" }
-                owner = { clr_global_flag = french_renamed_arkansas }
-				owner = { clr_global_flag = mex_arkansas_renamed }
-            }
-            ###Arkansas - French###
-            random_owned = {
-                limit = {
-                    province_id = 143
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                #Arkansas
-                143 = {
-                    change_province_name = "Chevreuils"
-                    state_scope = {
-                        change_region_name = "Arcansas"
-                    }
-                }
-                144 = { change_province_name = "Adaie" }
-                owner = { set_global_flag = french_renamed_arkansas }
-				owner = { clr_global_flag = mex_arkansas_renamed }
-            }
-            ###Oklahoma - American###
-            random_owned = {
-                limit = {
-                    province_id = 130
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                130 = {
-                    change_province_name = "Fort Gibson"
-                    state_scope = {
-                        change_region_name = "Oklahoma"
-                    }
-                }
-                131 = { change_province_name = "Fort Washita" }
-                owner = {  clr_global_flag = french_renamed_oklahoma }
-                owner = {  clr_global_flag = oklahoma_renamed }
-            }
-            ###Oklahoma###
-            random_owned = {
-                limit = {
-                    province_id = 130
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                130 = {
-                    change_province_name = "Champlain"
-                    state_scope = {
-                        change_region_name = "Cadodaquois"
-                    }
-                }
-                131 = { change_province_name = "Nacanne" }
-                owner = { set_global_flag = french_renamed_oklahoma }
-                owner = {  clr_global_flag = oklahoma_renamed }
-            }
-            ###Missouri - American###
-            random_owned = {
-                limit = {
-                    province_id = 148
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                148 = { change_province_name = "Malden" }
-                147 = { change_province_name = "Joplin" }
-                149 = { change_province_name = "Jefferson City" }
-                150 = { change_province_name = "Kansas City" }
-                owner = { clr_global_flag = french_renamed_missouri }
-				owner = { clr_global_flag = mex_missouri_renamed }
-            }
-            ###Missouri###
-            random_owned = {
-                limit = {
-                    province_id = 148
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                148 = { change_province_name = "Oxiers" }
-                147 = { change_province_name = "Petit Rocher" }
-                149 = { change_province_name = "Mines" }
-                150 = { change_province_name = "Lafayette" }
-                owner = { set_global_flag = french_renamed_missouri }
-				owner = { clr_global_flag = mex_missouri_renamed }
-            }
-            ###Iowa - American###
-            random_owned = {
-                limit = {
-                    province_id = 154
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                154 = {
-                    change_province_name = "Sioux City"
-                    state_scope = {
-                        change_region_name = "Iowa"
-                    }
-                }
-                152 = { change_province_name = "Oskaloosa" }
-                153 = { change_province_name = "Cedar Rapids" }
-                owner = { clr_global_flag = french_renamed_iowa }
-				owner = { clr_global_flag = mex_iowa_renamed }
-            }
-            ###Iowa###
-            random_owned = {
-                limit = {
-                    province_id = 154
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                154 = {
-                    change_province_name = "Aiaouez"
-                    state_scope = {
-                        change_region_name = "Haute-Louisiane"
-                    }
-                }
-                152 = { change_province_name = "La Sonde" }
-                153 = { change_province_name = "CÍdre Rapides" }
-                owner = { set_global_flag = french_renamed_iowa }
-				owner = { clr_global_flag = mex_iowa_renamed }
-            }
-            ###Kansas - American###
-            random_owned = {
-                limit = {
-                    province_id = 126
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                126 = {
-                    change_province_name = "Fort Leavenworth"
-                    state_scope = {
-                        change_region_name = "Kansas"
-                    }
-                }
-                127 = { change_province_name = "Fort Mann" }
-                owner = { clr_global_flag = french_renamed_kansas }
-				owner = { clr_global_flag = kansas_renamed }
-            }
-            ###Kansas###
-            random_owned = {
-                limit = {
-                    province_id = 126
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                126 = {
-                    change_province_name = "Canfez"
-                    state_scope = {
-                        change_region_name = "Cansez"
-                    }
-                }
-                127 = { change_province_name = "Grinaiches" }
-                owner = { set_global_flag = french_renamed_kansas }
-				owner = { clr_global_flag = kansas_renamed }
-            }
-            ###Nebraska - American###
-            random_owned = {
-                limit = {
-                    province_id = 124
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                124 = {
-                    change_province_name = "Bordeaux's Post"
-                    state_scope = {
-                        change_region_name = "Nebraska"
-                    }
-                }
-                123 = { change_province_name = "Fort Robidoux" }
-                125 = { change_province_name = "Fontenelle's Post" }
-                owner = { clr_global_flag = french_renamed_nebraska }
-				owner = { clr_global_flag = mex_nebraska_renamed }
-            }
-            ###Nebraska###
-            random_owned = {
-                limit = {
-                    province_id = 124
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                124 = {
-                    change_province_name = "Baptisteville"
-                    state_scope = {
-                        change_region_name = "Eau-Plattte"
-                    }
-                }
-                123 = { change_province_name = "Panis" }
-                125 = { change_province_name = "La Colline" }
-                owner = { set_global_flag = french_renamed_nebraska }
-				owner = { clr_global_flag = mex_nebraska_renamed }
-            }
-            ###Minnesota - American###
-            random_owned = {
-                limit = {
-                    province_id = 155
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                155 = {
-                    change_province_name = "Fort Snelling"
-                    state_scope = {
-                        change_region_name = "Minnesota"
-                    }
-                }
-                156 = { change_province_name = "Fort Renville" }
-                157 = { change_province_name = "Fort Ripley" }
-                owner = { clr_global_flag = french_renamed_minnesota }
-				owner = { clr_global_flag = mex_minnesota_renamed }
-            }
-            ###Minnesota###
-            random_owned = {
-                limit = {
-                    province_id = 155
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                155 = {
-                    change_province_name = "Huillier"
-                    state_scope = {
-                        change_region_name = "L'¬toile du Nord"
-                    }
-                }
-                156 = { change_province_name = "Moingana" }
-                157 = { change_province_name = "Vieux Fort" }
-                owner = { set_global_flag = french_renamed_minnesota }
-				owner = { clr_global_flag = mex_minnesota_renamed }
-            }
-            ###South Dakota - American###
-            random_owned = {
-                limit = {
-                    province_id = 120
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                120 = {
-                    change_province_name = "Fort Kiowa"
-                    state_scope = {
-                        change_region_name = "South Dakota"
-                    }
-                }
-                121 = { change_province_name = "Fort Cedar" }
-                122 = { change_province_name = "Fort Pierre" }
-                owner = { clr_global_flag = french_renamed_south_dakota }
-				owner = { clr_global_flag = mex_s_dakota_renamed }
-            }
-            ###South Dakota###
-            random_owned = {
-                limit = {
-                    province_id = 120
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                120 = {
-                    change_province_name = "Tintonoux"
-                    state_scope = {
-                        change_region_name = "Dakota du Sud"
-                    }
-                }
-                121 = { change_province_name = "Le CÍdre" }
-                122 = { change_province_name = "Pierreville" }
-                owner = { set_global_flag = french_renamed_south_dakota }
-				owner = { clr_global_flag = mex_s_dakota_renamed }
-            }
-            ###North Dakota - American###
-            random_owned = {
-                limit = {
-                    province_id = 117
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                117 = {
-                    change_province_name = "Fort Clark"
-                    state_scope = { change_region_name = "North Dakota" }
-                }
-                118 = { change_province_name = "Fort James" }
-                119 = { change_province_name = "Fort Union" }
-                owner = { clr_global_flag = french_renamed_north_dakota }
-				owner = { clr_global_flag = mex_n_dakota_renamed }
-            }
-            ###North Dakota###
-            random_owned = {
-                limit = {
-                    province_id = 117
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                117 = {
-                    change_province_name = "Ouidaou"
-                    state_scope = {
-                        change_region_name = "Dakota du Nord"
-                    }
-                }
-                118 = { change_province_name = "Choumans" }
-                119 = { change_province_name = "Mentous" }
-                owner = { set_global_flag = french_renamed_north_dakota }
-				owner = { clr_global_flag = mex_n_dakota_renamed }
-            }
-            ###Montana - American###
-            random_owned = {
-                limit = {
-                    province_id = 116
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                113 = {
-                    change_province_name = "Gallatin Valley"
-                    state_scope = {
-                        change_region_name = "Montana"
-                    }
-                }
-                114 = { change_province_name = "Fort Owen" }
-                115 = { change_province_name = "Fort Benton" }
-                116 = { change_province_name = "Fort Van Buren" }
-				3467 = { change_province_name = "Dillon" }
-                owner = { clr_global_flag = french_renamed_montana }
-				owner = { clr_global_flag = montana_renamed }
-            }
-            ###Montana###
-            random_owned = {
-                limit = {
-                    province_id = 116
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                113 = {
-                    change_province_name = "Montagneville"
-                    state_scope = {
-                        change_region_name = "Assiniboine"
-                    }
-                }
-                114 = { change_province_name = "Rochambeau" }
-                115 = { change_province_name = "RancÈ" }
-                116 = { change_province_name = "La Salle" }
-				3467 = { change_province_name = "DÓllon" }
-                owner = { set_global_flag = french_renamed_montana }
-				owner = { clr_global_flag = montana_renamed }
-            }
-            ###Wyoming - American###
-            random_owned = {
-                limit = {
-                    province_id = 112
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                112 = {
-                    change_province_name = "Fort Laramie"
-                    state_scope = {
-                        change_region_name = "Wyoming"
-                    }
-                }
-                111 = { change_province_name = "Fort Bonneville" }
-				3468 = { change_province_name = "Riverton" }
-                owner = { clr_global_flag = french_renamed_wyoming }
-				owner = { clr_global_flag = wyoming_renamed }
-            }
-            ###Wyoming###
-            random_owned = {
-                limit = {
-                    province_id = 112
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                112 = {
-                    change_province_name = "Cheyenne"
-                    state_scope = {
-                        change_region_name = "Contreforts"
-                    }
-                }
-                111 = { change_province_name = "Fontainebleau" }
-				3468 = { change_province_name = "Fleuveville" }
-                owner = { set_global_flag = french_renamed_wyoming }
-				owner = { clr_global_flag = wyoming_renamed }
-            }
-
-            ###Washington - American###
-            random_owned = {
-                limit = {
-                    province_id = 78
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                78 = {
-                    change_province_name = "Seattle"
-                    state_scope = {
-                        change_region_name = "Washington"
-                    }
-                }
-                79 = { change_province_name = "Olympia" }
-				80 = { change_province_name = "Walla Walla" }
-				3465 = { change_province_name = "North Cascades" }
-				3464 = { change_province_name = "Yakima" }
-				3466 = { change_province_name = "Spokane" }
-                owner = { clr_global_flag = french_renamed_washington }
-				owner = { clr_global_flag = e_washington_renamed }
-				owner = { clr_global_flag = w_washington_renamed }
-            }
-            ###Washington###
-            random_owned = {
-                limit = {
-                    province_id = 78
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                78 = {
-                    change_province_name = "St Brieux"
-                    state_scope = {
-                        change_region_name = "Colombie du Sud"
-                    }
-                }
-                79 = { change_province_name = "Charlesbourg-Royal" }
-				80 = { change_province_name = "Walle-Walle" }
-				3465 = { change_province_name = "Cascades du Nord" }
-				3464 = { change_province_name = "YakÓmes" }
-				3466 = { change_province_name = "SpÙkane" }
-                owner = { set_global_flag = french_renamed_washington }
-				owner = { clr_global_flag = e_washington_renamed }
-				owner = { clr_global_flag = w_washington_renamed }
-            }
-            ###Oregon - American###
-            random_owned = {
-                limit = {
-                    province_id = 81
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                3462 = {
-                    change_province_name = "Eugene"
-                    state_scope = { change_region_name = "Oregon" }
-                }
-                81 = { change_province_name = "Portland" }
-                82 = { change_province_name = "Baker City" }
-				3461 = { change_province_name = "Warm Springs" }
-				3462 = { change_province_name = "Siuslaw" }
-				3463 = { change_province_name = "Princeton" }
-                owner = { clr_global_flag = french_renamed_oregon }
-				owner = { clr_global_flag = oregon_renamed }
-            }
-            ###Oregon###
-            random_owned = {
-                limit = {
-                    province_id = 81
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                83 = {
-                    state_scope = {
-                        change_region_name = "Ourican"
-                    }
-                }
-                81 = { change_province_name = "Nouvelle-Toulon" }
-                82 = { change_province_name = "Nouvelle-Avignon" }
-				3461 = { change_province_name = "Sources Chaudes" }
-				3462 = { change_province_name = "Siousleau" }
-				3463 = { change_province_name = "Princeville" }
-                owner = { set_global_flag = french_renamed_oregon }
-				owner = { clr_global_flag = oregon_renamed }
-            }
-            ###Idaho - American###
-            random_owned = {
-                limit = {
-                    province_id = 91
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                91 = {
-                    state_scope = {
-                        change_region_name = "Idaho"
-                    }
-                }
-                owner = { clr_global_flag = french_renamed_idaho }
-				owner = { clr_global_flag = mex_idaho_renamed }
-            }
-            ###Idaho###
-            random_owned = {
-                limit = {
-                    province_id = 91
-                    owner = {
-                        OR = {
-                            primary_culture = french_canadian
-                            primary_culture = neo_zelandais
-                            primary_culture = french_australian
-                            primary_culture = cajun
-                            primary_culture = louisianan
-                            is_culture_group = french
-                        }
-                    }
-                }
-                91 = {
-                    state_scope = {
-                        change_region_name = "Cascadia"
-                    }
-                }
-                owner = { set_global_flag = french_renamed_idaho }
-				owner = { clr_global_flag = mex_idaho_renamed }
-            }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	rename_idaho_mex = {
-        potential = {
-            NOT = { has_global_flag = mex_idaho_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 92
-			owns = 91
-			owns = 93
-        }
-
-        allow = {
-            war = no
-            owns = 92
-			owns = 91
-			owns = 93
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = mex_idaho_renamed
-			clr_global_flag = french_renamed_idaho
-            91 = { change_province_name = "Seguridad" state_scope = { change_region_name = "Bosques" } }
-			92 = { change_province_name = "Alta" }
-			93 = { change_province_name = "Calabar" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	rename_louisianna_mex = {
-        potential = {
-            NOT = { has_global_flag = mex_louisianna_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 139
-			owns = 141
-			owns = 142
-        }
-
-        allow = {
-            war = no
-            owns = 139
-			owns = 141
-			owns = 142
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = mex_louisianna_renamed
-			clr_global_flag = french_renamed_louisiana
-            139 = { change_province_name = "Punta" state_scope = { change_region_name = "Luisiana" } }
-			141 = { change_province_name = "Desembocadura" }
-			142 = { change_province_name = "Gran Rio" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	rename_arkansas_mex = {
-        potential = {
-            NOT = { has_global_flag = mex_arkansas_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 145
-			owns = 144
-			owns = 143
-        }
-
-        allow = {
-            war = no
-            owns = 145
-			owns = 144
-			owns = 143
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = mex_arkansas_renamed
-			clr_global_flag = french_renamed_arkansas
-            145 = { change_province_name = "El Camino" }
-			144 = { change_province_name = "Fuerte Proteccion" }
-			143 = { change_province_name = "Limpios" state_scope = { change_region_name = "Terminal" } }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	rename_missouri_mex = {
-        potential = {
-            NOT = { has_global_flag = mex_missouri_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 146
-			owns = 147
-			owns = 148
-			owns = 149
-			owns = 150
-        }
-
-        allow = {
-            war = no
-            owns = 146
-			owns = 147
-			owns = 148
-			owns = 149
-			owns = 150
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = mex_missouri_renamed
-			clr_global_flag = french_renamed_missouri
-            146 = { change_province_name = "Frente Rio" state_scope = { change_region_name = "Liberacion" } }
-			147 = { change_province_name = "Profundidades" }
-			148 = { change_province_name = "Lanza" }
-			149 = { change_province_name = "Infiltramiento" }
-			150 = { change_province_name = "Libertad" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	rename_iowa_mex = {
-        potential = {
-            NOT = { has_global_flag = mex_iowa_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 151
-			owns = 152
-			owns = 153
-			owns = 154
-        }
-
-        allow = {
-            war = no
-			owns = 151
-			owns = 152
-			owns = 153
-			owns = 154
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = mex_iowa_renamed
-			clr_global_flag = french_renamed_iowa
-			151 = { change_province_name = "Montes" state_scope = { change_region_name = "Los Altos" } }
-			152 = { change_province_name = "Monte Juarez" }
-			153 = { change_province_name = "Revolucion" }
-			154 = { change_province_name = "Reserva" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	rename_minnesota_mex = {
-        potential = {
-            NOT = { has_global_flag = mex_minnesota_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 155
-			owns = 156
-			owns = 157
-			owns = 158
-        }
-
-        allow = {
-            war = no
-			owns = 155
-			owns = 156
-			owns = 157
-			owns = 158
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = mex_minnesota_renamed
-			clr_global_flag = french_renamed_minnesota
-			155 = { change_province_name = "Externo" state_scope = { change_region_name = "La Punta" } }
-			156 = { change_province_name = "Legitimo" }
-			157 = { change_province_name = "Puerta Norte" }
-			158 = { change_province_name = "Lagos Altos" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	rename_ndakota_mex = {
-        potential = {
-            NOT = { has_global_flag = mex_n_dakota_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 117
-			owns = 118
-			owns = 119
-        }
-
-        allow = {
-            war = no
-			owns = 117
-			owns = 118
-			owns = 119
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = mex_n_dakota_renamed
-			clr_global_flag = french_renamed_north_dakota
-			117 = { change_province_name = "Limite Previo" state_scope = { change_region_name = "Dakota del Norte" } }
-			118 = { change_province_name = "Comienzo" }
-			119 = { change_province_name = "Terminal" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	rename_sdakota_mex = {
-        potential = {
-            NOT = { has_global_flag = mex_s_dakota_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 120
-			owns = 121
-			owns = 122
-        }
-
-        allow = {
-            war = no
-			owns = 120
-			owns = 121
-			owns = 122
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = mex_s_dakota_renamed
-			clr_global_flag = french_renamed_south_dakota
-			120 = { change_province_name = "Alamos" state_scope = { change_region_name = "Dakota del Sur" } }
-			121 = { change_province_name = "Dakotas" }
-			122 = { change_province_name = "Provincia" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	rename_nebraska_mex = {
-        potential = {
-            NOT = { has_global_flag = mex_nebraska_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 123
-			owns = 124
-			owns = 125
-        }
-
-        allow = {
-            war = no
-			owns = 123
-			owns = 124
-			owns = 125
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = mex_nebraska_renamed
-			clr_global_flag = french_renamed_nebraska
-			123 = { change_province_name = "Antes Rio" state_scope = { change_region_name = "Iturbide" } }
-			124 = { change_province_name = "Secular" }
-			125 = { change_province_name = "Rampa" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-    e_washington_rename_mex = {
-        potential = {
-            NOT = { has_global_flag = e_washington_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 3466
-			owns = 80
-        }
-
-        allow = {
-            war = no
-			owns = 3466
-			owns = 80
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = e_washington_renamed
-			80 = { change_province_name = "Salida" }
-			3466 = { change_province_name = "Manito" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-    w_washington_rename_mex = {
-        potential = {
-            NOT = { has_global_flag = w_washington_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 3465
-			owns = 78
-			owns = 79
-			owns = 3464
-        }
-
-        allow = {
-            war = no
-			owns = 3465
-			owns = 78
-			owns = 79
-			owns = 3464
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = w_washington_renamed
-			3465 = { change_province_name = "Amoretti" }
-			3464 = { change_province_name = "Margaritas" }
-			79 = { change_province_name = "La Puerta" }
-			78 = { change_province_name = "Puerto Mar" state_scope = { change_region_name = "Colombia" } }
-        }
-        ai_will_do = { factor = 1 }
-    }
-    oregon_rename_mex = {
-        potential = {
-            NOT = { has_global_flag = oregon_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 81
-			owns = 82
-			owns = 83
-			owns = 3461
-			owns = 3462
-			owns = 3463
-        }
-
-        allow = {
-			owns = 81
-			owns = 82
-			owns = 83
-			owns = 3461
-			owns = 3462
-			owns = 3463
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = oregon_renamed
-			81 = { change_province_name = "Puerto San Agustin" }
-			82 = { change_province_name = "Colon" }
-			3461 = { change_province_name = "Huasco" }
-			3462 = { change_province_name = "Rivas" }
-			3463 = { change_province_name = "Girasol" }
-			83 = { change_province_name = "Don Hidalgo" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	montana_rename_mex = {
-        potential = {
-            NOT = { has_global_flag = montana_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 115
-			owns = 113
-			owns = 114
-			owns = 116
-			owns = 3467
-        }
-
-        allow = {
-			owns = 115
-			owns = 113
-			owns = 114
-			owns = 116
-			owns = 3467
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = montana_renamed
-			113 = { change_province_name = "Curiosidad" state_scope = { change_region_name = "Nieves" } }
-			114 = { change_province_name = "Las Flores" }
-			3467 = { change_province_name = "Cornucopia" }
-			115 = { change_province_name = "Terminacion" }
-			116 = { change_province_name = "Rescate" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	rename_wyoming_mex = {
-        potential = {
-            NOT = { has_global_flag = wyoming_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 3468
-			owns = 111
-			owns = 112
-        }
-
-        allow = {
-			owns = 3468
-			owns = 111
-			owns = 112
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = wyoming_renamed
-			111 = { change_province_name = "Treboles" }
-			112 = { change_province_name = "Fuente Liberacion" state_scope = { change_region_name = "Fuentes" } }
-			3468 = { change_province_name = "Bahia" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	kansas_rename_mex = {
-        potential = {
-            NOT = { has_global_flag = kansas_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 127
-			owns = 126
-        }
-
-        allow = {
-			owns = 127
-			owns = 126
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = kansas_renamed
-			126 = { change_province_name = "Previo" state_scope = { change_region_name = "Resurgimiento" } }
-			127 = { change_province_name = "Aztlan" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	oklahoma_rename_mex = {
-        potential = {
-            NOT = { has_global_flag = oklahoma_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 131
-			owns = 130
-        }
-
-        allow = {
-			owns = 130
-			owns = 131
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = oklahoma_renamed
-			130 = { change_province_name = "Liberados" state_scope = { change_region_name = "Reserva" } }
-			131 = { change_province_name = "Chichimequia" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	denver_rename_usa = {
-        potential = {
-            has_global_flag = denver_renamed
-            OR = {
-				tag = USA
-				tag = FSA
-				tag = CSA
-				tag = US2
-			}
-			owns = 106
-        }
-
-        allow = {
-            war = no
-            owns = 106
-        }
-
-        effect = {
-            prestige = 2
-			clr_global_flag = denver_renamed
-            106 = { change_province_name = "Denver" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-    denver_rename_mex = {
-        potential = {
-            NOT = { has_global_flag = denver_renamed }
-            OR = {
-				tag = MEX
-				tag = MEE
-			}
-			owns = 106
-        }
-
-        allow = {
-            war = no
-            owns = 106
-        }
-
-        effect = {
-            prestige = 2
-			set_global_flag = denver_renamed
-            106 = { change_province_name = "Cumbres" }
-        }
-        ai_will_do = { factor = 1 }
-    }
-	fort_ross_rename = {
-        picture = gtfo
-        potential = {
-            OR = {
-                AND = {
-                    is_culture_group = american_cultures
-                    owns = 3340 
-					NOT = { has_global_flag = us_renamed_fort_ross }
-                }
-				AND = {
-                    is_culture_group = latin_american_cultures
-					owns = 3340 
-					NOT = { has_global_flag = mex_renamed_fort_ross }
-                }
-                AND = {
-                    is_culture_group = east_slavic
-                    owns = 3340 
-					OR = { has_global_flag = mex_renamed_fort_ross has_global_flag = us_renamed_fort_ross }
-                }
-            }
-        }
-
-        allow = {
-            war = no
-        }
-
-        effect = {
-            ###American###
-            random_owned = {
-                limit = {
-                    province_id = 3340
-                    owner = {
-                        is_culture_group = american_cultures
-                    }
-                }
-                3340 = { change_province_name = "Fort Ross"  }
-				3340 = { remove_core = LSK }
-                owner = {
-                    set_global_flag = us_renamed_fort_ross
-                    clr_global_flag = mex_renamed_fort_ross
-                }
-            }
-			
-			###Mexican###
-            random_owned = {
-                limit = {
-                    province_id = 3340
-                    owner = {
-                        is_culture_group = latin_american_cultures
-                    }
-                }
-                3340 = { change_province_name = "Fuerte Ross" }
-				3340 = { remove_core = LSK }
-                owner = {
-                    set_global_flag = mex_renamed_fort_ross
-                    clr_global_flag = us_renamed_fort_ross
-                }
-            }
-			
-			###Russian###
-            random_owned = {
-                limit = {
-                    province_id = 3340
-                    owner = {
-                        is_culture_group = east_slavic
-                    }
-                }
-                3340 = { change_province_name = "Krepost Ross"  }
-				3340 = { add_core = LSK }
-                owner = {
-                    clr_global_flag = mex_renamed_fort_ross
-                    clr_global_flag = us_renamed_fort_ross
-                }
-            }
-			
-		}
         ai_will_do = { factor = 1 }
     }
 }

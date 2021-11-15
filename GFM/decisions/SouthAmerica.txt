@@ -93,10 +93,7 @@ political_decisions = {
     build_belo_horizonte = {
         picture = build_belo_horizonte
         potential = {
-            OR = {
-			    tag = MGR
-				tag = BRZ
-			}
+            tag = BRZ
             year = 1870
 			owns = 3443
             NOT = { has_country_flag = bh_built }
@@ -107,25 +104,20 @@ political_decisions = {
         effect = {
             set_country_flag = bh_built
             treasury = -5000
-            3443 = { 
-			    change_province_name = "Belo Horizonte" 
-                life_rating = 5
+            3443 = { change_province_name = "Belo Horizonte" }
+            3443 = {
+                life_rating = 4
                 trade_goods = iron
-                add_province_modifier = { 
-				    name = recently_built_city 
-					duration = 365 
-				}
-			}
+                add_province_modifier = { name = recently_built_city duration = 365 }
+            }
         }
     }
 
     law_1420_of_general_common_education = {
-		picture = law_1420_of_general_common_education
         potential = {
             OR = {
                 tag = ARG
                 tag = ARC
-				tag = LPL
             }
             NOT = { has_country_flag = 1420_passed }
             NOT = { school_reforms = low_schools }
@@ -139,34 +131,7 @@ political_decisions = {
         }
         effect = {
             social_reform = low_schools
-			years_of_research = 0.3
             set_country_flag = 1420_passed
-        }
-    }
-
-    law_8871 = {
-		picture = law_8871
-        potential = {
-            OR = {
-                tag = ARG
-                tag = ARC
-				tag = LPL
-            }
-            NOT = { has_country_flag = 8871_passed }
-			NOT = { vote_franschise = universal_voting }
-        }
-        allow = {
-            OR = {
-			    year = 1912
-				social_alienation = 1
-			}
-            ruling_party_ideology = conservative
-        }
-        effect = {
-            prestige = 2
-			years_of_research = 0.07
-            political_reform = universal_voting
-            set_country_flag = 8871_passed
         }
     }
 
@@ -290,7 +255,6 @@ political_decisions = {
                 government = democracy
                 government = hms_government
                 government = constitutional_empire
-				has_country_flag = Government_Democracy
             }
             money = 60000
         }
@@ -364,9 +328,8 @@ political_decisions = {
             OR = {
                 YUC = { all_core = { owned_by = THIS is_core = THIS } }
                 CHP = { all_core = { owned_by = THIS is_core = THIS } }
-                AND = { OR = { tag = MEX tag = UCA } 2181 = { owned_by = THIS is_core = LOS } }
-				AND = { OR = { tag = MEX tag = UCA } 2182 = { owned_by = THIS is_core = LOS } }
-				AND = { OR = { tag = MEX tag = UCA } 3402 = { owned_by = THIS is_core = LOS } }
+                AND = { tag = MEX 2181 = { owned_by = THIS is_core = LOS } 2182 = { owned_by = THIS is_core = LOS } }
+				AND = { tag = MEX 3402 = { owned_by = THIS is_core = LOS } 3402 = { owned_by = THIS is_core = LOS } }
                 AND = { OR = { tag = UCA tag = GUA } 2187 = { owned_by = THIS is_core = LOS } }
             }
             year = 1860
@@ -375,7 +338,6 @@ political_decisions = {
         allow = {
             war = no
             is_vassal = no
-			money = 20000
             invention = manifest_destiny
             NOT = { num_of_revolts = 1 }
             NOT = { any_owned_province = { country_units_in_province = REB } }
@@ -388,61 +350,58 @@ political_decisions = {
         }
 
         effect = {
-			treasury = -20000
+
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 20000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 20 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 20000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 20 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 20000 } }
+            owner = { treasury = -20000 }
+        }
+
             random_owned = {
                 limit = { YUC = { all_core = { owned_by = THIS is_core = THIS } } }
-                owner = {
-					any_owned = {
-						limit = {
-							is_core = YUC
-						}
-						remove_core = YUC
-						any_pop = {
-							consciousness = 4
-							militancy = 1
-						}
-					}
-				}
+                owner = { YUC = { all_core = { any_pop = { consciousness = 4 militancy = 1 } remove_core = YUC } } }
             }
             random_owned = {
                 limit = { CHP = { all_core = { owned_by = THIS is_core = THIS } } }
-                owner = {
-					any_owned = {
-						limit = {
-							is_core = CHP
-						}
-						remove_core = CHP
-						any_pop = {
-							consciousness = 4
-							militancy = 1
-						}
-					}
-				}
+                owner = { CHP = { all_core = { any_pop = { consciousness = 4 militancy = 1 } remove_core = CHP } } }
             }
             random_owned = {
                 limit = {
                     owner = {
-						OR = {
-							tag = MEX
-							tag = UCA
-						}
+                        tag = MEX
                         OR = {
                             2181 = { owned_by = THIS is_core = THIS is_core = LOS }
                             2182 = { owned_by = THIS is_core = THIS is_core = LOS }
-							3402 = { owned_by = THIS is_core = THIS is_core = LOS }
                         }
                     }
                 }
                 owner = {
                     any_owned = {
-                        limit = { OR = { province_id = 2181 province_id = 2182 province_id = 3402 } }
+                        limit = { OR = { province_id = 2181 province_id = 2182 } }
                         any_pop = { consciousness = 4 militancy = 1 } remove_core = LOS
                     }
                 }
             }
             random_owned = {
                 limit = { owner = { OR = { tag = UCA tag = GUA } 2187 = { owned_by = THIS is_core = LOS } } }
-                2187 = { remove_core = LOS any_pop = { consciousness = 4 militancy = 1 } }
+                owner = { 2187 = { remove_core = LOS any_pop = { consciousness = 4 militancy = 1 } } }
             }
 
             random_owned = {
@@ -672,6 +631,10 @@ political_decisions = {
         picture = coffee_in_colombia
         potential = {
             OR = {
+                AND = {
+					owns = 2201
+					NOT = { 2201 = { trade_goods = coffee } }
+				}
 				AND = {
 					owns = 2193
 					NOT = { 2193 = { trade_goods = coffee } }
@@ -679,10 +642,6 @@ political_decisions = {
 				AND = {
 					owns = 2194
 					NOT = { 2194 = { trade_goods = coffee } }
-				}
-				AND = {
-					owns = 3363
-					NOT = { 3363 = { trade_goods = coffee } }
 				}
 				AND = {
 					owns = 2188
@@ -716,6 +675,13 @@ political_decisions = {
         }
 
         effect = {
+            any_owned = {
+				limit = {
+					province_id = 2201
+					NOT = { trade_goods = coffee }
+				}
+				trade_goods = coffee
+			}
 			any_owned = {
 				limit = {
 					province_id = 2193
@@ -726,13 +692,6 @@ political_decisions = {
 			any_owned = {
 				limit = {
 					province_id = 2194
-					NOT = { trade_goods = coffee }
-				}
-				trade_goods = coffee
-			}
-			any_owned = {
-				limit = {
-					province_id = 3363
 					NOT = { trade_goods = coffee }
 				}
 				trade_goods = coffee
@@ -788,7 +747,6 @@ political_decisions = {
                 overlord = { NOT = { primary_culture = north_andean } }
             }
             NOT = { owns = 2401 }
-			NOT = { owns = 3359 }
             owns = 2403
             owns = 2407
         }
@@ -796,7 +754,6 @@ political_decisions = {
         allow = {
             war = no
             2401 = { owner = { NOT = { truce_with = THIS } } }
-			3359 = { owner = { NOT = { truce_with = THIS } } }
             OR = {
                 year = 1908
                 mass_politics = 1
@@ -805,27 +762,7 @@ political_decisions = {
 
         effect = {
             set_country_flag = treaty_of_bogota
-            2401 = { owner = { country_event = 46610100 set_country_flag = i_have_gotten_bogota_event } }
-			any_country = {
-				limit = {
-					owns = 3359
-					NOT = { owns = 2401 }
-				}
-				country_event = 46610100
-				set_country_flag = i_have_gotten_bogota_event
-			}
-			any_country = {
-				limit = {
-					OR = {
-						tag = CLM
-						tag = ECU
-						tag = PEU
-					}
-					NOT = { has_country_flag = i_have_gotten_bogota_event }
-					NOT = { has_country_flag = i_no_longer_have_cores_in_tonantins }
-				}
-				country_event = 46610100
-			}
+            2401 = { owner = { country_event = 46610100 } }
         }
 
         ai_will_do = { factor = 1 }
@@ -835,10 +772,15 @@ political_decisions = {
     treaty_of_petropolis = {
         picture = treaty_of_petropolis_stamp
         potential = {
-            tag = BRZ
-			owns = 3382
+            OR = {
+                primary_culture = south_andean
+                primary_culture = brazilian
+                tag = UPB
+            }
+            2549 = { is_core = THIS }
+            owns = 2549
+			3381 = { is_core = THIS }
 			owns = 3381
-			NOT = { owns = 2549 }
             NOT = { has_country_flag = treaty_of_petropolis }
             NOT = { has_country_flag = signed_treaty_of_petropolis }
         }
@@ -847,7 +789,10 @@ political_decisions = {
             war = no
             OR = {
                 money = 2000000
-                ai = yes
+                AND = {
+                    ai = yes
+                    money = 100000
+                }
             }
             OR = {
                 year = 1903
@@ -857,11 +802,9 @@ political_decisions = {
 
         effect = {
             set_country_flag = treaty_of_petropolis
+            random_owned = { limit = { owner = { ai = yes } } owner = { treasury = -100000 } }
             random_owned = { limit = { owner = { ai = no } } owner = { treasury = -2000000 } }
-            any_country = { limit = { OR = { is_core = 2549 is_core = 3382 is_core = 3381 } NOT = { tag = AMZ tag = THIS } } country_event = 46610101 }
-			2549 = { add_core = BRZ }
-			2549 = { limit = { has_global_flag = amz_created } add_core = AMZ }
-			2549 = { limit = { NOT = { has_global_flag = amz_created } } add_core = PAA }
+            any_country = { limit = { OR = { is_core = 2549 is_core = 3381 } NOT = { tag = AMZ } } country_event = 46610101 }
         }
 
         ai_will_do = {
@@ -1026,13 +969,6 @@ political_decisions = {
                         2308 = { is_core = THIS }
                         2307 = { is_core = THIS }
                     }
-					OR = {
-						owns = 2304
-						AND = {
-							owns = 2297
-							CHL = { owns = 2304 }
-						}
-					}
                 }
                 set_country_flag = treaty_of_lima_1929
                 country_event = 46610102
@@ -1055,116 +991,4 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
     }
-
-    claim_south_atlantic = {
-    picture = sthelena
-        potential = {
-            OR = {
-			primary_culture = platinean
-			primary_culture = brazilian
-			primary_culture = patagonian
-			}
-            NOT = {
-                has_country_flag = south_atlantic_claimed
-            }
-			OR = {
-			owns = 2131
-			owns = 2133
-			owns = 3482
-			}
-			NOT = {
-					2132 = { is_core = THIS }
-					2130 = { is_core = THIS }
-					2129 = { is_core = THIS }
-				}
-			}
-
-        allow = {
-            romanticism = 1
-            is_greater_power = yes
-        }
-
-        effect = {
-            badboy = 2
-			prestige = 3
-            ENG = { prestige = -5 }
-            set_country_flag = south_atlantic_claimed
-            2132 = {
-                add_core = THIS
-            }
-            2130 = {
-                add_core = THIS
-            }
-            2129 = {
-                add_core = THIS
-                }
-            }
-
-        ai_will_do = { factor = 0 }
-    }
-
-    parana_development = {
-        picture = parana_river
-        potential = {
-            tag = ARG
-            has_global_flag = corrientes_led_argentina
-			NOT = { has_country_flag = parana_developed }
-			owns = 2360
-			owns = 2359 
-			owns = 2357 
-			owns = 2358 
-			owns = 2554 
-			owns = 2356
-			owns = 2348
-        }
-
-        allow = {
-            war = no
-            money = 200000
-		}
-
-        effect = {
-            set_country_flag = parana_developed
-			treasury = -200000
-			2348 = {
-			    any_pop = { consciousness = 9 militancy = 7 }
-				life_rating = -2
-			}
-            2360 = { 
-			    any_pop = { militancy = -5 }
-                add_province_modifier = { name = parana_development_forever duration = -1 }
-                naval_base = 2
-			}
-            2356 = { 
-			    any_pop = { militancy = -5 }
-                add_province_modifier = { name = parana_development_forever duration = -1 }
-                life_rating = 5	
-			}
-            2554 = {
- 				any_pop = { militancy = -5 }
-                add_province_modifier = { name = parana_development duration = 3650 }
-			}
-            2357 = { 
-			    any_pop = { militancy = -5 }
-			    add_province_modifier = { name = parana_development duration = 3650 }
-			}
-            2359 = { 
-			    any_pop = { militancy = -5 }
-			    add_province_modifier = { name = parana_development duration = 3650 }
-			}
-            2358 = { 
-			    any_pop = { militancy = -5 }
-			    add_province_modifier = { name = parana_development duration = 3650 }
-			}
-            random_owned = {
-                limit = { province_id = 2462 }
-                add_province_modifier = { name = parana_development duration = 3650 }
-            }
-            random_owned = {
-                limit = { province_id = 2340 }
-                add_province_modifier = { name = parana_development duration = 3650 }
-            }
-        }
-        ai_will_do = { factor = 1 }
-	}
 }

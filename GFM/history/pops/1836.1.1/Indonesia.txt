@@ -247,7 +247,7 @@
     }
 
     farmers = {
-        culture = malay
+        culture = lampung
         religion = sunni
         size = 105875
     }
@@ -343,7 +343,7 @@
     farmers = {
         culture = malay
         religion = sunni
-        size = 10850
+        size = 13850
     }
 
     aristocrats = {
@@ -373,24 +373,7 @@
     farmers = {
         culture = javan
         religion = sunni
-        size = 1675
-    }
-	
-	clergymen = {
-        culture = hakka
-        religion = mahayana
-        size = 75
-    }
-    artisans = {
-        culture = hakka
-        religion = mahayana
-        size = 50
-    }
-
-    farmers = {
-        culture = hakka
-        religion = mahayana
-        size = 1250
+        size = 2275
     }
 }
 #Natuna (18000/4500 POPS)
@@ -453,23 +436,6 @@
         culture = javan
         religion = sunni
         size = 1360
-    }
-	
-	clergymen = {
-        culture = hakka
-        religion = mahayana
-        size = 75
-    }
-    artisans = {
-        culture = hakka
-        religion = mahayana
-        size = 50
-    }
-
-    farmers = {
-        culture = hakka
-        religion = mahayana
-        size = 1250
     }
 }
 #Siak Region (372000)
@@ -804,7 +770,7 @@
     }
 
     slaves = {
-        culture = sumatran
+        culture = gayo
         religion = animist
         size = 2000
     }
@@ -951,7 +917,7 @@
         size = 14425
     }
     farmers = {
-        culture = yue
+        culture = gayo
         religion = animist
         size = 1442
     }
@@ -1002,7 +968,7 @@
     }
 
     farmers = {
-        culture = sumatran
+        culture = minangkabau
         religion = animist
         size = 36975
     }
@@ -1082,7 +1048,7 @@
     }
 
     farmers = {
-        culture = sumatran
+        culture = minangkabau
         religion = animist
         size = 23750
     }
@@ -1157,7 +1123,7 @@
     }
 
     farmers = {
-        culture = malay
+        culture = batak
         religion = animist
         size = 18125
     }
@@ -2169,7 +2135,7 @@
     artisans = {
         culture = malay
         religion = sunni
-        size = 540
+        size = 500
     }
 
     farmers = {
@@ -2187,13 +2153,13 @@
     farmers = {
         culture = malay
         religion = sunni
-        size = 13000
+        size = 12000
     }
 
     slaves = {
         culture = dayak
         religion = animist
-        size = 2500
+        size = 2000
     }
 }
 #Pasir (64000/16000 POPS)
@@ -2550,7 +2516,7 @@
     artisans = {
         culture = yue
         religion = mahayana
-        size = 3500
+        size = 1500
     }
 
     slaves = {
@@ -2589,7 +2555,7 @@
     farmers = {
         culture = dayak
         religion = animist
-        size = 5000
+        size = 8000
     }
 
     aristocrats = {
@@ -2613,7 +2579,7 @@
     farmers = {
         culture = malay
         religion = sunni
-        size = 2800
+        size = 500
     }
 
     bureaucrats = {
@@ -2631,7 +2597,7 @@
     artisans = {
         culture = hakka
         religion = mahayana
-        size = 1000
+        size = 3000
     }
 
     officers = {
@@ -2643,7 +2609,7 @@
     farmers = {
         culture = hakka
         religion = mahayana
-        size = 21000
+        size = 15000
     }
 
     artisans = {
@@ -2712,7 +2678,7 @@
     farmers = {
         culture = malay
         religion = sunni
-        size = 12400
+        size = 12000
     }
 
     clergymen = {
@@ -2733,6 +2699,8 @@
         size = 750
     }
 }
+
+
 
 #Kota Waringin (152000/38000 POPS)
 1427 = {
@@ -2778,19 +2746,19 @@
     artisans = {
         culture = dayak
         religion = animist
-        size = 1600
+        size = 1500
     }
 
     soldiers = {
         culture = dayak
         religion = animist
-        size = 600
+        size = 500
     }
 
     farmers = {
         culture = dayak
         religion = animist
-        size = 23000
+        size = 20000
     }
 
     slaves = {
@@ -2857,13 +2825,13 @@
     farmers = {
         culture = malay
         religion = sunni
-        size = 7000
+        size = 7700
     }
 
     farmers = {
         culture = hakka
         religion = mahayana
-        size = 3600
+        size = 3700
     }
 
     clergymen = {
@@ -2881,9 +2849,10 @@
     slaves = {
         culture = hakka
         religion = mahayana
-        size = 1350
+        size = 350
     }
 }
+
 
 #Sambas (34000/8500)
 2665 = {
@@ -2914,7 +2883,7 @@
     farmers = {
         culture = dayak
         religion = animist
-        size = 16000
+        size = 17000
     }
 
     aristocrats = {
@@ -2938,7 +2907,7 @@
     farmers = {
         culture = malay
         religion = sunni
-        size = 4000
+        size = 7000
     }
 
     artisans = {
@@ -2950,96 +2919,46 @@
     farmers = {
         culture = hakka
         religion = mahayana
-        size = 4000
+        size = 6000
     }
 
     slaves = {
         culture = hakka
         religion = mahayana
-        size = 1350
+        size = 350
     }
 }
-#uncolonized in 1836
-#Tekalong (211720/52930 POPs) 
+
+#Palangkaraya (43800/10950 POPs)
 3275 = {
     aristocrats = {
         culture = dayak
         religion = animist
-        size = 190
+        size = 490
     }
 
     clergymen = {
         culture = dayak
         religion = animist
-        size = 190
+        size = 690
     }
 
     artisans = {
         culture = dayak
         religion = animist
-        size = 320
+        size = 920
     }
 
     soldiers = {
         culture = dayak
         religion = animist
-        size = 700
+        size = 1700
     }
 
     farmers = {
         culture = dayak
         religion = animist
-        size = 15150
-    }
-	
-	artisans = {
-        culture = hakka
-        religion = mahayana
-        size = 200
-    }
-}
-#Menukung
-3540 = {
-    aristocrats = {
-        culture = dayak
-        religion = animist
-        size = 390
-    }
-
-    clergymen = {
-        culture = dayak
-        religion = animist
-        size = 590
-    }
-
-    artisans = {
-        culture = dayak
-        religion = animist
-        size = 620
-    }
-
-    soldiers = {
-        culture = dayak
-        religion = animist
-        size = 1000
-    }
-
-    farmers = {
-        culture = dayak
-        religion = animist
-        size = 25150
-    }
-	
-	artisans = {
-        culture = hakka
-        religion = mahayana
-        size = 200
-    }
-
-    farmers = {
-        culture = hakka
-        religion = mahayana
-        size = 5680
+        size = 43150
     }
 }
 

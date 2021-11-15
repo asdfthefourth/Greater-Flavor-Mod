@@ -1,9 +1,8 @@
-color = { 227 66 52 }
-#colonial_company = { 10 75 200 } 
+color = { 170 140 255 }
 graphical_culture = MiddleEasternGC
 
 party = {
-    name = "KDS_reactionary"
+    name = "AZB_reactionary"
     start_date = 1830.1.1
     end_date = 2000.1.1
 
@@ -18,7 +17,7 @@ party = {
 }
 
 party = {
-    name = "KDS_liberal"
+    name = "AZB_liberal"
     start_date = 1830.1.1
     end_date = 2000.1.1
 
@@ -33,7 +32,7 @@ party = {
 }
 
 party = {
-    name = "KDS_conservative"
+    name = "AZB_conservative"
     start_date = 1830.1.1
     end_date = 2000.1.1
 

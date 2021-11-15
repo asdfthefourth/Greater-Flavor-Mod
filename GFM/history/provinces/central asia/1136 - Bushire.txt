@@ -1,7 +1,8 @@
-owner = BSR
-controller = BSR
+owner = BHR
+controller = BHR
 add_core = PER
-add_core = BSR
+add_core = BHR
+add_core = QAS
 trade_goods = fish
-terrain = bushire
 life_rating = 35
+terrain = semidesert

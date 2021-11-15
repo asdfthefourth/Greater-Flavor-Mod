@@ -8,15 +8,6 @@ country_event = {
         OR = {
 			tag = CHL
 			tag = CGC
-			AND = {
-			    tag = PBC
-				NOT = {
-				    OR = {
-					    exists = CHL
-					    exists = CGC
-					}
-				}
-			}
 		}
 		THIS = { exists = yes }
         OR = {
@@ -386,7 +377,7 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "Prepare for war."
+        name = "EVT97082OPTA"
         any_country = {
             limit = {
                 NOT = { war_with = THIS }
@@ -413,7 +404,7 @@ country_event = {
     }
 
     option = {
-        name = "Bide our time."
+        name = "EVT97082OPTB"
         any_owned = {
             limit = {
                 OR = {

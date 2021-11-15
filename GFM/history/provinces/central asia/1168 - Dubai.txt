@@ -1,7 +1,6 @@
-owner = QSM
-controller = QSM
-add_core = QSM
+owner = ABU
+controller = ABU
 add_core = ABU
-trade_goods = fish
+trade_goods = fruit
 life_rating = 31
 terrain = coastal_desert

@@ -1,3 +1,5 @@
+owner = KTH
+controller = KTH
 add_core = KTH
 add_core = MHR
 add_core = FDL

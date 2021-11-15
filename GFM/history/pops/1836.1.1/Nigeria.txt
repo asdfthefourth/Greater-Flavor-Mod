@@ -756,13 +756,7 @@
     farmers = {
         culture = ibo
         religion = fetishist
-        size = 210250
-    }
-	
-	farmers = {
-        culture = ibo
-        religion = jewish
-        size = 3750
+        size = 214000
     }
 
     slaves = {

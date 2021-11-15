@@ -14,6 +14,7 @@ province_event = {
     picture = "Revolution"
 
     trigger = {
+		ai = no
         is_ideology_enabled = socialist
         civilized = yes
         is_colonial = no
@@ -33,7 +34,6 @@ province_event = {
                 government = absolute_empire
                 government = semi_constitutional_empire
                 government = constitutional_empire
-				has_country_flag = Government_Democracy
             }
             OR = {
                 trade_unions = non_socialist
@@ -241,7 +241,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         OR = {
             trade_unions = non_socialist
@@ -402,6 +401,7 @@ province_event = {
     picture = "Factoryattack"
 
     trigger = {
+		ai = no
         is_ideology_enabled = socialist
         civilized = yes
         socialist = 10
@@ -414,7 +414,6 @@ province_event = {
                 government = absolute_empire
                 government = semi_constitutional_empire
                 government = constitutional_empire
-				has_country_flag = Government_Democracy
             }
             OR = {
                 trade_unions = non_socialist
@@ -623,7 +622,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         OR = {
             trade_unions = non_socialist
@@ -769,6 +767,7 @@ province_event = {
     picture = "Strike"
 
     trigger = {
+		ai = no
         is_ideology_enabled = socialist
         is_colonial = no
         civilized = yes
@@ -782,7 +781,6 @@ province_event = {
                 government = absolute_empire
                 government = semi_constitutional_empire
                 government = constitutional_empire
-				has_country_flag = Government_Democracy
             }
             OR = {
                 trade_unions = non_socialist
@@ -1019,7 +1017,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         OR = {
             trade_unions = non_socialist
@@ -1174,7 +1171,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         public_meetings = yes_meeting
         NOT = {
@@ -1328,7 +1324,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         press_rights = free_press
     }
@@ -1467,7 +1462,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         any_owned_province = {
             OR = {
@@ -1675,7 +1669,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         any_state = {
             has_building = factory
@@ -1863,7 +1856,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         OR = {
             any_core = {
@@ -2046,7 +2038,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         OR = {
             any_core = {
@@ -2229,7 +2220,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         any_owned_province = {
             is_colonial = no
@@ -2397,7 +2387,7 @@ country_event = {
     news_desc_medium = "EVTDESC17630_NEWS_MEDIUM"
     news_desc_short = "EVTDESC17630_NEWS_SHORT"
     major = yes
-    picture = "march_on_rome"
+    picture = "Fascist"
 
     trigger = {
 		ai = no
@@ -2412,7 +2402,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         NOT = { has_country_flag = march_on_capital }
     }
@@ -2586,7 +2575,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         OR = {
             any_core = {
@@ -2779,7 +2767,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         OR = {
             any_core = {
@@ -2942,7 +2929,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         any_owned_province = {
             has_province_modifier = black_shirts
@@ -3112,7 +3098,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         OR = {
             any_core = {
@@ -3299,7 +3284,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         any_owned_province = {
             has_province_modifier = black_shirts
@@ -3471,7 +3455,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         any_owned_province = {
             is_colonial = no
@@ -3659,7 +3642,6 @@ country_event = {
             government = absolute_empire
             government = semi_constitutional_empire
             government = constitutional_empire
-			has_country_flag = Government_Democracy
         }
         any_owned_province = {
             is_colonial = no
@@ -4460,6 +4442,7 @@ province_event = {
     desc = "EVTDESC17730"
 
     trigger = {
+		ai = no
         is_ideology_enabled = communist
         is_colonial = no
         NOT = { controlled_by = REB }

@@ -72,13 +72,13 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 100
+        size = 150
     }
 
     aristocrats = {
         culture = catalan
         religion = catholic
-        size = 100
+        size = 150
     }
     clergymen = {
         culture = catalan
@@ -89,7 +89,7 @@
     artisans = {
         culture = catalan
         religion = catholic
-        size = 150
+        size = 350
     }
 
     soldiers = {
@@ -102,7 +102,7 @@
     farmers = {
         culture = catalan
         religion = catholic
-        size = 870
+        size = 450
     }
 
     aristocrats = {
@@ -131,15 +131,9 @@
     }
 
     farmers = {
-        culture = spanish
+        culture = catalan
         religion = catholic
-        size = 200
-    }
-    
-    farmers = {
-        culture = occitan
-        religion = catholic
-        size = 80
+        size = 400
     }
 }
 

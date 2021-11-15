@@ -41,7 +41,7 @@
     farmers = {
         culture = tibetan
         religion = gelugpa
-        size = 22575
+        size = 24575
     }
 
     aristocrats = {
@@ -59,7 +59,7 @@
     artisans = {
         culture = nepali
         religion = hindu
-        size = 100
+        size = 200
     }
 
     soldiers = {
@@ -71,13 +71,13 @@
     serfs = {
         culture = nepali
         religion = hindu
-        size = 2100
+        size = 3650
     }
 
     slaves = {
         culture = assamese
         religion = hindu
-        size = 4000
+        size = 7000
     }
 
 }

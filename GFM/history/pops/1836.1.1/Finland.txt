@@ -133,7 +133,7 @@
     farmers = {
         culture = finnish
         religion = protestant
-        size = 42600
+        size = 42700
     }
 
     clergymen = {
@@ -193,12 +193,6 @@
     soldiers = {
         culture = russian
         religion = orthodox
-        size = 100
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = protestant
         size = 100
     }
 }
@@ -365,7 +359,7 @@
     farmers = {
         culture = finnish
         religion = protestant
-        size = 19000
+        size = 19400
     }
 
     aristocrats = {
@@ -408,12 +402,6 @@
         culture = swedish
         religion = protestant
         size = 7325
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = protestant
-        size = 400
     }
 }
 #Hameenlinna (44000/11000 POPS)
@@ -495,7 +483,7 @@
     farmers = {
         culture = finnish
         religion = protestant
-        size = 54375
+        size = 54475
     }
 
     aristocrats = {
@@ -525,13 +513,7 @@
     farmers = {
         culture = swedish
         religion = protestant
-        size = 10205
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = protestant
-        size = 120
+        size = 10225
     }
 }
 #Vaasa (272000/68000 POPS)
@@ -703,30 +685,60 @@
     farmers = {
         culture = sami
         religion = protestant
-        size = 22680
+        size = 20600
     }
 
     clergymen = {
         culture = finnish
         religion = protestant
-        size = 55
+        size = 50
     }
 
     artisans = {
         culture = finnish
         religion = protestant
-        size = 260
+        size = 250
     }
 
     soldiers = {
         culture = finnish
         religion = protestant
-        size = 105
+        size = 100
     }
 
     farmers = {
         culture = finnish
         religion = protestant
-        size = 1100
+        size = 1000
+    }
+}
+3340 = {
+    farmers = {
+        culture = sami
+        religion = protestant
+        size = 2080
+    }
+    clergymen = {
+        culture = finnish
+        religion = protestant
+        size = 5
+    }
+
+    artisans = {
+        culture = finnish
+        religion = protestant
+        size = 10
+    }
+
+    soldiers = {
+        culture = finnish
+        religion = protestant
+        size = 5
+    }
+
+    farmers = {
+        culture = finnish
+        religion = protestant
+        size = 100
     }
 }

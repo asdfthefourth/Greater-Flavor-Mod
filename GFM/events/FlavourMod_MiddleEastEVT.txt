@@ -44,7 +44,7 @@ country_event = {
             }
             modifier = {
                 factor = 0
-                badboy = 0.6
+                badboy = 17
             }
         }
     }
@@ -75,7 +75,7 @@ country_event = {
             }
             modifier = {
                 factor = 10
-                badboy = 0.6
+                badboy = 17
             }
         }
     }
@@ -203,8 +203,7 @@ country_event = {
         EGY_903 = { remove_core = TUR }
         EGY_897 = { remove_core = TUR }
         EGY_915 = { remove_core = TUR }
-        908 = { remove_core = TUR }
-		909 = { remove_core = TUR }
+        EGY_910 = { remove_core = TUR }
         EGY_921 = { remove_core = TUR }
         TUR_923 = { remove_core = TUR }
         TUR_931 = { remove_core = TUR }
@@ -434,7 +433,7 @@ country_event = {
             }
             owner = { any_owned = { limit = { is_core = CYP } secede_province = CYP } release_vassal = CYP  }
             ENG = { diplomatic_influence = { who = CYP value = 400 } create_vassal = CYP }
-            CYP = { government = dominion set_country_flag = Government_Dominion }
+            CYP = { government = dominion }
         }
 
         ###2ND GP SPHERE OF INFLUENCE###
@@ -593,15 +592,14 @@ country_event = {
     title = "EVTNAME89000"
     desc = "EVTDESC89000"
     is_triggered_only = yes
-	picture = "treaty_of_erzurum"
     major = yes
 
     option = {
         name = "EVT89000OPTA"
         badboy = -2
+        prestige = 5
         relation = { who = FROM value = 50 }
         prestige = 5
-		932 = { remove_core = PER }
         all_core = {
             limit = { is_core = PER }
             remove_core = TUR
@@ -647,7 +645,7 @@ country_event = {
 
     option = {
         name = "EVT89000OPTB"
-		TUR = { country_event = 4778800 }
+		TUR = { country_event = 4778800 days = 0 }
         THIS = {
             relation = {
                 who = TUR
@@ -703,8 +701,6 @@ country_event = {
 	
 	option = {
 		name = "This bodes ill."
-		1132 = { add_core = THIS }
-		3352 = { add_core = THIS }
 	}
 }
 
@@ -713,7 +709,7 @@ country_event = {
     title = "The Dawud Pasha Demand" #The Dawud Pasha Demand
     desc = "With Ali Pasha having defeated us resulting in the loss of the Levant, the Iraqi people are rallying around Dawud Pasha in an attempt to gain freedom."
     news = no
-    picture = "dawud_pasha"
+    picture = "arab_revolt"
     major = yes
 
     trigger = {
@@ -809,11 +805,16 @@ country_event = {
             limit = { has_pop_culture = mashriqi }
             militancy = -6
         }
-        IRQ = {
-			all_core = {
-				remove_core = TUR
-			}
-		}
+        901 = {
+            add_core = IRQ
+        }
+        any_owned = {
+            limit = {
+                is_core = IRQ
+                is_core = TUR
+            }
+            remove_core = TUR
+        }
         release = IRQ
         relation = { who = IRQ value = 200 }
         diplomatic_influence = { who = IRQ value = 100 }

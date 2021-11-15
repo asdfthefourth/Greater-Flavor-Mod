@@ -555,7 +555,7 @@
     }
 }
 #Sharawah (28000/7000 POPS)
-3273 = {
+1161 = {
     aristocrats = {
         culture = bedouin
         religion = sunni

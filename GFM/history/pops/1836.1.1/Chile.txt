@@ -454,32 +454,20 @@
     artisans = {
         culture = south_andean
         religion = catholic
-        size = 125
+        size = 250
     }
-	
-	artisans = {
-	    culture = patagonian
-		religion = animist
-		size = 125
-	}
 
     soldiers = {
-        culture = patagonian
-        religion = animist
+        culture = south_andean
+        religion = catholic
         size = 50
     }
 
     farmers = {
         culture = south_andean
         religion = catholic
-        size = 2175
+        size = 4525
     }
-	
-	farmers = {
-	    culture = patagonian
-		religion = animist
-		size = 2350
-	}
 }
 #Bio-Bio Region (232000)
 #Ruled by Chile 1836
@@ -648,33 +636,8 @@
     farmers = {
         culture = south_andean
         religion = catholic
-        size = 7325
+        size = 14650
     }
-	
-	farmers = {
-	    culture = patagonian
-		religion = animist
-		size = 7325
-	}
-
-    soldiers = { 
-	    culture = patagonian
-		religion = animist
-		size = 520
-	}
-	
-	artisans = {
-	    culture = patagonian
-		religion = animist
-		size = 275
-	}
-	
-	aristocrats = {
-	    culture = patagonian
-		religion = animist
-		size = 80
-	}
-	
 }
 #Chillan (36000/9000 POPS)
 2331 = {
@@ -705,14 +668,8 @@
     farmers = {
         culture = south_andean
         religion = catholic
-        size = 3162
+        size = 6325
     }
-	
-	farmers = {
-	    culture = patagonian
-		religion = animist
-		size = 3162
-	}
 
     aristocrats = {
         culture = patagonian

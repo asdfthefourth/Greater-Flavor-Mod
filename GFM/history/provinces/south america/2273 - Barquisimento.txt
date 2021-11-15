@@ -1,6 +1,5 @@
-owner = VNR
-controller = VNR
-add_core = VNR
+owner = VNZ
+controller = VNZ
 add_core = VNZ
 trade_goods = coffee
 terrain = montane_forest

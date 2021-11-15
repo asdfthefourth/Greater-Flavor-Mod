@@ -5,46 +5,31 @@ political_decisions = {
         alert = no
         potential = {
             owns = 749 #Rome
-			has_global_flag = thorbecke_reforms
+            NET = { has_country_flag = thorbecke_reforms }
             NOT = { has_global_flag = DIM_restored_bishops }
         }
 
         allow = {
-			OR = {			
-				NET = {
-					war = no
-					NOT = {
-						government = absolute_monarchy
-						government = absolute_empire
-					}
-					exists = yes
-					owns = 375
-				}
-				BNF = {
-					war = no
-					NOT = {
-						government = absolute_monarchy
-						government = absolute_empire
-					}
-					exists = yes
-					owns = 375
-				}
-			}
+            NET = {
+                war = no
+                NOT = {
+                    government = absolute_monarchy
+                    government = absolute_empire
+                }
+            }
         }
 
         effect = {
             prestige = 5
             set_global_flag = DIM_restored_bishops
             relation = { who = NET value = 20 }
-            375 = { 
-				owner = {
-					country_event = { id = 211560 days = 40 }
-					any_pop = {
-						limit = { has_pop_religion = catholic }
-						consciousness = 1
-					}
-				}
-			}
+            NET = {
+                country_event = { id = 211560 days = 40 }
+                any_pop = {
+                    limit = { has_pop_religion = catholic }
+                    consciousness = 1
+                }
+            }
         }
 
         ai_will_do = {
@@ -60,13 +45,7 @@ political_decisions = {
         alert = no
         picture = DIM_NHM_decision
         potential = {
-            OR = {
-				tag = NET
-				AND = {
-					tag = BNF
-					NOT = { exists = NET }
-				}
-			}
+            tag = NET
             OR = {
                 government = hms_government
                 government = prussian_constitutionalism
@@ -76,7 +55,7 @@ political_decisions = {
                 government = constitutional_empire
             }
             NOT = {
-                has_global_flag = NHM_sold
+                has_country_flag = NHM_sold
                 ruling_party_ideology = communist
             }
         }
@@ -87,7 +66,7 @@ political_decisions = {
         }
 
         effect = {
-            set_global_flag = NHM_sold
+            set_country_flag = NHM_sold
             set_country_flag = NHM_overinvested
             prestige = -10
             treasury = 100000
@@ -101,13 +80,10 @@ political_decisions = {
     DIM_NET_uitbreiding_amsterdam = {
         picture = amsterdam_renovation
         potential = {
-            OR = {
-				tag = NET
-				tag = BNF
-			}
+            tag = NET
             colonial_nation = yes
-            owns = 375
-            NOT = { has_global_flag = amsterdam_is_renovated }
+            capital = 375
+            NOT = { has_country_flag = extreme_home_makeover }
         }
 
         allow = {
@@ -118,7 +94,7 @@ political_decisions = {
         }
 
         effect = {
-        set_global_flag = amsterdam_is_renovated
+        set_country_flag = extreme_home_makeover
         country_event = 211489
         }
 

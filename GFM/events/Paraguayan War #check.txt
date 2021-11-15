@@ -23,14 +23,13 @@ country_event = {
             has_country_flag = will_not_support_uruguay
             has_global_flag = paraguayan_war
         }
-		URU = { exists = yes }
         neighbour = PRG
         capital_scope = { continent = south_america }
-        NOT = { relation = { who = PRG value = 200 } }
+        NOT = { relation = { who = PRG value = 150 } }
+        URU = { ruling_party_ideology = liberal }
         OR = {
             government = democracy
             government = hms_government
-			has_country_flag = Government_Democracy
         }
         PRG = { government = presidential_dictatorship }
     }
@@ -98,13 +97,12 @@ country_event = {
 
     trigger = {
         tag = PRG
-        has_country_flag = carlos_lopez_dictator
+        has_country_flag = solano_lopez
         war = no
         year = 1860
         URU = {
             ruling_party_ideology = liberal
             is_vassal = no
-			exists = yes
         }
         ENT = { exists = no }
         SBA = { exists = no }
@@ -118,7 +116,6 @@ country_event = {
             in_sphere = URU
             government = democracy
             government = hms_government
-			has_country_flag = Government_Democracy
             ruling_party_ideology = liberal
             badboy = 0.64
             has_global_flag = paraguayan_war
@@ -236,7 +233,7 @@ country_event = {
     }
 
     option = {
-        name = "Secure our sea access - impose mild conditions. §RGain 10 infamy§W"
+        name = "Secure our sea access - impose mild conditions."
         set_global_flag = paraguayan_war_won
         prestige = 20
         badboy = 10
@@ -280,7 +277,7 @@ country_event = {
     }
 
     option = {
-        name = "Become a regional power - impose harsh conditions. §RGain 20 infamy§W"
+        name = "Become a regional power - impose harsh conditions."
         set_global_flag = paraguayan_war_won
         prestige = 20
         badboy = 20
@@ -373,7 +370,7 @@ country_event = {
     }
 
     option = {
-        name = "Take our claims and keep Paraguay a buffer state. §RGain 5 infamy§W"
+        name = "Take our claims and keep Paraguay a buffer state."
         set_global_flag = paraguayan_war_lost
         random_country = {
             limit = {
@@ -555,7 +552,6 @@ country_event = {
     option = {
         name = "...installed a democracy in a war-torn Paraguay."
         government = democracy
-		set_country_flag = Government_Democracy
         political_reform = wealth_weighted_voting
         political_reform = population_equal_weight
         political_reform = gerrymandering
@@ -764,7 +760,7 @@ country_event = {
                 factor = 4
             }
             scaled_militancy = {
-                ideology = radical
+                ideology = anarcho_liberal
                 factor = 6
             }
         }
@@ -806,7 +802,6 @@ country_event = {
     option = {
         name = "EVTOPTC46625"
         government = democracy
-		set_country_flag = Government_Democracy
         political_reform = wealth_weighted_voting
         political_reform = population_equal_weight
         political_reform = gerrymandering

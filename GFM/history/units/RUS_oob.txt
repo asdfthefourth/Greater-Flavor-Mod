@@ -99,7 +99,7 @@ MCK = {
 
 PER = {
     value = -50
-    level = 3
+    level = 0
     influence_value = 0
 }
 

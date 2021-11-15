@@ -79,19 +79,19 @@ country_event = {
 
     trigger = {
         has_country_modifier = mycenaean_excavations
-        NOT = { owns = 840 }
+        NOT = { owns = 1767 }
     }
 
     mean_time_to_happen = { months = 200 }
 
     option = {
         name = "EVTOPTA190431"
-        treasury = -20000
+        treasury = -5000
     }
 
     option = {
         name = "EVTOPTB190431"
-		840 = { owner = { relation = { who = THIS value = -20 } } }
+        relation = { who = GRE value = -20 }
         prestige = -15
         clr_global_flag = mycenaean_excavation_rights
     }
@@ -173,7 +173,6 @@ country_event = {
     desc = "EVTDESC190461"
     picture = "Mask"
     fire_only_once = yes
-	major = yes
 
     trigger = {
         has_country_modifier = mycenaean_excavations
@@ -215,37 +214,13 @@ country_event = {
             revolution_n_counterrevolution = 1
         }
     }
-	
-	option = {
-        name = "EVT201038OPTA"
-           any_country = {
-            limit = {
-                is_greater_power = yes
-                NOT = { tag = THIS }
-            }
-            relation = { who = THIS  value = 25 }
-        }
-        prestige = 50
-        years_of_research = 0.5
-        set_global_flag = agamemnon_found
-        any_country = { remove_country_modifier = mycenaean_excavations }
-        remove_country_modifier = mycenaean_excavations
-        clr_global_flag = mycenaean_excavation_rights
-    }
 
     option = {
-        name = "EVT201038OPTB"
-        any_country = {
-            limit = {
-                is_greater_power = yes
-                NOT = { tag = THIS }
-            }
-            prestige = -5
-            set_country_flag = blamed_by_other_archaeologists
-        }
+        name = "EVTOPTA190461"
         prestige = 50
         years_of_research = 0.5
         set_global_flag = agamemnon_found
+        country_event = 201070
         any_country = { remove_country_modifier = mycenaean_excavations }
         remove_country_modifier = mycenaean_excavations
         clr_global_flag = mycenaean_excavation_rights
@@ -507,7 +482,7 @@ country_event = {
     id = 1905201
     title = "EVTNAME1905201"
     desc = "EVTDESC1905201"
-    picture = "homo_erectus"
+    picture = "paleoanthropology"
     major = yes
     fire_only_once = yes
 
@@ -529,12 +504,12 @@ country_event = {
     }
 
 }
-#Australopithecus Africanus discovered
+
 country_event = {
-    id = 1905301 
+    id = 1905301
     title = "EVTNAME1905301"
     desc = "EVTDESC1905301"
-    picture = "australopithecus_africanus"
+    picture = "paleoanthropology"
     major = yes
     fire_only_once = yes
 

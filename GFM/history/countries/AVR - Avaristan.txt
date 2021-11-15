@@ -1,6 +1,5 @@
 capital = 1053 #Gunib(Mahachkala)
 primary_culture = avar
-culture = dagestani
 religion = sunni
 government = absolute_monarchy
 plurality = 0.0
@@ -41,6 +40,7 @@ ruling_party = DAG_conservative
 consciousness = 0
 nonstate_consciousness = 0
 
+set_country_flag = theocratic_government
 set_country_flag = sunni_country
 
 oob = "DAG_oob.txt"

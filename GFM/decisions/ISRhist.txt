@@ -3,7 +3,6 @@ political_decisions = {
     form_israel = {
         picture = form_israel
         potential = {
-			ai = no
             civilized = yes
             NOT = { has_country_flag = sunni_country }
             NOT = { has_country_flag = shiite_country }
@@ -57,7 +56,7 @@ political_decisions = {
                     }
                 }
             }
-            3474 = {
+            921 = {
                 OR = {
                     owned_by = THIS
                     owner = {
@@ -65,15 +64,13 @@ political_decisions = {
                     }
                 }
             }
-			is_greater_power = yes
         }
         allow = {
+            is_greater_power = yes
             revolution_n_counterrevolution = 1
         }
         effect = {
             EGY_921 = { add_core = ISR }
-			909 = { remove_core = ISR }
-			908 = { remove_core = ISR }
             prestige = 10
             set_global_flag = israel_has_her_cores
             set_global_flag = israel_palestine
@@ -92,7 +89,6 @@ political_decisions = {
     madagascar_plan = {
         picture = form_israel
         potential = {
-			ai = no
             civilized = yes
             NOT = { has_country_flag = sunni_country }
             NOT = { has_country_flag = shiite_country }
@@ -162,9 +158,9 @@ political_decisions = {
                     }
                 }
             }
-			is_greater_power = yes
         }
         allow = {
+            is_greater_power = yes
             revolution_n_counterrevolution = 1
         }
         effect = {
@@ -189,15 +185,7 @@ political_decisions = {
     andinia_plan = {
         picture = form_israel
         potential = {
-			ai = no
             civilized = yes
-			NOT = {
-			    OR = {
-				    primary_culture = platinean
-					primary_culture = south_andean
-					primary_culture = patagonian
-				}
-			}
             NOT = { has_country_flag = sunni_country }
             NOT = { has_country_flag = shiite_country }
             NOT = { has_country_flag = ibadi_country }
@@ -266,9 +254,9 @@ political_decisions = {
                     }
                 }
             }
-			is_greater_power = yes
         }
         allow = {
+            is_greater_power = yes
             revolution_n_counterrevolution = 1
         }
         effect = {
@@ -300,7 +288,6 @@ political_decisions = {
     guiana_plan = {
         picture = form_israel
         potential = {
-			ai = no
             civilized = yes
             NOT = { has_country_flag = sunni_country }
             NOT = { has_country_flag = shiite_country }
@@ -338,9 +325,9 @@ political_decisions = {
                     }
                 }
             }
-			is_greater_power = yes
         }
         allow = {
+            is_greater_power = yes
             revolution_n_counterrevolution = 1
         }
         effect = {
@@ -369,7 +356,6 @@ political_decisions = {
     slattery_report = {
         picture = form_israel
         potential = {
-			ai = no
             civilized = yes
             NOT = { has_country_flag = sunni_country }
             NOT = { has_country_flag = shiite_country }
@@ -439,9 +425,9 @@ political_decisions = {
                     }
                 }
             }
-			is_greater_power = yes
         }
         allow = {
+            is_greater_power = yes
             revolution_n_counterrevolution = 1
         }
         effect = {
@@ -468,7 +454,6 @@ political_decisions = {
     uganda_plan = {
         picture = form_israel
         potential = {
-			ai = no
             civilized = yes
             NOT = { has_country_flag = sunni_country }
             NOT = { has_country_flag = shiite_country }
@@ -522,9 +507,9 @@ political_decisions = {
                     }
                 }
             }
-			is_greater_power = yes
         }
         allow = {
+            is_greater_power = yes
             revolution_n_counterrevolution = 1
         }
         effect = {
@@ -551,7 +536,6 @@ political_decisions = {
     fugu_plan = {
         picture = form_israel
         potential = {
-			ai = no
             civilized = yes
             NOT = { has_country_flag = sunni_country }
             NOT = { has_country_flag = shiite_country }
@@ -597,17 +581,15 @@ political_decisions = {
                     }
                 }
             }
-			is_greater_power = yes
         }
         allow = {
+            is_greater_power = yes
             revolution_n_counterrevolution = 1
         }
         effect = {
             JAP_1088 = { add_core = ISR }
             1087 = { add_core = ISR }
             1089 = { add_core = ISR }
-	    1086 = { add_core = ISR }
-	    1088 = { add_core = ISR } 
             prestige = 10
             set_global_flag = israel_has_her_cores
             set_global_flag = israel_japan
@@ -625,7 +607,6 @@ political_decisions = {
     cyrenaica_plan = {
         picture = form_israel
         potential = {
-			ai = no
             civilized = yes
             OR = {
                 tag = TUR
@@ -682,9 +663,9 @@ political_decisions = {
                     }
                 }
             }
-			is_greater_power = yes
         }
         allow = {
+            is_greater_power = yes
             revolution_n_counterrevolution = 1
         }
         effect = {
@@ -708,7 +689,6 @@ political_decisions = {
     angola_plan = {
         picture = form_israel
         potential = {
-			ai = no
             civilized = yes
             NOT = { has_country_flag = sunni_country }
             NOT = { has_country_flag = shiite_country }
@@ -762,9 +742,9 @@ political_decisions = {
                     }
                 }
             }
-			is_greater_power = yes
         }
         allow = {
+            is_greater_power = yes
             revolution_n_counterrevolution = 1
         }
         effect = {
@@ -790,9 +770,9 @@ political_decisions = {
         }
     }
 
-    law_of_return = {
-        picture = law_of_return
-        potential = {
+     law_of_return = {
+     picture = law_of_return
+         potential = {
             OR = {
                 AND = {
                     tag = ISR
@@ -802,6 +782,7 @@ political_decisions = {
                     owns = 919
                     owns = 3474
                     owns = 920
+                    owns = 921
                     has_global_flag = israel_palestine
                 }
                 AND = {
@@ -1423,8 +1404,7 @@ political_decisions = {
          effect = {
             set_country_flag = greater_israel
             badboy = 10
-            908 = { add_core = ISR }
-			909 = { add_core = ISR }
+            EGY_910 = { add_core = ISR }
             EGY_1755 = { add_core = ISR }
             EGY_915 = { add_core = ISR }
             EGY_903 = { add_core = ISR }

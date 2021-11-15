@@ -11,7 +11,7 @@ country_event = {
         year = 1838
         NOT = {
             year = 1841
-        }
+            }
 
     }
 
@@ -76,126 +76,15 @@ country_event = {
     option = {
         name = "EVTOPTA36601"
         prestige = 1
-        any_country = {
-			limit = { tag = SWE school_reforms = no_schools }
+        random_country = {
+			limit = { tag = SWE social_reform = no_schools }
 			social_reform = low_schools
 		}
-		any_country = {
-			limit = { tag = SWE NOT = { school_reforms = no_schools } }
+		random_country = {
+			limit = { tag = SWE NOT = { social_reform = no_schools } }
 			prestige = 25
 		}
     }
-}
-
-country_event = {
-
-    id = 18031903
-
-    trigger = {
-		NOT = {
-		    3493 = { owned_by = THIS }
-		}
-        OR = {
-		    AND = {
-				NOT = { exists = SWE }
-				tag = SCA
-			}
-			tag = SWE
-		}
-        year = 1903
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen =  { months = 1 }
-
-    title = "SWE_WISMAR_1903_TITLE"
-    desc = "SWE_WISMAR_1903_DESC"
-    picture = "swedish_germany"
-
-    option = {
-        name = "We're taking Wismar back, thank you very much. §RGain 1 infamy§W"
-        prestige = 6
-		badboy = 1
-		set_country_flag = swe_demand_wismar
-		3493 = { add_core = THIS }
-		3493 = {
-		    owner = {
-			    country_event = 20061903
-			}
-		}
-		ai_chance = { factor = 0.04 }
-    }
-    option = {
-        name = "Us owning Wismar just isn't realistic in this new political climate (Historical)"
-		3493 = {
-		    owner = {
-			    relation = {
-	                who = THIS
-	                value = 20
-                }
-			}
-		}
-		ai_chance = { factor = 0.96 }
-    }
-}
-
-country_event = {
-
-    id = 20061903
-
-    is_triggered_only = yes
-
-    fire_only_once = yes
-
-    title = "GER_WISMAR_1903_TITLE"
-    desc = "GER_WISMAR_1903_DESC"
-    picture = "swedish_germany"
-
-    option = {
-        name = "Well, that's just a part of the deal. §GLose 1 infamy§W"
-		THIS = { add_core = 3493 }
-		badboy = -1
-        prestige = -3
-		ai_chance = { factor = 0 }
-    }
-    option = {
-        name = "Wismar is German and always has been. This deal is simply irrelevant!"
-		set_country_flag = ger_refuses_swe
-		FROM = { country_event = 20061904 }
-		ai_chance = { factor = 1 }
-    }
-}
-
-country_event = {
-
-    id = 20061904
-
-    fire_only_once = yes
-
-    is_triggered_only = yes
-
-    title = "SWE_WISMAR_RESPONSE_TITLE"
-    desc = "SWE_WISMAR_RESPONSE_DESC"
-    picture = "swedish_germany"
-
-    option = {
-        name = "This isn't worth it. We need to back off and return another time"
-        prestige = -5
-		ai_chance = { factor = 0.95 }
-    }
-    option = {
-        name = "Send an occupation force to Wismar as a declaration of war!"
-        prestige = 5
-        war = {
-            target = FROM
-            attacker_goal = { casus_belli = acquire_core_state state_province_id = 3493 }
-            defender_goal = { casus_belli = humiliate_no_infamy }
-            call_ally = yes
-        }
-		3493 = { change_controller = THIS }
-		ai_chance = { factor = 0.05 }
-	}
 }
 
 country_event = {
@@ -1244,7 +1133,7 @@ country_event = {
     picture = "scandinavia_war"
     fire_only_once = yes
     trigger = {
-		NOR = {
+		NOR = { 
 		    is_disarmed = yes
 		    truce_with = THIS
 		    has_recently_lost_war = yes 
@@ -1253,7 +1142,7 @@ country_event = {
 		has_global_flag = scandinavia_war
 	}
     mean_time_to_happen =  {
-        days = 1
+        months = 0
 	}
     option = {
         name = "Sweden has won the War of Scandinavia!"
@@ -1262,14 +1151,11 @@ country_event = {
 		clr_global_flag = scandinavia_war
 		374 = {
 		    add_core = SWE
-		}
-		DEN = {
-			any_owned = {
+            assimilate = yes
+			}
+        DEN = {
+            any_owned = {
                 limit = {
-					DEN = {
-						exists = yes
-						truce_with = THIS
-					}
                     OR = {
                         province_id = 374
 						province_id = 251
@@ -1279,7 +1165,6 @@ country_event = {
 						province_id = 2223
 						province_id = 2591
 						province_id = 1907
-						province_id = 3264
                     }
                 }
 			    secede_province = THIS
@@ -1305,10 +1190,10 @@ country_event = {
 
 	}
     mean_time_to_happen =  {
-        days = 1
+        months = 0
 	}
     option = {
-        name = "Dano-Norwegian victory! Take Göteborg, Östersund and Saint Barths. §RGain 4 infamy§W"
+        name = "Dano-Norwegian victory! Take Göteborg, Östersund and Saint Barths."
 		prestige = 20
 		SWE = { prestige = -20 }
 		clr_global_flag = scandinavia_war
@@ -1327,15 +1212,7 @@ country_event = {
 			    secede_province = NOR
             }
 		}
-		any_country = {
-			limit = {
-				tag = DEN
-				exists = yes
-				truce_with = SWE
-				is_disarmed = no
-			}
-			country_event = 22021702
-		}
+		DEN = { country_event = 22021702 }
     }
 }
 
@@ -1347,7 +1224,7 @@ country_event = {
     fire_only_once = yes
     is_triggered_only = yes
     option = {
-        name = "Dano-Norwegian victory! Take Malmö, Karlskrona and Gotland. §RGain 4 infamy§W"
+        name = "Dano-Norwegian victory! Take Malmö, Karlskrona and Gotland."
 		prestige = 20
 		badboy = 4
 		331 = { add_core = DEN }
@@ -1378,12 +1255,7 @@ country_event = {
 	option = {
 	    name = "Declare independence and try to retake lost territories!"
 		SWE = { release_vassal = NOR }
-		random_owned = {
-			limit = {
-				DEN = { exists = yes is_vassal = no }
-			}
-			owner = { create_alliance = DEN }
-		}
+		create_alliance = DEN
 		set_global_flag = scandinavia_war
 		SWE = {
 		    war = {
@@ -1394,13 +1266,13 @@ country_event = {
 			}
 		}
 		ai_chance = { factor = 0.95 }
-	}
+		}
 	option = {
 		name = "Submit to the Swedes (Game over)"
 		SWE = { inherit = NOR }
 		ai_chance = { factor = 0.05 }
+		}
 	}
-}
 
 country_event = {
     id = 376000
@@ -1425,14 +1297,14 @@ country_event = {
 	    months = 1
 	}
 	option = {
-	    name = "No, acceptance is the key to maintaining the Swedish Empire! §GLose 1 infamy§W"
+	    name = "No, acceptance is the key to maintaining the Swedish Empire!"
 		add_accepted_culture = sami
 		add_accepted_culture = norwegian
 		add_accepted_culture = finnish
 		badboy = -1
 	}
 	option = {
-		name = "Do the drastic measures necessary to keep the empire in one piece! §RGain 3 infamy§W"
+		name = "Do the drastic measures necessary to keep the empire in one piece!"
 		set_country_flag = swedification
         badboy = 3
 		remove_accepted_culture = norwegian

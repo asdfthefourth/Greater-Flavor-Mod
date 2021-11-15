@@ -34,7 +34,6 @@ political_decisions = {
 
         effect = {
             prestige = 20
-			remove_country_modifier = free_city_krakow
             random_owned = {
                 limit = { owner = { accepted_culture = south_german } } owner = { remove_accepted_culture = south_german }
             }
@@ -108,7 +107,6 @@ political_decisions = {
         }
         effect = {
             prestige = 30
-			remove_country_modifier = free_city_krakow
             random_owned = {
                 limit = { owner = { accepted_culture = south_german } } owner = { remove_accepted_culture = south_german }
             }
@@ -330,7 +328,6 @@ political_decisions = {
 
         effect = {
             set_country_flag = unite_with_poland
-			remove_country_modifier = free_city_krakow
             random_owned = {
                 limit = { owner = { accepted_culture = south_german } } owner = { remove_accepted_culture = south_german }
             }
@@ -426,14 +423,12 @@ political_decisions = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
-					has_country_flag = Government_Democracy
                 }
                 POL = {
                     NOT = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
-						has_country_flag = Government_Democracy
                     }
                 }
             }
@@ -444,14 +439,12 @@ political_decisions = {
                         government = democracy
                         government = hms_government
                         government = constitutional_empire
-						has_country_flag = Government_Democracy
                     }
                 }
                 NOT = {
                     government = democracy
                     government = hms_government
                     government = constitutional_empire
-					has_country_flag = Government_Democracy
                 }
             }
             modifier = {
@@ -489,7 +482,6 @@ political_decisions = {
 
         effect = {
             set_country_flag = galicia_annex_krakow
-			remove_country_modifier = free_city_krakow
             all_core = { remove_core = THIS }
             random_country = {
                 limit = {
@@ -534,7 +526,7 @@ political_decisions = {
         potential = {
             tag = KRA
             is_subject = no
-            NOT = { exists = GLM }
+            not = { exists = GLM }
         }
 
         allow = {
@@ -550,7 +542,6 @@ political_decisions = {
 
         effect = {
             prestige = 10
-			remove_country_modifier = free_city_krakow
             all_core = { remove_core = THIS }
             change_tag = GLM
             capital = 702
@@ -740,6 +731,9 @@ political_decisions = {
                 add_core = PLR
             }
             RUS_964 = {
+                add_core = PLR
+            }
+            3279 = {
                 add_core = PLR
             }
             662 = {

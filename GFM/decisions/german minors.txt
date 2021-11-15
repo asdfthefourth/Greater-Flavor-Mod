@@ -1,23 +1,5 @@
 political_decisions = {
-    rastatt_festung = {
-        picture = rastatt_festung
-        potential = {
-            tag = BAD
-            NOT = { has_country_flag = rastatt_festung }
-        }
-
-        allow = {
-            idealism = 1
-        }
-
-        effect = {
-            set_country_flag = rastatt_festung
-            586 = { fort = 3 }
-			prestige = 5
-        }
-        ai_will_do = { factor = 1 }
-    }
-	sax_gorlitz = {
+    sax_gorlitz = {
         picture = german_confederation
         potential = {
             tag = SAX
@@ -150,7 +132,6 @@ political_decisions = {
         }
 
         effect = {
-			set_country_flag = burgundy_belgium
             BEL = {
                 all_core = {
                     add_core = BRG

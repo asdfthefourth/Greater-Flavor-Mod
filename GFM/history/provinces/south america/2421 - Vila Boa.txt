@@ -3,5 +3,5 @@ controller = BRZ
 add_core = BRZ
 add_core = GOI
 trade_goods = cattle
-terrain = vila_boa
+terrain = hills
 life_rating = 30

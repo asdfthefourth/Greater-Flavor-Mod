@@ -47,15 +47,9 @@
     farmers = {
         culture = uzbek
         religion = sunni
-        size = 33050
+        size = 38050
     }
 
-	farmers = {
-        culture = uzbek
-        religion = sunni
-        size = 5000
-    }
-	
     slaves = {
         culture = persian
         religion = shiite
@@ -114,41 +108,35 @@
     farmers = {
         culture = uzbek
         religion = sunni
-        size = 13325
-    }
-	
-	farmers = {
-        culture = kazak
-        religion = sunni
-        size = 4325
+        size = 17325
     }
 
     aristocrats = {
-        culture = uzbek
+        culture = kazak
         religion = sunni
         size = 275
     }
 
     clergymen = {
-        culture = uzbek
+        culture = kazak
         religion = sunni
         size = 125
     }
 
     artisans = {
-        culture = uzbek
+        culture = kazak
         religion = sunni
         size = 700
     }
 
     soldiers = {
-        culture = uzbek
+        culture = kazak
         religion = sunni
         size = 125
     }
 
     farmers = {
-        culture = uzbek
+        culture = kazak
         religion = sunni
         size = 13900
     }
@@ -259,7 +247,19 @@
     farmers = {
         culture = kazak
         religion = sunni
-        size = 3900
+        size = 13900
+    }
+
+    slaves = {
+        culture = persian
+        religion = shiite
+        size = 4000
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 2100
     }
 
     aristocrats = {
@@ -337,7 +337,7 @@
     artisans = {
         culture = uzbek
         religion = sunni
-        size = 1300
+        size = 2300
     }
 
     soldiers = {
@@ -355,7 +355,7 @@
     farmers = {
         culture = uzbek
         religion = sunni
-        size = 30850
+        size = 38850
     }
 
     aristocrats = {
@@ -391,19 +391,19 @@
     aristocrats = {
         culture = tajik
         religion = sunni
-        size = 625
+        size = 125
     }
 
     clergymen = {
         culture = tajik
         religion = sunni
-        size = 550
+        size = 50
     }
 
     artisans = {
         culture = tajik
         religion = sunni
-        size = 2325
+        size = 325
     }
 
     soldiers = {
@@ -415,7 +415,7 @@
     farmers = {
         culture = tajik
         religion = sunni
-        size = 13450
+        size = 6450
     }
 
     slaves = {
@@ -423,7 +423,6 @@
         religion = sunni
         size = 2000
     }
-	
     clergymen = {
         culture = persian
         religion = zoroastrian
@@ -441,19 +440,31 @@
     aristocrats = {
         culture = kirgiz
         religion = sunni
-        size = 100
+        size = 1100
+    }
+
+    bureaucrats = {
+        culture = kirgiz
+        religion = sunni
+        size = 200
+    }
+
+    officers = {
+        culture = kirgiz
+        religion = sunni
+        size = 225
     }
 
     clergymen = {
         culture = kirgiz
         religion = sunni
-        size = 150
+        size = 550
     }
 
     artisans = {
         culture = kirgiz
         religion = sunni
-        size = 1050
+        size = 7050
     }
 
     soldiers = {
@@ -465,7 +476,7 @@
     farmers = {
         culture = kirgiz
         religion = sunni
-        size = 26350
+        size = 46350
     }
 
     aristocrats = {
@@ -483,7 +494,7 @@
     artisans = {
         culture = tajik
         religion = sunni
-        size = 4800
+        size = 800
     }
 
     soldiers = {
@@ -493,51 +504,39 @@
     }
 
     farmers = {
-        culture = tajik
+        culture = uzbek
         religion = sunni
-        size = 10600
+        size = 14600
     }
 
     aristocrats = {
         culture = uzbek
         religion = sunni
-        size = 1050
-    }
-	
-	bureaucrats = {
-        culture = uzbek
-        religion = sunni
-        size = 200
-    }
-
-    officers = {
-        culture = uzbek
-        religion = sunni
-        size = 225
+        size = 50
     }
 
     clergymen = {
         culture = uzbek
         religion = sunni
-        size = 450
+        size = 50
     }
 
     artisans = {
         culture = uzbek
         religion = sunni
-        size = 3150
+        size = 150
     }
 
     soldiers = {
         culture = uzbek
         religion = sunni
-        size = 4025
+        size = 25
     }
 
     farmers = {
         culture = uzbek
         religion = sunni
-        size = 22625
+        size = 2625
     }
 
     slaves = {
@@ -554,7 +553,7 @@
 }
 #under the rule of Bukhara in 1836
 #Bukhara (868000/217000 POPS)
-1198 = {   
+1198 = {
     aristocrats = {
         culture = uzbek
         religion = sunni
@@ -576,61 +575,55 @@
     clergymen = {
         culture = uzbek
         religion = sunni
-        size = 1000
+        size = 2000
     }
 
     artisans = {
         culture = uzbek
         religion = sunni
-        size = 2300
+        size = 4300
     }
 
     soldiers = {
         culture = uzbek
         religion = sunni
-        size = 14000
+        size = 16000
     }
 
     farmers = {
         culture = uzbek
         religion = sunni
-        size = 52000
-    }
-	
-	farmers = {
-        culture = uzbek
-        religion = sunni
-        size = 7950
+        size = 142950
     }
 
     aristocrats = {
         culture = tajik
         religion = sunni
-        size = 775
+        size = 275
     }
 
     clergymen = {
         culture = tajik
         religion = sunni
-        size = 2625
+        size = 125
     }
 
     artisans = {
         culture = tajik
         religion = sunni
-        size = 12700
+        size = 700
     }
 
     soldiers = {
         culture = tajik
         religion = sunni
-        size = 3125
+        size = 125
     }
 
     farmers = {
         culture = tajik
         religion = sunni
-        size = 81775
+        size = 10775
     }
 
     aristocrats = {
@@ -648,7 +641,7 @@
     artisans = {
         culture = mashriqi
         religion = sunni
-        size = 3500
+        size = 1500
     }
 
     soldiers = {
@@ -660,7 +653,7 @@
     farmers = {
         culture = mashriqi
         religion = sunni
-        size = 1375
+        size = 3375
     }
 
     clergymen = {
@@ -682,11 +675,10 @@
     }
 
     slaves = {
-        culture = persian
-        religion = shiite
+        culture = tajik
+        religion = sunni
         size = 30000
     }
-	
     clergymen = {
         culture = persian
         religion = zoroastrian
@@ -728,25 +720,25 @@
     farmers = {
         culture = uzbek
         religion = sunni
-        size = 70800
+        size = 100800
     }
 
     aristocrats = {
         culture = tajik
         religion = sunni
-        size = 250
+        size = 50
     }
 
     clergymen = {
         culture = tajik
         religion = sunni
-        size = 1550
+        size = 50
     }
 
     artisans = {
         culture = tajik
         religion = sunni
-        size = 8300
+        size = 300
     }
 
     soldiers = {
@@ -758,7 +750,7 @@
     farmers = {
         culture = tajik
         religion = sunni
-        size = 30600
+        size = 5600
     }
 
     aristocrats = {
@@ -814,7 +806,7 @@
     artisans = {
         culture = uzbek
         religion = sunni
-        size = 550
+        size = 2550
     }
 
     soldiers = {
@@ -826,7 +818,7 @@
     farmers = {
         culture = uzbek
         religion = sunni
-        size = 20425
+        size = 46425
     }
 
     aristocrats = {
@@ -838,13 +830,13 @@
     clergymen = {
         culture = tajik
         religion = sunni
-        size = 600
+        size = 100
     }
 
     artisans = {
         culture = tajik
         religion = sunni
-        size = 6500
+        size = 500
     }
 
     soldiers = {
@@ -856,7 +848,7 @@
     farmers = {
         culture = tajik
         religion = sunni
-        size = 31075
+        size = 11075
     }
 
     aristocrats = {
@@ -894,7 +886,6 @@
         religion = sunni
         size = 8000
     }
-	
     clergymen = {
         culture = persian
         religion = zoroastrian

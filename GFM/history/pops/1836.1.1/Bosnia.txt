@@ -47,13 +47,7 @@
     farmers = {
         culture = bosniak
         religion = sunni
-        size = 33755
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = sunni
-        size = 1020
+        size = 34775
     }
 
     aristocrats = {
@@ -195,13 +189,7 @@
     farmers = {
         culture = bosniak
         religion = sunni
-        size = 16255
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = sunni
-        size = 420
+        size = 16675
     }
 
     soldiers = {
@@ -281,13 +269,7 @@
     farmers = {
         culture = bosniak
         religion = sunni
-        size = 4455
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = sunni
-        size = 45
+        size = 4500
     }
 
     soldiers = {
@@ -311,13 +293,7 @@
     farmers = {
         culture = serb
         religion = orthodox
-        size = 18080
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = orthodox
-        size = 220
+        size = 18300
     }
 
     soldiers = {
@@ -373,13 +349,7 @@
     farmers = {
         culture = bosniak
         religion = sunni
-        size = 19726
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = sunni
-        size = 189
+        size = 19975
     }
 
     soldiers = {
@@ -403,13 +373,7 @@
     farmers = {
         culture = serb
         religion = orthodox
-        size = 19000
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = orthodox
-        size = 125
+        size = 19125
     }
 
     soldiers = {
@@ -465,13 +429,7 @@
     farmers = {
         culture = bosniak
         religion = sunni
-        size = 5880
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = sunni
-        size = 45
+        size = 5925
     }
 
     soldiers = {
@@ -495,13 +453,7 @@
     farmers = {
         culture = serb
         religion = orthodox
-        size = 15200
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = orthodox
-        size = 100
+        size = 15300
     }
 }
 #Mostar (104000/26000 POPS)
@@ -533,13 +485,7 @@
     farmers = {
         culture = bosniak
         religion = sunni
-        size = 3855
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = sunni
-        size = 45
+        size = 3900
     }
 
     soldiers = {
@@ -563,13 +509,7 @@
     farmers = {
         culture = croat
         religion = catholic
-        size = 14255
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = catholic
-        size = 120
+        size = 14375
     }
 
     soldiers = {
@@ -601,7 +541,7 @@
     aristocrats = {
         culture = bosniak
         religion = sunni
-        size = 345
+        size = 350
     }
 
     soldiers = {
@@ -619,19 +559,13 @@
     artisans = {
         culture = bosniak
         religion = sunni
-        size = 240
+        size = 250
     }
 
     farmers = {
         culture = bosniak
         religion = sunni
-        size = 1170
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = catholic
-        size = 45
+        size = 1200
     }
 
     soldiers = {
@@ -655,13 +589,7 @@
     farmers = {
         culture = croat
         religion = catholic
-        size = 13866
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = catholic
-        size = 134
+        size = 14000
     }
 
     soldiers = {
@@ -685,13 +613,7 @@
     farmers = {
         culture = serb
         religion = orthodox
-        size = 16123
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = orthodox
-        size = 167
+        size = 16300
     }
 
 }

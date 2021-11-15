@@ -380,10 +380,7 @@ country_event = { #original VIP event by ? (author not described in the file)
     fire_only_once = yes
 
     trigger = {
-        OR = {
-			tag = NET
-			tag = BNF
-		}
+        tag = NET
         owns = 375 #Amsterdam
         year = 1880
     }

@@ -1,6 +1,6 @@
-capital = 3500
+capital = 1150
 primary_culture = kurdish
-religion = shiite
+religion = sunni
 government = absolute_monarchy
 plurality = 0
 nationalvalue = nv_tradition

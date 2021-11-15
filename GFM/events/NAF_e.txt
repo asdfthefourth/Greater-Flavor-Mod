@@ -59,7 +59,7 @@ country_event = {
     picture = Black_Belt
 
     option = {
-        name = "Louisiana and Mississippi. §GLose 2 infamy§W"
+        name = "Louisiana and Mississippi."
         USA_139 = { add_core = NAF } #Louisiana
         USA_194 = { add_core = NAF } #Mississippi
         NAF = { capital = 140 }
@@ -71,7 +71,7 @@ country_event = {
     }
 
     option = {
-        name = "Louisiana, Mississippi, Alabama, and Western Florida. §GLose 5 infamy§W"
+        name = "Louisiana, Mississippi, Alabama, and Western Florida."
         USA_139 = { add_core = NAF } #Louisiana
         USA_194 = { add_core = NAF } #Mississippi
         USA_196 = { add_core = NAF } #Alabama
@@ -84,7 +84,7 @@ country_event = {
     }
 
     option = {
-        name = "New Africa shall encompass the Lower South! §GLose 10 infamy§W"
+        name = "New Africa shall encompass the Lower South!"
         USA_139 = { add_core = NAF } #Louisiana
         USA_194 = { add_core = NAF } #Mississippi
         USA_196 = { add_core = NAF } #Alabama
@@ -162,12 +162,11 @@ country_event = {
     id = 4413221
     title = "The Manifest Destiny of New Africa"
     desc = "EVTDESC4413221"
-	picture = "naf_destiny"
     is_triggered_only = yes
     major = yes
 
     option = {
-        name = "Into the Caribbean! §RGain 10 infamy§W"
+        name = "Into the Caribbean!"
         add_accepted_culture = afro_caribbean
         add_accepted_culture = afro_latino
         SPA_2209 = { add_core = NAF }
@@ -181,7 +180,7 @@ country_event = {
     }
 
     option = {
-        name = "The South is our land! §RGain 15 infamy§W"
+        name = "The South is our land!"
         USA_144 = { add_core = NAF } #Arkansas
         USA_148 = { add_core = NAF } #Missouri
         USA_185 = { add_core = NAF } #Kentucky
@@ -197,7 +196,7 @@ country_event = {
     }
 
     option = {
-        name = "The Caribbean and the South! §RGain 25 infamy§W"
+        name = "The Caribbean and the South!"
         add_accepted_culture = afro_caribbean
         add_accepted_culture = afro_latino
         SPA_2209 = { add_core = NAF }
@@ -233,7 +232,7 @@ country_event = {
         any_pop = {
             limit = {
                 has_pop_culture = afro_american
-                pop_majority_ideology = fascist
+                ideology = fascist
             }
             consciousness = 5
             militancy = 5
@@ -260,7 +259,7 @@ country_event = {
         any_pop = {
             limit = {
                 has_pop_culture = afro_american
-                pop_majority_ideology = fascist
+                ideology = fascist
             }
             consciousness = 5
             militancy = 5
@@ -312,9 +311,8 @@ country_event = {
         exists = yes
         NOT = { has_country_modifier = underground_railroad_NAF }
         OR = {
-            USA = { slavery = yes_slavery exists = yes }
-			US2 = { slavery = yes_slavery exists = yes }
-            CSA = { slavery = yes_slavery exists = yes }
+            USA = { slavery = yes_slavery }
+            CSA = { slavery = yes_slavery }
         }
     }
 
@@ -328,7 +326,6 @@ country_event = {
             limit = {
                 OR = {
                     tag = USA
-					tag = US2
                     tag = CSA
                 }
                 slavery = yes_slavery
@@ -358,14 +355,8 @@ country_event = {
         has_country_modifier = underground_railroad_NAF
         USA = {
             OR = {
-                AND = { slavery = no_slavery NOT = { exists = US2 } exists = yes }
-                AND = { exists = no NOT = { exists = US2 } }
-            }
-        }
-        US2 = {
-            OR = {
-                AND = { slavery = no_slavery NOT = { exists = USA } exists = yes }
-                AND = { exists = no NOT = { exists = USA } }
+                slavery = no_slavery
+                exists = no
             }
         }
         CSA = {
@@ -486,7 +477,7 @@ country_event = {
     trigger = {
         tag = NAF
         accepted_culture = native_american_minor
-        NOT = { year = 1880 }
+        NOT = { Year = 1880 }
     }
 
     option = {
@@ -510,16 +501,10 @@ country_event = {
         tag = NAF
         year = 1840
         NOT = { year = 1850 }
-		OR = {
-			USA = {
-				slavery = yes_slavery
-				exists = yes
-			}
-			US2 = {
-				slavery = yes_slavery
-				exists = yes
-			}
-		}
+        USA = {
+            slavery = yes_slavery
+            exists = yes
+        }
     }
 
     mean_time_to_happen = {
@@ -530,38 +515,17 @@ country_event = {
         name = "Welcome the men ashore."
         prestige = 4
         clipper_convoy = 1
-        random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				USA = {
-					casus_belli = {
-						target = NAF
-						type = humiliate
-						months = 12
-					}
-					relation = {
-						who = THIS
-						value = -100
-					}
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				US2 = {
-					casus_belli = {
-						target = NAF
-						type = humiliate
-						months = 12
-					}
-					relation = {
-						who = THIS
-						value = -100
-					}
-				}
-			}
-		}
+        USA = {
+            casus_belli = {
+                target = NAF
+                type = humiliate
+                months = 12
+            }
+            relation = {
+                who = THIS
+                value = -100
+            }
+        }
         ai_chance = {
             factor = 90
         }
@@ -592,7 +556,7 @@ country_event = {
             government = prussian_constitutionalism
             government = constitutional_empire
             government = semi_constitutional_empire
-			has_country_flag = Government_Democracy
+            government = federal_democracy
         }
         NOT = { year = 1900 }
         USA_201 = { owned_by = THIS }
@@ -736,19 +700,12 @@ country_event = {
         year = 1890
         NOT = { year = 1910}
         is_greater_power = no
-		OR = {
-			USA = {
-				exists = yes
-				is_greater_power = yes
-			}
-			US2 = {
-				exists = yes
-				is_greater_power = yes
-			}
-		}
+        USA = {
+            exists = yes
+            is_greater_power = yes
+        }
         NOT = {
             war_with = USA
-			war_with = US2
         }
     }
 
@@ -762,17 +719,7 @@ country_event = {
             who = USA
             value = 100
         }
-        relation = {
-            who = US2
-            value = 100
-        }
         USA = {
-            diplomatic_influence = {
-                who = THIS
-                value = 200
-            }
-        }
-        US2 = {
             diplomatic_influence = {
                 who = THIS
                 value = 200
@@ -794,11 +741,11 @@ country_event = {
         ai_chance = {
             factor = 25
             modifier = {
-                factor = 2
+                factor = 1
                 war_policy = pacifism
             }
             modifier = {
-                factor = 1.5
+                factor = 1
                 war_policy = anti_military
             }
         }
@@ -822,11 +769,11 @@ country_event = {
         ai_chance = {
             factor = 75
             modifier = {
-                factor = 2
+                factor = 1
                 war_policy = jingoism
             }
             modifier = {
-                factor = 1.5
+                factor = 1
                 war_policy = pro_military
             }
         }
@@ -905,10 +852,7 @@ country_event = { ##### slavery ended
 
     trigger = {
         tag = FSA
-        OR = {
-			USA = { slavery = no_slavery exists = yes }
-			US2 = { slavery = no_slavery exists = yes }
-		}
+        USA = { slavery = no_slavery }
         has_country_flag = FSA_NAF_revolt_at_USA
         NOT = { has_global_flag = FSA_NAF_revolt_fire }
         NOT = { has_global_flag = FSA_NAF_revolt_fail }
@@ -939,12 +883,6 @@ country_event = { ##### slavery revolt failed
             AND = {
                 tag = USA
                 FSA = { has_country_flag = FSA_NAF_revolt_at_USA }
-				US2 = { exists = no }
-            }
-            AND = {
-                tag = US2
-                FSA = { has_country_flag = FSA_NAF_revolt_at_USA }
-				USA = { exists = no }
             }
             AND = {
                 tag = CSA
@@ -964,6 +902,10 @@ country_event = { ##### slavery revolt failed
     option = {
         name = "Damn those northern instigators."
         set_global_flag = FSA_NAF_revolt_fail
+        dominant_issue = {
+            factor = 0.10
+            value = yes_slavery
+        }
         any_pop = {
             limit = {
                 has_pop_culture = afro_american
@@ -976,9 +918,9 @@ country_event = { ##### slavery revolt failed
             value = -100
         }
         casus_belli = {
-            target = FSA
+            who = FSA
             type = humiliate
-            months = 12
+            duration = 12
         }
         FSA = { country_event = 4413228 }
     }
@@ -992,7 +934,7 @@ country_event = { ##### slavery revolt failed FSA
     picture = NAF_slave_revolt
     is_triggered_only = yes
     option = {
-        name = "At least we tried. §RGain 2 infamy§W"
+        name = "At least we tried."
         prestige = -10
         badboy = 2
         relation = {
@@ -1032,12 +974,6 @@ country_event = { ##### minor slave revolt
             AND = {
                 tag = USA
                 FSA = { has_country_flag = FSA_NAF_revolt_at_USA }
-				US2 = { exists = no }
-            }
-            AND = {
-                tag = US2
-                FSA = { has_country_flag = FSA_NAF_revolt_at_USA }
-				USA = { exists = no }
             }
             AND = {
                 tag = CSA
@@ -1159,12 +1095,6 @@ country_event = { ##### large slave
             AND = {
                 tag = USA
                 FSA = { has_country_flag = FSA_NAF_revolt_at_USA }
-				US2 = { exists = no }
-            }
-            AND = {
-                tag = US2
-                FSA = { has_country_flag = FSA_NAF_revolt_at_USA }
-				USA = { exists = no }
             }
             AND = {
                 tag = CSA

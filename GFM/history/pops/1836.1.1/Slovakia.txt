@@ -47,7 +47,7 @@
     serfs = {
         culture = slovak
         religion = catholic
-        size = 57000
+        size = 70000
     }
 
     serfs = {
@@ -119,7 +119,7 @@
     farmers = {
         culture = hungarian
         religion = protestant
-        size = 9025
+        size = 9725
     }
 
     aristocrats = {
@@ -185,7 +185,7 @@
     artisans = {
         culture = south_german
         religion = catholic
-        size = 9000
+        size = 11000
     }
 
     soldiers = {
@@ -197,7 +197,7 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 30000
+        size = 33000
     }
 }
 #Trencin (342540/85635 POPS)
@@ -223,13 +223,13 @@
     farmers = {
         culture = slovak
         religion = catholic
-        size = 59400
+        size = 53400
     }
 
     serfs = {
         culture = slovak
         religion = catholic
-        size = 27000
+        size = 29000
     }
 
     clergymen = {

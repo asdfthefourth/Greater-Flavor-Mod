@@ -2,14 +2,11 @@ political_decisions = {
     kpm_shipping = {
         picture = kpm_shipping
         potential = {
-            OR = {
-				tag = NET
-				tag = BNF
-			}
+            tag = NET
             colonial_nation = yes
             is_canal_enabled = 2
             owns = 1413 #Batavia
-            NOT = { has_global_flag = kpm_shipping_founded }
+            NOT = { has_country_flag = kpm_shipping_founded }
         }
 
         allow = {
@@ -20,7 +17,7 @@ political_decisions = {
         }
 
         effect = {
-            set_global_flag = kpm_shipping_founded
+            set_country_flag = kpm_shipping_founded
             relation = { who = ENG value = 50 }
             treasury = -25000
             1413 = { add_province_modifier = { name = kpm_shipping  duration = -1 } }
@@ -33,10 +30,7 @@ political_decisions = {
         alert = no
         picture = thorbecke_reforms
         potential = {
-            OR = {
-				tag = NET
-				tag = BNF
-			}
+            tag = NET
             NOT = { year = 1860 }
             OR = {
                 government = prussian_constitutionalism
@@ -44,9 +38,9 @@ political_decisions = {
                 government = absolute_monarchy
                 government = absolute_empire
             }
-            has_global_flag = thorbecke
+            has_country_flag = thorbecke
             has_global_flag = liberal_revolutions_should_now_fire
-            NOT = { has_global_flag = thorbecke_reforms }
+            NOT = { has_country_flag = thorbecke_reforms }
         }
 
         allow = {
@@ -59,7 +53,7 @@ political_decisions = {
         }
 
         effect = {
-            set_global_flag = thorbecke_reforms
+            set_country_flag = thorbecke_reforms
             prestige = -5
             add_country_modifier = {
                 name = thorbecke_reforms
@@ -264,10 +258,7 @@ political_decisions = {
     establish_bpm_oil = {
         picture = bpm_oil
         potential = {
-            OR = {
-				tag = NET
-				tag = BNF
-			}
+            tag = NET
             owns = 1413 #Batavia
             capital = 375 #Amsterdam
             colonial_nation = yes
@@ -275,7 +266,7 @@ political_decisions = {
                 continent = east_indies
                 trade_goods = oil
             }
-            NOT = { has_global_flag = establish_bpm_oil }
+            NOT = { has_country_flag = establish_bpm_oil }
         }
 
         allow = {
@@ -288,7 +279,7 @@ political_decisions = {
         }
 
         effect = {
-            set_global_flag = establish_bpm_oil
+            set_country_flag = establish_bpm_oil
             prestige = 10
             any_owned = {
                 limit = {
@@ -305,14 +296,11 @@ political_decisions = {
     batavian_museum = {
         picture = batavian_museum
         potential = {
-            OR = {
-				tag = NET
-				tag = BNF
-			}
+            tag = NET
             owns = 1413 #Batavia
-            owns = 375 #Amsterdam
+            capital = 375 #Amsterdam
             colonial_nation = yes
-            NOT = { has_global_flag = batavian_museum }
+            NOT = { has_country_flag = batavian_museum }
         }
 
         allow = {
@@ -327,7 +315,7 @@ political_decisions = {
             treasury = -10000
             prestige = 10
             years_of_research = 0.1
-            set_global_flag = batavian_museum
+            set_country_flag = batavian_museum
         }
 
         ai_will_do = { factor = 1 }

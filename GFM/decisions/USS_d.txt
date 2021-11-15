@@ -2,7 +2,7 @@ political_decisions = {
     call_for_south_american_union = {
         picture = switch_to_fraternity
         potential = {
-            OR = {
+            or = {
                 primary_culture = north_andean
                 primary_culture = south_andean
                 primary_culture = platinean
@@ -13,7 +13,6 @@ political_decisions = {
                 exists = USS
             }
             capital_scope = { continent = south_america }
-			has_global_flag = fantasy_countries_enabled
         }
 
         allow = {
@@ -44,46 +43,6 @@ political_decisions = {
                 all_core = { add_core = USS }
             }
             all_core = { add_core = USS }
-			##failsafe##
-			BRZ = {
-				all_core = { add_core = USS }
-			}
-			VNZ = {
-				all_core = { add_core = USS }
-			}
-			PEU = {
-				all_core = { add_core = USS }
-			}
-			BOL = {
-				all_core = { add_core = USS }
-			}
-			GUY = {
-				all_core = { add_core = USS }
-			}
-			ECU = {
-				all_core = { add_core = USS }
-			}
-			ARG = {
-				all_core = { add_core = USS }
-			}
-			PRG = {
-				all_core = { add_core = USS }
-			}
-			CLM = {
-				all_core = { add_core = USS }
-			}
-			PNM = {
-				all_core = { remove_core = USS }
-			}
-			CHL = {
-				all_core = { add_core = USS }
-			}
-			ARC = {
-				all_core = { add_core = USS }
-			}
-			URU = {
-				all_core = { add_core = USS }
-			}
         }
         ai_will_do = {
             factor = 1
@@ -92,7 +51,7 @@ political_decisions = {
     form_USSA = {
         picture = switch_to_freedom
         potential = {
-            OR = {
+            or = {
                 primary_culture = north_andean
                 primary_culture = south_andean
                 primary_culture = platinean
@@ -169,13 +128,13 @@ political_decisions = {
                 limit = {
                     any_owned_province = {
                         is_core = USS
-                    }
-					NOT = {
-                        OR = {
-                            primary_culture = north_andean
-                            primary_culture = south_andean
-                            primary_culture = platinean
-                            primary_culture = brazilian
+                        NOT = {
+                            OR ={
+                                primary_culture = north_andean
+                                primary_culture = south_andean
+                                primary_culture = platinean
+                                primary_culture = brazilian
+                            }
                         }
                     }
                     OR = {
@@ -357,7 +316,7 @@ political_decisions = {
                     war = no
                 }
                 country_event = {
-                    id = 72666 days = 0
+                    id = 72666
                 }
             }
         }
@@ -591,7 +550,6 @@ political_decisions = {
         allow = {
             is_greater_power = yes
             NOT = { truce_with = USA }
-			NOT = { truce_with = US2 }
             war = no
             MEX = {
                 is_vassal = no
@@ -639,24 +597,13 @@ political_decisions = {
                             culture = afro_brazilian
                         }
                     }
+                    OR = {
+                        ideology = reactionary
+                        ideology = conservative
+                    }
                 }
-				scaled_militancy = {
-                    ideology = reactionary
-                    factor = 3
-                }
-				scaled_consciousness = {
-                    ideology = reactionary
-                    factor = 3
-                }
-				scaled_militancy = {
-                    ideology = conservative
-                    factor = 3
-                }
-				scaled_consciousness = {
-                    ideology = conservative
-                    factor = 3
-                }
-                
+                consciousness = 3
+                militancy = 3
             }
         }
         ai_will_do = {
@@ -704,7 +651,7 @@ political_decisions = {
 
     USA_UCA_dismantle = {
         potential = {
-            OR = { tag = USA tag = US2 }
+            tag = USA
             OR = {
                 has_country_flag = USA_UCA_war
                 has_global_flag = USS_USA_lose
@@ -718,8 +665,7 @@ political_decisions = {
             war = no
         }
         effect = {
-            USA = { clr_country_flag = USA_UCA_war }
-			US2 = { clr_country_flag = USA_UCA_war }
+            clr_country_flag = USA_UCA_war
             prestige = 20
             inherit = UCA
             release_vassal = GUA
@@ -741,8 +687,7 @@ political_decisions = {
                 has_global_flag = treaty_of_new_york
             }
             NOT = { alliance_with = USA }
-			NOT = { alliance_with = US2 }
-            OR = { exists = USA exists = US2 }
+            exists = USA
             USS = {
                 all_core = {
                     OR = {
@@ -773,72 +718,27 @@ political_decisions = {
             mass_politics = 1
             war = no
             is_greater_power = yes
-			OR = {
-				AND = {
-					exists = USA
-					relation = {
-						who = USA
-						value = -200
-					}
-				}
-				AND = {
-					exists = US2
-					relation = {
-						who = US2
-						value = -200
-					}
-				}
-			}
-            NOT = { truce_with = USA truce_with = US2 }
+            relation = {
+                who = USA
+                value = -200
+            }
+            NOT = { truce_with = USA }
         }
         effect = {
             badboy = 20
-			random_owned = {
-				limit = {
-					owner = { USA = { exists = yes } }
-				}
-				owner = { USA = { country_event = 8165067 } }
-			}
-			random_owned = {
-				limit = {
-					owner = { US2 = { exists = yes } }
-				}
-				owner = { US2 = { country_event = 8165067 } }
-			}
-			random_owned = {
-				limit = {
-					owner = { USA = { exists = yes } }
-				}
-				owner = {
-					war = {
-						target = USA
-						attacker_goal = {
-							casus_belli = cut_down_to_size_no_infamy
-						}
-						defender_goal = {
-							casus_belli = cut_down_to_size_no_infamy
-						}
-						call_ally = yes
-					}
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { US2 = { exists = yes } }
-				}
-				owner = {
-					war = {
-						target = US2
-						attacker_goal = {
-							casus_belli = cut_down_to_size_no_infamy
-						}
-						defender_goal = {
-							casus_belli = cut_down_to_size_no_infamy
-						}
-						call_ally = yes
-					}
-				}
-			}
+            USA = { country_event = 8165067 }
+            war = {
+                target = USA
+                attacker_goal = {
+                    casus_belli = cut_down_to_size
+                    country = USS
+                }
+                defender_goal = {
+                    casus_belli = cut_down_to_size
+                    country = USA
+                }
+                call_ally = yes
+            }
         }
         ai_will_do = {
             factor = 1
@@ -859,18 +759,12 @@ political_decisions = {
         }
         allow = {
             has_recently_lost_war = no
-            OR = { truce_with = USA truce_with = US2 }
+            truce_with = USA
             is_greater_power = yes
-			OR = {
-				USA = {
-					truce_with = USS
-					is_disarmed = yes
-				}
-				USA = {
-					truce_with = USS
-					is_disarmed = yes
-				}
-			}
+            USA = {
+                truce_with = USS
+                is_disarmed = yes
+            }
         }
         effect = {
             set_global_flag = USS_USA_win
@@ -884,7 +778,7 @@ political_decisions = {
 
     USS_USA_lose = {
         potential = {
-            OR = { tag = USA tag = US2 }
+            tag = USA
             has_country_flag = USS_dismantle_USA
             NOT = {
                 OR = {
@@ -897,16 +791,10 @@ political_decisions = {
             has_recently_lost_war = no
             truce_with = USS
             is_greater_power = yes
-			OR = {
-				USS = {
-					truce_with = USA
-					is_disarmed = yes
-				}
-				USS = {
-					truce_with = US2
-					is_disarmed = yes
-				}
-			}
+            USS = {
+                truce_with = USA
+                is_disarmed = yes
+            }
         }
         effect = {
             set_global_flag = USS_USA_lose
@@ -934,8 +822,8 @@ political_decisions = {
             ARG_2377 = { add_core = ARG }
             ARG_2363 = { add_core = USS }
             ARG_2363 = { add_core = ARG }
-            ARG_2379 = { add_core = USS }
-            ARG_2379 = { add_core = ARG }
+            ARG_2384 = { add_core = USS }
+            ARG_2384 = { add_core = ARG }
             ARG_2393 = { add_core = USS }
             ARG_2393 = { add_core = ARG }
             ARG_2391 = { add_core = USS }
@@ -944,8 +832,6 @@ political_decisions = {
             CHL_2332 = { add_core = CHL }
             ARG_2398 = { add_core = USS }
             ARG_2398 = { add_core = ARG }
-			ARG_2389 = { add_core = ARG }
-			ARG_2389 = { add_core = USS }
             2353 = { add_core = USS }
             2353 = { add_core = ARG }
             2372 = { add_core = USS }

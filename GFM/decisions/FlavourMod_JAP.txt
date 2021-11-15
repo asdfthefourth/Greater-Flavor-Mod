@@ -216,7 +216,7 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    japanese_mck = { ##rework
+    japanese_mck = {
         picture = puyi_mck
         potential = {
             tag = JAP
@@ -286,7 +286,7 @@ political_decisions = {
         }
     }
 
-    japanese_img = { ##rework
+    japanese_img = {
         picture = japanese_img
         potential = {
             tag = JAP
@@ -334,7 +334,7 @@ political_decisions = {
         }
     }
 
-    reconquer_taiwan = { ##rework
+    reconquer_taiwan = {
         picture = panthay
         potential = {
             tag = JAP

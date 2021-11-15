@@ -65,8 +65,6 @@ political_decisions = {
 
         effect = {
             prestige = 3
-	    random_owned = { limit = { owner = { is_culture_group = latin_american_cultures } } 2336 = { change_province_name = "Isla de Pascua" } }
-            random_owned = { limit = { owner = { primary_culture = british } } 2336 = { change_province_name = "Easter Island" } }
             2336 = {
                 secede_province = THIS
                 any_pop = { reduce_pop = 0.50 }
@@ -135,59 +133,5 @@ political_decisions = {
         }
     }
 
-    almirante_latorre = {
-        picture = minas_gerais
-        potential = {
-            tag = CHL
-            has_global_flag = minas_gerais_ordered
-            relation = { who = ENG value = 100 }
-			NOT = { has_country_flag = almirante_latorre_ordered }
-            any_greater_power = {
-                invention = dreadnoughts
-            }
-        }
 
-        allow = {
-            NOT = { average_militancy = 3 }
-            money = 15000
-        }
-
-        effect = {
-            2325 = {
-                sub_unit = {
-                    type = dreadnought
-                    value = current
-                }
-                sub_unit = {
-                    type = dreadnought
-                    value = current
-                }
-            }
-            prestige = 15
-            treasury = -15000
-            set_country_flag = almirante_latorre_ordered
-        }
-    }
-
-	easter_island_concession = {
-        picture = annex_easter_island
-		potential = {
-            CHL = {
-                is_disarmed = yes
-                truce_with = THIS
-				owns = 2336
-            }
-			total_amount_of_ships = 40
-        }
-        allow = {
-			war = no
-        }
-        effect = {
-            badboy = 0.1
-			2336 = { secede_province = THIS }
-        }
-        ai_will_do = {
-            factor = 0
-        }
-    }
 }

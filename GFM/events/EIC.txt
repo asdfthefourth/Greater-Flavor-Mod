@@ -51,7 +51,7 @@ country_event = {
     id = 9990002
     title = "EVTNAME9990000"
     desc = "EVTDESC9990002"
-    picture = "eic_parliament"
+    picture = "deliberation"
     is_triggered_only = yes
 
     option = {
@@ -100,7 +100,7 @@ country_event = {
     id = 9990003
     title = "EVTNAME9990003"
     desc = "EVTDESC9990003"
-    picture = "eic_parliament"
+    picture = "deliberation"
     major = yes
     is_triggered_only = yes
 
@@ -138,7 +138,7 @@ country_event = {
     id = 9990004
     title = "EVTNAME9990000"
     desc = "EVTDESC9990004"
-    picture = "eic_parliament"
+    picture = "deliberation"
 
     major = yes
     is_triggered_only = yes
@@ -155,7 +155,7 @@ country_event = {
     id = 9990005
     title = "EVTNAME9990005"
     desc = "EVTDESC9990005"
-    picture = "britain_attack_eic"
+    picture = sepoy
     major = yes
 
     trigger = {
@@ -1084,7 +1084,7 @@ country_event = {
                 COL = {
                     any_core = {
                         owned_by = ENG
-						NOT = { OR = { is_core = USA is_core = US2 } }
+						NOT = { is_core = USA }
                     }
                 }
                 COL = {
@@ -1094,7 +1094,7 @@ country_event = {
             RPL = {
                 any_core = {
                     owned_by = ENG
-					NOT = { OR = { is_core = USA is_core = US2 } }
+					NOT = { is_core = USA }
                 }
             }
         }
@@ -1115,7 +1115,7 @@ country_event = {
                 limit = {
                     is_core = COL
                     is_overseas = yes
-					NOT = { OR = { is_core = USA is_core = US2 } }
+					NOT = { is_core = USA }
                 }
                 secede_province = THIS
             }
@@ -1123,7 +1123,7 @@ country_event = {
                 limit = {
                     is_core = RPL
                     is_overseas = yes
-					NOT = { OR = { is_core = USA is_core = US2 } }
+					NOT = { is_core = USA }
                 }
                 secede_province = THIS
                 remove_core = THIS

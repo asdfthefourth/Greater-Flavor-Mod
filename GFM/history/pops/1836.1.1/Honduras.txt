@@ -1,65 +1,11 @@
 #Honduras Region (352000)
 #Ruled by Central America 1836
 #Tegucigapa (180000/45000 POPS)
-3363 = {
-    aristocrats = {
-        culture = central_american
-        religion = catholic
-        size = 400
-        militancy = 9
-        rebel_type = nationalist_rebels
-    }
-
-    bureaucrats = {
-        culture = central_american
-        religion = catholic
-        size = 50
-    }
-
-    officers = {
-        culture = central_american
-        religion = catholic
-        size = 40
-        militancy = 9
-        rebel_type = nationalist_rebels
-    }
-
-    clergymen = {
-        culture = central_american
-        religion = catholic
-        size = 150
-        militancy = 9
-        rebel_type = nationalist_rebels
-    }
-
-    artisans = {
-        culture = central_american
-        religion = catholic
-        size = 1000
-    }
-
-    soldiers = {
-        culture = central_american
-        religion = catholic
-        size = 2000
-
-        militancy = 9
-        rebel_type = nationalist_rebels
-    }
-
-    farmers = {
-        culture = central_american
-        religion = catholic
-        size = 15675
-        militancy = 5
-    }
-}
-#Comayagua (180000/45000 POPS)
 2193 = {
     aristocrats = {
         culture = central_american
         religion = catholic
-        size = 550
+        size = 950
         militancy = 9
         rebel_type = nationalist_rebels
     }
@@ -67,13 +13,13 @@
     bureaucrats = {
         culture = central_american
         religion = catholic
-        size = 75
+        size = 125
     }
 
     officers = {
         culture = central_american
         religion = catholic
-        size = 60
+        size = 100
         militancy = 9
         rebel_type = nationalist_rebels
     }
@@ -81,7 +27,7 @@
     clergymen = {
         culture = central_american
         religion = catholic
-        size = 300
+        size = 450
         militancy = 9
         rebel_type = nationalist_rebels
     }
@@ -89,13 +35,13 @@
     artisans = {
         culture = central_american
         religion = catholic
-        size = 1250
+        size = 2250
     }
 
     soldiers = {
         culture = central_american
         religion = catholic
-        size = 1000
+        size = 1450
 
         militancy = 9
         rebel_type = nationalist_rebels
@@ -104,7 +50,7 @@
     farmers = {
         culture = central_american
         religion = catholic
-        size = 25000
+        size = 40675
         militancy = 5
     }
 }
@@ -230,71 +176,4 @@
         militancy = 5
     }
 
-}
-3393 = {
-    aristocrats = {
-        culture = british
-        religion = anglican
-        size = 22
-    }
-
-    bureaucrats = {
-        culture = british
-        religion = anglican
-        size = 1
-    }
-
-    officers = {
-        culture = british
-        religion = anglican
-        size = 1
-    }
-
-    clergymen = {
-        culture = british
-        religion = anglican
-        size = 7
-    }
-
-    artisans = {
-        culture = british
-        religion = anglican
-        size = 25
-    }
-
-    soldiers = {
-        culture = british
-        religion = anglican
-        size = 75
-    }
-
-    farmers = {
-        culture = central_american
-        religion = catholic
-        size = 285
-    }
-
-    clergymen = {
-        culture = central_american
-        religion = catholic
-        size = 50
-    }
-
-    artisans = {
-        culture = central_american
-        religion = catholic
-        size = 250
-    }
-
-    farmers = {
-        culture = british
-        religion = anglican
-        size = 165
-    }
-	
-	farmers = {
-        culture = afro_caribbean
-        religion = protestant
-        size = 250
-    }
 }

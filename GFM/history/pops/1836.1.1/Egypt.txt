@@ -271,19 +271,7 @@
     farmers = {
         culture = misri
         religion = sunni
-        size = 73238
-    }
-
-    clergymen = {
-        culture = greek
-        religion = orthodox
-        size = 50
-    }
-
-    artisans = {
-        culture = greek
-        religion = orthodox
-        size = 5950
+        size = 79238
     }
 
     clergymen = {
@@ -351,7 +339,7 @@
     farmers = {
         culture = misri
         religion = sunni
-        size = 74625
+        size = 75625
     }
 
     clergymen = {
@@ -370,18 +358,6 @@
         culture = copt
         religion = coptic
         size = 1875
-    }
-
-    clergymen = {
-        culture = greek
-        religion = orthodox
-        size = 50
-    }
-
-    artisans = {
-        culture = greek
-        religion = orthodox
-        size = 950
     }
 }
 #Mansura (256200/64050 POPS)
@@ -431,19 +407,7 @@
     farmers = {
         culture = misri
         religion = sunni
-        size = 53700
-    }
-
-    clergymen = {
-        culture = greek
-        religion = orthodox
-        size = 50
-    }
-
-    artisans = {
-        culture = greek
-        religion = orthodox
-        size = 950
+        size = 54700
     }
 
     clergymen = {
@@ -679,7 +643,7 @@
     farmers = {
         culture = misri
         religion = sunni
-        size = 109725
+        size = 116725
     }
 
     bureaucrats = {
@@ -727,7 +691,7 @@
     artisans = {
         culture = greek
         religion = orthodox
-        size = 8950
+        size = 1950
     }
 
     slaves = {

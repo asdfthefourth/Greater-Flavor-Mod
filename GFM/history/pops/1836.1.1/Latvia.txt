@@ -23,13 +23,7 @@
     farmers = {
         culture = latvian
         religion = protestant
-        size = 30775
-    }
-	
-	farmers = {
-        culture = latvian
-        religion = orthodox
-        size = 6775
+        size = 36775
     }
 
     aristocrats = {
@@ -59,7 +53,7 @@
     farmers = {
         culture = volga_german
         religion = protestant
-        size = 49000
+        size = 50000
     }
 
     artisans = {
@@ -163,13 +157,7 @@
     farmers = {
         culture = latvian
         religion = protestant
-        size = 102375
-    }
-	
-	farmers = {
-        culture = latvian
-        religion = orthodox
-        size = 20775
+        size = 112375
     }
 
     aristocrats = {
@@ -281,7 +269,6 @@
     }
 
 }
-#Salacgriva
 3424 = {
     clergymen = {
         culture = latvian
@@ -304,13 +291,7 @@
     farmers = {
         culture = latvian
         religion = protestant
-        size = 20230
-    }
-	
-	farmers = {
-        culture = latvian
-        religion = orthodox
-        size = 4775
+        size = 11237
     }
 
     aristocrats = {
@@ -346,7 +327,7 @@
     artisans = {
         culture = ashkenazi
         religion = jewish
-        size = 300
+        size = 1100
     }
 
     soldiers = {
@@ -358,7 +339,7 @@
     farmers = {
         culture = ashkenazi
         religion = jewish
-        size = 2175
+        size = 3875
     }
 
     aristocrats = {
@@ -388,7 +369,7 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 1950
+        size = 1550
     }
 
     aristocrats = {
@@ -418,25 +399,7 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 1200
-    }
-	
-	artisans = {
-        culture = estonian
-        religion = protestant
-        size = 150
-    }
-
-    soldiers = {
-        culture = estonian
-        religion = protestant
-        size = 250
-    }
-
-    farmers = {
-        culture = estonian
-        religion = protestant
-        size = 4525
+        size = 200
     }
 
 }
@@ -463,13 +426,7 @@
     farmers = {
         culture = latvian
         religion = protestant
-        size = 16800
-    }
-	
-	farmers = {
-        culture = latvian
-        religion = orthodox
-        size = 3775
+        size = 19800
     }
 
     aristocrats = {
@@ -562,6 +519,121 @@
         size = 2025
     }
 }
+3365 = {
+    clergymen = {
+        culture = latvian
+        religion = protestant
+        size = 17
+    }
+
+    artisans = {
+        culture = latvian
+        religion = protestant
+        size = 65
+    }
+
+    soldiers = {
+        culture = latvian
+        religion = protestant
+        size = 250
+    }
+
+    farmers = {
+        culture = latvian
+        religion = protestant
+        size = 1980
+    }
+
+    aristocrats = {
+        culture = volga_german
+        religion = protestant
+        size = 70
+    }
+
+    clergymen = {
+        culture = volga_german
+        religion = protestant
+        size = 10
+    }
+
+    artisans = {
+        culture = volga_german
+        religion = protestant
+        size = 220
+    }
+
+    soldiers = {
+        culture = volga_german
+        religion = protestant
+        size = 10
+    }
+
+    clergymen = {
+        culture = ashkenazi
+        religion = jewish
+        size = 10
+    }
+
+    artisans = {
+        culture = ashkenazi
+        religion = jewish
+        size = 40
+    }
+
+    soldiers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 10
+    }
+
+    farmers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 152
+    }
+
+    aristocrats = {
+        culture = russian
+        religion = orthodox
+        size = 10
+    }
+
+    clergymen = {
+        culture = russian
+        religion = orthodox
+        size = 10
+    }
+
+    artisans = {
+        culture = russian
+        religion = orthodox
+        size = 10
+    }
+
+    soldiers = {
+        culture = russian
+        religion = orthodox
+        size = 10
+    }
+
+    farmers = {
+        culture = russian
+        religion = orthodox
+        size = 2050
+    }
+
+    farmers = {
+        culture = lithuanian
+        religion = catholic
+        size = 385
+    }
+
+    farmers = {
+        culture = polish
+        religion = catholic
+        size = 202
+    }
+}
 #Jelgava (128000/32000 POPS)
 357 = {
     clergymen = {
@@ -585,13 +657,7 @@
     farmers = {
         culture = latvian
         religion = protestant
-        size = 23275
-    }
-	
-	farmers = {
-        culture = latvian
-        religion = orthodox
-        size = 5775
+        size = 28275
     }
 
     farmers = {
@@ -671,19 +737,7 @@
     farmers = {
         culture = latvian
         religion = protestant
-        size = 26450
-    }
-	
-	farmers = {
-        culture = latvian
-        religion = orthodox
-        size = 2000
-    }
-	
-	farmers = {
-        culture = ugrian
-        religion = protestant
-        size = 2000
+        size = 29450
     }
 
     aristocrats = {
@@ -741,34 +795,10 @@
     }
 }
 3423 = {
-	clergymen = {
-        culture = latvian
-        religion = protestant
-        size = 175
-    }
-
-    artisans = {
-        culture = latvian
-        religion = protestant
-        size = 150
-    }
-
-    soldiers = {
-        culture = latvian
-        religion = protestant
-        size = 200
-    }
-
-    farmers = {
-        culture = latvian
-        religion = protestant
-        size = 10075
-    }
-
-    aristocrats = {
+        aristocrats = {
         culture = volga_german
         religion = protestant
-        size = 200
+        size = 1200
     }
 
     clergymen = {
@@ -818,13 +848,7 @@
     farmers = {
         culture = latvian
         religion = protestant
-        size = 18475
-    }
-	
-	farmers = {
-        culture = latvian
-        religion = orthodox
-        size = 3775
+        size = 21475
     }
 
     aristocrats = {

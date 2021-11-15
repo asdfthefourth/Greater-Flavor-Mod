@@ -21,7 +21,7 @@
     }
 
     aristocrats = {
-        culture = south_italian
+        culture = maltese
         religion = catholic
         size = 200
     }
@@ -33,31 +33,31 @@
     }
 
     bureaucrats = {
-        culture = south_italian
+        culture = maltese
         religion = catholic
         size = 10
     }
 
     clergymen = {
-        culture = south_italian
+        culture = maltese
         religion = catholic
         size = 275
     }
 
     artisans = {
-        culture = south_italian
+        culture = maltese
         religion = catholic
         size = 5500
     }
 
     soldiers = {
-        culture = south_italian
+        culture = maltese
         religion = catholic
         size = 340
     }
 
     farmers = {
-        culture = south_italian
+        culture = maltese
         religion = catholic
         size = 20475
     }

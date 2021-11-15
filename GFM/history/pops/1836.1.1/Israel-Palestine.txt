@@ -265,7 +265,7 @@
     aristocrats = {
         culture = mashriqi
         religion = sunni
-        size = 75
+        size = 52
     }
 
     clergymen = {
@@ -283,13 +283,13 @@
     soldiers = {
         culture = mashriqi
         religion = sunni
-        size = 110
+        size = 54
     }
 
     farmers = {
         culture = mashriqi
         religion = sunni
-        size = 9750
+        size = 3750
     }
 
     clergymen = {
@@ -307,7 +307,7 @@
     farmers = {
         culture = syriac
         religion = orthodox
-        size = 800
+        size = 400
     }
 
     clergymen = {
@@ -325,7 +325,7 @@
     farmers = {
         culture = sephardic
         religion = jewish
-        size = 432
+        size = 532
     }
 }
 #Hafia (XXX/XXX POPS)
@@ -357,7 +357,7 @@
     farmers = {
         culture = mashriqi
         religion = sunni
-        size = 3650
+        size = 3750
     }
 
     clergymen = {
@@ -375,7 +375,7 @@
     farmers = {
         culture = syriac
         religion = orthodox
-        size = 2300
+        size = 400
     }
 
     clergymen = {
@@ -393,7 +393,7 @@
     farmers = {
         culture = sephardic
         religion = jewish
-        size = 632
+        size = 532
     }
 }
 #Gaza (44000/11000 POPS)
@@ -445,6 +445,69 @@
         religion = orthodox
         size = 1725
     }
+}
+#Beersheba (36000/9000 POPS)
+921 = {
+    aristocrats = {
+        culture = mashriqi
+        religion = sunni
+        size = 75
+    }
+
+    clergymen = {
+        culture = mashriqi
+        religion = sunni
+        size = 50
+    }
+
+    artisans = {
+        culture = mashriqi
+        religion = sunni
+        size = 350
+    }
+
+    soldiers = {
+        culture = mashriqi
+        religion = sunni
+        size = 100
+    }
+
+    farmers = {
+        culture = mashriqi
+        religion = sunni
+        size = 6425
+    }
+
+    aristocrats = {
+        culture = bedouin
+        religion = sunni
+        size = 25
+    }
+
+    clergymen = {
+        culture = bedouin
+        religion = sunni
+        size = 25
+    }
+
+    artisans = {
+        culture = bedouin
+        religion = sunni
+        size = 75
+    }
+
+    soldiers = {
+        culture = bedouin
+        religion = sunni
+        size = 25
+    }
+
+    farmers = {
+        culture = bedouin
+        religion = sunni
+        size = 1850
+    }
+
 }
 3357 = {
     aristocrats = {

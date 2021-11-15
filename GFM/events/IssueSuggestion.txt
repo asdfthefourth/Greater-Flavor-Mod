@@ -15,7 +15,6 @@ country_event = {
     picture = "slums"
 
     trigger = {
-		ai = no
         civilized = yes
         health_care = no_health_care
         NOT = { poor_strata_life_needs = 0.9 }
@@ -100,7 +99,6 @@ country_event = {
     picture = "Hospital"
 
     trigger = {
-		ai = no
         civilized = yes
         health_care = acceptable_health_care
         conservative = 0.2
@@ -161,7 +159,6 @@ country_event = {
     picture = "Countryside"
 
     trigger = {
-		ai = no
         civilized = yes
         health_care = low_health_care
     }
@@ -198,7 +195,6 @@ country_event = {
     picture = "Workers"
 
     trigger = {
-		ai = no
         civilized = yes
         health_care = trinket_health_care
         NOT = { poor_strata_life_needs = 0.95 }
@@ -265,7 +261,6 @@ country_event = {
     picture = "Poor"
 
     trigger = {
-		ai = no
         civilized = yes
         health_care = low_health_care
         NOT = { social_reform_want = 0.2 }
@@ -327,7 +322,6 @@ country_event = {
     picture = "Hospital"
 
     trigger = {
-		ai = no
         civilized = yes
         health_care = acceptable_health_care
     }
@@ -395,7 +389,6 @@ country_event = {
     picture = "Dental"
 
     trigger = {
-		ai = no
         health_care = good_health_care
         civilized = yes
         NOT = { ruling_party_ideology = conservative }
@@ -454,7 +447,6 @@ country_event = {
     picture = "Finepeople"
 
     trigger = {
-		ai = no
         civilized = yes
         pensions = no_pensions
         is_ideology_enabled = socialist
@@ -529,7 +521,6 @@ country_event = {
     picture = "Elderly"
 
     trigger = {
-		ai = no
         pensions = trinket_pensions
         civilized = yes
     }
@@ -581,7 +572,6 @@ country_event = {
     picture = "Finepeople"
 
     trigger = {
-		ai = no
         civilized = yes
         pensions = low_pensions
         acceptable_pensions = 5
@@ -633,7 +623,6 @@ country_event = {
     picture = "Poor"
 
     trigger = {
-		ai = no
         civilized = yes
         pensions = acceptable_pensions
         is_ideology_enabled = socialist
@@ -696,7 +685,6 @@ country_event = {
     picture = "Finepeople"
 
     trigger = {
-		ai = no
         civilized = yes
         pensions = good_pensions
         conservative = 0.2
@@ -753,7 +741,6 @@ country_event = {
     picture = "Oldsoldiers"
 
     trigger = {
-		ai = no
         civilized = yes
         social_reform_want = 0.05
         liberal = 0.1
@@ -850,7 +837,6 @@ country_event = {
     picture = "Oldsoldiers"
 
     trigger = {
-		ai = no
         pensions = no_pensions
         civilized = yes
         OR = {
@@ -912,7 +898,6 @@ country_event = {
     picture = "Oldsoldiers"
 
     trigger = {
-		ai = no
         has_country_flag = promised_post_war_pensions
         war = no
     }
@@ -960,7 +945,6 @@ country_event = {
     picture = "Poor"
 
     trigger = {
-		ai = no
         civilized = yes
         unemployment_subsidies = no_subsidies
         is_ideology_enabled = socialist
@@ -1030,7 +1014,6 @@ country_event = {
     picture = "Poor"
 
     trigger = {
-		ai = no
         civilized = yes
         unemployment = 0.05
         unemployment_subsidies = low_subsidies
@@ -1095,7 +1078,6 @@ country_event = {
     picture = "Poor"
 
     trigger = {
-		ai = no
         civilized = yes
         unemployment_subsidies = acceptable_subsidies
         unemployment = 0.05
@@ -1153,7 +1135,6 @@ country_event = {
     picture = "Strike"
 
     trigger = {
-		ai = no
         civilized = yes
         unemployment_subsidies = low_subsidies
         wage_reform = low_minimum_wage
@@ -1228,7 +1209,6 @@ country_event = {
     picture = "Strike"
 
     trigger = {
-		ai = no
         civilized = yes
         unemployment_subsidies = acceptable_subsidies
         NOT = { trade_unions = no_trade_unions }
@@ -1281,7 +1261,6 @@ country_event = {
     picture = "Workers"
 
     trigger = {
-		ai = no
         civilized = yes
         safety_regulations = no_safety
         industrial_score = 1
@@ -1336,7 +1315,6 @@ country_event = {
 
 
     trigger = {
-		ai = no
         civilized = yes
         safety_regulations = trinket_safety
         industrial_score = 1
@@ -1390,7 +1368,6 @@ country_event = {
     picture = "Workers"
 
     trigger = {
-		ai = no
         civilized = yes
         safety_regulations = low_safety
         social_reform_want = 0.2
@@ -1463,7 +1440,6 @@ country_event = {
     picture = "Workers"
 
     trigger = {
-		ai = no
         civilized = yes
         safety_regulations = acceptable_safety
         industrial_score = 1
@@ -1524,7 +1500,6 @@ country_event = {
     picture = "Spies"
 
     trigger = {
-		ai = no
         civilized = yes
         NOT = { trade_unions = all_trade_unions }
         NOT = { safety_regulations = good_safety }
@@ -1573,7 +1548,6 @@ country_event = {
     picture = "Police"
 
     trigger = {
-		ai = no
         civilized = yes
         safety_regulations = low_safety
         health_care = low_health_care
@@ -1633,7 +1607,6 @@ country_event = {
     picture = "Workers"
 
     trigger = {
-		ai = no
         civilized = yes
         safety_regulations = acceptable_safety
         health_care = acceptable_health_care
@@ -1685,7 +1658,6 @@ country_event = {
     picture = "Strike"
 
     trigger = {
-		ai = no
         civilized = yes
         safety_regulations = good_safety
         health_care = good_health_care
@@ -1729,10 +1701,9 @@ country_event = {
     id = 3700
     title = "EVTNAME3700"
     desc = "EVTDESC3700"
-    picture = "Childlabor"
+    picture = "Childlabor2"
 
     trigger = {
-		ai = no
         civilized = yes
         child_labor = child_labor_legal
         is_ideology_enabled = socialist
@@ -1784,10 +1755,9 @@ country_event = {
     id = 370000002
     title = "EVTNAME370000002"
     desc = "EVTDESC370000002"
-    picture = "Childlabor"
+    picture = "Childlabor2"
 
     trigger = {
-		ai = no
         civilized = yes
         work_hours = no_work_hour_limit
         is_ideology_enabled = socialist
@@ -1840,7 +1810,6 @@ country_event = {
     picture = "Strike"
 
     trigger = {
-		ai = no
         civilized = yes
         work_hours = fourteen_hours
     }
@@ -1899,7 +1868,6 @@ country_event = {
     picture = "Strike"
 
     trigger = {
-		ai = no
         civilized = yes
         work_hours = twelve_hours
         NOT = {
@@ -1968,7 +1936,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         work_hours = ten_hours
         conservative = 0.3
@@ -2025,7 +1992,6 @@ country_event = {
     picture = "Workers"
 
     trigger = {
-		ai = no
         civilized = yes
         wage_reform = no_minimum_wage
         social_reform_want = 0.1
@@ -2098,7 +2064,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         wage_reform = trinket_wage
         NOT = {
@@ -2164,7 +2129,6 @@ country_event = {
     picture = "Strike"
 
     trigger = {
-		ai = no
         civilized = yes
         wage_reform = low_minimum_wage
         average_consciousness = 5
@@ -2239,7 +2203,6 @@ country_event = {
     picture = "Strike"
 
     trigger = {
-		ai = no
         civilized = yes
         wage_reform = good_minimum_wage
         has_pop_type = capitalists
@@ -2280,7 +2243,6 @@ country_event = {
     picture = "Demonstration"
 
     trigger = {
-		ai = no
         civilized = yes
         trade_unions = no_trade_unions
         state_controlled = 10
@@ -2350,7 +2312,6 @@ country_event = {
     picture = "Demonstration"
 
     trigger = {
-		ai = no
         civilized = yes
         trade_unions = state_controlled
         OR = {
@@ -2428,7 +2389,6 @@ country_event = {
     picture = "Demonstration"
 
     trigger = {
-		ai = no
         civilized = yes
         trade_unions = non_socialist
     }
@@ -2485,7 +2445,6 @@ country_event = {
     picture = "Strike"
 
     trigger = {
-		ai = no
         trade_unions = all_trade_unions
         civilized = yes
         NOT = {
@@ -2558,7 +2517,6 @@ country_event = {
     picture = "Slaves"
 
     trigger = {
-		ai = no
         slavery = freedom_of_womb
         civilized = yes
         no_slavery = 10
@@ -2632,7 +2590,6 @@ country_event = {
     picture = "Slaves"
 
     trigger = {
-		ai = no
         slavery = yes_slavery
         civilized = yes
         freedom_of_womb = 10
@@ -2706,7 +2663,6 @@ country_event = {
     picture = "Slaves"
 
     trigger = {
-		ai = no
         slavery = no_slavery
         civilized = yes
         prestige = 20

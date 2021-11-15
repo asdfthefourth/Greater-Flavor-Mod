@@ -154,11 +154,6 @@ country_event = {
                     }
                 call_ally = yes
                 }
-				define_general = {
-                    name = "Alejandro Heredia"
-                    personality = competent
-                    background = natural_born_leader
-				}
             }
         }
         ai_chance = {
@@ -215,7 +210,7 @@ country_event = {
     news_desc_long = "EVTDESC97055_NEWS_LONG"
     news_desc_medium = "EVTDESC97055_NEWS_MEDIUM"
     news_desc_short = "EVTDESC97055_NEWS_SHORT"
-    picture = "end_of_pbc"
+    picture = "demonstration"
     major = yes
 
     fire_only_once = yes
@@ -423,10 +418,7 @@ country_event = {
 
     trigger = {
         tag = ECU
-		OR = {
-			government = democracy
-			has_country_flag = Government_Democracy	
-		}
+        government = democracy
         year = 1842
         election = yes
         NOT = { year = 1860 }
@@ -493,10 +485,7 @@ country_event = {
 
     trigger = {
         tag = ECU
-		OR = {
-			government = democracy
-			has_country_flag = Government_Democracy	
-		}
+        government = democracy
         year = 1860
         NOT = { year = 1885 }
         OR = {
@@ -764,18 +753,10 @@ country_event = {
     option = {
         name = "EVT46610100OPTA" #We agree
         badboy = -5
-		2401 = { remove_core = THIS }
-		3359 = { remove_core = THIS }
-		any_owned = {
-			limit = {
-				OR = {
-					province_id = 2401
-					province_id = 3359
-				}
-			}
-			add_core = BRZ
-			secede_province = BRZ
-		}
+        2401 = { add_core = BRZ }
+        2401 = { remove_core = THIS }
+        2401 = { remove_core = CLM }
+        2401 = { secede_province = BRZ }
         relation = { who = BRZ value = 300 }
         ai_chance = { factor = 90 }
     }
@@ -783,20 +764,12 @@ country_event = {
     option = {
         name = "EVT46610100OPTB" #No
         badboy = 1
-		any_owned = {
-			limit = {
-				OR = {
-					province_id = 2401
-					province_id = 3359
-				}
-			}
-			add_core = BRZ
-		}
+        2401 = { add_core = BRZ }
         relation = { who = BRZ value = -400 }
         ai_chance = {
             factor = 10
             modifier = { factor = 1.5 is_greater_power = yes }
-            modifier = { factor = 0 OR = { in_sphere = BRZ vassal_of = BRZ } }
+            modifier = { factor = 0 OR = { in_sphere = FROM vassal_of = FROM } }
             modifier = { factor = 0 badboy = 0.95 }
         }
     }
@@ -817,28 +790,6 @@ country_event = {
         badboy = -2
         2549 = { remove_core = THIS }
 		3381 = { remove_core = THIS }
-		3382 = { remove_core = THIS }
-		any_owned = { 
-			limit = {
-				province_id = 2321
-			}
-			remove_core = PEU
-		}
-		any_country = {
-			limit = {
-				tag = FROM
-				owns = 3381
-				owns = 3382
-			}
-			THIS = { 
-				any_owned = {
-					limit = {
-						province_id = 2549
-					}
-					secede_province = FROM
-				}
-			}
-		}
         relation = { who = FROM value = 300 }
         treasury = 1000000
         random_owned = {
@@ -853,9 +804,6 @@ country_event = {
         name = "EVT46610101OPTB" #No
         badboy = 1
         relation = { who = BRZ value = -200 }
-		2321 = { add_core = BRZ }
-		2321 = { limit = { has_global_flag = amz_created } add_core = AMZ }
-		2321 = { limit = { NOT = { has_global_flag = amz_created } } add_core = PAA }
         ai_chance = {
             factor = 20
             modifier = { factor = 1.5 is_greater_power = yes }
@@ -1034,58 +982,3 @@ country_event = {
         }
     }
 }
-
-country_event = {
-    id = 97095
-    title = "The French Blockade"
-    desc = "Due to our current war with the Peru-Bolivian Confederation, the French have initiated a blockade against us, demanding that we capitulate and that they receive the condition of 'most favoured nation', aside from several other demands."
-    picture = "french_blockade"
-
-    is_triggered_only = yes
-
-    mean_time_to_happen = { days = 1 }
-    fire_only_once = yes
-
-    option = {
-        name = "Fools! Like that would stop us!"
-        add_country_modifier = { name = french_blockade duration = 730 }
-		set_country_flag = rosas_resists
-        ai_chance = { factor = 100 }
-    }
-
-    option = {
-        name = "We have no choice but to agree to their demands."
-        prestige = -5
-		end_war = PBC
-		set_country_flag = rosas_surrenders
-        ai_chance = { factor = 0 }
-    }
-}
-
-country_event = {
-    id = 97096
-    title = "The French Blockade is Over!"
-    desc = "Despite their best efforts, the French couldn't stop us from fulfilling our goals, and are now retreating from our shores."
-    picture = "french_blockade"
-
-    fire_only_once = yes
-
-    trigger = {
-		tag = ARC
-        has_country_flag = rosas_resists
-        NOT = { has_country_modifier = french_blockade }
-        OR = {
-            PBC = { truce_with = THIS }
-            PBC = { has_recently_lost_war = yes }
-            PBC = { exists = no }
-		}
-    }
-
-    mean_time_to_happen = { days = 1 }
-
-    option = {
-        name = "Glory to the Argentine Confederation!"
-		prestige = 3
-		FRA = { prestige = -3 }
-		}
-	}

@@ -67,12 +67,6 @@
         religion = catholic
         size = 500
     }
-	
-	serfs = {
-        culture = gypsy
-        religion = sunni
-        size = 45
-    }
 
     serfs = {
         culture = slovene
@@ -136,13 +130,7 @@
     serfs = {
         culture = slovene
         religion = catholic
-        size = 19770
-    }
-	
-	serfs = {
-        culture = gypsy
-        religion = catholic
-        size = 230
+        size = 20000
     }
 
 }
@@ -175,13 +163,13 @@
     farmers = {
         culture = slovene
         religion = catholic
-        size = 39125
+        size = 39075
     }
 
     farmers = {
         culture = gypsy
         religion = catholic
-        size = 450
+        size = 500
     }
 
     clergymen = {
@@ -226,7 +214,7 @@
     farmers = {
         culture = slovene
         religion = catholic
-        size = 19650
+        size = 20000
     }
 
     aristocrats = {
@@ -245,12 +233,6 @@
         culture = hungarian
         religion = catholic
         size = 2000
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = catholic
-        size = 350
     }
 
 }

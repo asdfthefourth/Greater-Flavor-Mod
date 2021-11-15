@@ -1,6 +1,7 @@
-owner = OMA
-controller = OMA
+owner = ENG
+controller = ENG
 add_core = PER
 trade_goods = fish
 life_rating = 35
-terrain = coastal_desert
+terrain = semidesert
+colonial = 2

@@ -5,7 +5,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         is_ideology_enabled = socialist
         upper_house = {
@@ -91,7 +90,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         universal_voting = 10
         NOT = {
@@ -134,7 +132,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         yes_meeting = 10
         NOT = {
@@ -175,7 +172,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         is_ideology_enabled = socialist
         political_reform_want = 0.1
@@ -230,7 +226,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         political_reform_want = 0.1
         NOT = { upper_house_composition = party_appointed }
@@ -272,7 +267,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         NOT = {
             upper_house = {
@@ -319,7 +313,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         NOT = {
             upper_house_composition = party_appointed
@@ -360,7 +353,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         social_reform_want = 0.2
         NOT = { wage_reform = good_minimum_wage }
@@ -398,7 +390,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         political_reform_want = 0.15
         average_militancy = 4
@@ -436,7 +427,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         is_greater_power = yes
         social_reform_want = 0.15
@@ -493,7 +483,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         unemployment_subsidies = no_subsidies
         social_reform_want = 0.1
@@ -537,7 +526,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         average_militancy = 5
         upper_house = {
@@ -579,7 +567,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         average_militancy = 2
         ruling_party_ideology = socialist
@@ -652,7 +639,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         upper_house = {
             ideology = fascist
@@ -696,7 +682,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         vote_franschise = none_voting
         average_militancy = 5
@@ -741,7 +726,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         average_militancy = 2
         upper_house = {
@@ -784,14 +768,13 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         average_militancy = 3
         upper_house = {
             ideology = socialist
             value = 0.2
         }
-        NOT = {
+        not = {
             ruling_party_ideology = socialist
         }
         NOT = { has_country_flag = spectator ai = yes }
@@ -828,7 +811,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         average_consciousness = 3
         upper_house = {
@@ -865,7 +847,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         upper_house = {
             ideology = reactionary
@@ -912,7 +893,6 @@ country_event = {
     picture = "Upperhouse"
 
     trigger = {
-		ai = no
         civilized = yes
         upper_house = {
             ideology = radical
@@ -954,7 +934,6 @@ country_event = {
     picture = "senate_debate"
 
     trigger = {
-		ai = no
         NOT = { has_country_flag = cutoff_reactionary_UH_1 }
         NOT = { election = yes }
         civilized = yes
@@ -1427,7 +1406,6 @@ country_event = {
     picture = "senate_debate"
 
     trigger = {
-		ai = no
         civilized = yes
         NOT = { has_country_flag = spectator ai = yes }
         upper_house_composition = appointed
@@ -1703,7 +1681,6 @@ country_event = {
     picture = "senate_debate"
 
     trigger = {
-		ai = no
         NOT = { has_country_flag = spectator ai = yes }
         NOT = { has_country_flag = cutoff_reactionary_UH_3 }
         civilized = yes
@@ -2027,7 +2004,6 @@ country_event = {
     picture = "senate_debate"
 
     trigger = {
-		ai = no
         NOT = { has_country_flag = spectator ai = yes }
         civilized = yes
         public_meetings = yes_meeting
@@ -2252,7 +2228,6 @@ country_event = {
     picture = "senate_debate"
 
     trigger = {
-		ai = no
         NOT = { has_country_flag = spectator ai = yes }
         NOT = { has_country_flag = cutoff_reactionary_UH_5 }
         NOT = { election = yes }

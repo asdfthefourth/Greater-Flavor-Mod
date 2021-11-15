@@ -11,3 +11,4 @@ fort = 1
 #    building = lumber_mill
 #    upgrade = yes
 #}
+1861.1.1 = { railroad = 2 }

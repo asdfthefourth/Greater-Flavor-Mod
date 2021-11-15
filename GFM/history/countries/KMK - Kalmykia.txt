@@ -1,5 +1,5 @@
 capital = 1041
-primary_culture = kalmyk
+primary_culture = oirat
 culture = tatar
 religion = gelugpa
 government = absolute_monarchy
@@ -53,4 +53,6 @@ upper_house = {
 # Inventions
 #bottling_process = yes
 modern_winemaking = yes
-
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes

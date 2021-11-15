@@ -19,7 +19,7 @@ political_decisions = {
         }
     }
     the_ussr = {
-        #picture = form_the_soviet_union
+        picture = form_the_soviet_union
         potential = {
             war = no
             OR = {
@@ -88,15 +88,6 @@ political_decisions = {
                 war_with = RUS
             }
             NOT = { has_global_flag = sendlenin }
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					NOT = {
-						RUS = { war_countries = { ai = no } }
-					}
-				}
-			}
         }
         allow = {
             war_with = RUS

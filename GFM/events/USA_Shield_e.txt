@@ -19,8 +19,10 @@ country_event = {
             ENG_68 = { add_core = ENG }
             ENG_74 = { add_core = ENG }
             77 = { remove_core = ENG }
+            ENG_6 = { add_core = CAN }
             ENG_9 = { add_core = CAN }
             CAN_13 = { add_core = CAN }
+            CAN_18 = { add_core = CAN }
             ENG_22 = { add_core = CAN }
             ENG_30 = { add_core = CAN }
             ENG_36 = { add_core = CAN }
@@ -47,28 +49,12 @@ country_event = {
             annex_to = THIS
         }
         RPL = { all_core = { remove_core = RPL } }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				war = {
-					target = USA
-					attacker_goal = { casus_belli = cut_down_to_size_no_infamy }
-					defender_goal = { casus_belli = cut_down_to_size_no_infamy }
-					call_ally = yes
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				war = {
-					target = US2
-					attacker_goal = { casus_belli = cut_down_to_size_no_infamy }
-					defender_goal = { casus_belli = cut_down_to_size_no_infamy }
-					call_ally = yes
-				}
-			}
-		}
+        war = {
+            target = USA
+            attacker_goal = { casus_belli = cut_down_to_size }
+            defender_goal = { casus_belli = cut_down_to_size }
+            call_ally = yes
+        }
         ai_chance = {
             factor = 100
         }
@@ -92,14 +78,13 @@ country_event = {
 
 
     option = {
-        name = "Ok. §GLose 5 infamy§W"
+        name = "Ok."
         release_vassal = NEN
         badboy = -5
         NEN = {
             primary_culture = yankee
             add_accepted_culture = anglo_canadian
             government = democracy
-			set_country_flag = Government_Democracy
         }
         create_alliance = NEN
         diplomatic_influence = {
@@ -114,7 +99,6 @@ country_event = {
     title = "Treaty of Ottawa"
     desc = EVTDESC72748
     major = yes
-	picture = "treaty_of_ottawa"
     is_triggered_only = yes
 
     option = {
@@ -152,54 +136,35 @@ country_event = {
             }
             leave_alliance = THIS
         }
-        random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				USA = {
-					diplomatic_influence = {
-						who = THIS
-						value = 400
-					}
-					create_alliance = THIS
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				US2 = {
-					diplomatic_influence = {
-						who = THIS
-						value = 400
-					}
-					create_alliance = THIS
-				}
-			}
-		}
+        USA = {
+            diplomatic_influence = {
+                who = THIS
+                value = 400
+            }
+            create_alliance = THIS
+        }
         government = democracy
-		set_country_flag = Government_Democracy
         ai_chance = {
             factor = 100
         }
     }
 }
 
-#country_event = {   #This event is triggered nowhere, kinda sus
-#    id = 72740
-#    title = "Treaty of Philadelphia"
-#    desc = EVTDESC72740
-#    major = yes
-#	picture = "treaty_of_philadelphia"
-#    is_triggered_only = yes
-#
-#    option = {
-#        name = "Damn those colonist! May they freeze in their new territories."
-#        prestige = -30
-#        ai_chance = {
-#            factor = 100
-#        }
-#    }
-#}
+country_event = {
+    id = 72740
+    title = "Treaty of Philadelphia"
+    desc = EVTDESC72740
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "Damn those colonist! May they freeze in their new territories."
+        prestige = -30
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
 
 country_event = {
     id = 72738
@@ -215,14 +180,14 @@ country_event = {
             value = 100
         }
         set_country_flag = betray_revolution
-        FRA = { country_event = { id = 72737 days = 1 } }
+        FRA = { country_event = { id = 72737 } }
         ai_chance = {
             factor = 30
         }
     }
     option = {
         name = "They French may have Quebec as long as Quebec has home rule."
-        FRA = { country_event = { id = 72736 days = 1 } }
+        FRA = { country_event = { id = 72736 } }
         ai_chance = {
             factor = 50
         }
@@ -234,7 +199,7 @@ country_event = {
             who = FRA
             value = -100
         }
-        FRA = { country_event = { id = 72735 days = 1 } }
+        FRA = { country_event = { id = 72735 } }
         ai_chance = {
             factor = 20
         }
@@ -252,32 +217,18 @@ country_event = {
         name = "The lost children of France are finally returned home!"
         FRA = { treasury = -100000 }
         USA = { treasury = 100000 }
-        US2 = { treasury = 100000 }
         relation = {
             who = USA
-            value = 100
-        }
-        relation = {
-            who = US2
             value = 100
         }
         CAN_60 = { add_core = QUE }
         2625 = { add_core = QUE }
         76 = { add_core = QUE }
-        QUE = { all_core = { remove_core = USA remove_core = US2 } }
+        QUE = { all_core = { remove_core = USA } }
         QUE = { all_core = { add_core = FRA } }
         any_country = {
                 limit = {
                     tag = USA
-                }
-                any_owned = {
-                    limit = { is_core = QUE }
-                    secede_province = FRA
-                }
-        }
-        any_country = {
-                limit = {
-                    tag = US2
                 }
                 any_owned = {
                     limit = { is_core = QUE }
@@ -301,19 +252,13 @@ country_event = {
         name = "France agrees to the compromise."
         FRA = { treasury = -50000 }
         USA = { treasury = 50000 }
-        US2 = { treasury = 50000 }
         CAN_60 = { add_core = QUE }
         2625 = { add_core = QUE }
         76 = { add_core = QUE }
-        QUE = { all_core = { remove_core = USA remove_core = US2 } }
+        QUE = { all_core = { remove_core = USA } }
         USA = { set_country_flag = betray_revolution }
-        US2 = { set_country_flag = betray_revolution }
         relation = {
             who = USA
-            value = 100
-        }
-        relation = {
-            who = US2
             value = 100
         }
         any_country = {
@@ -325,21 +270,12 @@ country_event = {
                 secede_province = FRA
             }
         }
-        any_country = {
-            limit = {
-                tag = US2
-            }
-            any_owned = {
-                limit = { is_core = QUE }
-                secede_province = FRA
-            }
-        }
         release_vassal = QUE
         diplomatic_influence = {
                 who = QUE
                 value = 400
         }
-        create_alliance = QUE
+        make_alliance = QUE
         ai_chance = {
             factor = 60
         }
@@ -350,71 +286,34 @@ country_event = {
             who = USA
             value = -50
         }
-        relation = {
-            who = US2
-            value = -50
-        }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = { USA = { country_event = 72734 } }
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = { US2 = { country_event = 72734 } }
-		}
+        USA = { country_event = { id = 72734 } }
         ai_chance = {
             factor = 30
         }
     }
     option = {
-        name = "How dare the Americans! This calls for war! §RGain 7 infamy§W"
+        name = "How dare the Americans! This calls for war!"
         badboy = 7
         CAN_60 = { add_core = QUE }
         2625 = { add_core = QUE }
         76 = { add_core = QUE }
         QUE = { all_core = { add_core = FRA } }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				war = {
-					target = USA
-					attacker_goal = {
-						casus_belli = acquire_all_cores
-						country = FRA
-					}
-					defender_goal = {
-						casus_belli = monroe2
-						country = USA
-					}
-				}
-				relation = {
-					who = USA
-					value = -200
-				}
-				USA = { country_event = 72733 }
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				war = {
-					target = US2
-					attacker_goal = {
-						casus_belli = acquire_all_cores
-						country = FRA
-					}
-					defender_goal = {
-						casus_belli = monroe2
-						country = US2
-					}
-				}
-				relation = {
-					who = US2
-					value = -200
-				}
-				US2 = { country_event = 72733 }
-			}
-		}
+        war = {
+            target = USA
+            attacker_goal = {
+                casus_belli = acquire_all_cores
+                country = FRA
+            }
+            defender_goal = {
+                casus_belli = monroe2
+                country = USA
+            }
+        }
+        relation = {
+            who = USA
+            value = -200
+        }
+        USA = { country_event = { id = 72733 } }
         ai_chance = {
             factor = 10
         }
@@ -434,63 +333,33 @@ country_event = {
             who = USA
             value = -100
         }
-        relation = {
-            who = US2
-            value = -100
-        }
         ai_chance = {
             factor = 80
         }
     }
     option = {
-        name = "How dare the Americans! This calls for war! §RGain 7 infamy§W"
+        name = "How dare the Americans! This calls for war!"
         badboy = 7
         CAN_60 = { add_core = QUE }
         2625 = { add_core = QUE }
         76 = { add_core = QUE }
         QUE = { all_core = { add_core = FRA } }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				war = {
-					target = USA
-					attacker_goal = {
-						casus_belli = acquire_all_cores
-						country = FRA
-					}
-					defender_goal = {
-						casus_belli = monroe2
-						country = USA
-					}
-				}
-				relation = {
-					who = USA
-					value = -200
-				}
-				USA = { country_event = 72733 }
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				war = {
-					target = US2
-					attacker_goal = {
-						casus_belli = acquire_all_cores
-						country = FRA
-					}
-					defender_goal = {
-						casus_belli = monroe2
-						country = US2
-					}
-				}
-				relation = {
-					who = US2
-					value = -200
-				}
-				US2 = { country_event = 72733 }
-			}
-		}
+        war = {
+            target = USA
+            attacker_goal = {
+                casus_belli = acquire_all_cores
+                country = FRA
+            }
+            defender_goal = {
+                casus_belli = monroe2
+                country = USA
+            }
+        }
+        relation = {
+            who = USA
+            value = -200
+        }
+        USA = { country_event = { id = 72733 } }
         ai_chance = {
             factor = 20
         }
@@ -508,14 +377,7 @@ country_event = {
         name = "This is one nation indivisible. There will be no home rule."
         add_accepted_culture = french_canadian
         set_country_flag = USA_french
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = { QUE = { all_core = { add_core = USA } } }
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = { QUE = { all_core = { add_core = US2 } } }
-		}
+        QUE = { all_core = { add_core = USA } }
         any_pop = {
             limit = {
                 culture = french_canadian
@@ -534,13 +396,12 @@ country_event = {
         2625 = { add_core = QUE }
         76 = { add_core = QUE }
         QUE = { all_core = { remove_core = USA } }
-        QUE = { all_core = { remove_core = US2 } }
         release_vassal = QUE
         diplomatic_influence = {
             who = QUE
             value = 400
         }
-        create_alliance = QUE
+        make_alliance = QUE
         ai_chance = {
             factor = 30
         }
@@ -587,20 +448,19 @@ country_event = {
         }
     }
     option = {
-        name = "Quebec deserves to be the master of its destiny. §GLose 5 infamy§W"
+        name = "Quebec deserves to be the master of its destiny."
         badboy = -5
         set_country_flag = USA_QUE_agree
         CAN_60 = { add_core = QUE }
         2625 = { add_core = QUE }
         76 = { add_core = QUE }
         QUE = { all_core = { remove_core = USA } }
-        QUE = { all_core = { remove_core = US2 } }
         release_vassal = QUE
         diplomatic_influence = {
             who = QUE
             value = 400
         }
-        create_alliance = QUE
+        make_alliance = QUE
         ai_chance = {
             factor = 40
         }
@@ -640,34 +500,15 @@ country_event = {
         name = "Damn those Americans"
         clr_country_flag = NW_overlord
         THIS = {
-            random_owned = {
-				limit = { owner = { USA = { exists = yes } } }
-				owner = {
-					any_owned = {
-						limit = {
-							OR = {
-								continent = north_america
-								continent = south_america
-							}
-						}
-						secede_province = USA
-					}
-				}
-			}
-			random_owned = {
-				limit = { owner = { US2 = { exists = yes } } }
-				owner = {
-					any_owned = {
-						limit = {
-							OR = {
-								continent = north_america
-								continent = south_america
-							}
-						}
-						secede_province = US2
-					}
-				}
-			}
+            any_owned = {
+                limit = {
+                    OR = {
+                        continent = north_america
+                        continent = south_america
+                    }
+                }
+                secede_province = USA
+            }
         }
         any_country = {
             limit = {
@@ -703,10 +544,6 @@ country_event = {
             who = USA
             value = -200
         }
-        relation = {
-            who = US2
-            value = -200
-        }
         ai_chance = {
             factor = 100
         }
@@ -717,7 +554,7 @@ country_event = {
 
 country_event = {
     id = 3309812
-    title = "The United States Secures Hegemony Over the Americas"
+    title = "The United States Secures Hegemony Over the America's"
     desc = "The United States has declared hegemony over the New World and there is not much the rest of the international community can do."
     picture = exemplar_colony
     is_triggered_only = yes
@@ -749,12 +586,6 @@ country_event = {
     option = {
         name = "Let's see how this goes."
         USA = {
-            diplomatic_influence = {
-                who = THIS
-                value = 100
-            }
-        }
-        US2 = {
             diplomatic_influence = {
                 who = THIS
                 value = 100
@@ -824,10 +655,6 @@ country_event = {
             who = USA
             value = 100
         }
-        relation = {
-            who = US2
-            value = 100
-        }
         government = hms_government
         political_reform = no_slavery
         political_reform = universal_voting
@@ -839,8 +666,8 @@ country_event = {
         any_pop = {
             limit = {
                 OR = {
-                    pop_majority_ideology = reactionary
-                    pop_majority_ideology = conservative
+                    ideology = reactionary
+                    ideology = conservative
                 }
             }
             consciousness = 5
@@ -848,7 +675,7 @@ country_event = {
         }
         any_pop = {
             limit = {
-                pop_majority_ideology = liberal
+                ideology = liberal
             }
             consciousness = -5
             militancy = -5
@@ -864,43 +691,22 @@ country_event = {
 
     option = {
         name = "Never! Viva la Emperor"
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				USA = {
-					relation = {
-						who = MEX
-						value = -100
-					}
-					diplomatic_influence = {
-						who = MEX
-						value = -400
-					}
-					country_event = 8981518
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				US2 = {
-					relation = {
-						who = MEX
-						value = -100
-					}
-					diplomatic_influence = {
-						who = MEX
-						value = -400
-					}
-					country_event = 8981518
-				}
-			}
-		}
+        USA = {
+            relation = {
+                who = MEX
+                value = -100
+            }
+            diplomatic_influence = {
+                who = MEX
+                value = -400
+            }
+            country_event = 8981518
+        }
         any_pop = {
             limit = {
                 OR = {
-                    pop_majority_ideology = reactionary
-                    pop_majority_ideology = conservative
+                    ideology = reactionary
+                    ideology = conservative
                 }
             }
             consciousness = -5
@@ -908,7 +714,7 @@ country_event = {
         }
         any_pop = {
             limit = {
-                pop_majority_ideology = liberal
+                ideology = liberal
             }
             consciousness = 5
             militancy = 5
@@ -933,43 +739,22 @@ country_event = {
 
     option = {
         name = "Never! Viva la Emperor"
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				USA = {
-					relation = {
-						who = MEX
-						value = -100
-					}
-					diplomatic_influence = {
-						who = MEX
-						value = -400
-					}
-					country_event = 8981518
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				US2 = {
-					relation = {
-						who = MEX
-						value = -100
-					}
-					diplomatic_influence = {
-						who = MEX
-						value = -400
-					}
-					country_event = 8981518
-				}
-			}
-		}
+        USA = {
+            relation = {
+                who = MEX
+                value = -100
+            }
+            diplomatic_influence = {
+                who = MEX
+                value = -400
+            }
+            country_event = 8981518
+        }
         any_pop = {
             limit = {
                 OR = {
-                    pop_majority_ideology = reactionary
-                    pop_majority_ideology = conservative
+                    ideology = reactionary
+                    ideology = conservative
                 }
             }
             consciousness = -8
@@ -977,7 +762,7 @@ country_event = {
         }
         any_pop = {
             limit = {
-                pop_majority_ideology = liberal
+                ideology = liberal
             }
             consciousness = 4
             militancy = 4
@@ -994,9 +779,7 @@ country_event = {
     option = {
         name = "Replace the Emperor with a President."
         USA = { set_country_flag = USA_demcoup }
-		US2 = { set_country_flag = USA_demcoup }
         government = democracy
-		set_country_flag = Government_Democracy
         political_reform = no_slavery
         political_reform = universal_voting
         political_reform = state_equal_weight
@@ -1007,8 +790,8 @@ country_event = {
         any_pop = {
             limit = {
                 OR = {
-                    pop_majority_ideology = reactionary
-                    pop_majority_ideology = conservative
+                    ideology = reactionary
+                    ideology = conservative
                 }
             }
             consciousness = 8
@@ -1016,17 +799,13 @@ country_event = {
         }
         any_pop = {
             limit = {
-                pop_majority_ideology = liberal
+                ideology = liberal
             }
             consciousness = -6
             militancy = -6
         }
         relation = {
             who = USA
-            value = 100
-        }
-        relation = {
-            who = US2
             value = 100
         }
         ai_chance = {
@@ -1059,7 +838,7 @@ country_event = {
     }
 
     option = {
-        name = "Send the Son's of Democracy down south. §RGain 2 infamy§W"
+        name = "Send the Son's of Democracy down south."
         badboy = 2
         set_country_flag = USA_demcoup
         release_vassal = MEX
@@ -1076,38 +855,17 @@ country_event = {
             type = install_democracy_make_puppet
             months = 12
         }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				war = {
-					target = MEX
-					attacker_goal = {
-						casus_belli = install_democracy_make_puppet
-						country = USA
-					}
-					defender_goal = {
-						casus_belli = humiliate
-						country = MEX
-					}
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				war = {
-					target = MEX
-					attacker_goal = {
-						casus_belli = install_democracy_make_puppet
-						country = US2
-					}
-					defender_goal = {
-						casus_belli = humiliate
-						country = MEX
-					}
-				}
-			}
-		}
+        war = {
+            target = MEX
+            attacker_goal = {
+                casus_belli = install_democracy_make_puppet
+                country = USA
+            }
+            defender_goal = {
+                casus_belli = humiliate
+                country = MEX
+            }
+        }
         ai_chance = {
             factor = 80
         }
@@ -1117,7 +875,7 @@ country_event = {
 country_event = {
     id = 5578766
     title = "Yucatan Revolt"
-    desc = "We have received reports that American troops have been arming the Mayan population in the Yucatan and now the entire peninsula is in a full-blown rebellion."
+    desc = "We have received reports that American troops have been arming the Mayan population in the Yucatan and now the entire peninsula is in a full blown rebellion."
     picture = autocracy
     is_triggered_only = yes
 
@@ -1217,30 +975,19 @@ country_event = {
     id = 5853546
     title = "The Alaskan Frontier"
     desc = EVTDESC5853546
-    picture = alaska
+    picture = map_alaska
     is_triggered_only = yes
 
     option = {
         name = "The land should be cultivated by Americans."
         add_accepted_culture = alaskan
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				LSK = { all_core = { add_core = USA } }
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				LSK = { all_core = { add_core = US2 } }
-			}
-		}
+        LSK = { all_core = { add_core = USA } }
         ai_chance = {
             factor = 70
         }
     }
     option = {
-        name = "The pilgrims started small too. §GLose 3 infamy§W"
+        name = "The pilgrims started small too."
         prestige = 5
         badboy = -3
         LSK = { set_country_flag = LSK_form }
@@ -1249,7 +996,7 @@ country_event = {
             who = LSK
             value = 400
         }
-        create_alliance = LSK
+        make_alliance = LSK
         ai_chance = {
             factor = 30
         }
@@ -1265,7 +1012,7 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-        OR = { USA = { has_country_flag = USA_demcoup exists = yes } US2 = { has_country_flag = USA_demcoup exists = yes } }
+        USA = { has_country_flag = USA_demcoup  }
         tag = BRZ
         is_vassal = no
         is_greater_power = no
@@ -1288,8 +1035,8 @@ country_event = {
         any_pop = {
             limit = {
                 OR = {
-                    pop_majority_ideology = socialist
-                    pop_majority_ideology = liberal
+                    ideology = socialist
+                    ideology = liberal
                 }
             }
             militancy = 9
@@ -1303,7 +1050,6 @@ country_event = {
     option = {
         name = "Brazil is no longer safe."
         government = democracy
-		set_country_flag = Government_Democracy
         political_reform = no_slavery
         political_reform = universal_voting
         political_reform = state_equal_weight
@@ -1312,30 +1058,18 @@ country_event = {
         political_reform = free_press
         political_reform = secret_ballots
         any_pop = {
-            limit = { pop_majority_ideology = reactionary }
+            limit = { ideology = reactionary }
             militancy = 5
             consciousness = 5
         }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				USA = {
-					country_event = 9452276
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				US2 = {
-					country_event = 9452276
-				}
-			}
-		}
+
+        USA = {
+            country_event = 9452276
+        }
 
         country_event = {
             id = 3886062
-            days = 180
+            months = 6
         }
         ai_chance = {
             factor = 60
@@ -1376,7 +1110,7 @@ country_event = {
     option = {
         name = "The Republic will Endure"
         any_pop = {
-            limit = { pop_majority_ideology = reactionary }
+            limit = { ideology = reactionary }
             militancy = 8
             consciousness = 8
         }
@@ -1396,42 +1130,26 @@ country_event = {
         political_reform = underground_parties
         political_reform = no_trade_unions
         any_pop = {
-            limit = { pop_majority_ideology = liberal }
+            limit = { ideology = liberal }
             militancy = 8
             consciousness = 8
         }
         any_pop = {
             limit = {
                 OR = {
-                    pop_majority_ideology = reactionary
-                    pop_majority_ideology = conservative
+                    ideology = reactionary
+                    ideology = conservative
                 }
             }
             militancy = -8
             consciousness = -8
         }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				USA = {
-					country_event = {
-						id = 2791898
-						days =  8
-					}
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				US2 = {
-					country_event = {
-						id = 2791898
-						days =  8
-					}
-				}
-			}
-		}
+        USA = {
+            country_event = {
+                id = 2791898
+                days =  8
+            }
+        }
         ai_chance = {
             factor = 50
         }
@@ -1452,7 +1170,7 @@ country_event = {
             value = 100
         }
         any_pop = {
-            limit = { pop_majority_ideology = liberal }
+            limit = { ideology = liberal }
             consciousness = 5
         }
         ai_chance = {
@@ -1465,8 +1183,8 @@ country_event = {
         any_pop = {
             limit = {
                 OR = {
-                    pop_majority_ideology = reactionary
-                    pop_majority_ideology = conservative
+                    ideology = reactionary
+                    ideology = conservative
                 }
             }
             consciousness = 5
@@ -1495,43 +1213,23 @@ country_event = {
         any_pop = {
             limit = {
                 OR = {
-                    pop_majority_ideology = reactionary
-                    pop_majority_ideology = conservative
+                    ideology = reactionary
+                    ideology = conservative
                 }
             }
             militancy = -5
             consciousness = -5
         }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				relation = {
-					who = USA
-					value = -80
-				}
-				USA = {
-					country_event = {
-						id = 2931608
-						days = 5
-					}
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				relation = {
-					who = US2
-					value = -80
-				}
-				US2 = {
-					country_event = {
-						id = 2931608
-						days = 5
-					}
-				}
-			}
-		}
+        relation = {
+            who = USA
+            value = -80
+        }
+        USA = {
+            country_event = {
+                id = 2931608
+                days = 5
+            }
+        }
         ai_chance = {
             factor = 75
         }
@@ -1540,7 +1238,6 @@ country_event = {
     option = {
         name = "Let's not be arrogant."
         government = democracy
-		set_country_flag = Government_Democracy
         political_reform = no_slavery
         political_reform = universal_voting
         political_reform = state_equal_weight
@@ -1549,31 +1246,18 @@ country_event = {
         political_reform = free_press
         political_reform = secret_ballots
         any_pop = {
-            limit = { pop_majority_ideology = liberal }
+            limit = { ideology = liberal }
             consciousness = -9
             militancy = -9
         }
         any_pop = {
-            limit = { pop_majority_ideology = reactionary }
+            limit = { ideology = reactionary }
             militancy = 8
             consciousness = 8
         }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				USA = {
-					country_event = 4949670
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				US2 = {
-					country_event = 4949670
-				}
-			}
-		}
+        USA = {
+            country_event = 4949670
+        }
         ai_chance = {
             factor = 25
         }
@@ -1588,20 +1272,20 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "Another War for Liberty §RGain 4 infamy§W"
+        name = "Another War for Liberty"
         badboy = 4
         any_pop = {
             limit = {
                 OR = {
-                    pop_majority_ideology = reactionary
-                    pop_majority_ideology = conservative
+                    ideology = reactionary
+                    ideology = conservative
                 }
             }
             consciousness = 5
             militancy = 3
         }
         any_pop = {
-            limit = { pop_majority_ideology = liberal }
+            limit = { ideology = liberal }
             consciousness = -4
             militancy = -4
         }
@@ -1618,38 +1302,17 @@ country_event = {
             type = install_democracy_make_puppet
             months = 12
         }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				war = {
-					target = BRZ
-					attacker_goal = {
-						casus_belli = install_democracy_make_puppet
-						country = USA
-					}
-					defender_goal = {
-						casus_belli = humiliate
-						country = BRZ
-					}
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				war = {
-					target = BRZ
-					attacker_goal = {
-						casus_belli = install_democracy_make_puppet
-						country = US2
-					}
-					defender_goal = {
-						casus_belli = humiliate
-						country = BRZ
-					}
-				}
-			}
-		}
+        war = {
+            target = BRZ
+            attacker_goal = {
+                casus_belli = install_democracy_make_puppet
+                country = USA
+            }
+            defender_goal = {
+                casus_belli = humiliate
+                country = BRZ
+            }
+        }
         ai_chance = {
             factor = 40
         }
@@ -1664,15 +1327,15 @@ country_event = {
         any_pop = {
             limit = {
                 OR = {
-                    pop_majority_ideology = reactionary
-                    pop_majority_ideology = conservative
+                    ideology = reactionary
+                    ideology = conservative
                 }
             }
             consciousness = -5
             militancy = -3
         }
         any_pop = {
-            limit = { pop_majority_ideology = liberal }
+            limit = { ideology = liberal }
             consciousness = 4
             militancy = 4
         }
@@ -1726,8 +1389,8 @@ country_event = {
         ai_chance = {
             factor = 50
             modifier = {
-                factor = 0.8 
-                OR = { vassal_of = USA vassal_of = US2 }
+                factor = 0.8
+                vassal_of = USA
             }
         }
 
@@ -1735,44 +1398,20 @@ country_event = {
     option = {
         name = "Refuse"
         prestige = 10
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				USA = {
-					country_event = {
-						id = 7859305
-						days = 12
-					}
-					diplomatic_influence = {
-						who = THIS
-						value = -200
-					}
-					relation = {
-						who = THIS
-						value = -100
-					}
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				US2 = {
-					country_event = {
-						id = 7859305
-						days = 12
-					}
-					diplomatic_influence = {
-						who = THIS
-						value = -200
-					}
-					relation = {
-						who = THIS
-						value = -100
-					}
-				}
-			}
-		}
+        USA = {
+                country_event = {
+                    id = 7859305
+                    days = 12
+                }
+                diplomatic_influence = {
+                    who = THIS
+                    value = -200
+                }
+                relation = {
+                    who = THIS
+                    value = -100
+                }
+        }
         ai_chance = {
             factor = 50
         }
@@ -1788,7 +1427,7 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "We must accept. §GLose 5 infamy§W"
+        name = "We must accept"
         badboy = -5
         prestige = -20
         diplomatic_influence = {
@@ -1805,7 +1444,7 @@ country_event = {
     }
 
     option = {
-        name = "It was not an offer to be refused. §RGain 5 infamy§W"
+        name = "It was not an offer to be refused."
         badboy = 5
         CHL = {
             all_core = { add_core = PBC }
@@ -1824,40 +1463,18 @@ country_event = {
             type = install_democracy_make_puppet
             months = 12
         }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				war = {
-					target = CHL
-					attacker_goal = {
-						casus_belli = install_democracy_make_puppet
-						country = USA
-					}
-					defender_goal = {
-						casus_belli = humiliate
-						country = CHL
-					}
-					call_ally = no
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				war = {
-					target = CHL
-					attacker_goal = {
-						casus_belli = install_democracy_make_puppet
-						country = US2
-					}
-					defender_goal = {
-						casus_belli = humiliate
-						country = CHL
-					}
-					call_ally = no
-				}
-			}
-		}
+        war = {
+            target = CHL
+            attacker_goal = {
+                casus_belli = install_democracy_make_puppet
+                country = USA
+            }
+            defender_goal = {
+                casus_belli = humiliate
+                country = CHL
+            }
+            call_ally = no
+        }
         ai_chance = {
             factor = 60
         }
@@ -1906,28 +1523,12 @@ country_event = {
             add_core = GCO
             remove_core = UCA
         }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				1723 = {
-					secede_province = THIS
-					add_core = USA
-					remove_core = GCO
-					remove_core = UCA
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				1723 = {
-					secede_province = THIS
-					add_core = US2
-					remove_core = GCO
-					remove_core = UCA
-				}
-			}
-		}
+        1723 = {
+            secede_province = THIS
+            add_core = USA
+            remove_core = GCO
+            remove_core = UCA
+        }
         ai_chance = {
             factor = 60
         }
@@ -1956,32 +1557,14 @@ country_event = {
         CLM_1723 = {
             secede_province = UCA
         }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				UCA = {
-					1723 = {
-						secede_province = THIS
-						add_core = USA
-						remove_core = GCO
-						remove_core = UCA
-					}
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				UCA = {
-					1723 = {
-						secede_province = THIS
-						add_core = US2
-						remove_core = GCO
-						remove_core = UCA
-					}
-				}
-			}
-		}
+        UCA = {
+            1723 = {
+                secede_province = THIS
+                add_core = USA
+                remove_core = GCO
+                remove_core = UCA
+            }
+        }
         ai_chance = {
             factor = 20
         }
@@ -2010,32 +1593,14 @@ country_event = {
         CLM_1723 = {
             secede_province = GCO
         }
-		random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				GCO = {
-					1723 = {
-						secede_province = THIS
-						add_core = USA
-						remove_core = GCO
-						remove_core = UCA
-					}
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				GCO = {
-					1723 = {
-						secede_province = THIS
-						add_core = US2
-						remove_core = GCO
-						remove_core = UCA
-					}
-				}
-			}
-		}
+        GCO = {
+            1723 = {
+                secede_province = THIS
+                add_core = USA
+                remove_core = GCO
+                remove_core = UCA
+            }
+        }
         ai_chance = {
             factor = 20
         }
@@ -2100,10 +1665,6 @@ country_event = {
             who = USA
             value = 100
         }
-		relation = {
-			who = US2
-			value = 100
-		}
         government = hms_government
         political_reform = no_slavery
         political_reform = universal_voting
@@ -2126,30 +1687,13 @@ country_event = {
 
     option = {
         name = "The Emperor Answers Only to God!"
-        random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				USA = {
-					relation = {
-						who = BRZ
-						value = -100
-					}
-					country_event = 7078003
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				US2 = {
-					relation = {
-						who = BRZ
-						value = -100
-					}
-					country_event = 7078003
-				}
-			}
-		}
+        USA = {
+            relation = {
+                who = BRZ
+                value = -100
+            }
+            country_event = 7078003
+        }
         ai_chance = {
             factor = 40
             modifier = {
@@ -2170,30 +1714,13 @@ country_event = {
 
     option = {
         name = "The Emperor Answers Only to God!"
-        random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				USA = {
-					relation = {
-						who = BRZ
-						value = -100
-					}
-					country_event = 7078003
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				US2 = {
-					relation = {
-						who = BRZ
-						value = -100
-					}
-					country_event = 7078003
-				}
-			}
-		}
+        USA = {
+            relation = {
+                who = BRZ
+                value = -100
+            }
+            country_event = 7078003
+        }
         ai_chance = {
             factor = 60
             modifier = {
@@ -2206,7 +1733,6 @@ country_event = {
     option = {
         name = "Replace the Emperor with a President."
         government = democracy
-		set_country_flag = Government_Democracy
         political_reform = no_slavery
         political_reform = universal_voting
         political_reform = state_equal_weight
@@ -2218,10 +1744,6 @@ country_event = {
             who = USA
             value = 100
         }
-		relation = {
-			who = US2
-			value = 100
-		}
         ai_chance = {
             factor = 40
         }
@@ -2244,7 +1766,7 @@ country_event = {
     }
 
     option = {
-        name = "Bring Brazil Democracy! §RGain 2 infamy§W"
+        name = "Bring Brazil Democracy"
         badboy = 2
         release_vassal = BRZ
         relation = {
@@ -2260,38 +1782,17 @@ country_event = {
             type = install_democracy_make_puppet
             months = 12
         }
-        random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				war = {
-					target = BRZ
-					attacker_goal = {
-						casus_belli = install_democracy_make_puppet
-						country = USA
-					}
-					defender_goal = {
-						casus_belli = humiliate
-						country = BRZ
-					}
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				war = {
-					target = BRZ
-					attacker_goal = {
-						casus_belli = install_democracy_make_puppet
-						country = US2
-					}
-					defender_goal = {
-						casus_belli = humiliate
-						country = BRZ
-					}
-				}
-			}
-		}
+        war = {
+            target = BRZ
+            attacker_goal = {
+                casus_belli = install_democracy_make_puppet
+                country = USA
+            }
+            defender_goal = {
+                casus_belli = humiliate
+                country = BRZ
+            }
+        }
         ai_chance = {
             factor = 80
         }
@@ -2302,21 +1803,15 @@ country_event = {
     id = 7680756
     title = "End of American Hegemony"
     desc = EVTDESC7680756
-	picture = "uss_defeat_usa"
     major = yes
 
     fire_only_once = yes
 
     trigger = {
         has_country_flag = NW_hegemony
-        OR = { tag = USA tag = US2 }
+        tag = USA
         OR = {
-            NOT = { 
-                OR = {
-					government = democracy
-					has_country_flag = Government_Democracy	
-				}
-			}
+            NOT = { government = democracy }
             is_greater_power = no
             is_disarmed = yes
         }
@@ -2330,7 +1825,7 @@ country_event = {
         clr_country_flag = shield_NW
         any_country = {
             limit = {
-                NOT = { tag = USA tag = US2 }
+                NOT = { tag = USA }
                 OR = {
                     vassal_of = THIS
                     in_sphere = THIS
@@ -2356,39 +1851,18 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "What will come next?"
-        random_owned = {
-			limit = { owner = { USA = { exists = yes } } }
-			owner = {
-				USA = {
-					release_vassal = THIS
-					relation = {
-						who = THIS
-						value = -200
-					}
-					diplomatic_influence = {
-						who = THIS
-						value = -400
-					}
-				}
-			}
-		}
-		random_owned = {
-			limit = { owner = { US2 = { exists = yes } } }
-			owner = {
-				US2 = {
-					release_vassal = THIS
-					relation = {
-						who = THIS
-						value = -200
-					}
-					diplomatic_influence = {
-						who = THIS
-						value = -400
-					}
-				}
-			}
-		}
+        name = "Who Knows What Comes Next"
+        USA = {
+            release_vassal = THIS
+            relation = {
+                who = THIS
+                value = -200
+            }
+            diplomatic_influence = {
+                who = THIS
+                value = -400
+            }
+        }
         ai_chance = {
             factor = 100
         }
@@ -2454,7 +1928,7 @@ country_event = {
         change_tag = CLM
         release = VNZ
         release = ECU
-        GCO = { all_core = { remove_core = GCO }  }
+        GCO = { all_core = { remove_core = GCO}  }
         any_pop = {
             limit = {
                 OR = {

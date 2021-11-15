@@ -40,19 +40,12 @@
     farmers = {
         culture = norwegian
         religion = protestant
-        size = 24900
+        size = 25000
     }
-	
     farmers = {
         culture = sami
         religion = protestant
-        size = 6180
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = protestant
-        size = 220
+        size = 6250
     }
 }
 #Bodo (56000/14000 POPS)
@@ -122,19 +115,13 @@
     farmers = {
         culture = norwegian
         religion = protestant
-        size = 1950
+        size = 2000
     }
 
     farmers = {
         culture = sami
         religion = protestant
-        size = 7950
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = protestant
-        size = 100
+        size = 8000
     }
 
 }
@@ -215,13 +202,7 @@
     farmers = {
         culture = norwegian
         religion = protestant
-        size = 37800
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = protestant
-        size = 420
+        size = 38200
     }
 }
 #Stavanger (82000/20500 POPS)
@@ -285,13 +266,7 @@
     farmers = {
         culture = norwegian
         religion = protestant
-        size = 19310
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = protestant
-        size = 190
+        size = 19500
     }
 }
 #Skien (68000/17000 POPS)
@@ -401,19 +376,13 @@
     farmers = {
         culture = norwegian
         religion = protestant
-        size = 14800
+        size = 15275
     }
 
     capitalists = {
         culture = norwegian
         religion = protestant
         size = 5
-    }
-	
-	farmers = {
-        culture = gypsy
-        religion = protestant
-        size = 400
     }
 }
 #Hamar (80000/20000 POPS)
@@ -527,7 +496,7 @@
 }
 3412 = {
     farmers = {
-        culture = icelandic
+        culture = polar_bears
         religion = protestant
         size = 5
     }
